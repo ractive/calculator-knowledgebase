@@ -26,5 +26,8 @@ E-7):
    count the user flags; the ROM keeps one 64-bit word of each kind
    ([[hardware/hp48-system-ram]]).
 
-Still open, on both 48 series: the bit order of the word-size flags -5 to
--10 and of the digit-count flags -45 to -48, which neither manual gives.
+The bit order of the word-size flags -5 to -10 and of the digit-count
+flags -45 to -48 is in neither manual. Inferred from saturnus's decompiler
+matching the ROM's display (2026-10-05): the lowest-numbered flag is the
+least significant bit. -5 is bit 0 of the word size minus 1, and -45 is
+bit 0 of the digit count.

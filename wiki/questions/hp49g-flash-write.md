@@ -11,7 +11,7 @@ Neither Smith nor Sousa describes flash writes; Sousa refuses to and warns
 against "toggling the IR line and trying different controllers" (src:
 [[sources/memory49-sousa]]). An emulator needs the Intel 28F160S5 command set
 plus whatever enables the write line. Check [[emulators/emu48]] CHANGES and
-the chip datasheet (not in raw/).
+the chip datasheet ([[sources/intel-28f160s5]]).
 
 ## Progress
 

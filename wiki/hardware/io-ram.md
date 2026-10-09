@@ -22,7 +22,7 @@ the subsystem pages.
 
 | Addr | Bits | Function | Page |
 | --- | --- | --- | --- |
-| #100 | 0-2 / 3 | display vertical (pixel) offset / display enable | [[hardware/display]] |
+| #100 | 0-2 / 3 | display horizontal (left) pixel offset / display enable | [[hardware/display]] |
 | #101 | all | contrast, low 4 bits of 5 | [[hardware/display]] |
 | #102 | 0 / 1-3 | contrast MSB / display test | [[hardware/display]] |
 | #103 | all | display test; bit 3 no-refresh mode (dangerous) | [[hardware/display]] |
@@ -42,12 +42,12 @@ the subsystem pages.
 | #114-#115 | all | receive buffer byte (R/O) | [[hardware/uart]] |
 | #116-#117 | all | transmit buffer byte (W/O) | [[hardware/uart]] |
 | #118-#119 | all | interrupt type, read by the handler; #119 bit 3 = keyboard (Voyage). Mastracci: "service request" | [[hardware/interrupts]] |
-| #11A | 0-3 | IR control | [[hardware/uart]] |
+| #11A | 0-3 | IR control; bit 3 also tells the 39G from the 40G | [[hardware/uart]] |
 | #11B | all | "base nibble offset" (Mastracci); blank in Voyage | below |
 | #11C | 0-3 | IR status / LED enable | [[hardware/uart]] |
 | #11D | 0 | LED buffer | [[hardware/uart]] |
 | #11E | all | scratch nibble used by the ROM interrupt handler | [[hardware/interrupts]] |
-| #11F | all | RAM base nibble kept by the OS: 7 on S/SX, 8 on G/GX, #C while RAM is moved to #C0000 | below |
+| #11F | all | RAM base nibble kept by the OS: 7 on S/SX, 8 on G/GX, #C while RAM is moved to #C0000; #F on the 38G (RAM at #F0000; observed in saturnus 2026-10-05, ROM A1.67) | below |
 | #120-#124 | all | display start address (W/O) | [[hardware/display]] |
 | #125-#127 | all | display line offset (W/O) | [[hardware/display]] |
 | #128-#129 | | read: current LCD row, M32, DA19; write: line count before menu, M32, DA19 | [[hardware/display]] |

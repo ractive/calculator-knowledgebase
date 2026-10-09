@@ -101,7 +101,11 @@ Timers). See [[questions/timer-expiry-semantics]] (answered).
   instruction times are SASM's approximate cycle counts plus a flat 13%
   display stall. So the handler's self-compensation (src:
   [[sources/duchesne-interrupts-en]] p. 13) is insensitive to cycle errors
-  of that size (emulator only, not hardware).
+  of that size (emulator only, not hardware). The test still passes after
+  saturnus's timing calibration (iteration 7: Meta Kernel counts on the
+  Yorke models and a per-model factor, see
+  [[questions/instruction-speed-vs-hardware]]) (saturnus decision log,
+  iteration 7).
 - With the clock shown, ROM J still turns the calculator off after ten
   minutes without a key press (observed in saturnus).
 
@@ -126,8 +130,8 @@ Timers). See [[questions/timer-expiry-semantics]] (answered).
 
 ## Open
 
-- Exactly when the interrupt fires (on reaching 0 or on wrapping past it) is
-  still not stated precisely; the expiry flag is bit 3 (Voyage p. 203). See
-  [[questions/timer-expiry-semantics]].
+- Expiry is the counter's MSB going set (count through zero); the
+  interrupt fires on the rising edge of MSB and INT:
+  [[questions/timer-expiry-semantics]] (answered).
 - Whether TIMER1 has a run bit; Mastracci and Voyage show a run bit only for
   TIMER2.

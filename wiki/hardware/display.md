@@ -118,6 +118,12 @@ Display). Contrast reset values and keyboard limits per model are on
 48SX limits, not its 48GX limits (9-24) (src: [[sources/voyage-48gx]] p.
 193; [[sources/kml20]] LCD), see [[questions/contrast-range-48gx]].
 
+Power-on contrast observed in saturnus after a cold start, with the ON+/ON-
+range: 48SX 11 (3-19), 48GX 14 (9-24), 38G 14, 49G 14 (2.10 sets 16
+first), 39G/40G 12, 42S 22 (15-31); details on each model page. The 48GX
+keyboard range was not observed and stays open
+([[questions/contrast-range-48gx]]).
+
 ## Bit names (Giesselink)
 
 | Reg | Name | Bits |

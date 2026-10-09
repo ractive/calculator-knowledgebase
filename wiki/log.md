@@ -162,7 +162,7 @@ crc.
 hp48g-aur). Fixed seven dead-end source pages by linking the pages they feed.
 Swept for claims overturned by later sources: corrected the DA19 polarity in
 memory-controller, hp48gx and display, and the #100 offset axis in display.
-Stubs: hardware/hp38g, hardware/hp39g-40g. Open questions: 12 (11 answered).
+Stubs: hardware/hp38g, hardware/hp39g-40g. Questions: 23 (12 open, 11 answered).
 Rewrote [[overview]] with the big picture and the next sources to ingest
 (RPLMAN, HP Journal 38G, first Voyage book, x48ng/saturnng trees).
 
@@ -491,3 +491,39 @@ list but `}` and `«` stay in the word (`Invalid Syntax`). Recorded on
   applications right-shifted, 49G blue/red), from the owner's manuals;
   48GX left/right shift + 7 measured on the saturnus emulator (ROM R).
   Settles the 48SX "left shift is orange, unverified" note.
+
+## [2026-10-07] ingest | Power-on contrast per model (saturnus)
+
+Recorded the contrast each ROM writes after a cold start, as observed in
+saturnus: [[hardware/hp48sx]], [[hardware/hp48gx]], [[hardware/hp38g]],
+[[hardware/hp49g]], [[hardware/hp39g-40g]], [[hardware/hp42s]].
+
+## [2026-10-09] query | Time awake after a key (saturnus, "Key waits per model")
+
+New section on [[hardware/keyboard]]: how long each ROM stays awake after
+a shift, a digit, ENTER and a function key, and the per-model wait
+saturnus uses before the next queued key.
+
+## [2026-10-09] lint | Pre-publication review
+
+Cross-checked every page against what saturnus and hptx now record.
+Fixed contradictions inside the wiki (display offset axis on
+[[hardware/io-ram]], the DEC-mode constant note on [[hardware/saturn-cpu]],
+cold-start and transfer notes on [[hardware/hp38g]] and
+[[hardware/hp39g-40g]], the timer expiry note on [[hardware/timers]]).
+Added: per-model key waits, typing limits and shift colours
+([[hardware/keyboard]]); 38G, 39G/40G, 49G and 42S rows in the default
+maps and the 49G latch on SHUTDN ([[hardware/memory-controller]]);
+power-on contrast per model ([[hardware/display]]); the CRC feed rule
+([[hardware/crc]]); the timing calibration ([[hardware/saturn-cpu]]);
+#11A bit 3 as the 39G/40G strap ([[hardware/uart]]); the server's own
+packets, algebraic mode on the 49G, ON during a transaction and hptx's
+observations ([[protocols/server-commands]]); the character set and two
+ASCII-transfer notes ([[protocols/hp-object-format]]); IOPAR rewritten by
+the server ([[protocols/iopar]]); XModem name conflicts and ALG mode
+([[protocols/xmodem-hp]]). Progress notes on
+[[questions/binary-odd-nibble-padding]], [[questions/contrast-range-48gx]],
+[[questions/interrupt-maskability]], [[questions/hp38g-39g-transfer-protocol]]
+(all still open). Answered the bit order part of
+[[questions/hp48sx-system-flags]] (inferred). Replaced `raw/` mentions that
+the manifest does not resolve. Updated [[index]] and [[overview]].

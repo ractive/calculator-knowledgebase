@@ -183,7 +183,8 @@ hardware):
   SP23); the 49G's latch evidently is not.
 - **Boot timing**: the screen stays blank for about 0.6 s of emulated time
   while the boot code scans the banks with SHUTDN timer waits; then "Try To
-  Recover Memory?" (YES/NO), NO gives a "Memory Clear" box with OK, OK
+  Recover Memory?" on the top line, YES on the first menu key and NO on
+  the sixth (F); NO gives a "Memory Clear" box with OK, OK
   gives the stack in algebraic mode ("ALG").
 - **Flash writes**: storing to port 2 programs the chip with write to
   buffer (#E8 ... #D0), see [[questions/hp49g-flash-write]].

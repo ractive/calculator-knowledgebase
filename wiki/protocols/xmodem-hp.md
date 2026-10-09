@@ -38,7 +38,7 @@ From [[sources/conn4x-ymodem-pas]] (the part of the code in brackets):
 
 - Receiver start characters understood by the PC's sender: NAK (checksum),
   `C` (CRC-16) and `D` (an HP-specific CRC, 2 bytes, computed by a routine not
-  available in raw/) [YModem sender]. Which one each calculator sends
+  in the source) [YModem sender]. Which one each calculator sends
   when receiving is not visible in this code:
   [[questions/xmodem-hp-crc-mode]].
 - When receiving from a calculator, the PC opens with NAK, i.e. checksum
@@ -63,7 +63,7 @@ From [[sources/conn4x-ymodem-pas]] (the part of the code in brackets):
 Measured on the saturnng emulator by hptx, 2026-10-05, against HP 49G ROM
 2.15 and HP 48GX ROM R; not yet confirmed on hardware. Byte-level evidence
 is in the hptx repository under `crates/xmodem-proto/traces/` (trace names
-below), not a document in raw/.
+below), not a document.
 
 Starting a transfer:
 
@@ -95,6 +95,8 @@ Starting a transfer:
   padding itself when it stores a string.
 - XRECV does not overwrite an existing variable: with HPTXX present it stored
   the object as HPTXX.1.
+- `-95 CF` over Kermit, FINISH, XRECV or XSEND from the keyboard, `SERVER`,
+  then `-95 SF` brings back ALG mode (hptx).
 
 48GX:
 
@@ -104,6 +106,10 @@ Starting a transfer:
   1k blocks must not be used with the 48G series (`48gx-xrecv-1k.trace`).
 - XSEND pads the last block with 0x00 (`48gx-xsend.trace`).
 - A cancelled XRECV leaves an empty string in the target variable.
+- XRECV onto an existing name stops with "XRECV Error: Name Conflict": no
+  start character is sent, the name stays on the stack, and there is no
+  `.1` fallback; flag -36 was not tried (hptx, saturnng 48GX ROM R,
+  2026-10-05).
 
 ## Settings
 

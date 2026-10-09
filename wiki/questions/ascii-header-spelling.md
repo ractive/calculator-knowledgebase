@@ -8,7 +8,7 @@ tags: [object-format, hptx]
 # Is the ASCII transfer header %%HP: or %HPHP:?
 
 The FAQ writes the header as `%HPHP: T(3)A(D)F(.);` (src:
-[[sources/hp48-faq]] 6.12). `raw/README.md` calls it the `%%HP:` header.
+[[sources/hp48-faq]] 6.12). The library's index of source documents calls it the `%%HP:` header.
 Check the 48G user's guide or AUR I/O chapter and an actual transfer from
 the saturnng emulator.
 

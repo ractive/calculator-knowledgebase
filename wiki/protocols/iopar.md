@@ -14,6 +14,11 @@ the I/O settings change; all entries are integers (src: [[sources/hp48g-aur]]
 D-5). Deleting it restores the defaults (src: [[sources/hp48-kermit-hints]],
 Communications settings).
 
+The Kermit server writes IOPAR in HOME when it ends: purged during a
+session, it is back after `G F` (saturnus iteration 12b, 2026-10-08).
+Storing IOPAR back with the same values grows the 48SX variable from 29.5
+to 37.5 bytes (hptx, 2026-10-05).
+
 ## Fields (48G series)
 
 | # | Field (command) | Values | Default |

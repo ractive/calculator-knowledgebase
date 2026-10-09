@@ -59,13 +59,12 @@ the top of the address space. Code name "Elsie" (src:
   allowing to run the HP-38G ROM image on an unmodified Emu48" (src:
   [[sources/giesselink-emu48-25-years]]). The page does not name it; the RAM
   address is the likely candidate (inference, unverified).
-- **Not found:** which controller selects the RAM (NCE2 as on the 48G is the
-  natural guess), whether CE1, CE2 and NCE3 are wired to anything, how the
-  ROM uses DA19 (#129 bit 3), and what #11F reads.
-  Filed as [[questions/hp38g-memory-controllers]]. An emulator can let the
-  ROM's own CONFIG sequence show the answer: hang 32 KB of RAM on NCE2,
-  the ROM on NCE1, nothing on CE1/CE2/NCE3, and log where the ROM puts each
-  controller.
+- Partly answered by running the ROM (saturnus, no oracle): the ROM itself
+  configures NCE2 as 32 KB at #F0000, CE1 as the bank switcher at #7F000
+  and CE2/NCE3 parked at #7E000; DA19 is set at HOME and #11F holds #F.
+  Still open: whether CE1, CE2 and NCE3 are wired to anything, and
+  Gießelink's "important difference":
+  [[questions/hp38g-memory-controllers]].
 
 ## Keyboard
 
@@ -162,9 +161,9 @@ cold start (observed in saturnus 2026-10-07; saturnus renders it at about 90 % d
   [[sources/hpj-38g]] art. 6 p. 2).
 - Warm reset: ON plus the third menu key, or the reset hole; memory clear:
   ON plus the first and last menu keys (src: [[sources/hp38g-ug]] 9-8).
-- What the ROM shows on a cold start with blank RAM (a "Memory Clear"
-  message as on the 48G, or straight to HOME) is not documented: observe it
-  when booting the ROM.
+- On a cold start with blank RAM the ROM shows a "Memory Clear" box with
+  OK on menu key 6, with no "Try To Recover Memory?" prompt (observed in
+  saturnus 2026-10-05, ROM A1.67; see below).
 
 ## ROM image
 
@@ -211,8 +210,7 @@ is no oracle, so this is not checked against hardware or another emulator.
   those matrix positions, shows `6*7` and 42 in the history. This confirms
   the 7, 6, multiply and ENTER rows of the keyboard table above. RPN-style
   `6 ENTER 7 * ENTER` gives "Invalid Syntax".
-- **After boot.** At HOME the contrast register holds 14, the Emu48 KML
-  value for the 38G. #11F holds #F.
+- **After boot.** #11F holds #F (the contrast is under Display).
 
 ## Facts settled while building saturnus (2026-10-05, keys and link)
 

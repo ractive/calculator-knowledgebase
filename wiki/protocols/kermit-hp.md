@@ -52,6 +52,9 @@ is on [[protocols/server-commands]].
   automatically (Protocol settings).
 - Block check types 1, 2 and 3; type 3 by default on most models (Protocol
   settings).
+- The HP's Send-Init has no REPT field, so repeat prefixing is never used
+  (hptx kermit-proto traces, 2026-10-04). The server's packets are on
+  [[protocols/server-commands]].
 - The HP does not accept unprefixed control characters: the host must prefix
   all of them (Kermit 95 needs `SET CONTROL PREFIX ALL`) (Protocol settings).
 - ASCII mode is not plain text: on send the HP decompiles the object to text,

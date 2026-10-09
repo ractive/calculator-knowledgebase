@@ -30,6 +30,13 @@ at #13F (src: [[emulators/emu48]] CHANGES SP15, SP19). Voyage says reads of the
 I/O RAM do not disturb the CRC (src: [[sources/voyage-48gx]] p. 194);
 the #13F case is an exception to check.
 
+saturnus feeds the CRC from data reads only (DAT loads and the PC=(A)/PC=(C)
+target fetch), not from opcode fetches or I/O RAM reads. With that rule the
+48SX, 48GX and 49G ROMs boot, and the CRC of an object's nibbles equals
+BYTES and G D on all three (saturnus decision log, iterations 2 and 12a).
+The 42S self-test's ROM step under the same rule gives #1BE8, not #FFFF
+([[questions/hp42s-rom-crc]]), so the rule is unconfirmed for the Lewis.
+
 ## Use outside the CPU
 
 Libraries carry the same CRC. It does not cover the 5-nibble library prolog;

@@ -6,7 +6,8 @@ type: meta
 # Overview
 
 The wiki covers HP Saturn-based graphing calculators (HP48 S/SX/G/GX, HP49G,
-HP38G, HP39G, HP40G) for two projects:
+HP38G, HP39G, HP40G) and the HP 42S (Lewis chip, a Saturn core) for two
+projects:
 
 - **hptx** (<https://github.com/ractive/hptx>): Rust file transfer over
   serial, Kermit and XModem, with a sans-IO protocol core, a CLI and later a
@@ -21,8 +22,9 @@ back here for calculator facts. GPL emulator sources are not part of this
 repository and are read for facts only.
 
 State as of the first ingest pass (2026-10-04): 36 source pages, 15 hardware
-pages, 8 protocol pages, 1 emulator note, 23 questions (11 answered). See
-[[index]] and [[log]].
+pages, 8 protocol pages, 1 emulator note, 23 questions (11 answered). State
+on 2026-10-09: 59 source pages, 22 hardware pages, 9 protocol pages, 1
+emulator note, 35 questions (16 answered). See [[index]] and [[log]].
 
 ## Hardware: what is solid
 
@@ -53,6 +55,15 @@ pages, 8 protocol pages, 1 emulator note, 23 questions (11 answered). See
 - **Emulator evidence**: [[emulators/emu48]] records the behaviour Emu48's
   change log encodes; it settled DA19 polarity, TIMER2 expiry and the LPB
   bit.
+- **Settled by running the ROMs in saturnus** (no oracle unless stated):
+  the 49G bank latch (Sousa's bit order boots,
+  [[questions/hp49g-bank-latch-bits]]); the 39G/40G model strap (#11A
+  bit 3, [[questions/hp39g-40g-model-detection]]); the 38G and 39G RAM
+  wiring as the ROMs configure it ([[hardware/memory-controller]]); and
+  pages on system RAM ([[hardware/hp48-system-ram]]), the command line
+  ([[hardware/command-line]]), the system flags of each model, RPL
+  libraries and menus ([[protocols/rpl-libraries]]) and the 42S and its
+  Lewis chip ([[hardware/hp42s]], [[hardware/lewis]]).
 
 ## Protocols: what hptx needs
 
@@ -77,8 +88,12 @@ pages, 8 protocol pages, 1 emulator note, 23 questions (11 answered). See
 
 ## Biggest open points
 
-- XModem CRC variants on the 49G and XSERV's `D` mode:
-  [[questions/xmodem-hp-crc-mode]].
+- The 38G/39G/40G directory file and aplet format:
+  [[questions/hp38g-39g-transfer-protocol]].
+- Why the real machines are slower than the cycle counts:
+  [[questions/instruction-speed-vs-hardware]].
+- Whether the 42S ROM image passes its own CRC test:
+  [[questions/hp42s-rom-crc]].
 - Constant add/subtract in DEC mode: [[questions/dec-mode-constant-bug]].
 - CE1 vs CE2 priority: [[questions/bus-priority-ce1-ce2]].
 - 49G flash programming command set: [[questions/hp49g-flash-write]].
@@ -87,9 +102,8 @@ pages, 8 protocol pages, 1 emulator note, 23 questions (11 answered). See
 
 ## Sources not yet used
 
-`hp-tools-1991/` (SASM beyond the HST table, RPLMAN),
-`hp48-sdk-1993/SATURN.TXT`, `hp28s-procnotes.txt`, Cannon's tips, the other HP
-Journal articles, the first Voyage book (`hp48-voyage.pdf`), the ML starter
-kit, the 82240B printer guide, the image-only 49G AUG, and the
-x48ng, saturnng and other emulator trees. RPLMAN is the next source for
-object prologs.
+Now used: RPLMAN, the SASM manual beyond the HST table (2.7, 8), the HP 28S
+processor notes, MAKEROM, the three HP Journal issues, the 49G Advanced
+User's Guide (skimmed), and saturnng as a black box. Not yet used: Cannon's
+tips, the first Voyage book, the ML starter kit, the 82240B printer guide,
+SATURN.TXT from the 1993 SDK, and x48ng.

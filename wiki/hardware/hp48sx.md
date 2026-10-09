@@ -73,7 +73,8 @@ document:
   bit 3 = MSB set and (INT or WAKE)" ([[questions/timer-expiry-semantics]]),
   INTOFF masking only the keyboard scan ([[questions/interrupt-maskability]])
   and the CRC fed by data reads only ([[hardware/crc]]), the ROM reaches
-  "Try To Recover Memory?" after about 40 M cycles at 2 MHz, idles in SHUTDN
+  "Try To Recover Memory?" after about 40 M cycles at 2 MHz (before
+  saturnus's timing calibration of iteration 7), idles in SHUTDN
   at #0497C with TIMER2 running and WAKE set, and after NO (menu key F)
   shows "Memory Clear" over an empty stack. This supports, but does not
   prove, those three readings.

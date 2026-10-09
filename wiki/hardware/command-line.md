@@ -165,6 +165,8 @@ gap, and reading the line back:
   evaluates.
 - A key in the middle of a long 48GX line kept the ROM busy for more than
   5 s once (a garbage collection, presumably; not traced).
+- For the time each ROM stays awake after one key at its start screen,
+  see [[hardware/keyboard]] "Time awake after a key".
 
 ## Open
 

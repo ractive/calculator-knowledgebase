@@ -15,10 +15,9 @@ source read names the protocol, the baud rate or the framing. The 38G has a
 10-pin connector, and the 48's calculator-end adaptor must not be used
 with it (src: [[sources/finseth-hp38g]]; [[sources/connectivity-kit]]).
 
-Likely, unverified: Kermit, with the calculator as the client of a Kermit
-server on the PC (the reverse of the 48 kit), because the 38G reuses the
-48G software platform (src: [[sources/hpj-38g]] art. 6 p. 1). Listing a
-remote directory would then be a Kermit generic directory command.
+Answered by observation (below): Kermit, with the calculator as the
+client of a server on the PC (the reverse of the 48 kit). What stays open
+is the directory file and the aplet format.
 
 How to settle: boot a ROM in the emulator, choose SEND to a disk drive,
 and decode the bytes on the emulated UART; or read the connectivity kit

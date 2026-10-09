@@ -15,7 +15,7 @@ tags: [saturn, cpu]
 
 The opcode masks are concrete and assembler-tested, so the tutorial order is
 the working assumption. Confirm against the HP SASM manual
-(`raw/saturn-hardware/hp-tools-1991/`) or [[sources/voyage-48gx]].
+([[sources/sasm-reference]]) or [[sources/voyage-48gx]].
 
 ## Answer
 

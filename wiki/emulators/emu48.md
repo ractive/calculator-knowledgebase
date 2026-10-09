@@ -146,7 +146,9 @@ CHANGES.TXT has no dates ([[sources/emu48-changes]]).
   re-maps memory (flash write enable) (SP16); bank latch line A6 selects the
   upper half of the flash (SP15); flash is an Intel 28F160 command-set model
   with query table and block-lock status bits (SP17, SP28, SP47, SP51).
-  ROMs smaller than 2 MB are mirrored (SP19).
+  ROMs smaller than 2 MB are mirrored (SP19). (With the bit order the ROMs
+  need, A4 is the top bit of the high-window bank. Emu48's A6 may number
+  the latch differently; see [[questions/hp49g-bank-latch-bits]].)
 
 ## I/O register details
 
@@ -180,6 +182,10 @@ CHANGES.TXT has no dates ([[sources/emu48-changes]]).
 | 49G | 14 | 9 | 24 |
 | 38G | 14 | 9 | 24 |
 | 39G, 40G | 12 | 9 | 24 |
+
+The reset values match what the ROMs themselves write at a cold start:
+48SX J 11; 48GX R, 38G A and 49G 14; 39G/40G 12 (observed in saturnus
+2026-10-07).
 
 ## CPU
 

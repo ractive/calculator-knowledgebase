@@ -1,5 +1,5 @@
 ---
-title: How fast does a real 48SX run User RPL compared with the emulated cycle counts?
+title: How fast do real 48SX/48GX/49G run compared with the cycle counts?
 type: question
 status: open
 tags:
@@ -8,7 +8,7 @@ tags:
   - timing
 ---
 
-# How fast does a real 48SX run User RPL compared with the emulated cycle counts?
+# How fast do real 48SX/48GX/49G run compared with the cycle counts?
 
 saturnus times instructions with the SASM manual's approximate cycle counts
 (src: [[sources/sasm-reference]] 8) at a 2 MHz clock (src:
@@ -49,7 +49,7 @@ TICKS) gives:
 | 48SX | `0 1 n FOR X X ATAN SIN EXP 3 INV ^ + NEXT` | 100 | (no real figure) | 64214 ticks = 7.84 s | - |
 | 48GX | FOR/NEXT, UserRPL | 100 | 5.5 s (thread summary) | 29695 ticks = 3.62 s | 0.66 |
 | 48GX | Σ sum function | 100 | 5.9 s (thread summary) | 30478 ticks = 3.72 s | 0.63 |
-| 49G (ROM 2.10) | FOR/NEXT, radians | 100 | 5.5 s (post 195) | not measured (the in-process Kermit host command timed out on the 49G) | - |
+| 49G (ROM 2.10) | FOR/NEXT, radians | 100 | 5.5 s (post 195) | not measured here (the in-process Kermit host command timed out on the 49G; measured in iteration 7, see below) | - |
 
 The sums match the real machines digit for digit (139.297187047 for
 n=100; the thread lists 1395.3462877 for n=1000). So saturnus runs the

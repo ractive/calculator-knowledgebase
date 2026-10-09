@@ -68,8 +68,8 @@ XEQ, STO to TAN, ENTER (two keys wide) x≷y +/- E ←, then ▲ 7 8 9 ÷, ▼ 4
 | EXIT + LN | continuous self-test | [[sources/hosoda-hp42s]]; 42S ROM |
 | EXIT + + + XEQ | deep sleep | [[sources/hosoda-hp42s]] note 15 |
 
-The self-test steps (42S ROM): SPD (the measured speed, "SPD 08847" in
-saturnus at 1 MHz), BEEP, DISP (display patterns and the annunciators), ROM
+The self-test steps (42S ROM): SPD (the measured speed, "SPD 08847" to
+"SPD 08974" in saturnus at 1 MHz), BEEP, DISP (display patterns and the annunciators), ROM
 (the hardware CRC over #0001C-#1FFFB, expected #FFFF; on failure it prints
 the CRC), DRAM (display RAM), URAM (user RAM), an IR or further test that
 is skipped when status flag 8 is set, then "OK-42S" or "FAIL" with a code

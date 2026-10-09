@@ -76,7 +76,8 @@ clean-room saturnus emulator and comparing screens with saturnng 6.1.1
 
 - With the DA19 polarity from [[questions/da19-polarity]] (1 = upper ROM)
   and the bank latch modelled as on [[hardware/memory-controller]], ROM R
-  cold boots to "Try To Recover Memory?". NO then gives "Memory Clear"
+  cold boots to "Try To Recover Memory?" on the top line, YES on the first
+  menu key and NO on the sixth (F). NO then gives "Memory Clear"
   over the empty stack. The boot, arithmetic, menu, alpha, OFF/ON and card
   screens match saturnng pixel for pixel.
 - After that boot the OS has written 8 to #11F, as Mastracci 4.11 says

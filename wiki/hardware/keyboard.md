@@ -1,7 +1,7 @@
 ---
 title: "Keyboard matrix"
 type: hardware
-models: [48sx, 48gx, 49g, 38g, 39g, 40g]
+models: [48sx, 48gx, 49g, 38g, 39g, 40g, 42s]
 status: draft
 sources:
   - "[[sources/mastracci-saturn-guide]]"
@@ -40,8 +40,16 @@ tags: [saturn, keyboard]
   identical samples, so a keystroke takes more than 10 ms to register, and
   its service loop is synchronised to TIMER1 (src: [[sources/keyboard-ervin]]
   3.3). An emulator's key-press events must last long enough for this.
+- Measured on the saturnus emulator, waiting for SHUTDN after each key:
+  holds of 15 ms lose keys on the 48SX, 25 ms are reliable on the 48SX,
+  48GX and 49G; a repeated key needs a pause, since the release is seen
+  only at the next 1/16 s poll (the 49G loses repeats with gaps under
+  70 ms). Details on [[hardware/command-line]] "Key timing".
 - The alpha and shift keys are polled outside the keyboard service routine to
   update the annunciators (src: [[sources/keyboard-ervin]] 4.1.2).
+- On the 48SX the alpha annunciator blinks while the ROM redraws the
+  command line, up to about 250 ms after a key is released (observed in
+  saturnus, ROM J).
 
 - The handler restores OUT from its RAM shadow (#704C3 on S, #80642 on G), so
   a program scanning the keyboard with interrupts on must write its row mask
@@ -127,7 +135,8 @@ key is multiply.)
 
 Emu48's OutIn table for the 49G agrees key for key and applies to the 39G
 and 40G as well (src: [[sources/kml20]] OutIn codes HP49G). The 39G key
-names at each position are on [[hardware/hp39g-40g]].
+names at each position are on [[hardware/hp39g-40g]]. The 42S matrix is
+on [[hardware/hp42s]].
 
 ## Contradictions
 
@@ -181,8 +190,15 @@ saturnus skins, iteration 30):
   (ROOT DIFFE POLY SYS TVM), right shift + 7 the "Solve equation…"
   choose box of the SOLVE application.
 - **49G**: blue left shift (FILES above APPS), red right shift (PASTE
-  above NXT) (src: [[sources/hp49g-um]] p. 1-3).
-- **38G, 39G/40G, 42S**: one shift key.
+  above NXT) (src: [[sources/hp49g-um]] p. 1-3). On @ractive's unit the
+  left-shift labels are navy and the right-shift labels dark red.
+- **38G**: one shift key, light turquoise, its labels turquoise
+  (@ractive's photographs of a 38G, saturnus skin).
+- **39G/40G**: one orange SHIFT key, orange-red shifted labels
+  (@ractive's photo of an HP 39g+, whose keyboard is taken to be the
+  39G's; unverified on a 39G).
+- **42S**: one shift key, orange and unlabelled, orange shifted labels
+  (@ractive's photographs of a 42S).
 
 ## Time awake after a key (2026-10-09)
 
@@ -206,6 +222,10 @@ about 525 ms; the 48GX's about 155 or 520 ms; the 38G's about 60 or
 520 ms. A key pressed in that time may be lost: on the 48SX a second
 left shift pressed about 410 ms after √x was released, while the ROM
 was still awake, never lit the annunciator, and the √x after it ran
-unshifted. saturnus therefore waits up to the longest time per model
-before it sends the next queued key (saturnus decision log, "Key waits
-per model").
+unshifted. saturnus therefore waits for the CPU to sleep, at most the
+longest time per model plus a margin, before it sends the next queued
+key: 48SX 850 ms, 48GX 600, 49G 550, 38G 1100, 39G, 40G and 42S 300
+(saturnus decision log, "Key waits per model").
+
+For how fast a long command line can be typed, see
+[[hardware/command-line]] "Key timing".

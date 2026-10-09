@@ -157,6 +157,11 @@ HP's specification (src: [[sources/io-guide]] 3):
 
 (src: [[sources/mastracci-saturn-guide]] 4.7)
 
+On the 39G/40G ROM, #11A bit 3 also tells the models apart: read as 1, the
+ROM shows the 40G's CAS label (observed in saturnus 2026-10-05; that a 40G
+without an IR receiver reads the line high is inferred). See
+[[questions/hp39g-40g-model-detection]].
+
 Voyage gives the same bits with more detail (src: [[sources/voyage-48gx]]
 p. 198-199):
 

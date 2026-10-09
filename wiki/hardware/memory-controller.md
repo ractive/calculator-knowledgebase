@@ -179,8 +179,12 @@ size half of this table.)
 | 48GX, no cards | as 48G but RAM 128 KB #80000-#BFFFF; ROM #C0000-#FFFFF uncovered |
 | 48GX, card in slot 1 | slot 1 card at #C0000 (32 or 128 KB), empty slot 2 at #7E000 |
 | 48GX, cards in both | slot 1 and slot 2 both at #C0000, slot 1 covering slot 2 (CE2 > NCE3) |
+| 38G | I/O #00100; RAM 32 KB on NCE2 at #F0000; CE1 bank switcher #7F000; CE2 and NCE3 parked at #7E000 (ROM A1.67 in saturnus, [[questions/hp38g-memory-controllers]]) |
+| 39G/40G | I/O #00100; RAM 256 KB on NCE2 at #80000; CE1 configured only around a bank switch (4 KB at #7E000); CE2, NCE3 never configured ([[hardware/hp39g-40g]]) |
+| 49G | see [[hardware/hp49g]] "Controllers (Giesselink)" |
+| 42S (Lewis) | fixed map, no CONFIG: [[hardware/lewis]] |
 
-(src: [[sources/saturn-tutorial]] p. 154-158). A full GX bring-up sequence:
+(src: [[sources/saturn-tutorial]] p. 154-158, for the 48 rows). A full GX bring-up sequence:
 HDW #00100; NCE2 size #C0000, address #80000; CE1 size #FF000,
 address #7F000; CE2 and NCE3 size #C0000, address #C0000 (p. 154-155).
 
@@ -222,7 +226,10 @@ read; one that does not will show all 32 banks working.
 Unmapped reads return an open-bus value; windows align to their size; the
 bank latch only clocks when CE1 actually owns the address; addresses wrap
 at #FFFFF; SHUTDN and reset clear the bank flip-flop (src: [[emulators/emu48]]
-Memory controller, SHUTDN).
+Memory controller, SHUTDN). This is the 48GX's latch; the 49G's survives
+SHUTDN, since its ROM sleeps while running from a switched bank
+([[hardware/hp49g]] "Bring-up findings"). The 39G/40G are taken to do the
+same (saturnus, inferred).
 
 ## Takeover tricks that depend on this
 

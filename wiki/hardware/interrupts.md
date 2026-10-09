@@ -220,6 +220,10 @@ SHUTDN is skipped when a wake condition is already present (src:
 - Keyboard interrupts must respect INTOFF; the ON key and timers must not
   (src: [[sources/duchesne-interrupts-en]] 2.1; [[sources/keyboard-ervin]]
   4.1.2). See [[questions/interrupt-maskability]].
+- With only the keyboard scan masked by INTOFF (timers and UART not), the
+  48SX, 48GX and 49G ROMs boot and run their Kermit servers in saturnus;
+  this supports, but does not prove, Ervin's and Duchesne's reading
+  (saturnus decision log, iteration 4).
 - TIMER2 must run, or the ROM halts with "Clock corrupted" (src:
   [[sources/duchesne-interrupts-en]] p. 12).
 - On a 48S/SX, every controller must report configured (C=ID = 0) whenever an

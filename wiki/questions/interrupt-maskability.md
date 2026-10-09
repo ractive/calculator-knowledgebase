@@ -23,3 +23,10 @@ Reading: INTOFF gates only the keyboard scan; the timers, UART and IR are
 gated by their own enable bits in I/O RAM, which is what Mastracci and the
 tutorial call "maskable". Everything is gated by the in-service flag. Confirm
 with [[sources/voyage-48gx]].
+
+## Progress (2026-10-05)
+
+saturnus implements that reading (only the keyboard scan masked by INTOFF;
+timers and UART not), and the 48SX, 48GX, 49G, 38G and 39G/40G ROMs boot
+and run their Kermit servers with it (saturnus decision log, iterations 2
+and 4). That is consistent with the reading but does not prove it.

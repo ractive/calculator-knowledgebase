@@ -15,5 +15,5 @@ update rule that multiplies by #1081 and keeps 16 bits (src:
 ## Answer
 
 16 bits. Gariepy: "the 16 bit CRC at address #00104" (src:
-[[sources/checksum-crc]]). The register therefore spans #104-#107. Confirm
-the exact span when [[sources/voyage-48gx]] is ingested.
+[[sources/checksum-crc]]). The register therefore spans #104-#107. Emu48 also places it at #104-#107
+([[emulators/emu48]] SP15).

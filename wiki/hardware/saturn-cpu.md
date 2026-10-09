@@ -138,10 +138,11 @@ ch. 33-52 (p. 47-100). Facts an emulator needs beyond the table:
   and clear it when false; GOC/GONC do not change it (p. 41-42, 85, 89).
 - Add/subtract constant (818 group) encodes c-1 in the last nibble, c = 1-16
   (p. 60).
-- **Decimal-mode bug**: in DEC mode, add/subtract of a constant greater than
-  one on the S, XS, WP or P fields acts on the whole register and propagates
-  the carry beyond the field. HEX mode is unaffected (p. 59-60). An accurate
-  emulator must reproduce this.
+- Add/subtract constant and DEC mode: the tutorial describes a DEC-mode
+  bug on the S, XS, WP and P fields (p. 59-60). SASM lists these forms as
+  always hexadecimal (see "Facts settled" below); a hex add that overruns
+  from a single-nibble field circularly through the register reproduces
+  the tutorial's examples. Open points: [[questions/dec-mode-constant-bug]].
 - D0/D1 increment/decrement (n = 1-16), P=P+1/P=P-1 and C+P+1 always work in
   hex, whatever the mode, and set carry on wrap (p. 76, 93).
 - D0=/D1= with 2 or 4 nibbles replace only the low 2 or 4 nibbles of the
@@ -195,6 +196,13 @@ slows the CPU (p. 165); see [[hardware/display]].
   supports SASM for the 48SX and the Meta Kernel counts for the Yorke.
   With those tables, the real machines are still 19-34% slower than the
   counts at 2 / 4 MHz plus the display stall. The cause is unknown.
+- saturnus applies the gap as a calibration factor per model: 48SX 1.267,
+  48GX 1.335, 49G 1.205; the 38G is taken as a 48GX and the 39G/40G as a
+  49G (inferred, no benchmark). The factor scales instruction times only,
+  not SHUTDN time, since the timers run on the crystal. The 42S runs at
+  1 MHz with the SASM counts, factor 1 and no display stall (unverified;
+  see [[questions/lewis-clock-and-rate]]) (saturnus decision log,
+  iterations 7 and 15).
 - The 48SX's CPU clock is multiplied from the 32 kHz crystal ("8-MHz CPU
   clock", src: [[sources/hpj-48sx]] p. 30; the usual 2 MHz is a quarter
   of that, inferred). The G series runs at a "4-MHz bus rate" (src:

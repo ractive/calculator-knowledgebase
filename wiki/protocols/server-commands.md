@@ -95,7 +95,34 @@ From driving ROM J (48SX), ROM R (48GX) and ROM 2.15 (49G) in the
 - A command packet that arrives right after the client's final ACK of the
   previous transaction is lost: the server answers only after its own
   timeout (about 6 s) has sent a NAK and the client resent. A pause of
-  100 ms between transactions avoided it on all three models.
+  100 ms between transactions avoided it on all three models. The idle
+  server NAKs packet 0 about every 5 s (observed in saturnus, 2026-10-08).
+- A C packet resent after a lost ACK or a NAK runs again: the server runs
+  a command when it arrives and cannot tell a resend from a new one (seen
+  once on the emulated 49G under load). A C the server rejects is NAKed
+  about 11 ms after it arrives and does not run (48SX in saturnus) (hptx
+  calculator quirks, 2026-10-05).
+- The idle server's NAKs pile up in the host's input between commands, and
+  one is waiting when a host connects; discard input before each command
+  (hptx).
+- The `G D` reply on the 48GX and 49G begins with a line holding the
+  current path and the free bytes (`{ HOME } 127847`); the 48SX has none.
+  Lines end in CR LF; the 49G writes sizes and checksums with a trailing
+  point (`IOPAR 29.5 List 10777.`) (hptx traces `48sx-dir`, `48gx-dir`,
+  `49g-dir`).
+- A command whose client died mid-way is still finished; its reply arrives
+  as the answer to the next client's first command (hptx).
+- The 48SX loses keys typed within about 2 s after FINISH (hptx; saturnus
+  waits 2.5 s).
+- On the 49G in RPN mode, typing `SERVER` leaves a tagged `SERVER` and
+  `NOVAL` on the stack after the server ends; ALG mode and the 48GX leave
+  nothing. Alpha mode can still be on after the server ends (hptx,
+  saturnng 49G 2.15).
+- In server mode `LCD→` returns the "Awaiting Server Cmd." banner, never
+  the stack (hptx).
+- `PURGE` of a missing `:0:` port object raises no error (hptx).
+- `'SIN' CRDIR` is `Invalid Syntax`, as for `STO` (saturnus decision log,
+  "iteration 29: create a directory").
 - `STO` strips the tag of a tagged object (`:T:5 'X' STO` stores 5).
 - Flag -35 selects the transfer format for GET and SEND: set binary, clear
   ASCII; a fresh calculator of all three models is in ASCII mode.
@@ -108,10 +135,22 @@ From driving ROM J (48SX), ROM R (48GX) and ROM 2.15 (49G) in the
   second), the text comes back on level 1 as a string, with HP
   characters such as Σ for the trigraph `\GS`; the 48GX left nothing in
   the same case (saturnus, 2026-10-05).
+- On the 49G, ON pressed during a packet exchange (not during evaluation
+  of a C command) ends only that transaction; the server goes on serving,
+  and further presses of ON are needed to leave it (ROM 2.10; saturnus
+  decision log, "49G writes in algebraic mode", 2026-10-09).
 - The C text is parsed as an RPN command line on the 48SX and also on
   the 49G in ALG mode: `SIN(0.5)` without quotes is `Invalid Syntax` (the
   text is left on level 1 as a string); `'SIN(0.5)' EVAL` works. A fresh
   48SX is in degrees, the 49G in radians.
+- A server entered from algebraic mode on the 49G leaves the stack packed
+  in one list after FINISH, followed by the tagged command line `SERVER`
+  ([[hardware/hp48-system-ram]]). So -95 cannot be cleared by a host
+  command the way -35 can: clear it before typing `SERVER` (`CF(-95)` in
+  ALG mode) and set it again after FINISH (`-95 SF` in RPN mode). Inside
+  the server the host commands are RPN either way and the replies are the
+  same (ROM 2.10; saturnus decision log, "49G writes in algebraic mode",
+  2026-10-09).
 
 ## Compiling text through the server (saturnus, 2026-10-08)
 
@@ -129,7 +168,8 @@ RPN mode) while building its object editor, not from a document:
   the checksum of a variable is unchanged when its own decompiled text
   (every digit of a real, binary integers at 64 bits, tags as `:T:obj`)
   is stored back this way, for reals, complex numbers, strings,
-  algebraics, tagged objects, units, binaries, lists, arrays and programs
+  algebraics, tags inside lists (a tagged object itself loses its tag at
+  `STO`), units, binaries, lists, arrays and programs
   (also in FIX 3).
 - The reply shows numbers in the display mode (`SIZE` is `1.000` in
   FIX 3), so a host that reads a count from it reads the digits, not the
@@ -175,8 +215,19 @@ Measured on the saturnng emulator by hptx, 2026-10-05 (HP 49G ROM 2.15, HP
   CLOSEIO, clearing flag -33 and a container restart; only a fresh container
   fixed it.
 
+## Packets the server sends (saturnng, hptx traces, 2026-10-04)
+
+- Its S packet carries `~* @-#Y3` on the 48SX J, 48GX R and 49G 2.15:
+  MAXL 94, TIME 10, no padding, EOL CR, QCTL `#`, QBIN `Y`, CHKT 3, no
+  REPT field.
+- Its ACK to an I packet carries `~* @-# 3` (no 8-bit quoting).
+- The 49G sends a NAK before its S.
+- A GET of a missing name is answered with an E packet, `Undefined Name`.
+- Command packets (I, S, R, C, G) must use block check 1 even after an I
+  exchange agreed on 3; a C packet with a type-3 check is NAKed.
+
 ## Open
 
-- Exact text of the I/S packets the HP sends and of its E messages.
+- The text of the HP's other E messages.
 - Whether the 49G server supports more generic commands; the 49G uses XSERV
   for its richer server ([[protocols/xserv]]).

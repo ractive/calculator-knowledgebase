@@ -18,7 +18,8 @@ OUT #004 and shift-right on OUT #002 (src: [[sources/mastracci-saturn-guide]]
 
 - Ervin's Figure 1 labels the OUT #004 / IN #20 key "yel" and OUT #002 /
   IN #20 "blu" (src: [[sources/keyboard-ervin]] 3). On the 48SX the left
-  shift is the orange key (unverified), so left shift = #004, agreeing with
+  shift is the orange key ([[hardware/keyboard]], "Shift colours and
+  printed labels"), so left shift = #004, agreeing with
   5.8 / [[sources/teuwen-gx-hardware]] 9 and not with the Mastracci 4.9 table.
 - Ervin also gives the KeyState order "... MTH, 4, 5, 6, x, blu, A, 1 ..." with
   "yel" next to MTH (src: [[sources/keyboard-ervin]] Figure 2), consistent

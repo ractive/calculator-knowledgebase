@@ -15,8 +15,8 @@ send back. Transport (Kermit, XModem) is on [[protocols/kermit-hp]] and
 ## Objects in memory
 
 - Every object starts with a 5-nibble prolog identifying its type; RPLMAN
-  (in `raw/saturn-hardware/hp-tools-1991/`) is HP's reference for all
-  prologs (src: [[sources/hp48-faq]] 8.18). Examples: GROB #02B1E (FAQ 8.18),
+  (src: [[sources/rplman]]) is HP's reference for all prologs (src:
+  [[sources/hp48-faq]] 8.18). Examples: GROB #02B1E (FAQ 8.18),
   string #02A2C (src: [[sources/saturn-tutorial]] p. 81), library #02B40
   (src: [[sources/checksum-crc]], written "04B20" in memory order).
 - Every multi-nibble field is stored low nibble first, so the GROB
@@ -131,6 +131,13 @@ lengths counted in nibbles, every field low nibble first):
   program (6.12).
 - The \->ASC / ASC\-> programs are a separate, older text encoding of binary
   objects with a checksum (7.6). Not a calculator built-in.
+- An ASCII transfer of a string has two layers. The 49G's string syntax
+  escapes `\"` and `\\`, and translation 2 or 3 then doubles each
+  backslash, so one 49G backslash becomes four in T(3) text. The 48 has no
+  escapes in strings and writes a string holding `"` as `C$ n` (hptx,
+  2026-10-05).
+- In ASCII mode a fresh 48SX did not keep bytes 0-26 of a 256-byte file
+  through a round trip; all 256 survive in binary mode (hptx).
 
 ### ASCII transfer and stack display (saturnus, 2026-10-05)
 
@@ -202,8 +209,17 @@ From binary GETs (flag -35 set) on ROM J (48SX), ROM R (48GX) and ROM 2.15
   `Integer`), not a real.
 - `LCD\->` returns a 131x64 GROB (length field #0088F) on all three models.
 
+## Character set
+
+Bytes 0-127 are ASCII and 160-255 ISO 8859-1. 128-159 are, in order:
+∡ x̄ ∇ √ ∫ Σ ▶ π ∂ ≤ ≥ ≠ α → ← ↓ ↑ γ δ ε η θ λ ρ σ τ ω Δ Π Ω ■ ∞ (checked by
+hptx against a 48SX string holding every character from 128 to 255;
+saturnus `charset.rs`). A host command takes these bytes, not the trigraphs
+([[protocols/server-commands]]).
+
 ## Open
 
 - Padding when the object has an odd number of nibbles:
   [[questions/binary-odd-nibble-padding]].
-- Header for 49G, 38G, 39G/40G objects.
+- Header and file format of 38G and 39G/40G aplets
+  ([[questions/hp38g-39g-transfer-protocol]]).

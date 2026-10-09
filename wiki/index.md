@@ -94,6 +94,7 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 - [[hardware/memory-controller]] — Memory controller: daisy-chain CONFIG, UNCNFG, RESET, C=ID (draft)
 - [[hardware/saturn-cpu]] — Saturn CPU: registers, flags, instruction classes (draft)
 - [[hardware/system-flags-48gx]] — System flags -1 to -64 of the 48G/GX: name, clear and set meaning per flag, from the User's Guide (draft)
+- [[hardware/system-flag-fields]] — The multi-flag fields (word size, base, coordinates, angle, digits, format) of the 48SX, 48GX and 49G in plain words, with their named settings (draft)
 - [[hardware/system-flags-48sx]] — System flags -1 to -64 of the 48S/SX: name, clear and set meaning per flag, from the Owner's Manual (draft)
 - [[hardware/system-flags-49g]] — System flags of the 49G from the Pocket Guide: 103 described with defaults, 25 not listed (draft)
 - [[hardware/timers]] — Timers (draft)

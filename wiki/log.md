@@ -535,3 +535,14 @@ New types beside `hardware`, `protocol`, `source`, `question`: `model`
 RAM, RPL libraries) and `file-format` ([[protocols/hp-object-format]]);
 `emulator-note` became `emulator`. `models` items and `sources` links are
 checked by pattern. Page paths are unchanged.
+
+## [2026-10-09] lint | Schema and tag tidy
+
+Every type now declares `tags` as a list and checks `models` and `sources`
+by pattern where it allows them; `authors` on sources is a list, and
+emulator and synthesis pages may list `sources`.
+[[emulators/emu48]] lists the four sources it cites. Tags: `49g` folded
+into `hp49g`, the all-numeric `48` into `hp48`; `memory` added to
+[[questions/hp49g-bank-latch-bits]] and [[questions/lewis-memory-map]]
+(suggested by a Jev pass over the 35 question pages, checked by hand).
+Page paths are unchanged.

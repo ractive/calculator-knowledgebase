@@ -34,5 +34,5 @@ use and the 49G padding limit; retry and timeout values.
 Working client code by an HP engineer, but with visible defects: the
 "CRC16" routine is a reflected table labelled by Graves as "obviously wrong"
 and "not detected in use with HP49", and the CRC byte order differs between
-the send and receive paths. The HP-CRC routine (`StringCrc`) lives in a unit
+the send and receive paths. The HP-CRC routine lives in a unit
 that is not in raw/. Treat byte-order details as unverified.

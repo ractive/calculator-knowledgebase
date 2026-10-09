@@ -36,12 +36,14 @@ implementations from it. Therefore:
   two, in quotes, attributed. No copied tables, code or page layouts from
   any document.
 - GPL emulator source code (Emu48, Emu42, x48ng, saturnng, ...) is never
-  copied or paraphrased here. Reading it to learn a hardware fact is
-  allowed: record the fact with a citation and no code, no function names,
-  no data-structure layouts. Prefer the emulators' manuals and change logs
-  and black-box runs; say which.
-- The same applies to other source code with restrictive terms (the Conn4x
-  sources are non-commercial): facts only.
+  opened for this wiki, not even to look up a fact. Facts about emulators
+  come from their published documentation (manuals, KML and skin docs,
+  change logs, forum posts by their authors) and from black-box runs; the
+  citation says which.
+- Other source code with restrictive terms is not opened either. The one
+  exception is the Conn4x sources (non-commercial licence), already read
+  for the XSERV and HP XModem facts because no prose specification exists:
+  facts only, no code, no routine names, no layouts copied from it.
 - No ROM images, and no private material (photographs of someone's own
   calculators or manuals, local file paths, personal data).
 

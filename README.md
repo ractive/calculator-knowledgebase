@@ -39,7 +39,10 @@ are restated in our own words; quotations are kept to a sentence or two
 and attributed. GPL emulator source code is not reproduced here, and nothing
 here is taken from it: the emulator pages draw on the emulators' manuals
 and change logs, and on black-box runs. Emulator change logs and manuals
-were read for facts, never their source code. If you implement from these notes,
+were read for facts, never their source code. The one exception is HP's
+Conn4x connectivity kit, whose source was read for the XSERV and HP XModem
+facts because no written specification exists: facts only, no code or
+routine names. If you implement from these notes,
 implement from the notes, not with someone else's source open beside you.
 
 No ROM images are included.

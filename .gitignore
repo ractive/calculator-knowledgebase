@@ -5,3 +5,6 @@ wiki/.obsidian/workspace*
 .hyalo-index
 __pycache__/
 *.part
+
+# Local agent tooling (hyalo init --claude), not part of the knowledge base
+.claude/

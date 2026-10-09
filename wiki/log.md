@@ -548,3 +548,14 @@ into `hp49g`, the all-numeric `48` into `hp48`; `memory` added to
 [[questions/hp49g-bank-latch-bits]] and [[questions/lewis-memory-map]]
 (suggested by a Jev pass over the 35 question pages, checked by hand).
 Page paths are unchanged.
+
+## [2026-10-09] query | Multi-flag fields as a flags list shows them
+
+saturnus' Flags tab showed the model pages' notes about the sources ("bit
+order not given in the guide") as help text, and could not name the
+setting a field holds. New page [[hardware/system-flag-fields]]: per model
+and field, a plain-words description where the Clear column holds notes,
+and the named settings with the flags each needs, restated from the model
+pages. The notes stay on [[hardware/system-flags-48sx]],
+[[hardware/system-flags-48gx]] and [[hardware/system-flags-49g]], which
+now link to it; saturnus' `scripts/flags-json.py` reads both.

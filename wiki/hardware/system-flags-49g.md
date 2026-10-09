@@ -42,7 +42,8 @@ default of -90 (see Contradictions).
 - All four photographs are legible; no entry was guessed.
 
 Multi-flag fields are one row with a range; their encoding is in the
-Clear column.
+Clear column. The fields' plain-words descriptions and named settings,
+for a flags list: [[hardware/system-flag-fields]].
 
 The table is parsed by saturnus' `scripts/flags-json.py`; keep its columns,
 its Flags syntax (`-1` or `-5..-10`), the Topic and Status vocabularies, and

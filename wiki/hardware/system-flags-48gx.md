@@ -29,7 +29,9 @@ cross-check, and its page numbers are not repeated per row.
 
 Multi-flag fields are one row with a range; their encoding is in the Clear
 column. The guides say how many bits the word size and digit count take but
-not their bit order; that is left open here rather than filled in.
+not their bit order; that is left open here rather than filled in. The
+fields' plain-words descriptions and named settings, for a flags list:
+[[hardware/system-flag-fields]].
 
 The table is parsed by saturnus' `scripts/flags-json.py`; keep its columns,
 its Flags syntax (`-1` or `-5..-10`), the Topic and Status vocabularies, and

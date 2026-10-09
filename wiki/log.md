@@ -164,7 +164,9 @@ Swept for claims overturned by later sources: corrected the DA19 polarity in
 memory-controller, hp48gx and display, and the #100 offset axis in display.
 Stubs: hardware/hp38g, hardware/hp39g-40g. Questions: 23 (12 open, 11 answered).
 Rewrote [[overview]] with the big picture and the next sources to ingest
-(RPLMAN, HP Journal 38G, first Voyage book, x48ng/saturnng trees).
+(RPLMAN, HP Journal 38G, first Voyage book, and the x48ng and saturnng
+manuals and change logs: documentation only; their source code is not read
+for this wiki).
 
 ## [2026-10-04] setup | Linked the hptx and saturnus repos
 

@@ -4,6 +4,11 @@ type: emulator
 emulator: Emu48
 status: draft
 tags: [emu48, emulator, hardware]
+sources:
+  - "[[sources/emu48-manual]]"
+  - "[[sources/emu48-changes]]"
+  - "[[sources/kml20]]"
+  - "[[sources/io-guide]]"
 ---
 
 # Emu48

@@ -556,6 +556,6 @@ order not given in the guide") as help text, and could not name the
 setting a field holds. New page [[hardware/system-flag-fields]]: per model
 and field, a plain-words description where the Clear column holds notes,
 and the named settings with the flags each needs, restated from the model
-pages. The notes stay on [[hardware/system-flags-48sx]] and
-[[hardware/system-flags-48gx]], which now link to it; saturnus'
-`scripts/flags-json.py` reads both.
+pages. The notes stay on [[hardware/system-flags-48sx]],
+[[hardware/system-flags-48gx]] and [[hardware/system-flags-49g]], which
+now link to it; saturnus' `scripts/flags-json.py` reads both.

@@ -1,6 +1,6 @@
 ---
 title: "System flags: HP 49G"
-type: hardware
+type: rom-behaviour
 models: [49g]
 status: draft
 sources: ["[[sources/hp49g-pocket-guide]]", "[[sources/hp49g-aug]]", "[[sources/hp49g-um]]"]

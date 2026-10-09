@@ -1,6 +1,6 @@
 ---
 title: "Emu48: hardware behaviour it encodes"
-type: emulator-note
+type: emulator
 emulator: Emu48
 status: draft
 tags: [emu48, emulator, hardware]

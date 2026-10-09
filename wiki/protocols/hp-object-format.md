@@ -1,6 +1,6 @@
 ---
 title: "HP object and transfer file formats (binary HPHP48-x, ASCII %%HP)"
-type: protocol
+type: file-format
 status: draft
 sources: ["[[sources/hp48-faq]]", "[[sources/rplman]]", "[[sources/hp48-kermit-hints]]", "[[sources/conn4x-ymodem-pas]]", "[[sources/checksum-crc]]", "[[sources/saturn-tutorial]]"]
 tags: [object-format, binary, ascii, transfer, hptx]

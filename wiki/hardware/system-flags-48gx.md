@@ -1,6 +1,6 @@
 ---
 title: "System flags: HP 48G / 48GX"
-type: hardware
+type: rom-behaviour
 models: [48gx]
 status: draft
 sources: ["[[sources/hp48g-ug]]", "[[sources/hp48g-aur]]"]

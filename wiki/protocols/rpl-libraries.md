@@ -1,9 +1,13 @@
 ---
 title: "RPL libraries in ROM: headers, hash and link tables, command names (48SX, 48GX, 49G)"
-type: protocol
+type: rom-behaviour
 status: draft
 sources: ["[[sources/rplman]]", "[[sources/hp48-sdk-makerom]]"]
 tags: [rpl, library, xlib, decompiler, rom]
+models:
+  - 48sx
+  - 48gx
+  - 49g
 ---
 
 # RPL libraries in ROM

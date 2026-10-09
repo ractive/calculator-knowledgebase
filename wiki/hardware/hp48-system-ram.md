@@ -1,6 +1,6 @@
 ---
 title: "System RAM: HOME, current directory, data stack and flags (48SX, 48GX, 49G)"
-type: hardware
+type: rom-behaviour
 models: [48sx, 48gx, 49g]
 status: draft
 sources: ["[[sources/hp48-internals-address-list]]", "[[sources/rplman]]", "[[sources/hpregint-fr]]"]

@@ -1,6 +1,6 @@
 ---
 title: "System flags: HP 48S / 48SX"
-type: hardware
+type: rom-behaviour
 models: [48sx]
 status: draft
 sources: ["[[sources/hp48sx-om]]", "[[sources/hp48-faq]]"]

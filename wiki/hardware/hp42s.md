@@ -1,6 +1,6 @@
 ---
 title: "HP 42S"
-type: hardware
+type: model
 models: [42s]
 status: draft
 sources:

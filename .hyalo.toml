@@ -21,6 +21,17 @@ required = ["title", "type", "models", "status", "sources", "tags"]
 type = "enum"
 values = ["stub", "draft", "reviewed"]
 
+[schema.types.hardware.properties.models]
+type = "string-list"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s)$"
+
+[schema.types.hardware.properties.sources]
+type = "string-list"
+item_pattern = "^\\[\\[sources/[a-z0-9-]+\\]\\]$"
+
+[schema.types.hardware.properties.tags]
+type = "list"
+
 [schema.types.protocol]
 required = ["title", "type", "status", "sources", "tags"]
 
@@ -28,12 +39,13 @@ required = ["title", "type", "status", "sources", "tags"]
 type = "enum"
 values = ["stub", "draft", "reviewed"]
 
-[schema.types.emulator-note]
-required = ["title", "type", "emulator", "status", "tags"]
+[schema.types.protocol.properties.models]
+type = "string-list"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s)$"
 
-[schema.types.emulator-note.properties.status]
-type = "enum"
-values = ["stub", "draft", "reviewed"]
+[schema.types.protocol.properties.sources]
+type = "string-list"
+item_pattern = "^\\[\\[sources/[a-z0-9-]+\\]\\]$"
 
 [schema.types.decision]
 required = ["title", "type", "date", "status", "tags"]
@@ -52,6 +64,14 @@ required = ["title", "type", "status", "tags"]
 type = "enum"
 values = ["open", "answered"]
 
+[schema.types.question.properties.sources]
+type = "string-list"
+item_pattern = "^\\[\\[sources/[a-z0-9-]+\\]\\]$"
+
+[schema.types.question.properties.models]
+type = "string-list"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s)$"
+
 [schema.types.synthesis]
 required = ["title", "type", "date", "sources", "tags"]
 
@@ -60,6 +80,105 @@ type = "date"
 
 [schema.types.meta]
 required = ["title", "type"]
+
+[schema.types.model]
+required = ["title", "type", "models", "status", "sources", "tags"]
+
+[schema.types.model.properties]
+
+[schema.types.model.properties.status]
+type = "enum"
+values = ["stub", "draft", "reviewed"]
+
+[schema.types.model.properties.models]
+type = "string-list"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s)$"
+
+[schema.types.model.properties.sources]
+type = "string-list"
+item_pattern = "^\\[\\[sources/[a-z0-9-]+\\]\\]$"
+
+[schema.types.model.properties.tags]
+type = "list"
+
+[schema.types.model.properties.title]
+type = "string"
+
+[schema.types.model.properties.type]
+type = "string"
+
+[schema.types.rom-behaviour]
+required = ["title", "type", "models", "status", "sources", "tags"]
+
+[schema.types.rom-behaviour.properties]
+
+[schema.types.rom-behaviour.properties.status]
+type = "enum"
+values = ["stub", "draft", "reviewed"]
+
+[schema.types.rom-behaviour.properties.sources]
+type = "string-list"
+item_pattern = "^\\[\\[sources/[a-z0-9-]+\\]\\]$"
+
+[schema.types.rom-behaviour.properties.tags]
+type = "list"
+
+[schema.types.rom-behaviour.properties.models]
+type = "string-list"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s)$"
+
+[schema.types.rom-behaviour.properties.title]
+type = "string"
+
+[schema.types.rom-behaviour.properties.type]
+type = "string"
+
+[schema.types.file-format]
+required = ["title", "type", "status", "sources", "tags"]
+
+[schema.types.file-format.properties]
+
+[schema.types.file-format.properties.status]
+type = "enum"
+values = ["stub", "draft", "reviewed"]
+
+[schema.types.file-format.properties.sources]
+type = "string-list"
+item_pattern = "^\\[\\[sources/[a-z0-9-]+\\]\\]$"
+
+[schema.types.file-format.properties.tags]
+type = "list"
+
+[schema.types.file-format.properties.models]
+type = "string-list"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s)$"
+
+[schema.types.file-format.properties.title]
+type = "string"
+
+[schema.types.file-format.properties.type]
+type = "string"
+
+[schema.types.emulator]
+required = ["title", "type", "emulator", "status", "tags"]
+
+[schema.types.emulator.properties]
+
+[schema.types.emulator.properties.status]
+type = "enum"
+values = ["stub", "draft", "reviewed"]
+
+[schema.types.emulator.properties.tags]
+type = "list"
+
+[schema.types.emulator.properties.emulator]
+type = "string"
+
+[schema.types.emulator.properties.title]
+type = "string"
+
+[schema.types.emulator.properties.type]
+type = "string"
 
 [views.stubs]
 properties = ["status=stub"]

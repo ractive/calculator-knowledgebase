@@ -1,6 +1,6 @@
 ---
 title: "HP 38G"
-type: hardware
+type: model
 models: [38g]
 status: draft
 sources:

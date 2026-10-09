@@ -527,3 +527,11 @@ the server ([[protocols/iopar]]); XModem name conflicts and ALG mode
 (all still open). Answered the bit order part of
 [[questions/hp48sx-system-flags]] (inferred). Replaced `raw/` mentions that
 the manifest does not resolve. Updated [[index]] and [[overview]].
+
+## [2026-10-09] lint | Page types
+
+New types beside `hardware`, `protocol`, `source`, `question`: `model`
+(the six model pages), `rom-behaviour` (system flags, command line, system
+RAM, RPL libraries) and `file-format` ([[protocols/hp-object-format]]);
+`emulator-note` became `emulator`. `models` items and `sources` links are
+checked by pattern. Page paths are unchanged.

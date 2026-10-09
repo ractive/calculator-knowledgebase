@@ -65,9 +65,12 @@ against the hosting sites more often than needed.
 | Directory | Page type | Purpose |
 | --- | --- | --- |
 | `sources/` | `source` | One page per document: what it is, what it covers, reliability, where the useful parts are (page numbers). |
-| `hardware/` | `hardware` | One page per subsystem (saturn-cpu, memory-controller, io-ram, display, keyboard, timers, uart, interrupts, ...) and one per model. |
-| `protocols/` | `protocol` | Kermit, the HP Kermit quirks and server commands, XModem and its HP variants, HP object/binary format, IOPAR. |
-| `emulators/` | `emulator-note` | Facts learned from Emu48 and other emulators' documentation: hardware behaviours they encode. Facts only. |
+| `hardware/` | `hardware` | One page per subsystem (saturn-cpu, memory-controller, io-ram, display, keyboard, timers, uart, interrupts, lewis, ...). |
+| `hardware/` | `model` | One page per calculator model (hp48sx, hp48gx, hp49g, hp38g, hp39g-40g, hp42s). |
+| `hardware/`, `protocols/` | `rom-behaviour` | What the ROM does, as observed or documented: system flags, command line, system RAM layout, RPL libraries and menus. |
+| `protocols/` | `protocol` | Kermit, the HP Kermit quirks and server commands, XModem and its HP variants, XSERV, IOPAR. |
+| `protocols/` | `file-format` | The HP object and binary file formats, ASCII transfer format, character set. |
+| `emulators/` | `emulator` | Facts learned from Emu48 and other emulators' documentation: hardware behaviours they encode. Facts only. |
 | `decisions/` | `decision` | Design decisions, ADR style. |
 | `questions/` | `question` | Open questions, contradictions between sources, things to verify on hardware. |
 | `synthesis/` | `synthesis` | Answers worth keeping: comparisons, analyses, roadmaps. |
@@ -78,9 +81,13 @@ against the hosting sites more often than needed.
 ## Page conventions
 
 - Filenames: kebab-case, no dates in names.
-- Frontmatter per type is enforced by `.hyalo.toml`. Common keys: `title`,
-  `type`, `tags`, `status`, `sources` (list of `[[sources/...]]` links),
-  `models` (subset of `48sx, 48gx, 49g, 38g, 39g, 40g`).
+- Frontmatter per type is enforced by `.hyalo.toml` (`hyalo types list`,
+  `hyalo types show <type>`). Common keys: `title`, `type`, `tags`, `status`
+  (`stub|draft|reviewed`; questions `open|answered`; sources
+  `unread|skimmed|digested`), `sources` (list of `[[sources/...]]` links),
+  `models` (subset of `48sx, 48gx, 49g, 38g, 39g, 40g, 42s`). The type
+  says what a page is; the directory stays fixed because other projects
+  cite page paths. Change schemas with `hyalo types set`.
 - Every hardware or protocol fact carries a citation inline:
   `(src: [[sources/voyage-48gx]] p. 212)` or
   `(src: [[emulators/emu48]] CHANGES SP43)` (Emu48's change log has

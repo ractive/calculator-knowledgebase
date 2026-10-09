@@ -1,6 +1,6 @@
 ---
 title: "HP 48G / 48GX"
-type: hardware
+type: model
 models: [48gx]
 status: draft
 sources: ["[[sources/mastracci-saturn-guide]]", "[[sources/teuwen-gx-hardware]]", "[[sources/bank-horn]]", "[[sources/saturn-tutorial]]"]

@@ -1,6 +1,6 @@
 ---
 title: "The command line (edit line) in RAM, its keys and typing speed (48SX, 48GX, 49G)"
-type: hardware
+type: rom-behaviour
 models: [48sx, 48gx, 49g]
 status: draft
 sources: ["[[sources/hp48sx-om]]", "[[sources/rplman]]", "[[sources/hp48-internals-address-list]]"]

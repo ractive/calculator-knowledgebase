@@ -2,7 +2,7 @@
 title: "HP 49G system flags the Pocket Guide does not cover"
 type: question
 status: open
-tags: [49g, flags, rom]
+tags: [hp49g, flags, rom]
 ---
 
 # HP 49G system flags the Pocket Guide does not cover

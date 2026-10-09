@@ -5,7 +5,7 @@ authors: ["Hewlett-Packard"]
 year: 1999
 raw: "raw/manuals/hp-graph-calc-connectivity.pdf"
 status: digested
-tags: [38g, 48, 49g, connectivity, pc]
+tags: [38g, hp49g, connectivity, pc, hp48]
 ---
 
 # HP Graphing Calculator PC Connectivity Kit User Guide

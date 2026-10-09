@@ -2,7 +2,7 @@
 title: "How does the Lewis decode memory: fixed map or configurable windows?"
 type: question
 status: open
-tags: [lewis, memory-controller, 42s]
+tags: [lewis, memory-controller, 42s, memory]
 ---
 
 # How does the Lewis decode memory: fixed map or configurable windows?

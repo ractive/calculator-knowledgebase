@@ -1,0 +1,7 @@
+raw/
+.DS_Store
+.obsidian/workspace*
+wiki/.obsidian/workspace*
+.hyalo-index
+__pycache__/
+*.part

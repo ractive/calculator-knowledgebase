@@ -1,0 +1,4673 @@
+{
+  "about": "Source documents cited by the wiki. None of them is in this repository; scripts/fetch-sources downloads the 'fetch' and 'zip-member' entries into raw/ and lists the rest.",
+  "methods": {
+    "fetch": "download url to path",
+    "zip-member": "extract member from zip (a path in this manifest) or from zip_url (downloaded to a temporary file)",
+    "manual": "no stable URL; follow instructions",
+    "derived": "made locally from derived_from; command if given, else see how"
+  },
+  "entries": [
+    {
+      "path": "emulator-docs/KML20R23.ZIP",
+      "method": "fetch",
+      "title": "EmuXY and KML 2.0 (KML scripting language)",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "2024",
+      "terms": "not checked",
+      "url": "https://hp.giesselink.com/Emu48/KML20R23.ZIP",
+      "size": 15273,
+      "sha256": "dd34639e01eee6177eaf79ad0aa5ad98bc0b492dbb73d4c5a0e3d5a37a4e462d"
+    },
+    {
+      "path": "emulator-docs/emu42/CHANGES.TXT",
+      "method": "fetch",
+      "title": "Emu42 changelog",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "2026",
+      "terms": "GPL package",
+      "url": "https://hp.giesselink.com/Emu42/CHANGES.TXT",
+      "size": 119323,
+      "sha256": "14e108be3e0fd697766d137a360d1748b24911212b4cefeb104fbaccc7d4166f",
+      "hash_stable": false,
+      "notes": "Updated with each release; a newer copy will not match the hash.",
+      "wiki": [
+        "sources/emu42-changes"
+      ]
+    },
+    {
+      "path": "emulator-docs/emu42/CLAMSHEL.TXT",
+      "method": "zip-member",
+      "title": "ROM dump procedure for the Clamshell series (28C/28S)",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "2007",
+      "terms": "free for personal use only (the listing)",
+      "zip_url": "https://hp.giesselink.com/Emu28/CPROMUPL.ZIP",
+      "member": "CLAMSHEL.TXT",
+      "size": 12689,
+      "sha256": "bb26bb94fb6932a84e4dd0c2216c739be34362b0aa01995d3d7b83c71ace0a54"
+    },
+    {
+      "path": "emulator-docs/emu42/Emu42.htm",
+      "method": "fetch",
+      "title": "Emu42 Manual",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "2025",
+      "terms": "Emu42 is GPL; manual read for facts",
+      "url": "https://hp.giesselink.com/Emu42/Emu42.htm",
+      "size": 32485,
+      "sha256": "5f718b6792ec8393a03fe90b44738f7e7c0cb42ecc1aeb9ed50f09e0f280d738",
+      "hash_stable": false
+    },
+    {
+      "path": "emulator-docs/emu42/Emu42.txt",
+      "method": "derived",
+      "title": "Emu42 Manual (text)",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "2025",
+      "terms": "Emu42 is GPL; manual read for facts",
+      "derived_from": "emulator-docs/emu42/Emu42.htm",
+      "command": "textutil -convert txt -output emulator-docs/emu42/Emu42.txt emulator-docs/emu42/Emu42.htm",
+      "how": "macOS textutil",
+      "size": 25405,
+      "sha256": "f32bf2ea5b36ffc7fe253191061792a119275a5e3adbd84df1acb51f4741e315",
+      "hash_stable": false,
+      "wiki": [
+        "sources/emu42-manual"
+      ]
+    },
+    {
+      "path": "emulator-docs/emu42/LEWISCRC.TXT",
+      "method": "zip-member",
+      "title": "LEWISCRC readme",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "2022",
+      "terms": "freeware",
+      "zip_url": "https://hp.giesselink.com/Emu42/e42b133.zip",
+      "member": "LEWISCRC.TXT",
+      "size": 1369,
+      "sha256": "5432972e69061f61a666e06754d614d655d7049694e73d214b0529c7adfa0c04"
+    },
+    {
+      "path": "emulator-docs/emu42/PIONEER.TXT",
+      "method": "zip-member",
+      "title": "ROM dump procedure for the Pioneer series (17B/17BII/27S/42S)",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "2009",
+      "terms": "free for personal use only (the listing)",
+      "zip_url": "https://hp.giesselink.com/Emu28/CPROMUPL.ZIP",
+      "member": "PIONEER.TXT",
+      "size": 10299,
+      "sha256": "835f750d93b91bcaa434630faedb2a2f047c0d5edf2f98735426d321f3f584e4",
+      "wiki": [
+        "sources/emu42-pioneer-dump"
+      ]
+    },
+    {
+      "path": "emulator-docs/emu42/PROBLEMS.TXT",
+      "method": "zip-member",
+      "title": "Emu42 1.33 known restrictions",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "2025",
+      "terms": "GPL package",
+      "zip_url": "https://hp.giesselink.com/Emu42/e42b133.zip",
+      "member": "PROBLEMS.TXT",
+      "size": 779,
+      "sha256": "af7e6a421e65432d64f98290534b8c3eedb303226f2a12b8c327e815b2c873a3",
+      "wiki": [
+        "sources/emu42-problems"
+      ]
+    },
+    {
+      "path": "emulator-docs/emu48-manual/Emu48.htm",
+      "method": "fetch",
+      "title": "Emu48 Manual",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "",
+      "terms": "Emu48 is GPL; the manual has its own licence section",
+      "url": "https://hp.giesselink.com/Emu48/Emu48.htm",
+      "size": 36099,
+      "sha256": "7c2c4cb8abdcc88499d6aafea22976c8bf35663a97a0e17fb257095de44d254b",
+      "hash_stable": false
+    },
+    {
+      "path": "emulator-docs/emu48-manual/Emu48.txt",
+      "method": "derived",
+      "title": "Emu48 Manual (text)",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "",
+      "terms": "Emu48 is GPL; the manual has its own licence section",
+      "derived_from": "emulator-docs/emu48-manual/Emu48.htm",
+      "command": "textutil -convert txt -output emulator-docs/emu48-manual/Emu48.txt emulator-docs/emu48-manual/Emu48.htm",
+      "how": "macOS textutil",
+      "size": 25321,
+      "sha256": "7cbf755aee99b8a7219d3e083ef165fe38a37dfeac2a62b2530a9f619b78005a",
+      "hash_stable": false,
+      "wiki": [
+        "sources/emu48-manual"
+      ]
+    },
+    {
+      "path": "emulator-docs/kml20/KML_20.DOC",
+      "method": "zip-member",
+      "title": "EmuXY and KML 2.0 (KML scripting language)",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "2024",
+      "terms": "not checked",
+      "zip": "emulator-docs/KML20R23.ZIP",
+      "member": "KML_20.DOC",
+      "size": 215712,
+      "sha256": "3f64c5e0ebe282be84e18e445978fe3b9cf6bcbe78402e3ddeb2494b5638dedd"
+    },
+    {
+      "path": "emulator-docs/kml20/KML_20.txt",
+      "method": "derived",
+      "title": "EmuXY and KML 2.0 (KML scripting language) (text)",
+      "authors": [
+        "Christoph Gießelink"
+      ],
+      "year": "2024",
+      "terms": "not checked",
+      "derived_from": "emulator-docs/kml20/KML_20.DOC",
+      "command": "textutil -convert txt -output emulator-docs/kml20/KML_20.txt emulator-docs/kml20/KML_20.DOC",
+      "how": "macOS textutil (the .DOC is RTF)",
+      "size": 34137,
+      "sha256": "bcc2c614301f6e80d3ca9b3894258315ca57ea500f5992267fdf53360fd2a592",
+      "hash_stable": false,
+      "wiki": [
+        "sources/kml20"
+      ]
+    },
+    {
+      "path": "hp42s/garnier-hp42s-new-facts.html",
+      "method": "fetch",
+      "title": "HP-42S: New Facts",
+      "authors": [
+        "Jean-François Garnier"
+      ],
+      "year": "2002",
+      "terms": "not stated",
+      "url": "https://web.archive.org/web/20251011210330/https://www.hpmuseum.org/cgi-bin/articles.cgi?read=266",
+      "details_url": "https://www.hpmuseum.org/cgi-bin/articles.cgi?read=266",
+      "size": 15248,
+      "sha256": "9a80933a0693a0e676462db860cf6c772e2ba86226f4a88f1da080f8a847d4f9",
+      "hash_stable": false,
+      "notes": "Saved from the Wayback Machine with its toolbar; a fresh copy will differ in bytes."
+    },
+    {
+      "path": "hp42s/garnier-hp42s-new-facts.txt",
+      "method": "derived",
+      "title": "HP-42S: New Facts (text)",
+      "authors": [
+        "Jean-François Garnier"
+      ],
+      "year": "2002",
+      "terms": "not stated",
+      "derived_from": "hp42s/garnier-hp42s-new-facts.html",
+      "command": "textutil -convert txt -output hp42s/garnier-hp42s-new-facts.txt hp42s/garnier-hp42s-new-facts.html",
+      "how": "macOS textutil",
+      "size": 9184,
+      "sha256": "fd872c08a00dd8e9ff666934f3e483c7547086a0e49e9b46e95a7963501dd09d",
+      "hash_stable": false,
+      "wiki": [
+        "sources/garnier-hp42s-new-facts"
+      ]
+    },
+    {
+      "path": "hp42s/hosoda-hp42s-memory-overclock.html",
+      "method": "fetch",
+      "title": "HP-42S memory upgrade and overclock",
+      "authors": [
+        "Takayuki Hosoda"
+      ],
+      "year": "2007-2020",
+      "terms": "not stated",
+      "url": "http://www.finetune.co.jp/~lyuka/interests/calc/hp42s/",
+      "size": 34349,
+      "sha256": "dfbe21c60cc2c3780fc70dbc5433a46bc81e858856119042a8d13054dfab42bc",
+      "hash_stable": false
+    },
+    {
+      "path": "hp42s/hosoda-hp42s-memory-overclock.txt",
+      "method": "derived",
+      "title": "HP-42S memory upgrade and overclock (text)",
+      "authors": [
+        "Takayuki Hosoda"
+      ],
+      "year": "2007-2020",
+      "terms": "not stated",
+      "derived_from": "hp42s/hosoda-hp42s-memory-overclock.html",
+      "command": "textutil -convert txt -output hp42s/hosoda-hp42s-memory-overclock.txt hp42s/hosoda-hp42s-memory-overclock.html",
+      "how": "macOS textutil",
+      "size": 16631,
+      "sha256": "e6af8fed333de4c60deb885b434645f5ada7d985db809589a881e0bd6bcdbc13",
+      "hash_stable": false,
+      "wiki": [
+        "sources/hosoda-hp42s"
+      ]
+    },
+    {
+      "path": "hp48-internals/faq/48faq-html.zip",
+      "method": "fetch",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "url": "https://www.hpcalc.org/hp48/docs/faq/48faq-html.zip",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 148187,
+      "sha256": "de05ec88365db242290be4e20911592cc35eb11d7bbe3f0718e344c9d83c2d80"
+    },
+    {
+      "path": "hp48-internals/faq/48faq-txt.zip",
+      "method": "fetch",
+      "title": "HP 48 FAQ 4.62, text edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "url": "https://www.hpcalc.org/hp48/docs/faq/48faq-txt.zip",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 122970,
+      "sha256": "b10b6cc9953e13ec401aef4c3790a4c2d281acfafc83be253a34ebf84997571a"
+    },
+    {
+      "path": "hp48-internals/faq/48faq.txt",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, text edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-txt.zip",
+      "member": "48faq.txt",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 342396,
+      "sha256": "0ce31cac236485251651d5ff9fb041bc1a1c533389796e3a6d0901d009a9cf38",
+      "wiki": [
+        "sources/hp48-faq"
+      ]
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-1.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-1.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 5077,
+      "sha256": "1b2612a47879df3ee0c7a674698b101e6b48323776f893b535549ce745500e20"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-10.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-10.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 28902,
+      "sha256": "8b408e821ee7c4dd6e5d996196d0de3f8c428153610a7506ddb2789ff7bdb0a8"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-11.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-11.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 14877,
+      "sha256": "a4e11fe4375a283e19dffadd2be0a20470a7bf94fd1e5a2af760b0d49c2080ae"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-12.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-12.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 29824,
+      "sha256": "092b50cb3a4ed9039865fbdd21f4780b7936ea3a7da7022fd16b1955eb22148e"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-13.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-13.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 25094,
+      "sha256": "9209bc5ad6a24a7408c9d420441c5c64e15539d31de93548b99f04484def1224"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-14.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-14.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 2148,
+      "sha256": "e008a5050884a5df79615e402c5c2db9d1275974d816842bc28b48aa288c07d3"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-2.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-2.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 44460,
+      "sha256": "45c39a82b734d5109fc32a9c13e36e85358292b81513459ce42dc9b97acf1458"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-3.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-3.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 17183,
+      "sha256": "50560cacb6030ca85bd4d02b473c9e4b4ace5256ad8bc6bf6896866e0c61977d"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-4.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-4.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 34171,
+      "sha256": "e7314388c2c3fd909291ef03be8a12b71ba0fb77ba14ed1e272eb48b7acc58f3"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-5.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-5.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 26860,
+      "sha256": "92a72dd3861b5e74404d866a429fcb96a190da7a8cac199afb2729bf3522eb2a"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-6.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-6.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 39599,
+      "sha256": "4b82b7f9bd5c9d2f8d62201c4198ccbfa02c0af0e41c97016b5ca4729e395397"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-7.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-7.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 7598,
+      "sha256": "91618f642f52073fc49d67bb17629d6983757ff9a0558fc9a54405cd6751e058"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-8.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-8.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 51568,
+      "sha256": "f24b4b5891da3ea2968b4a2cb0f450591f4387de7409bdae744cf2877f10d3c3"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq-9.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq-9.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 27459,
+      "sha256": "e0a3853d353444ba0bc91d390fcf4df2a88b67509068b5b0ebca598ad047e45f"
+    },
+    {
+      "path": "hp48-internals/faq/html/48faq.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "48faq.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 15835,
+      "sha256": "bbcdd9b850deaa70ec465c47cf8c74cd73c6e3d85a2ce59fc68c8b3cb35b418d"
+    },
+    {
+      "path": "hp48-internals/faq/html/new-1.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "new-1.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 20495,
+      "sha256": "72df86b692e9479e54a5e3d1681d148a9352d984929f5f5c5c5b2c626487b162"
+    },
+    {
+      "path": "hp48-internals/faq/html/new.html",
+      "method": "zip-member",
+      "title": "HP 48 FAQ 4.62, HTML edition",
+      "authors": [
+        "André Schoorl (editor)"
+      ],
+      "year": "2000",
+      "terms": "usual FAQ redistribution",
+      "zip": "hp48-internals/faq/48faq-html.zip",
+      "member": "new.html",
+      "details_url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 3239,
+      "sha256": "5be06ab5d0f5c304fe456658ebb97447d46b93514541177aeaec5f24bdcbdcd0"
+    },
+    {
+      "path": "hp48-internals/faq/index.html",
+      "method": "fetch",
+      "title": "hpcalc.org HP 48 FAQ index page",
+      "authors": [],
+      "year": "",
+      "terms": "-",
+      "url": "https://www.hpcalc.org/hp48/docs/faq/",
+      "size": 9396,
+      "sha256": "01f53dddc71cb31687272c2e409a05f9d8336b80c728e5c2b85678ffa66d25f3",
+      "hash_stable": false
+    },
+    {
+      "path": "hp48-internals/io-guide/48techni.pdf",
+      "method": "zip-member",
+      "title": "HP 48 I/O Technical Interfacing Guide (PDF)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "zip": "hp48-internals/io-guide/48techni.zip",
+      "member": "48techni.pdf",
+      "details_url": "https://www.hpcalc.org/details/4741",
+      "size": 162295,
+      "sha256": "13af6c05188009f9e65f96cc11f33352dea9b71e447f9fb5f200345f34481c8a"
+    },
+    {
+      "path": "hp48-internals/io-guide/48techni.zip",
+      "method": "fetch",
+      "title": "HP 48 I/O Technical Interfacing Guide (PDF)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "url": "https://www.hpcalc.org/hp48/docs/programming/48techni.zip",
+      "details_url": "https://www.hpcalc.org/details/4741",
+      "size": 124574,
+      "sha256": "cd9db079f212388353b94cd23308d057244cc08be4b30b66ea6c4a651e8804c9"
+    },
+    {
+      "path": "hp48-internals/io-guide/82240bte.pdf",
+      "method": "zip-member",
+      "title": "HP 82240B Technical Interfacing Guide",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "HP copyright",
+      "zip": "hp48-internals/io-guide/82240bte.zip",
+      "member": "82240bte.pdf",
+      "details_url": "https://www.hpcalc.org/details/4742",
+      "size": 100723,
+      "sha256": "7a2bbfde7610166379fe1007e26e1c4106a0eb07c7c9fe8e36dfbb4e33d2edae"
+    },
+    {
+      "path": "hp48-internals/io-guide/82240bte.zip",
+      "method": "fetch",
+      "title": "HP 82240B Technical Interfacing Guide",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "HP copyright",
+      "url": "https://www.hpcalc.org/hp48/docs/programming/82240bte.zip",
+      "details_url": "https://www.hpcalc.org/details/4742",
+      "size": 75620,
+      "sha256": "4c2b16de2260d8a727de3bed1709ae0794a659e066d2a6e1d354ed26a756f335"
+    },
+    {
+      "path": "hp48-internals/io-guide/io2.txt",
+      "method": "fetch",
+      "title": "HP 48 I/O Technical Interfacing Guide (plain text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "url": "https://www.hpcalc.org/hp48/docs/misc/io2.txt",
+      "details_url": "https://www.hpcalc.org/details/1722",
+      "size": 24227,
+      "sha256": "4a8f35e9a7318d1a234e050cb077687352fbbd233c9cd440655c0add1a070679",
+      "wiki": [
+        "sources/io-guide"
+      ]
+    },
+    {
+      "path": "hp48-internals/io-guide/ioguide-troff/README",
+      "method": "zip-member",
+      "title": "HP 48 I/O Technical Interfacing Guide (troff source)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "zip": "hp48-internals/io-guide/ioguide.zip",
+      "member": "README",
+      "details_url": "https://www.hpcalc.org/details/3567",
+      "size": 593,
+      "sha256": "96cad6f99a285ba48687d3b5450993d4ae0a117a66aceb4920e8ebb418316603"
+    },
+    {
+      "path": "hp48-internals/io-guide/ioguide-troff/byte41ir.pic",
+      "method": "zip-member",
+      "title": "HP 48 I/O Technical Interfacing Guide (troff source)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "zip": "hp48-internals/io-guide/ioguide.zip",
+      "member": "byte41ir.pic",
+      "details_url": "https://www.hpcalc.org/details/3567",
+      "size": 7563,
+      "sha256": "a365c854074aef12edcea4e3557d45c9a55319010ede85136a1c5aedfeae6e99"
+    },
+    {
+      "path": "hp48-internals/io-guide/ioguide-troff/byte41w.pic",
+      "method": "zip-member",
+      "title": "HP 48 I/O Technical Interfacing Guide (troff source)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "zip": "hp48-internals/io-guide/ioguide.zip",
+      "member": "byte41w.pic",
+      "details_url": "https://www.hpcalc.org/details/3567",
+      "size": 4409,
+      "sha256": "8426e02351fa5cf7dfd984f30efc7cf228b6991d31503af36dae0369c329df18"
+    },
+    {
+      "path": "hp48-internals/io-guide/ioguide-troff/cableconn.pic",
+      "method": "zip-member",
+      "title": "HP 48 I/O Technical Interfacing Guide (troff source)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "zip": "hp48-internals/io-guide/ioguide.zip",
+      "member": "cableconn.pic",
+      "details_url": "https://www.hpcalc.org/details/3567",
+      "size": 12609,
+      "sha256": "96ac1689ab2ae525adae7a8f04c0f2de9c6c67c60cb61d29c639761167dd3fec"
+    },
+    {
+      "path": "hp48-internals/io-guide/ioguide-troff/cover.er",
+      "method": "zip-member",
+      "title": "HP 48 I/O Technical Interfacing Guide (troff source)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "zip": "hp48-internals/io-guide/ioguide.zip",
+      "member": "cover.er",
+      "details_url": "https://www.hpcalc.org/details/3567",
+      "size": 207,
+      "sha256": "3e932b01503a8bfbda23857508fdd3ff9405cbc59b95756264009e37ef314aa5"
+    },
+    {
+      "path": "hp48-internals/io-guide/ioguide-troff/io.doc",
+      "method": "zip-member",
+      "title": "HP 48 I/O Technical Interfacing Guide (troff source)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "zip": "hp48-internals/io-guide/ioguide.zip",
+      "member": "io.doc",
+      "details_url": "https://www.hpcalc.org/details/3567",
+      "size": 13525,
+      "sha256": "9f1aa6eeb41703920a557404c3c5b7027b27afc01cfadf86c4453f493f244d7b"
+    },
+    {
+      "path": "hp48-internals/io-guide/ioguide-troff/ircircuit.pic",
+      "method": "zip-member",
+      "title": "HP 48 I/O Technical Interfacing Guide (troff source)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "zip": "hp48-internals/io-guide/ioguide.zip",
+      "member": "ircircuit.pic",
+      "details_url": "https://www.hpcalc.org/details/3567",
+      "size": 11580,
+      "sha256": "95dc80d5c4500a20ae2e962d49176cbe7e8a5b436a8d889cc60b9af654f446d5"
+    },
+    {
+      "path": "hp48-internals/io-guide/ioguide-troff/irport.pic",
+      "method": "zip-member",
+      "title": "HP 48 I/O Technical Interfacing Guide (troff source)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "zip": "hp48-internals/io-guide/ioguide.zip",
+      "member": "irport.pic",
+      "details_url": "https://www.hpcalc.org/details/3567",
+      "size": 12586,
+      "sha256": "8172f659c6351a13222abc2d389a3e868ffde16e0af5c28298f4e632fc2d2912"
+    },
+    {
+      "path": "hp48-internals/io-guide/ioguide.zip",
+      "method": "fetch",
+      "title": "HP 48 I/O Technical Interfacing Guide (troff source)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1990",
+      "terms": "Copyright Hewlett-Packard 1990, all rights reserved",
+      "url": "https://www.hpcalc.org/hp48/docs/misc/ioguide.zip",
+      "details_url": "https://www.hpcalc.org/details/3567",
+      "size": 15581,
+      "sha256": "5cfaa5295f87d0baa921ab51923535cfb0d99c0636f153e41a7baa2a1ce7ba44"
+    },
+    {
+      "path": "hp48-internals/io-guide/iotest.txt",
+      "method": "fetch",
+      "title": "Testing an HP to PC connection without Kermit",
+      "authors": [
+        "Ray Depew"
+      ],
+      "year": "1997",
+      "terms": "none",
+      "url": "https://www.hpcalc.org/hp48/docs/misc/iotest.txt",
+      "details_url": "https://www.hpcalc.org/details/3569",
+      "size": 2394,
+      "sha256": "e5ff1a2f2448703dc72d67368ff681c586d6c1f121810f57fd7183150f060b28"
+    },
+    {
+      "path": "manuals/hp-graph-calc-connectivity.pdf",
+      "method": "fetch",
+      "title": "HP Graphing Calculator PC Connectivity Kit User Guide",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp-graph-calc-connectivity.pdf",
+      "size": 9781386,
+      "sha256": "11493ff8743a2c31c67352572dae76f0c91044cd3ba34c5b5ad20f1262d00375",
+      "wiki": [
+        "sources/connectivity-kit"
+      ]
+    },
+    {
+      "path": "manuals/hp38g-ug-en.pdf",
+      "method": "fetch",
+      "title": "HP 38G User's Guide (no text layer)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "official HP PDF",
+      "url": "https://literature.hpcalc.org/official/hp38g-ug-en.pdf",
+      "size": 8449217,
+      "sha256": "2640ad725b7beaf1f425a29d9bb6ad0671cb9245252e1e58f257d0928436d891",
+      "wiki": [
+        "sources/hp38g-ug"
+      ]
+    },
+    {
+      "path": "manuals/hp39g40g-ug-en.pdf",
+      "method": "fetch",
+      "title": "HP 39G/40G User's Guide",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "2000",
+      "terms": "official HP PDF",
+      "url": "https://literature.hpcalc.org/official/hp39g40g-ug-en.pdf",
+      "size": 3055701,
+      "sha256": "17a9096aed0268fd4521833dc027da0562cbe8c4e077907f6ba443aa037e6bee",
+      "wiki": [
+        "sources/hp39g40g-ug"
+      ]
+    },
+    {
+      "path": "manuals/hp48-sikug-pc-en.pdf",
+      "method": "fetch",
+      "title": "HP 48 to DOS/Windows Compatible PCs Serial Interface Kit User's Guide, edition 2",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1994",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp48-sikug-pc-en.pdf",
+      "size": 34179643,
+      "sha256": "d938cb3ced5721cc24864fa1a919778891c0cc2e4f77d3991c5155c12d1aa417",
+      "wiki": [
+        "sources/hp48-sikug"
+      ]
+    },
+    {
+      "path": "manuals/hp48g-aur-en.pdf",
+      "method": "fetch",
+      "title": "HP 48G Series Advanced User's Reference Manual (literature.hpcalc.org copy, text layer)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp48g-aur-en.pdf",
+      "size": 75519882,
+      "sha256": "3694ab0e5c2d76640430a402374246f89b1eb793ce0163ee9d3a7a0637274c2b",
+      "notes": "76 MB."
+    },
+    {
+      "path": "manuals/hp48g-ug-en.pdf",
+      "method": "fetch",
+      "title": "HP 48G Series User's Guide (literature.hpcalc.org copy, text layer)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp48g-ug-en.pdf",
+      "size": 91136620,
+      "sha256": "ef5354066cc096958dc5d4a1bce530a339a9920baf5ffa32e630fb590613a52c",
+      "notes": "91 MB."
+    },
+    {
+      "path": "manuals/hp48gaur.pdf",
+      "method": "zip-member",
+      "title": "HP 48G Series Advanced User's Reference Manual, 4th edition (scan, no text layer)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "HP copyright",
+      "zip_url": "https://www.hpcalc.org/hp48/docs/misc/hp48gaur.zip",
+      "member": "hp48gaur.pdf",
+      "details_url": "https://www.hpcalc.org/details/6036",
+      "size": 40804390,
+      "sha256": "c041081c07dac1716ed7667774ed43cd618d98b0cd5ddca4755eb797a67bdb96",
+      "wiki": [
+        "sources/hp48g-aur"
+      ]
+    },
+    {
+      "path": "manuals/hp48gug.pdf",
+      "method": "zip-member",
+      "title": "HP 48G Series User's Guide, 8th edition (scan, no text layer)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "included on hpcalc.org with the permission of HP tech support",
+      "zip_url": "https://www.hpcalc.org/hp48/docs/misc/hp48gug.zip",
+      "member": "HP 48G Series User's Guide.pdf",
+      "details_url": "https://www.hpcalc.org/details/3937",
+      "size": 18975223,
+      "sha256": "00847bb9ede29677884a54a9be7b46a33113ec7da311735b919bb35704428e6a",
+      "wiki": [
+        "sources/hp48g-ug"
+      ]
+    },
+    {
+      "path": "manuals/hp48sx-om-en.pdf",
+      "method": "fetch",
+      "title": "HP 48SX Owner's Manual, volumes I and II",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp48sx-om-en.pdf",
+      "size": 114171736,
+      "sha256": "9724f7e567d4c16f31152dd08401714a6257c32b5ad33ec6cbaa106265d993df",
+      "notes": "114 MB.",
+      "wiki": [
+        "sources/hp48sx-om"
+      ]
+    },
+    {
+      "path": "manuals/hp49g-aug-en.pdf",
+      "method": "fetch",
+      "title": "HP 49G Advanced User's Guide (no text layer)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "official HP PDF",
+      "url": "https://literature.hpcalc.org/official/hp49g-aug-en.pdf",
+      "size": 8050780,
+      "sha256": "6c8c419b82af712c6c4500d13f4bbc676d3d1e2afafee9e0b14f40ddb1d80654",
+      "wiki": [
+        "sources/hp49g-aug"
+      ]
+    },
+    {
+      "path": "manuals/hp49g-pocket-guide/README.md",
+      "method": "manual",
+      "title": "The HP 49G Pocket Guide, System Flags pages 76-79 (photographs of a printed copy)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "HP copyright; photographs not distributed",
+      "instructions": "Not online and not distributed. Photographs of pages 76-79 of a printed HP 49G Pocket Guide, used only to cite the 49G system flags. Use your own copy of the booklet.",
+      "size": 802,
+      "sha256": "f3e9e93a502fe8d80c74e2b725ec8ac6357adf593302c315287fcba536bb60de",
+      "wiki": [
+        "sources/hp49g-pocket-guide"
+      ]
+    },
+    {
+      "path": "manuals/hp49g-pocket-guide/p76-flags--1-to--26.jpeg",
+      "method": "manual",
+      "title": "The HP 49G Pocket Guide, System Flags pages 76-79 (photographs of a printed copy)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "HP copyright; photographs not distributed",
+      "instructions": "Not online and not distributed. Photographs of pages 76-79 of a printed HP 49G Pocket Guide, used only to cite the 49G system flags. Use your own copy of the booklet.",
+      "size": 351510,
+      "sha256": "226f864c68e35be90f0af6154e640526e602b5587bb9c41a2e84dde2e9305506",
+      "wiki": [
+        "sources/hp49g-pocket-guide"
+      ]
+    },
+    {
+      "path": "manuals/hp49g-pocket-guide/p77-flags--27-to--61.jpeg",
+      "method": "manual",
+      "title": "The HP 49G Pocket Guide, System Flags pages 76-79 (photographs of a printed copy)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "HP copyright; photographs not distributed",
+      "instructions": "Not online and not distributed. Photographs of pages 76-79 of a printed HP 49G Pocket Guide, used only to cite the 49G system flags. Use your own copy of the booklet.",
+      "size": 451022,
+      "sha256": "aa6dd8f1fc1bbe1b3e84862ebf7b84d209aa63ec211575628269bca17d01145e",
+      "wiki": [
+        "sources/hp49g-pocket-guide"
+      ]
+    },
+    {
+      "path": "manuals/hp49g-pocket-guide/p78-flags--62-to--96.jpeg",
+      "method": "manual",
+      "title": "The HP 49G Pocket Guide, System Flags pages 76-79 (photographs of a printed copy)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "HP copyright; photographs not distributed",
+      "instructions": "Not online and not distributed. Photographs of pages 76-79 of a printed HP 49G Pocket Guide, used only to cite the 49G system flags. Use your own copy of the booklet.",
+      "size": 389073,
+      "sha256": "acf834f69dac5891586528ec077e760ef39a2837afd03dc3667291c9c6066793",
+      "wiki": [
+        "sources/hp49g-pocket-guide"
+      ]
+    },
+    {
+      "path": "manuals/hp49g-pocket-guide/p79-flags--97-to--120.jpeg",
+      "method": "manual",
+      "title": "The HP 49G Pocket Guide, System Flags pages 76-79 (photographs of a printed copy)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "HP copyright; photographs not distributed",
+      "instructions": "Not online and not distributed. Photographs of pages 76-79 of a printed HP 49G Pocket Guide, used only to cite the 49G system flags. Use your own copy of the booklet.",
+      "size": 299168,
+      "sha256": "614f1181523a1b9ea93a0864628810c7af3c48580209d3308f47689b13f70b43",
+      "wiki": [
+        "sources/hp49g-pocket-guide"
+      ]
+    },
+    {
+      "path": "manuals/hp49g-um-en.pdf",
+      "method": "fetch",
+      "title": "HP 49G User's Manual",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1999",
+      "terms": "official HP PDF",
+      "url": "https://literature.hpcalc.org/official/hp49g-um-en.pdf",
+      "size": 2635776,
+      "sha256": "5a35e5c68305e59665fced038bce2583cf675785ec1161f83bf52e4f6602a3b6",
+      "wiki": [
+        "sources/hp49g-um"
+      ]
+    },
+    {
+      "path": "manuals/text/hp48g-aur-en.txt",
+      "method": "derived",
+      "title": "HP 48G Series Advanced User's Reference Manual (literature.hpcalc.org copy, text layer) (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "community scan",
+      "derived_from": "manuals/hp48g-aur-en.pdf",
+      "how": "pdftotext -layout, one page at a time, pages joined with form feeds (block N = PDF page N), after '#' header lines",
+      "size": 1031970,
+      "sha256": "88c2ca5d06e3c855f17973dc1cadc61f83d4d2514d29d149faed270aa8bf4f1e",
+      "hash_stable": false
+    },
+    {
+      "path": "manuals/text/hp48g-ug-en.txt",
+      "method": "derived",
+      "title": "HP 48G Series User's Guide (literature.hpcalc.org copy, text layer) (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "community scan",
+      "derived_from": "manuals/hp48g-ug-en.pdf",
+      "how": "pdftotext -layout, one page at a time, pages joined with form feeds (block N = PDF page N), after '#' header lines",
+      "size": 1029819,
+      "sha256": "75e4959ec40d0ef4b02b0b9056a402ca77818b776f2f2d9e33c5705a0fb1e487",
+      "hash_stable": false
+    },
+    {
+      "path": "manuals/text/hp48sx-om-en.txt",
+      "method": "derived",
+      "title": "HP 48SX Owner's Manual, volumes I and II (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "community scan",
+      "derived_from": "manuals/hp48sx-om-en.pdf",
+      "how": "pdftotext -layout, one page at a time, pages joined with form feeds (block N = PDF page N), after a few '#' header lines naming the PDF",
+      "size": 1342901,
+      "sha256": "89f648ef1022a905577c0b474865de576c56154d9d179750bee22024c5a4936a",
+      "hash_stable": false
+    },
+    {
+      "path": "manuals/text/hp49g-aug-en.txt",
+      "method": "derived",
+      "title": "HP 49G Advanced User's Guide (no text layer) (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "",
+      "terms": "official HP PDF",
+      "derived_from": "manuals/hp49g-aug-en.pdf",
+      "how": "no text layer: Ghostscript (pnggray, 200 dpi) per page, then tesseract 5 OCR (-l eng --psm 3); pages joined with form feeds",
+      "size": 221060,
+      "sha256": "1cfe587b9a709f49ab13d8ea5ecad361099f0ed14b46d7475000c62bf82828dc",
+      "hash_stable": false
+    },
+    {
+      "path": "manuals/text/hp49g-um-en.txt",
+      "method": "derived",
+      "title": "HP 49G User's Manual (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1999",
+      "terms": "official HP PDF",
+      "derived_from": "manuals/hp49g-um-en.pdf",
+      "how": "pdftotext -layout per page; the subset fonts sit 29 code points below ASCII, so every non-space character below code 98 is shifted up by 29; pages joined with form feeds",
+      "size": 476571,
+      "sha256": "fddbf6a362609ee51c2e5ffaf7628ecf39a05d320fe48389df4039cfe9e0c15e",
+      "hash_stable": false
+    },
+    {
+      "path": "protocols/hp48-kermit-columbia.html",
+      "method": "fetch",
+      "title": "HP-48 Kermit Hints and Tips",
+      "authors": [
+        "The Kermit Project, Columbia University"
+      ],
+      "year": "1999-2011",
+      "terms": "Columbia University copyright",
+      "url": "https://web.archive.org/web/20240119085949id_/http://www.columbia.edu/kermit/hp48.html",
+      "details_url": "https://www.columbia.edu/kermit/hp48.html",
+      "size": 19476,
+      "sha256": "54cf15745fdcf04c6719083e12b8efca6099c32e2f64cbdc3f840703d4becad6",
+      "notes": "The live page sits behind a bot check; the Wayback copy is used."
+    },
+    {
+      "path": "protocols/hp48-kermit-columbia.txt",
+      "method": "derived",
+      "title": "HP-48 Kermit Hints and Tips (text)",
+      "authors": [
+        "The Kermit Project, Columbia University"
+      ],
+      "year": "1999-2011",
+      "terms": "Columbia University copyright",
+      "derived_from": "protocols/hp48-kermit-columbia.html",
+      "command": "textutil -convert txt -output protocols/hp48-kermit-columbia.txt protocols/hp48-kermit-columbia.html",
+      "how": "macOS textutil",
+      "size": 13721,
+      "sha256": "7c5c757e648dabf1d4c7dfbf638b6cb7b240b06d822dbbe9c4e0983a0a9bcabf",
+      "hash_stable": false,
+      "wiki": [
+        "sources/hp48-kermit-hints"
+      ]
+    },
+    {
+      "path": "protocols/kproto.pdf",
+      "method": "fetch",
+      "title": "Kermit Protocol Manual, 6th edition",
+      "authors": [
+        "Frank da Cruz"
+      ],
+      "year": "1986",
+      "terms": "Kermit Project copyright, freely distributable",
+      "url": "https://www.kermitproject.org/kproto.pdf",
+      "size": 166478,
+      "sha256": "65d9714f982514691060136e42c012c526885eee3570ce0a44f6843577c6d9a7",
+      "wiki": [
+        "sources/kermit-protocol-manual"
+      ]
+    },
+    {
+      "path": "protocols/xmodem-larry-jordan.txt",
+      "method": "fetch",
+      "title": "XMODEM File Transfer Protocol",
+      "authors": [
+        "Larry Jordan"
+      ],
+      "year": "",
+      "terms": "none",
+      "url": "http://www.textfiles.com/programming/xmodem.txt",
+      "size": 9600,
+      "sha256": "6a2e8cd86261c4bc21c6b9b2227837ecfe60953038f3d871a5e5df35bfe29672"
+    },
+    {
+      "path": "protocols/xmodem-lightning-house.txt",
+      "method": "fetch",
+      "title": "XModem protocol (short tutorial)",
+      "authors": [
+        "Lightning House Software Co."
+      ],
+      "year": "",
+      "terms": "none",
+      "url": "http://www.textfiles.com/computers/xmodem.txt",
+      "size": 6005,
+      "sha256": "3777e7955fbca298fe2051874759dca7d05ed76ab335b326c6777d8c56d19b06"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "method": "fetch",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "url": "https://www.hpcalc.org/hp49/pc/link/conn4xhelp.zip",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 204384,
+      "sha256": "cd92bc00ba719eebce3a45cb4f417ed01c74beaf0049c8e44da146a6d18c3c61"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Conn4x.HHP",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Conn4x.HHP",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1038,
+      "sha256": "ff6654bac48d35d42d7cb90ccfd3a5a36df3a25090a02c7037caa31a48b35e20"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Conn4x.chm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Conn4x.chm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 83777,
+      "sha256": "b4af92af9357d1521932cc21b16d182f1242c5a993e2d3de7487fc082aa971c8"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Conn4x.hhc",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Conn4x.hhc",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 2179,
+      "sha256": "065552058ce51c838b976398439d1ef7d074c253e9b4d766bbd9d2f0e2d72b3d"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Conn4x.hhk",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Conn4x.hhk",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 203,
+      "sha256": "625dad7030429efde459dd58c09311bf38b94dcf704b49c5f340c6c2af4dae0c"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/Connectivity Menus.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/Connectivity Menus.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 9477,
+      "sha256": "3b5cb51815e9bc5cfdc6e650b9daa15fb5ae88b92b9deee8a110ab53eef21952",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/Connectivity.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/Connectivity.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 3922,
+      "sha256": "757f9c6a04f82b71fc23253a1e7c18d6a465fde24f92a8fd4b805c0ffe8600e0",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/ConnectivityCapture.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/ConnectivityCapture.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 2745,
+      "sha256": "737c84be0e751421dc3a1922436c0f6a6a90430a547652613a5c04004be61bd9",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/ConnectivityCom.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/ConnectivityCom.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 3576,
+      "sha256": "05d6db67c38995450fdc93cff059f965e57b76865b1d62639e603ad7ff0051a6",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/ConnectivityHP48Ops.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/ConnectivityHP48Ops.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 2708,
+      "sha256": "ae7a7d6668c425655fac364a0cf2c08da48eca4de64d747d8cd442cd1376bdb3",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/ConnectivityHP49Ops.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/ConnectivityHP49Ops.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 2928,
+      "sha256": "61e689331f654e0c0de4159f84d671f6d92b29a1ab071e06d9f5cced1c9a1c4c",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/ConnectivityPopup.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/ConnectivityPopup.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 928,
+      "sha256": "a48ef9628cc26a3a4cc7c3b12674d6a49c75596b302e975837d545522dfa8b80",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/ConnectivityToolBar.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/ConnectivityToolBar.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1069,
+      "sha256": "da6cef8c8ae06e7dd8c6011704d6e8cec961a6254c7d210007eda51d74b8b015",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/ConnectivitystatusBar.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/ConnectivitystatusBar.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1107,
+      "sha256": "2c805f3a4b92e08ae695512760468b6f4149c7b78b4123d01274e135e32ac0bb",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/Copyright.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/Copyright.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1867,
+      "sha256": "775a3c2aeacda5c93bcde19259fd8d1bfcf4ae2f5ec90a85d5225acd637ec8ca",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/Features.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/Features.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1895,
+      "sha256": "4dbecd6ea0b424886da2eb133e5c1d4c8b41c1ce8cde794f9a696732b7b5378a",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/Help System.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/Help System.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1853,
+      "sha256": "d9f93cd7f7381c62068dc55dc3e293cd0602c3484f9096b58b87d14ff2539142",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/XModem Library.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/XModem Library.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 2160,
+      "sha256": "7d465e6b9fbcf51de05a975dfd705963f3adcf3a03e131dce104b5ca0239b148",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/XModem Server Menu.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/XModem Server Menu.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 2515,
+      "sha256": "fd1def7d793b49c5f7fa66142be52f81fc7932af5599658782fd682fad407cd1",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/Connectivity Menus.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/Connectivity Menus.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 2700,
+      "sha256": "f67d4e6884484fcbae187698627d6dccb23bbaf7014d3c6a229a6c5c1f87f6d0",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/Connectivity.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/Connectivity.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1627,
+      "sha256": "b7309eed91e2284fdb7d4e28af4008977c8ad9edc20dc5e47af3e5112cd677a2",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/ConnectivityCapture.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/ConnectivityCapture.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1255,
+      "sha256": "f81b0a833555b795f49f11b22226acc675da1d7d6caf1976c318292f7eb83c13",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/ConnectivityCom.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/ConnectivityCom.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1473,
+      "sha256": "4e6174919609a5b7e50ec9a2d2af1d1eed5f233c45d560a96d3515d0ae7970f7",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/ConnectivityHP48Ops.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/ConnectivityHP48Ops.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1414,
+      "sha256": "84bba7faec01f64de0c61cf709c5ffc11fbf79fec0cf4ad4494273c6334928c3",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/ConnectivityHP49Ops.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/ConnectivityHP49Ops.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1481,
+      "sha256": "cb196e0e5cdd39e4288e58aaa53e371d69e6965f955239b83e17ac512ec8884d",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/ConnectivityPopup.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/ConnectivityPopup.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1156,
+      "sha256": "fcea9a81317f03ab697d53c5f6aa59ca0e8a7b1b5536f33e91eb9e1e1549df02",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/ConnectivityToolBar.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/ConnectivityToolBar.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1225,
+      "sha256": "d300353f01617398f3239d84483908bd6e0c44e5c1f56b5a00417b466c71b98e",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/ConnectivitystatusBar.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/ConnectivitystatusBar.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1169,
+      "sha256": "344d160b8ca8beaa70ea21b226811ad264503bfd9ea6fdc8047c6fb88cbb019b",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/Copyright.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/Copyright.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 925,
+      "sha256": "d24620d80e22799f6807a11a50b1f9aaea9a76108b6a7dcdf98fd089a9198b23",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/Features.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/Features.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1023,
+      "sha256": "0c531adcd049a292111f879a3740853a9682354129090194f72be95c8e606139",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/Help System.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/Help System.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1081,
+      "sha256": "a640782de0e2c75939cd1b9cfa30a4c9d2aec518028c16ed7625af7af77a993c",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/XModem Library.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/XModem Library.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1418,
+      "sha256": "b2dee4e15f3aeefc3046267165d9ca6b0ae26d59dce9f06685f68ec29de0c81f",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/_vti_cnf/XModem Server Menu.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Connectivity/_vti_cnf/XModem Server Menu.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1497,
+      "sha256": "cc315bec748fb0d4cb9dc895eea51036d6d4600aacb734ef00b9ab6de1993e23",
+      "wiki": [
+        "sources/conn4x-help"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/ErrorLog.log",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/ErrorLog.log",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1294,
+      "sha256": "a5bb35691250dbb82955f81e85ae3644608a58e49c7c56466a27c2acce7cafe4"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/Connectivity.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/Connectivity.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 8330,
+      "sha256": "28a02002c8b87eabfd1484b78f5f47ce8f816cea5ad5c05cf7e6d62b13400497"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/ConnectivityBar.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/ConnectivityBar.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1419,
+      "sha256": "ea0e39dae60f641b13b2831c00047f30d7bfbb65b6e5174c294f65397276b18d"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/ConnectivityBar2.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/ConnectivityBar2.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 986,
+      "sha256": "e2ad5408899bf5e3982d3a93d742c32787e7dd17594787d469f3800801094955"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/ConnectivityCapture1.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/ConnectivityCapture1.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 4023,
+      "sha256": "5a17ac63766c9807ac2c3d9a9f989330da373adf4af8ee8eda9db9b89cb68739"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/ConnectivityCapture2.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/ConnectivityCapture2.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 3910,
+      "sha256": "69495632f6de0cee45bc185d9cf7dc95d5d8ee66b2dc1b99b133d8c68f961998"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/ConnectivityPopup.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/ConnectivityPopup.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 2992,
+      "sha256": "b9bf8aeed12abf257f2475c02855ae204cf8111125a4ca1ed3081e04d30f83fb"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/ConnectivityProps.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/ConnectivityProps.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 3729,
+      "sha256": "6ae7912a246a3a71f900879df6fd50f47f354d2c8e1beda6da616ebfb9d231b1"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/ConnectivityStatus.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/ConnectivityStatus.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1435,
+      "sha256": "c1b5303390888cfa66bc6b8d298f67a059826fba5e760454d68d68f6643062f2"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/ConnectivityXM Menu.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/ConnectivityXM Menu.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1650,
+      "sha256": "9911e1cdf28b08f4d61320c65c86ef739c338ac2445e0b2b7215995380a1c9a8"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/HP48.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/HP48.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 11433,
+      "sha256": "0ccc1f76f5a3131a874cbd727c39c207d93e7af459d03a5a4d22a50ca6fd3f8d"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/HP48Nxt.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/HP48Nxt.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1075,
+      "sha256": "ce8ae7541b85c3926898c37440deed201b0eaf9ed3e9123b11be0363bf678e8d"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/HP48Srvr.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/HP48Srvr.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1634,
+      "sha256": "c67079a9229d4ef025e64d022506e82b437cd53d93deaa5ce25c00f155292a9b"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/HP48Srvr2.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/HP48Srvr2.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1558,
+      "sha256": "0913af91af28d57718480a01dc31a7bdd9b860254678fdde951d4ff51b9e5300"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/HP48XSrvr.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/HP48XSrvr.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1527,
+      "sha256": "e93a448f2de1aacb5585e93019aca55d2ae4081a1f3adfcb304af3836ab20a79"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/HP49.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/HP49.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 12014,
+      "sha256": "55f21e3db0a36ba1bd57e382ae675ea0cf4ab0f2e661e10a2cefeffee06f2c43"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/HP49Apps.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/HP49Apps.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1569,
+      "sha256": "cce739121eec358c94895d4086377c9e449dfbf8ac103e31e6c5efc2905a7559"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/HP49IOMenu.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/HP49IOMenu.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 2873,
+      "sha256": "3d2e786bc13bc3582408d2492b82059e9ce4200be8741a1d1faee62959b55451"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/HP49Settings.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/HP49Settings.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 2853,
+      "sha256": "b958293ea84878e1bbc2f0e9872e7dc91df59df9786c110521f57cb9dc723107"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/HP49Transfer.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/HP49Transfer.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 2814,
+      "sha256": "66b5bf8fd2fd0bd304120d5c9b2d6cfa41355464b3bf4510e8d80c0c9d4c308f"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/HelpQ.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/HelpQ.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1997,
+      "sha256": "741373a1dda66601bf44c91e7f85ceddbf8dec3a2744e14a0ede30e4e53578d2"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/Connectivity.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/Connectivity.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 467,
+      "sha256": "eb8a07cebc46eda34d7ac7421d592621bccf9df6ae7992649e2baa0571c2efac"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/ConnectivityBar.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/ConnectivityBar.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 504,
+      "sha256": "8ca614414ceb6896b2c6c932cf1e3253e5c91381ab4fe2d496e9b85e531d51ac"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/ConnectivityBar2.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/ConnectivityBar2.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 503,
+      "sha256": "87bc73c6d8103a2a79cde61bc205cd2faae8685e1030f463cb4251306c926aa0"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/ConnectivityCapture1.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/ConnectivityCapture1.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 403,
+      "sha256": "8fe7d702c355f56381fc2bdeb088739f24d6fb92370d2de733fa9e5f7a71ed6a"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/ConnectivityCapture2.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/ConnectivityCapture2.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 403,
+      "sha256": "ac837f94a5a108e8124b4e9a0b41d9c88eaebf5bbd0523b7f334ddec7d27497a"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/ConnectivityPopup.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/ConnectivityPopup.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 469,
+      "sha256": "e531f7daafacd1f5e74c50025bc4e1c1d2ff202e9973d268332b1b9062d81998"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/ConnectivityProps.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/ConnectivityProps.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 367,
+      "sha256": "5c97aaa10f54f1f5682c4343b8eb9cf7e1c8e676ca176d13f27d9497905ecdb3"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/ConnectivityStatus.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/ConnectivityStatus.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 473,
+      "sha256": "f39483062b61853bfec3e97fa27309a6d534202c874e7cbcdfee7502dd0120c8"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/ConnectivityXM Menu.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/ConnectivityXM Menu.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 440,
+      "sha256": "56531353f0902b26c90f8582b4d5dfe31d1dd9d1d014d5624b22f18b0fc2c172"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/HP48.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/HP48.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 393,
+      "sha256": "7d1b4887cc2f8247323bff0f0fcdbc6261d0d29a6721b1247a02088c364c6ba5"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/HP48Nxt.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/HP48Nxt.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 170,
+      "sha256": "5877171fa14182fa0bd699ea5ee495646347dd190cb13c42217f9e494fb9b6f4"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/HP48Srvr.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/HP48Srvr.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 170,
+      "sha256": "5d42b513e481daf4dae2c22510aec36eb3d24801a34ab23349f53ebd91b8b00c"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/HP48Srvr2.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/HP48Srvr2.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 170,
+      "sha256": "7b29192c72a13d48d2bc104ef9b9dfee662706a6d29185da67f51877bf5b73d8"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/HP48XSrvr.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/HP48XSrvr.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 170,
+      "sha256": "29df4580c3fdcdfac8efdbb8986e8ee936d77b32782395d34b0c7d814f909252"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/HP49.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/HP49.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 393,
+      "sha256": "0d6115cf4f6bd10d3042100f59bb5f9e5f9f7fe0f688040868ca056e1eaa97f0"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/HP49Apps.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/HP49Apps.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 170,
+      "sha256": "b73fb50fa2cb00d7d95b2906408094d54e0d8143ee933d2d7cd51adfcb36b28a"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/HP49IOMenu.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/HP49IOMenu.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 170,
+      "sha256": "515297de74527f337ff545759c918bfb9fd63e87c803829d77eb24ac4efb832d"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/HP49Settings.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/HP49Settings.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 170,
+      "sha256": "21a5b2357aee89064b54f980dcc6af8d836ffaa634946640e89b598ef60450b9"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/HP49Transfer.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/HP49Transfer.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 170,
+      "sha256": "fb5ae20c110cf6f0a684313e31045d34ed5cbf85ce8314f478c0710955286a6e"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Images/_vti_cnf/HelpQ.gif",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Images/_vti_cnf/HelpQ.gif",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 397,
+      "sha256": "cfa8c0df0a4d90c4a1090b2e0354b73e9b0dff0590ac80a997380c6d80c51e51"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Index.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/Index.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1578,
+      "sha256": "0a537df85340db505942390d2ae6cd030e9c23db0cb95d0675c54f19b1a6ca52"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/NoPage.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/NoPage.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 312,
+      "sha256": "adbd57689f69a58dd94b054a3b2871dc0abeaaaee03d3fd4d2749caf2f38f4d9"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_themes/_vti_cnf/themes.inf",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_themes/_vti_cnf/themes.inf",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 394,
+      "sha256": "708f5a7a811eb1929b655e7d82a3ba4040a723e84fdf253df83820abe632dcae"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_themes/themes.inf",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_themes/themes.inf",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 7276,
+      "sha256": "de50eb8f5e6a91d7528d6c8f9182672c63bffc67c75e8b8452c41285913d7ca1"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_cnf/Conn4x.HHP",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_cnf/Conn4x.HHP",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 290,
+      "sha256": "ec0194fdcfacc8b63163f554ce266e35b6900f980ff187043aa74bc13df8d22b"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_cnf/Conn4x.chm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_cnf/Conn4x.chm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 292,
+      "sha256": "6dfea0ebb2f401dd5f0df7ba4429ae9378494c30c5e190ea5029c4334929269a"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_cnf/Conn4x.hhc",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_cnf/Conn4x.hhc",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 258,
+      "sha256": "a6652b1a40a1429eb41b397f7bc7ddda38ec24e3264d37d43d485b6895077578"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_cnf/Conn4x.hhk",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_cnf/Conn4x.hhk",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 257,
+      "sha256": "59a668893bc780a78af911c465a54dbd5f7346070351ace63bec3076bea092f7"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_cnf/ErrorLog.log",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_cnf/ErrorLog.log",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 291,
+      "sha256": "fbc16943ee995281c00146faaefeacd02291efbf976490abf5a4d8f7d2de78bd"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_cnf/NoPage.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_cnf/NoPage.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 711,
+      "sha256": "970fb15df833aad6adc40f4973cdd8592a9c4494c9f75d2b782af0e0b42aefbd"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_cnf/cshelp.ali",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_cnf/cshelp.ali",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 290,
+      "sha256": "24190996c8ea1361c8e9e7eca860b63784bee4b45bd4d8ebac398b01d6f13813"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_cnf/cshelp.h",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_cnf/cshelp.h",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 289,
+      "sha256": "a5fbf76a71ab03bb5699a2509967d4350ef166811aeb84131b3b59a92fe8a959"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_cnf/cshelp.txt",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_cnf/cshelp.txt",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 290,
+      "sha256": "07046b647ac8f296e97453bd0906d0d7d55cb535e7f0bc4df4b4d5300df06c8b"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_cnf/index.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_cnf/index.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1343,
+      "sha256": "ffdfc63af2b41c245ec2a4e86bfef3ade0e11b51c1274eeb917e2d388f9fcca2"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/_vti_cnf/_x_todo.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/_vti_cnf/_x_todo.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 677,
+      "sha256": "3cb1b50212350f0631e1a58232d4bf49869cd431a6c74dd5c668dab5f3b5fb59"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/_vti_cnf/_x_todoh.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/_vti_cnf/_x_todoh.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 679,
+      "sha256": "ced59b9ea84c536169c650bfd2de355b276fe11e2b9466b5d0784578052ede4e"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/_x_todo.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/_x_todo.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 555,
+      "sha256": "8dbac87dd97ab6d0930eeadc6de4282686f6052b2a3d79871d3380ad7fab3bc0"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/_x_todoh.htm",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/_x_todoh.htm",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 557,
+      "sha256": "33ef7426d21a439dde7e3326939b6a88b54ceae698ce12d37b80be38b9fcf691"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/botinfs.cnf",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/botinfs.cnf",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 146,
+      "sha256": "bb53da4f9e3d381eb0bf0d222ab8fd4a0af13ad7e126ac57e83243d0b39b8a36"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/bots.cnf",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/bots.cnf",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 323,
+      "sha256": "91982948d399d4e48d2d46b37e14b838005f34177e5809fcec00485de6dbfbe7"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/deptodoc.btr",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/deptodoc.btr",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 6708,
+      "sha256": "ecca95f29457303b6903c54fa3d005f8ce3840b948f358adbc29a38a8623acfc"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/doctodep.btr",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/doctodep.btr",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 101400,
+      "sha256": "40fc00c92b62ecec8d4bf889360ad3405ccd6669429556884921641ed3d133ea"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/fpdbw.ico",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/fpdbw.ico",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1078,
+      "sha256": "4e8a2ac76c99ca8b8e32229e74270b9638fe0ac28af8bc49a67ded9d18be6cb7"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/linkinfo.btr",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/linkinfo.btr",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 35491,
+      "sha256": "6786c07e31163cc52c78d5b02cf70aafdc103dcb4922f8b6196bb3800afeccac"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/service.cnf",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/service.cnf",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 1166,
+      "sha256": "c3e01c12f7fe9650bcf7099f5e28ae41ab98b17dba888d0da18189620718b02e"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/service.lck",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/cshelp.txt",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/services.cnf",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/services.cnf",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 3,
+      "sha256": "9ce998a2512c48e337735a52c61d26e8d59de44f1522cf67b4eae3c1c38c02b7"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/structure.cnf",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/structure.cnf",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 384,
+      "sha256": "066102b43cd4b890471fbd5fd78ff7ddd633a5a87c6c54170f9a0fe5ecd30af7"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/_vti_pvt/writeto.cnf",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/_vti_pvt/writeto.cnf",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 25,
+      "sha256": "353b91839fb23a527a087fd66e142ebc68a35f8912d37e1ecebccca447bff753"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/cshelp.ali",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/cshelp.ali",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 178,
+      "sha256": "f1b45ad30730c0e9a3934a800befcbc2d4a6cfc5391cafa123315e2e2aacc650"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/cshelp.h",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/cshelp.h",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 97,
+      "sha256": "1d7d41b94ec6eca687d68739c5fe9fcbeed4fe169fa58adc2c5a058dbae63664"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/cshelp.txt",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/cshelp.txt",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xhelp/HelpConn4x/desktop.ini",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 help",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xhelp.zip",
+      "member": "HelpConn4x/desktop.ini",
+      "details_url": "https://www.hpcalc.org/details/5457",
+      "size": 114,
+      "sha256": "b710a83d9ecc57b6202132a387e8ff08ec736c858a0aac40bc4b20df7fee016c"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xsource.zip",
+      "method": "fetch",
+      "title": "Conn4x 2.0 Delphi source (YModem.pas, FixObj.pas, ...)",
+      "authors": [
+        "Cyrille de Brébisson",
+        "William G. Graves"
+      ],
+      "year": "2000-2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "url": "https://www.hpcalc.org/hp49/pc/link/conn4xsource.zip",
+      "details_url": "https://www.hpcalc.org/details/5416",
+      "size": 388428,
+      "sha256": "876ea9fbecdc93a7b5dce51653e847b8d7d81dce122e3f1761fc03676a645f49"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xsource/DownLd.pas",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 Delphi source (YModem.pas, FixObj.pas, ...)",
+      "authors": [
+        "Cyrille de Brébisson",
+        "William G. Graves"
+      ],
+      "year": "2000-2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xsource.zip",
+      "member": "DownLd.pas",
+      "details_url": "https://www.hpcalc.org/details/5416",
+      "size": 3757,
+      "sha256": "9edeb389d097dcc506dccf4e3a97b7da7134c0a76d9e3093d2d16f9d3835e3c6"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xsource/FixObj.pas",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 Delphi source (YModem.pas, FixObj.pas, ...)",
+      "authors": [
+        "Cyrille de Brébisson",
+        "William G. Graves"
+      ],
+      "year": "2000-2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xsource.zip",
+      "member": "FixObj.pas",
+      "details_url": "https://www.hpcalc.org/details/5416",
+      "size": 12903,
+      "sha256": "459956478d34a6155c461778296f638b23f32a8159a98ca16914ed735369fcaf"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xsource/HPDir.pas",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 Delphi source (YModem.pas, FixObj.pas, ...)",
+      "authors": [
+        "Cyrille de Brébisson",
+        "William G. Graves"
+      ],
+      "year": "2000-2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xsource.zip",
+      "member": "HPDir.pas",
+      "details_url": "https://www.hpcalc.org/details/5416",
+      "size": 33924,
+      "sha256": "13814906650147779709db9fb8934137f5edb14ce2174f7694d5e025378ddd11"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xsource/ReadMe.txt",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 Delphi source (YModem.pas, FixObj.pas, ...)",
+      "authors": [
+        "Cyrille de Brébisson",
+        "William G. Graves"
+      ],
+      "year": "2000-2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xsource.zip",
+      "member": "ReadMe.txt",
+      "details_url": "https://www.hpcalc.org/details/5416",
+      "size": 3928,
+      "sha256": "f6277fe6d559431660172f32a0bbca1e9256bf3d0fa4e3b23e350b371c0ffc50"
+    },
+    {
+      "path": "protocols/xserv-conn4x/conn4xsource/YModem.pas",
+      "method": "zip-member",
+      "title": "Conn4x 2.0 Delphi source (YModem.pas, FixObj.pas, ...)",
+      "authors": [
+        "Cyrille de Brébisson",
+        "William G. Graves"
+      ],
+      "year": "2000-2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/conn4xsource.zip",
+      "member": "YModem.pas",
+      "details_url": "https://www.hpcalc.org/details/5416",
+      "size": 44616,
+      "sha256": "f476389b3cbcdced110f41cdc2a36549ddc947c619cc4d43c1cbea0bf4ef6773",
+      "wiki": [
+        "sources/conn4x-ymodem-pas"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/hpmuseum-archv005.html",
+      "method": "fetch",
+      "title": "hpmuseum.org forum post quoting the HP 49G ROM 1.18 release notes",
+      "authors": [
+        "Bryan",
+        "C. Marangon"
+      ],
+      "year": "2001",
+      "terms": "forum post",
+      "url": "https://web.archive.org/web/20190405024301id_/https://www.hpmuseum.org/cgi-sys/cgiwrap/hpmuseum/archv005.cgi?read=9011",
+      "details_url": "https://www.hpmuseum.org/cgi-sys/cgiwrap/hpmuseum/archv005.cgi?read=9011",
+      "size": 6620,
+      "sha256": "43587e3053cc7a44cfe52183d64d91856b2fb9630684676ae336714d2a6d73d0",
+      "hash_stable": false
+    },
+    {
+      "path": "protocols/xserv-conn4x/hpmuseum-archv005.txt",
+      "method": "derived",
+      "title": "hpmuseum.org forum post quoting the HP 49G ROM 1.18 release notes (text)",
+      "authors": [
+        "Bryan",
+        "C. Marangon"
+      ],
+      "year": "2001",
+      "terms": "forum post",
+      "derived_from": "protocols/xserv-conn4x/hpmuseum-archv005.html",
+      "command": "textutil -convert txt -output protocols/xserv-conn4x/hpmuseum-archv005.txt protocols/xserv-conn4x/hpmuseum-archv005.html",
+      "how": "macOS textutil",
+      "size": 4565,
+      "sha256": "b41243dea4b34fca9321ccc01b73ddd8fa713f89e2af9afb6dbef46d09dfec21",
+      "hash_stable": false,
+      "wiki": [
+        "sources/hp49-rom118-notes"
+      ]
+    },
+    {
+      "path": "protocols/xserv-conn4x/xsrvr48.zip",
+      "method": "fetch",
+      "title": "XSrvr48 1.1, XModem server library for the HP 48",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "url": "https://www.hpcalc.org/hp48/pc/link/xsrvr48.zip",
+      "details_url": "https://www.hpcalc.org/details/5412",
+      "size": 4805,
+      "sha256": "5cbe71dd7622e2ab77ca3a867eafbee74a8289479689c2563aebfc65149d0d4f"
+    },
+    {
+      "path": "protocols/xserv-conn4x/xsrvr48/ReadMe.txt",
+      "method": "zip-member",
+      "title": "XSrvr48 1.1, XModem server library for the HP 48",
+      "authors": [
+        "William G. Graves"
+      ],
+      "year": "2002",
+      "terms": "(c) 2002 Graves: free copying, not for resale, keep notice, no commercial use without permission",
+      "zip": "protocols/xserv-conn4x/xsrvr48.zip",
+      "member": "ReadMe.txt",
+      "details_url": "https://www.hpcalc.org/details/5412",
+      "size": 2658,
+      "sha256": "8f03de7609fc6fd263bb9c6fe1cb8eac3f299838051de4c9bf96395e0420952f",
+      "wiki": [
+        "sources/xsrvr48-readme"
+      ]
+    },
+    {
+      "path": "protocols/ymodem-1985-textfiles.txt",
+      "method": "fetch",
+      "title": "XMODEM/YMODEM Protocol Reference (10-10-85)",
+      "authors": [
+        "Chuck Forsberg"
+      ],
+      "year": "1985",
+      "terms": "please distribute as widely as possible",
+      "url": "http://www.textfiles.com/programming/ymodem.txt",
+      "size": 49446,
+      "sha256": "34d77f6a5b4477045fdfc1e5e50d185311b5a57cdbe916f8aeb797354d2c2e67"
+    },
+    {
+      "path": "protocols/ymodem.txt",
+      "method": "fetch",
+      "title": "XMODEM/YMODEM Protocol Reference (10-14-88)",
+      "authors": [
+        "Chuck Forsberg (editor)",
+        "Ward Christensen"
+      ],
+      "year": "1988",
+      "terms": "please distribute as widely as possible",
+      "url": "https://gallium.inria.fr/~doligez/zmodem/ymodem.txt",
+      "size": 67550,
+      "sha256": "744a0f24bc6cf149cdc152aa4e8b35c06d9962887807ffabcc4bac111ba56922",
+      "wiki": [
+        "sources/ymodem-reference"
+      ]
+    },
+    {
+      "path": "protocols/zmodem-1987-textfiles.txt",
+      "method": "fetch",
+      "title": "ZMODEM (10-27-87)",
+      "authors": [
+        "Chuck Forsberg"
+      ],
+      "year": "1987",
+      "terms": "public domain",
+      "url": "http://www.textfiles.com/programming/zmodem6.txt",
+      "size": 105216,
+      "sha256": "dda08a647e2c92a4650273abd9b4da3c85556384c3e9f77fc951e3e273319430"
+    },
+    {
+      "path": "protocols/zmodem.txt",
+      "method": "fetch",
+      "title": "The ZMODEM Inter Application File Transfer Protocol (Oct-14-88)",
+      "authors": [
+        "Chuck Forsberg"
+      ],
+      "year": "1988",
+      "terms": "public domain per the document",
+      "url": "https://gallium.inria.fr/~doligez/zmodem/zmodem.txt",
+      "size": 104047,
+      "sha256": "24dc81099c747c794f58896c4a627ca67f798c47eca185f1d94d28645564c007",
+      "wiki": [
+        "sources/zmodem"
+      ]
+    },
+    {
+      "path": "saturn-hardware/Interrupts48-R_DUCHESNE-EN-Rev07c.pdf",
+      "method": "manual",
+      "title": "HP48 S, SX, G, GX Interrupts: Tricks to Know (unofficial English edition, rev. 07c)",
+      "authors": [
+        "Régis Duchesne",
+        "Marcos Navarro (English edition)"
+      ],
+      "year": "1994; edition 2024",
+      "terms": "not checked",
+      "instructions": "Hosted on mega.nz, linked from https://sites.google.com/view/mnavarrodocs/home (\"Interrupts48\"). Download it in a browser and save it as this path.",
+      "details_url": "https://sites.google.com/view/mnavarrodocs/home",
+      "size": 2157842,
+      "sha256": "af6afec56ecd56743e5a590d866d422d6de65d9287f8547cbf2480e89a2301d6",
+      "wiki": [
+        "sources/duchesne-interrupts-en"
+      ]
+    },
+    {
+      "path": "saturn-hardware/Saturn_tutorial.pdf",
+      "method": "fetch",
+      "title": "Introduction to Saturn Assembly Language, 3rd edition",
+      "authors": [
+        "Gilbert Fernandes",
+        "Eric Rechlin"
+      ],
+      "year": "2005",
+      "terms": "none found",
+      "url": "https://www.keesvandersanden.nl/calculators/downloads/Saturn_tutorial.pdf",
+      "details_url": "https://www.hpcalc.org/details/1693",
+      "size": 957072,
+      "sha256": "c91efae69b0e8e0ac088ae7582e913c025306a1c308391443c6a53ff0176d4e0",
+      "notes": "Byte-identical to the PDF inside asm-pdf.zip on hpcalc.org details/1693.",
+      "wiki": [
+        "sources/saturn-tutorial"
+      ]
+    },
+    {
+      "path": "saturn-hardware/cannon-tips-v1.pdf",
+      "method": "manual",
+      "title": "S/SX and G/GX Software Developing Tips, version 1",
+      "authors": [
+        "Douglas R. Cannon",
+        "Marcos Navarro (PDF edition)"
+      ],
+      "year": "1993",
+      "terms": "not checked",
+      "instructions": "Hosted on mega.nz, linked from https://sites.google.com/view/mnavarrodocs/home (Cannon, tips v1). Download it in a browser and save it as this path.",
+      "details_url": "https://sites.google.com/view/mnavarrodocs/home",
+      "size": 689639,
+      "sha256": "cac3ba6fd8478e34f276c525a1ffe4c1312a1895ace4d868f610b95566d1902f"
+    },
+    {
+      "path": "saturn-hardware/cannon-tips-v2.pdf",
+      "method": "manual",
+      "title": "S/SX and G/GX Software Developing Tips, version 2",
+      "authors": [
+        "Douglas R. Cannon",
+        "Marcos Navarro (PDF edition)"
+      ],
+      "year": "1993",
+      "terms": "not checked",
+      "instructions": "Hosted on mega.nz, linked from https://sites.google.com/view/mnavarrodocs/home (Cannon, tips v2). Download it in a browser and save it as this path.",
+      "details_url": "https://sites.google.com/view/mnavarrodocs/home",
+      "size": 557351,
+      "sha256": "5de69a06052b5c4eced344fae59d7f9b8f14b7f95b184f014937f3cfd7255ca5"
+    },
+    {
+      "path": "saturn-hardware/datasheets/intel-28f160s5-290609-004.pdf",
+      "method": "fetch",
+      "title": "5 Volt FlashFile Memory 28F160S5 and 28F320S5, preliminary datasheet, order 290609-004",
+      "authors": [
+        "Intel"
+      ],
+      "year": "1998",
+      "terms": "Intel copyright, standard datasheet disclaimer",
+      "url": "https://web.archive.org/web/20000819001922id_/http://developer.intel.com:80/design/flcomp/datashts/29060904.pdf",
+      "size": 328417,
+      "sha256": "a206083c738715f3704df99be627bb7fb33bc206ec1dae1a71819e10241d461f",
+      "wiki": [
+        "sources/intel-28f160s5"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp-journal/hpj-38g.zip",
+      "method": "fetch",
+      "title": "HP Journal, June 1996: three HP 38G articles",
+      "authors": [
+        "Hewlett-Packard",
+        "James A. Donnelly"
+      ],
+      "year": "1996",
+      "terms": "Copyright Hewlett-Packard, distributed with permission",
+      "url": "https://www.hpcalc.org/hp38/docs/hpj-38g.zip",
+      "details_url": "https://www.hpcalc.org/details/3556",
+      "size": 172118,
+      "sha256": "be0eceef3a08a99bc1b950c7e2a5554eac92df3ec438c13ea1ed906d9b55f988"
+    },
+    {
+      "path": "saturn-hardware/hp-journal/hpj-38g/ju96a6.pdf",
+      "method": "zip-member",
+      "title": "HP Journal, June 1996: three HP 38G articles",
+      "authors": [
+        "Hewlett-Packard",
+        "James A. Donnelly"
+      ],
+      "year": "1996",
+      "terms": "Copyright Hewlett-Packard, distributed with permission",
+      "zip": "saturn-hardware/hp-journal/hpj-38g.zip",
+      "member": "ju96a6.pdf",
+      "details_url": "https://www.hpcalc.org/details/3556",
+      "size": 154286,
+      "sha256": "8c7966402027eed1884d0ff50d8336e523f03e1a7313437e42bc3954e0882674",
+      "wiki": [
+        "sources/hpj-38g"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp-journal/hpj-38g/ju96a6a.pdf",
+      "method": "zip-member",
+      "title": "HP Journal, June 1996: three HP 38G articles",
+      "authors": [
+        "Hewlett-Packard",
+        "James A. Donnelly"
+      ],
+      "year": "1996",
+      "terms": "Copyright Hewlett-Packard, distributed with permission",
+      "zip": "saturn-hardware/hp-journal/hpj-38g.zip",
+      "member": "ju96a6a.pdf",
+      "details_url": "https://www.hpcalc.org/details/3556",
+      "size": 16951,
+      "sha256": "0f42017fe5cbadb809ac20731b2b9bff45cedfa1fd57b0c153be116e4b052320"
+    },
+    {
+      "path": "saturn-hardware/hp-journal/hpj-38g/ju96a7.pdf",
+      "method": "zip-member",
+      "title": "HP Journal, June 1996: three HP 38G articles",
+      "authors": [
+        "Hewlett-Packard",
+        "James A. Donnelly"
+      ],
+      "year": "1996",
+      "terms": "Copyright Hewlett-Packard, distributed with permission",
+      "zip": "saturn-hardware/hp-journal/hpj-38g.zip",
+      "member": "ju96a7.pdf",
+      "details_url": "https://www.hpcalc.org/details/3556",
+      "size": 63949,
+      "sha256": "44e1832aceaf14319e6d2f0396ff5dff7958316e5d7393a211582f0db4bfc3c5"
+    },
+    {
+      "path": "saturn-hardware/hp-journal/hpj-48gx.zip",
+      "method": "fetch",
+      "title": "HP Journal, August 1994: the HP 48G/GX",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1994",
+      "terms": "Copyright Hewlett-Packard, distributed with permission",
+      "url": "https://www.hpcalc.org/hp48/docs/misc/hpj-48gx.zip",
+      "details_url": "https://www.hpcalc.org/details/3555",
+      "size": 199898,
+      "sha256": "42fc457bf0e842f1c3e2640059e78b9dd5b2c3d8fa480f1422656c1d54318097"
+    },
+    {
+      "path": "saturn-hardware/hp-journal/hpj-48gx/aug94_6t.pdf",
+      "method": "zip-member",
+      "title": "HP Journal, August 1994: the HP 48G/GX",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1994",
+      "terms": "Copyright Hewlett-Packard, distributed with permission",
+      "zip": "saturn-hardware/hp-journal/hpj-48gx.zip",
+      "member": "aug94_6t.pdf",
+      "details_url": "https://www.hpcalc.org/details/3555",
+      "size": 249793,
+      "sha256": "861a4bd7679ac9499fcbb26318a15aa274f94a370d4e912fca54eccbf55e7ce4",
+      "wiki": [
+        "sources/hpj-48gx"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp-journal/hpj-48sx/hpj-48sx.pdf",
+      "method": "zip-member",
+      "title": "HP Journal, June 1991: The HP 48SX Scientific Expandable Calculator",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "Copyright Hewlett-Packard, distributed with permission",
+      "zip_url": "https://www.hpcalc.org/hp48/docs/misc/hpj-48sx.zip",
+      "member": "hpj-48sx.pdf",
+      "details_url": "https://www.hpcalc.org/details/7838",
+      "size": 9686172,
+      "sha256": "7be43df8d4e467d472bcdce1b832816928753fa002f808c4fb923df2b8496b47",
+      "wiki": [
+        "sources/hpj-48sx"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp-tools-1991/DOCS/MAKEROM.DOC",
+      "method": "zip-member",
+      "title": "HP Tools: SASM, RPLCOMP, SLOAD, MAKEROM, USRLIB manuals and RPLMAN",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "Copyright Hewlett-Packard 1991, all rights reserved; redistribution without charge or for a media fee permitted provided the notice is retained",
+      "zip": "saturn-hardware/hp-tools-1991/tools.zip",
+      "member": "DOCS/MAKEROM.DOC",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 23672,
+      "sha256": "c48da17193b55aa3572cad476f5b0e7a6dc4f0e42d8994672bb59dca5a95c107"
+    },
+    {
+      "path": "saturn-hardware/hp-tools-1991/DOCS/RPLCOMP.DOC",
+      "method": "zip-member",
+      "title": "HP Tools: SASM, RPLCOMP, SLOAD, MAKEROM, USRLIB manuals and RPLMAN",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "Copyright Hewlett-Packard 1991, all rights reserved; redistribution without charge or for a media fee permitted provided the notice is retained",
+      "zip": "saturn-hardware/hp-tools-1991/tools.zip",
+      "member": "DOCS/RPLCOMP.DOC",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 16270,
+      "sha256": "446eced366de0c4223ab358db7349a30a4d88c2c10bd6272156a7f8d3c91e4e5"
+    },
+    {
+      "path": "saturn-hardware/hp-tools-1991/DOCS/SASM.DOC",
+      "method": "zip-member",
+      "title": "HP Tools: SASM, RPLCOMP, SLOAD, MAKEROM, USRLIB manuals and RPLMAN",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "Copyright Hewlett-Packard 1991, all rights reserved; redistribution without charge or for a media fee permitted provided the notice is retained",
+      "zip": "saturn-hardware/hp-tools-1991/tools.zip",
+      "member": "DOCS/SASM.DOC",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 294157,
+      "sha256": "a937dd232bef7ab2e02348e215ebc847bc72633667fa43d0e95fdec799f0bcd5"
+    },
+    {
+      "path": "saturn-hardware/hp-tools-1991/DOCS/SLOAD.DOC",
+      "method": "zip-member",
+      "title": "HP Tools: SASM, RPLCOMP, SLOAD, MAKEROM, USRLIB manuals and RPLMAN",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "Copyright Hewlett-Packard 1991, all rights reserved; redistribution without charge or for a media fee permitted provided the notice is retained",
+      "zip": "saturn-hardware/hp-tools-1991/tools.zip",
+      "member": "DOCS/SLOAD.DOC",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 11622,
+      "sha256": "c9057869c0eabf16d64b4a4e3130f2bd3d0106497a33e7698bf2f1fe72cec1bf"
+    },
+    {
+      "path": "saturn-hardware/hp-tools-1991/DOCS/USRLIB.DOC",
+      "method": "zip-member",
+      "title": "HP Tools: SASM, RPLCOMP, SLOAD, MAKEROM, USRLIB manuals and RPLMAN",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "Copyright Hewlett-Packard 1991, all rights reserved; redistribution without charge or for a media fee permitted provided the notice is retained",
+      "zip": "saturn-hardware/hp-tools-1991/tools.zip",
+      "member": "DOCS/USRLIB.DOC",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 23879,
+      "sha256": "fc2d3b9a91715855db1ccb14c7663acfa6b5ec8556bd03e21266de9b3a0980c1"
+    },
+    {
+      "path": "saturn-hardware/hp-tools-1991/README",
+      "method": "zip-member",
+      "title": "HP Tools: SASM, RPLCOMP, SLOAD, MAKEROM, USRLIB manuals and RPLMAN",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "Copyright Hewlett-Packard 1991, all rights reserved; redistribution without charge or for a media fee permitted provided the notice is retained",
+      "zip": "saturn-hardware/hp-tools-1991/tools.zip",
+      "member": "README",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 3148,
+      "sha256": "2c786a3d35cd2194bf75c13fe361709393dc400e1ad01bb803e67b5e063be25a"
+    },
+    {
+      "path": "saturn-hardware/hp-tools-1991/RPLMAN.DOC",
+      "method": "zip-member",
+      "title": "HP Tools: SASM, RPLCOMP, SLOAD, MAKEROM, USRLIB manuals and RPLMAN",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "Copyright Hewlett-Packard 1991, all rights reserved; redistribution without charge or for a media fee permitted provided the notice is retained",
+      "zip": "saturn-hardware/hp-tools-1991/tools.zip",
+      "member": "RPLMAN.DOC",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 271443,
+      "sha256": "381a1defce1141423b454d53de4ee091c7ef24dbb8f19734d25434b3d1b4b3cf",
+      "wiki": [
+        "sources/rplman"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp-tools-1991/TOOLS/KEYDEFS.H",
+      "method": "zip-member",
+      "title": "HP Tools: SASM, RPLCOMP, SLOAD, MAKEROM, USRLIB manuals and RPLMAN",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "Copyright Hewlett-Packard 1991, all rights reserved; redistribution without charge or for a media fee permitted provided the notice is retained",
+      "zip": "saturn-hardware/hp-tools-1991/tools.zip",
+      "member": "TOOLS/KEYDEFS.H",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 1500,
+      "sha256": "7217aea86c5cd7a2271d2643512168587e68a449468918ac48379fb0891fb7a0"
+    },
+    {
+      "path": "saturn-hardware/hp-tools-1991/TOOLS/SASM.OPC",
+      "method": "zip-member",
+      "title": "HP Tools: SASM, RPLCOMP, SLOAD, MAKEROM, USRLIB manuals and RPLMAN",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "Copyright Hewlett-Packard 1991, all rights reserved; redistribution without charge or for a media fee permitted provided the notice is retained",
+      "zip": "saturn-hardware/hp-tools-1991/tools.zip",
+      "member": "TOOLS/SASM.OPC",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 32024,
+      "sha256": "e4b4a2bacbe7ac8692627c32bdc815912d089c7ce450db29b2cc5c0e87d02635"
+    },
+    {
+      "path": "saturn-hardware/hp-tools-1991/tools.zip",
+      "method": "fetch",
+      "title": "HP Tools: SASM, RPLCOMP, SLOAD, MAKEROM, USRLIB manuals and RPLMAN",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "Copyright Hewlett-Packard 1991, all rights reserved; redistribution without charge or for a media fee permitted provided the notice is retained",
+      "url": "https://www.hpcalc.org/hp48/pc/programming/tools.zip",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 347017,
+      "sha256": "ce104997141efb6c0891dec5132ddf7ad099604d510e0bcdad6a8a31813b8863"
+    },
+    {
+      "path": "saturn-hardware/hp28s-procnotes.txt",
+      "method": "fetch",
+      "title": "HP28S Processor Notes",
+      "authors": [
+        "Alonzo Gariepy"
+      ],
+      "year": "1989",
+      "terms": "(c) 1989 Gariepy",
+      "url": "https://www.hpcalc.org/hp28/docs/procnotes.txt",
+      "details_url": "https://www.hpcalc.org/details/8557",
+      "size": 61436,
+      "sha256": "33a72e96921f28085d087c504a340067b93d24c0ac1405a30ea6de03b031a9f5",
+      "wiki": [
+        "sources/hp28s-procnotes"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/bank.txt",
+      "method": "fetch",
+      "title": "Bank switching: SX ports versus GX ports",
+      "authors": [
+        "Joe Horn"
+      ],
+      "year": "1994",
+      "terms": "none",
+      "url": "https://www.hpcalc.org/hp48/docs/misc/bank.txt",
+      "details_url": "https://www.hpcalc.org/details/6693",
+      "size": 4703,
+      "sha256": "96a66229d554340a65611420621b098b485f962c07b211714ea336a8ebad2823",
+      "wiki": [
+        "sources/bank-horn"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/checksum.txt",
+      "method": "fetch",
+      "title": "Built-in hardware CRC at #00104",
+      "authors": [
+        "Alonzo Gariepy",
+        "Dave Kaffine"
+      ],
+      "year": "1990",
+      "terms": "none",
+      "url": "https://www.hpcalc.org/hp48/docs/programming/checksum.txt",
+      "details_url": "https://www.hpcalc.org/details/6720",
+      "size": 801,
+      "sha256": "a33ce8ec7ac354d589433703a6eff328ddc00928cb090bd72ab9a14d978f00e1",
+      "wiki": [
+        "sources/checksum-crc"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hdwreg.txt",
+      "method": "fetch",
+      "title": "HP48SX Hardware Registers Document v1.0",
+      "authors": [
+        "Julian Taplin"
+      ],
+      "year": "1991",
+      "terms": "none",
+      "url": "https://www.hpcalc.org/hp48/docs/programming/hdwreg.txt",
+      "details_url": "https://www.hpcalc.org/details/6809",
+      "size": 3009,
+      "sha256": "8b9185b1b724efd9de12e541202c747b067ff3cc3ac9da614a4b026b2b28e7e9",
+      "wiki": [
+        "sources/hdwreg-taplin"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "method": "fetch",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "url": "https://www.hpcalc.org/hp48/docs/misc/hphard.zip",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 65568,
+      "sha256": "553032ab9439ef37cbd2d3a2e8cc48ebea72f76292e1d2f3bf3a80bd1ff684fd"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/backup.gif",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "backup.gif",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 1724,
+      "sha256": "cf7ab02d1eebc550b76a2190fea3b62e06c0f9501ea963ea5a6358280d600abf"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/driverir.gif",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "driverir.gif",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 4715,
+      "sha256": "63c9cb426190250a9525ad4e67ef66d77428c2ce39f2924856ae6e7b056a725c"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/hphard.htm",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "hphard.htm",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 54013,
+      "sha256": "915adf14fcff2c1f96861de9ce0e26e403d9b2b3b219b70ffc492db2f3cf7899"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/hphard.txt",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "hphard.txt",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 22107,
+      "sha256": "db07b595c4672b2e4f6464c48cc0b18517ae52ae22c4d4945de60540bbce8bc5",
+      "wiki": [
+        "sources/teuwen-gx-hardware"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/irsx.gif",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "irsx.gif",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 4110,
+      "sha256": "d7356587a72c7fa67bfcd87f8ada7e8aae4b7d124e591cc213c78bd5482168b1"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/irtrans.gif",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "irtrans.gif",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 776,
+      "sha256": "7377bcc17431237ee293a60ac6e2a2ce15a612f85d92ab671863eaed1c0117f6"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/rs1.gif",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "rs1.gif",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 1571,
+      "sha256": "b4c78c4506100caa7bdcdc7acb68ff5739e96c43a672db3b55f876dc7fd147fc"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/rs2.gif",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "rs2.gif",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 664,
+      "sha256": "ed6cb2716daeb44719f932095f1dca41ac9b912119229bf03cf71fd0e5a61311"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/rs3.gif",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "rs3.gif",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 6250,
+      "sha256": "1ba9e341b2299363f4075102339cc464618175cf43a7c64dbdb6dd7503338d2f"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/rs4.gif",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "rs4.gif",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 2520,
+      "sha256": "e146da3bf9dcc34d2670c942194ceb0d174b8647e0395e18a5b6220af97b98fc"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/supply.gif",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "supply.gif",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 5547,
+      "sha256": "33366342ea7081f5eaab8befd45378a8261effc24c54970be5a8421c93bc4c79"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/hphard/wholepcb.jpg",
+      "method": "zip-member",
+      "title": "Guide to the HP48G/GX Hardware v0.05",
+      "authors": [
+        "Philippe Teuwen"
+      ],
+      "year": "1997",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp48-hw-notes/hphard.zip",
+      "member": "wholepcb.jpg",
+      "details_url": "https://www.hpcalc.org/details/3553",
+      "size": 20570,
+      "sha256": "b28f032654896873f554d759be8f02641e7fa78066c8e154cc99db5aad0deba9"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/input.zip",
+      "method": "fetch",
+      "title": "Reading the keyboard from ML",
+      "authors": [
+        "Joe Ervin"
+      ],
+      "year": "1992",
+      "terms": "none",
+      "url": "https://www.hpcalc.org/hp48/docs/programming/input.zip",
+      "details_url": "https://www.hpcalc.org/details/1720",
+      "size": 12562,
+      "sha256": "f873b7d89c8cb827d1b8319280a36ce68f6e512bd8a41d01fc4756f5348e9375"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/input/keybrd_input.txt",
+      "method": "zip-member",
+      "title": "Reading the keyboard from ML",
+      "authors": [
+        "Joe Ervin"
+      ],
+      "year": "1992",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/input.zip",
+      "member": "keybrd_input.txt",
+      "details_url": "https://www.hpcalc.org/details/1720",
+      "size": 40432,
+      "sha256": "a5351f856c16d185ee6e02122b0721e16342d43601fb8a6514d9f0591116c285",
+      "wiki": [
+        "sources/keyboard-ervin"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/mlstarterkit.zip",
+      "method": "fetch",
+      "title": "HP48 Machine Language Starter Kit",
+      "authors": [
+        "Joe Ervin (compiler)",
+        "Alonzo Gariepy",
+        "others"
+      ],
+      "year": "1990-1991",
+      "terms": "none",
+      "url": "https://www.hpcalc.org/hp48/docs/programming/mlstarterkit.zip",
+      "details_url": "https://www.hpcalc.org/details/4672",
+      "size": 155860,
+      "sha256": "bbd58f74d9dcc78fec8f274a0c77244f3c07352439603c70cac6d708581e8146"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/mlstarterkit/MAIL-SERVER",
+      "method": "zip-member",
+      "title": "HP48 Machine Language Starter Kit",
+      "authors": [
+        "Joe Ervin (compiler)",
+        "Alonzo Gariepy",
+        "others"
+      ],
+      "year": "1990-1991",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/mlstarterkit.zip",
+      "member": "MAIL-SERVER",
+      "details_url": "https://www.hpcalc.org/details/4672",
+      "size": 9437,
+      "sha256": "e8f685b84cfe43fc3f0f7c702035715d470f6870749662b4d7d2e602bc507221"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/mlstarterkit/README",
+      "method": "zip-member",
+      "title": "HP48 Machine Language Starter Kit",
+      "authors": [
+        "Joe Ervin (compiler)",
+        "Alonzo Gariepy",
+        "others"
+      ],
+      "year": "1990-1991",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/mlstarterkit.zip",
+      "member": "README",
+      "details_url": "https://www.hpcalc.org/details/4672",
+      "size": 1742,
+      "sha256": "281acfcf0444c46390447114c3eefebdc43b08dde155f1b43028380e8e44d462"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/mlstarterkit/chip8/chip-48.src",
+      "method": "zip-member",
+      "title": "HP48 Machine Language Starter Kit",
+      "authors": [
+        "Joe Ervin (compiler)",
+        "Alonzo Gariepy",
+        "others"
+      ],
+      "year": "1990-1991",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/mlstarterkit.zip",
+      "member": "chip8/chip-48.src",
+      "details_url": "https://www.hpcalc.org/details/4672",
+      "size": 35613,
+      "sha256": "ce83a989ad7172eb6453465cdba87a477edb4b151f4633818177d97d557499cf"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/mlstarterkit/graphics/diss",
+      "method": "zip-member",
+      "title": "HP48 Machine Language Starter Kit",
+      "authors": [
+        "Joe Ervin (compiler)",
+        "Alonzo Gariepy",
+        "others"
+      ],
+      "year": "1990-1991",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/mlstarterkit.zip",
+      "member": "graphics/diss",
+      "details_url": "https://www.hpcalc.org/details/4672",
+      "size": 4457,
+      "sha256": "e64e4bf8173d57dacdf36133e1c3c56a469f5ebd24f27407017c77cb6cc21a5d"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/mlstarterkit/hardware/derick.int",
+      "method": "zip-member",
+      "title": "HP48 Machine Language Starter Kit",
+      "authors": [
+        "Joe Ervin (compiler)",
+        "Alonzo Gariepy",
+        "others"
+      ],
+      "year": "1990-1991",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/mlstarterkit.zip",
+      "member": "hardware/derick.int",
+      "details_url": "https://www.hpcalc.org/details/4672",
+      "size": 108338,
+      "sha256": "29416cd0e1d5ef3b8d12b463887b0dd0a1a3c96f43ea427505fa710d123107b6"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/mlstarterkit/hardware/innards",
+      "method": "zip-member",
+      "title": "HP48 Machine Language Starter Kit",
+      "authors": [
+        "Joe Ervin (compiler)",
+        "Alonzo Gariepy",
+        "others"
+      ],
+      "year": "1990-1991",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/mlstarterkit.zip",
+      "member": "hardware/innards",
+      "details_url": "https://www.hpcalc.org/details/4672",
+      "size": 19560,
+      "sha256": "c5a593884a55d7a6c525f9f5e9fba66fe9f72eec93a2ad390043d768162af697"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/mlstarterkit/hardware/internals/READ.ME",
+      "method": "zip-member",
+      "title": "HP48 Machine Language Starter Kit",
+      "authors": [
+        "Joe Ervin (compiler)",
+        "Alonzo Gariepy",
+        "others"
+      ],
+      "year": "1990-1991",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/mlstarterkit.zip",
+      "member": "hardware/internals/READ.ME",
+      "details_url": "https://www.hpcalc.org/details/4672",
+      "size": 7314,
+      "sha256": "1c1961c74d747386b46d16bb96cd86eca1a962d3d3381eddabf488c06f281435"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/mlstarterkit/hardware/internals/byaddress",
+      "method": "zip-member",
+      "title": "HP48 Machine Language Starter Kit",
+      "authors": [
+        "Joe Ervin (compiler)",
+        "Alonzo Gariepy",
+        "others"
+      ],
+      "year": "1990-1991",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/mlstarterkit.zip",
+      "member": "hardware/internals/byaddress",
+      "details_url": "https://www.hpcalc.org/details/4672",
+      "size": 168244,
+      "sha256": "6fb0d031b919e96301f252e477a12592547cd0b67692d96b17d32e0ea5324bde",
+      "wiki": [
+        "sources/hp48-internals-address-list"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/mlstarterkit/hardware/internals/byfunction",
+      "method": "zip-member",
+      "title": "HP48 Machine Language Starter Kit",
+      "authors": [
+        "Joe Ervin (compiler)",
+        "Alonzo Gariepy",
+        "others"
+      ],
+      "year": "1990-1991",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/mlstarterkit.zip",
+      "member": "hardware/internals/byfunction",
+      "details_url": "https://www.hpcalc.org/details/4672",
+      "size": 182259,
+      "sha256": "9bac70c918d1ea7fc5d6ef06e4f1b5edf0d16564d459741243a4d861222b150e"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/screen.zip",
+      "method": "fetch",
+      "title": "HP48SX screen addresses",
+      "authors": [
+        "Jan Brittenson"
+      ],
+      "year": "1990",
+      "terms": "none",
+      "url": "https://www.hpcalc.org/hp48/docs/programming/screen.zip",
+      "details_url": "https://www.hpcalc.org/details/1756",
+      "size": 2349,
+      "sha256": "f983d54d8d1192fe13d4fc4b631d43b88bee88f6399557f6204dbcc060929cf5"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/screen/FILE_ID.DIZ",
+      "method": "zip-member",
+      "title": "HP48SX screen addresses",
+      "authors": [
+        "Jan Brittenson"
+      ],
+      "year": "1990",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/screen.zip",
+      "member": "FILE_ID.DIZ",
+      "details_url": "https://www.hpcalc.org/details/1756",
+      "size": 33,
+      "sha256": "aab0fc934602b3f0c5c6bb069e1dbb4e861a7e806299285630d5cae5e897f507"
+    },
+    {
+      "path": "saturn-hardware/hp48-hw-notes/screen/SCREEN",
+      "method": "zip-member",
+      "title": "HP48SX screen addresses",
+      "authors": [
+        "Jan Brittenson"
+      ],
+      "year": "1990",
+      "terms": "none",
+      "zip": "saturn-hardware/hp48-hw-notes/screen.zip",
+      "member": "SCREEN",
+      "details_url": "https://www.hpcalc.org/details/1756",
+      "size": 4017,
+      "sha256": "d8db468448b02f97d15c1a5cfc1d8743702c4171097a3f3b19293e528c8e11b6",
+      "wiki": [
+        "sources/screen-brittenson"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/ARGCHECK.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "ARGCHECK.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 1774,
+      "sha256": "66a0024622814c75551edcd84e6c943215761c4addbee3528e3ccb13ef150422"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/ASM48.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "ASM48.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 22005,
+      "sha256": "25a37020c47571defbd17bec0f41c4dc5d1de383bdfdbb6c48f3eddc37ebdca5"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/EXPAND.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "EXPAND.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 1573,
+      "sha256": "7d32b54eddb17db48b8d03e1cc4185c5333dedc4340a305e51d0c2f0015bfcab"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/GOTO.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "GOTO.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 1452,
+      "sha256": "034aba9bf297882fc3395757c6cf36bf3aabcd82131326dbb3fdce074d4c7312"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/KEYDEFS.H",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "KEYDEFS.H",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 1500,
+      "sha256": "7217aea86c5cd7a2271d2643512168587e68a449468918ac48379fb0891fb7a0"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/LIBIDS.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "LIBIDS.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 9644,
+      "sha256": "8a0e580111d5298cfdfdd6f5a87dbf2e153d6fffacc6ec4d114a31972522d156"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/MAKEROM.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "MAKEROM.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 23672,
+      "sha256": "c48da17193b55aa3572cad476f5b0e7a6dc4f0e42d8994672bb59dca5a95c107",
+      "wiki": [
+        "sources/hp48-sdk-makerom"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/NDUPN.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "NDUPN.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 1565,
+      "sha256": "f92faa91b7617655d5d87805b2a9d0b2b5a867a64c16474d64eeae662b514ea3"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/README",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "README",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 3007,
+      "sha256": "0deb02ce463ed4e9cb8784d545dc0eed410e46719e4cc61a4e5bb23828c7bfb5"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/README2",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "README2",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 3333,
+      "sha256": "0d923f89d58d284d719e86bc46b1fc6cd74f17b6e88f236d6dbb2f2a7886793d"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/RPL.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "RPL.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 13792,
+      "sha256": "4654425f2cb6da1bf7c576b1b3475b8cd3afeb2237d07fb95f2b92a96c4d3f0f"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/RPL2.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "RPL2.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 2198,
+      "sha256": "54688b900de54e0d2b059761a8a5e68cec28d63ab326e4fd5af77c8fe06c5e4e"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/RPL3.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "RPL3.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 8380,
+      "sha256": "7e6788980b649457b0b79b5736db976276c8c3c687d832fc1e6c42dd6e4d6616"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/RPLCOMP.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "RPLCOMP.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 16270,
+      "sha256": "446eced366de0c4223ab358db7349a30a4d88c2c10bd6272156a7f8d3c91e4e5"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/RPLDEVEL.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "RPLDEVEL.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 1662,
+      "sha256": "a672fe9fbce13528065932b86c35bb818da8232f2453b4468f120a275db01a6b"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/RPLMAN.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "RPLMAN.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 271443,
+      "sha256": "381a1defce1141423b454d53de4ee091c7ef24dbb8f19734d25434b3d1b4b3cf"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/RPL_NAME.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "RPL_NAME.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 913,
+      "sha256": "dcb5dafbdb46189dad35d1fd90f13804d99339d9722d2c69644ab9edc78fa792"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/SASM.OPC",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "SASM.OPC",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 32024,
+      "sha256": "e4b4a2bacbe7ac8692627c32bdc815912d089c7ce450db29b2cc5c0e87d02635"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/SASM.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "SASM.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 294157,
+      "sha256": "a937dd232bef7ab2e02348e215ebc847bc72633667fa43d0e95fdec799f0bcd5"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/SATURN.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "SATURN.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 8967,
+      "sha256": "94a18a420ba83af8451cbf022d76af4d821c7897f5b8096b941e32605cf30ca5"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/SLOAD.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "SLOAD.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 11622,
+      "sha256": "c9057869c0eabf16d64b4a4e3130f2bd3d0106497a33e7698bf2f1fe72cec1bf"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/USRLIB.DOC",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "USRLIB.DOC",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 23879,
+      "sha256": "fc2d3b9a91715855db1ccb14c7663acfa6b5ec8556bd03e21266de9b3a0980c1"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/USRLIB.TXT",
+      "method": "zip-member",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "zip": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "member": "USRLIB.TXT",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 1541,
+      "sha256": "77513ecd5b96d9a16f7ba968a8ee6e046d6b0c4bd3ee2b98d27915869ba35f56"
+    },
+    {
+      "path": "saturn-hardware/hp48-sdk-1993/sysrplpc.zip",
+      "method": "fetch",
+      "title": "HP 48 Software Development Tools (1993 repackaging, with SATURN.TXT and ASM48.TXT)",
+      "authors": [
+        "Hewlett-Packard",
+        "Derek S. Nickel"
+      ],
+      "year": "1993",
+      "terms": "same HP terms as tools.zip",
+      "url": "https://www.hpcalc.org/hp48/pc/programming/sysrplpc.zip",
+      "details_url": "https://www.hpcalc.org/hp48/pc/programming/",
+      "size": 384653,
+      "sha256": "a3838667eef6f9df72fa8eb4165d82003e50e431db81e63acc33139b8f14942d"
+    },
+    {
+      "path": "saturn-hardware/hp48-voyage.pdf",
+      "method": "fetch",
+      "title": "Voyage au centre de la HP 48 (French)",
+      "authors": [
+        "Paul Courbis",
+        "Sébastien Lalande"
+      ],
+      "year": "2000",
+      "terms": "not checked; hosted with the authors' agreement on literature.hpcalc.org",
+      "url": "https://literature.hpcalc.org/community/hp48-voyage.pdf",
+      "details_url": "https://literature.hpcalc.org/items/1773",
+      "size": 7282723,
+      "sha256": "39b6572d389787b4190cec2d648f8cb63e2eec92f29414db58bac647d1b1ce6a"
+    },
+    {
+      "path": "saturn-hardware/hp48gx-voyage.pdf",
+      "method": "fetch",
+      "title": "Voyage au centre de la HP 48G/GX (French)",
+      "authors": [
+        "Paul Courbis",
+        "Sébastien Lalande"
+      ],
+      "year": "2000",
+      "terms": "not checked; hosted with the authors' agreement on literature.hpcalc.org",
+      "url": "https://literature.hpcalc.org/community/hp48gx-voyage.pdf",
+      "details_url": "https://literature.hpcalc.org/items/1774",
+      "size": 10133093,
+      "sha256": "1bfda7b05b6d3450a67703594e5b8c37268de49542883a6d0deea546b22f2261",
+      "wiki": [
+        "sources/voyage-48gx"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp49-38-39/buf49.zip",
+      "method": "fetch",
+      "title": "External serial buffer for the HP 49G serial bug",
+      "authors": [
+        "Marcel Flipse"
+      ],
+      "year": "2000",
+      "terms": "not checked",
+      "url": "https://www.hpcalc.org/hp49/docs/misc/buf49.zip",
+      "details_url": "https://www.hpcalc.org/details/3009",
+      "size": 422797,
+      "sha256": "f3c04e705681a1acc9390e7b3338a738e2d4a475470c1a78e7f8841a48398037"
+    },
+    {
+      "path": "saturn-hardware/hp49-38-39/buf49/Buf49.PDF",
+      "method": "zip-member",
+      "title": "External serial buffer for the HP 49G serial bug",
+      "authors": [
+        "Marcel Flipse"
+      ],
+      "year": "2000",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp49-38-39/buf49.zip",
+      "member": "Buf49.PDF",
+      "details_url": "https://www.hpcalc.org/details/3009",
+      "size": 441397,
+      "sha256": "6d08eb86578bfba86efa98cda33c1878bdd85bcc453b4bf11fa3477de70b3122",
+      "wiki": [
+        "sources/buf49-flipse"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp49-38-39/keyb49.zip",
+      "method": "fetch",
+      "title": "HP 49G Keyboard Hardware Note v0.2",
+      "authors": [
+        "Igor Andrade Sylvester"
+      ],
+      "year": "2000-2003",
+      "terms": "not checked",
+      "url": "https://www.hpcalc.org/hp49/docs/programming/keyb49.zip",
+      "details_url": "https://www.hpcalc.org/details/4301",
+      "size": 1794,
+      "sha256": "35c0f451bc99215a81ed063623b0a6a9f5bdd91bf32ea565d18433bf98e6a499"
+    },
+    {
+      "path": "saturn-hardware/hp49-38-39/keyb49/keyb49.txt",
+      "method": "zip-member",
+      "title": "HP 49G Keyboard Hardware Note v0.2",
+      "authors": [
+        "Igor Andrade Sylvester"
+      ],
+      "year": "2000-2003",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp49-38-39/keyb49.zip",
+      "member": "keyb49.txt",
+      "details_url": "https://www.hpcalc.org/details/4301",
+      "size": 4027,
+      "sha256": "390d1af9eb34fc46b544374ce173a88af3c3c29fde2ed0b6177de4ca207125d8",
+      "wiki": [
+        "sources/keyb49-sylvester"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp49-38-39/memmap.zip",
+      "method": "fetch",
+      "title": "HP 49G memory map",
+      "authors": [
+        "Eric Smith"
+      ],
+      "year": "1999",
+      "terms": "none",
+      "url": "https://www.hpcalc.org/hp49/docs/programming/memmap.zip",
+      "details_url": "https://www.hpcalc.org/details/2988",
+      "size": 3461,
+      "sha256": "0280cceeea01c7ae3edbd4151c6852869af27f271389b182cd41d90a29dd70a8"
+    },
+    {
+      "path": "saturn-hardware/hp49-38-39/memmap/memmap.txt",
+      "method": "zip-member",
+      "title": "HP 49G memory map",
+      "authors": [
+        "Eric Smith"
+      ],
+      "year": "1999",
+      "terms": "none",
+      "zip": "saturn-hardware/hp49-38-39/memmap.zip",
+      "member": "memmap.txt",
+      "details_url": "https://www.hpcalc.org/details/2988",
+      "size": 8568,
+      "sha256": "542900759a3a8493e5c8aa7bda1adbd159b00076bcdda2541c1ddc965d6a5516",
+      "wiki": [
+        "sources/hp49-memmap-smith"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp49-38-39/memory49.zip",
+      "method": "fetch",
+      "title": "HP49 Memory Explained",
+      "authors": [
+        "Steve (Fernando) Sousa"
+      ],
+      "year": "2000",
+      "terms": "(c) Sousa",
+      "url": "https://www.hpcalc.org/hp49/docs/programming/memory49.zip",
+      "details_url": "https://www.hpcalc.org/details/2989",
+      "size": 2641,
+      "sha256": "e6c5d79786540cbb093707eda2898c86420da95b61ca4909ab41e6bc21a72dbe"
+    },
+    {
+      "path": "saturn-hardware/hp49-38-39/memory49/memory49.txt",
+      "method": "zip-member",
+      "title": "HP49 Memory Explained",
+      "authors": [
+        "Steve (Fernando) Sousa"
+      ],
+      "year": "2000",
+      "terms": "(c) Sousa",
+      "zip": "saturn-hardware/hp49-38-39/memory49.zip",
+      "member": "memory49.txt",
+      "details_url": "https://www.hpcalc.org/details/2989",
+      "size": 5420,
+      "sha256": "1ddb03d91440e23af545e93c1aeb543af92ffad67a6bf0809c9e789962b3337e",
+      "wiki": [
+        "sources/memory49-sousa"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hp49-38-39/serial49.zip",
+      "method": "fetch",
+      "title": "External serial port patch for the HP 49G",
+      "authors": [
+        "Tacio Philip Sansonovski"
+      ],
+      "year": "2000",
+      "terms": "not checked",
+      "url": "https://www.hpcalc.org/hp49/docs/misc/serial49.zip",
+      "details_url": "https://www.hpcalc.org/details/3032",
+      "size": 37589,
+      "sha256": "7d7784cd4e873b813e5f006456b941c78e41f338e3ab8d425172cda9f436ba0a"
+    },
+    {
+      "path": "saturn-hardware/hp49-38-39/serial49/serial49.pdf",
+      "method": "zip-member",
+      "title": "External serial port patch for the HP 49G",
+      "authors": [
+        "Tacio Philip Sansonovski"
+      ],
+      "year": "2000",
+      "terms": "not checked",
+      "zip": "saturn-hardware/hp49-38-39/serial49.zip",
+      "member": "serial49.pdf",
+      "details_url": "https://www.hpcalc.org/details/3032",
+      "size": 40369,
+      "sha256": "c2e97695539f688254a2d3f617d97cf75cb2161a8af82935d12157ee5c29cc38",
+      "wiki": [
+        "sources/serial49-sansonovski"
+      ]
+    },
+    {
+      "path": "saturn-hardware/hpregint.txt",
+      "method": "fetch",
+      "title": "Les interruptions de la HP48 S,SX,G,GX: Ruses à connaître (French original)",
+      "authors": [
+        "Régis Duchesne"
+      ],
+      "year": "1994",
+      "terms": "author disclaims liability; no licence",
+      "url": "https://chl.be/hp/docs/hpregint.txt",
+      "size": 40501,
+      "sha256": "306d663f02f97ad02f6ebd532307d4dcf7acb13367b57d369ef5046769bc95cc",
+      "wiki": [
+        "sources/hpregint-fr"
+      ]
+    },
+    {
+      "path": "saturn-hardware/sasmhtml.zip",
+      "method": "fetch",
+      "title": "SASM Reference (HTML conversion from Goodies Disk 4)",
+      "authors": [
+        "Hewlett-Packard",
+        "Adrian Drury (HTML)"
+      ],
+      "year": "1998",
+      "terms": "HP copyright",
+      "url": "https://www.hpcalc.org/hp48/docs/programming/sasmhtml.zip",
+      "details_url": "https://www.hpcalc.org/details/1747",
+      "size": 50419,
+      "sha256": "728fc5d099f2d4b5a288204dd5648212d1ef1dbc9cd537cb0572939a44e95bcc"
+    },
+    {
+      "path": "saturn-hardware/sasmhtml/sasm.html",
+      "method": "zip-member",
+      "title": "SASM Reference (HTML conversion from Goodies Disk 4)",
+      "authors": [
+        "Hewlett-Packard",
+        "Adrian Drury (HTML)"
+      ],
+      "year": "1998",
+      "terms": "HP copyright",
+      "zip": "saturn-hardware/sasmhtml.zip",
+      "member": "sasm.html",
+      "details_url": "https://www.hpcalc.org/details/1747",
+      "size": 263665,
+      "sha256": "e58f403328d632e4d979ca39bb35df0f2b690ccbe526c93ead034c9c4ec12335",
+      "wiki": [
+        "sources/sasm-reference"
+      ]
+    },
+    {
+      "path": "saturn-hardware/saturnd.zip",
+      "method": "fetch",
+      "title": "Guide to the Saturn Processor (With HP48 Applications), Rev. 1.0b",
+      "authors": [
+        "Matthew Mastracci"
+      ],
+      "year": "1995-1998",
+      "terms": "(c) Mastracci, all rights reserved; free to copy and distribute provided no changes or additions are made",
+      "url": "https://www.hpcalc.org/hp48/docs/programming/saturnd.zip",
+      "details_url": "https://www.hpcalc.org/details/1753",
+      "size": 26310,
+      "sha256": "feec9443d96e3f8bdd2201453c699cb6783c09f9003643bc9877599d97717c04"
+    },
+    {
+      "path": "saturn-hardware/saturnd/saturn.doc",
+      "method": "zip-member",
+      "title": "Guide to the Saturn Processor (With HP48 Applications), Rev. 1.0b",
+      "authors": [
+        "Matthew Mastracci"
+      ],
+      "year": "1995-1998",
+      "terms": "(c) Mastracci, all rights reserved; free to copy and distribute provided no changes or additions are made",
+      "zip": "saturn-hardware/saturnd.zip",
+      "member": "saturn.doc",
+      "details_url": "https://www.hpcalc.org/details/1753",
+      "size": 83327,
+      "sha256": "18e2ebc4ef058db9cbda1c057ddb1e6a8167a7c81dd60cfa74b9071690f190b5"
+    },
+    {
+      "path": "saturn-hardware/saturnd/saturn.txt",
+      "method": "derived",
+      "title": "Guide to the Saturn Processor (With HP48 Applications), Rev. 1.0b (text)",
+      "authors": [
+        "Matthew Mastracci"
+      ],
+      "year": "1995-1998",
+      "terms": "(c) Mastracci, all rights reserved; free to copy and distribute provided no changes or additions are made",
+      "derived_from": "saturn-hardware/saturnd/saturn.doc",
+      "command": "cp saturn-hardware/saturnd/saturn.doc saturn-hardware/saturnd/saturn.txt",
+      "how": "the .doc is already plain ASCII",
+      "size": 83327,
+      "sha256": "18e2ebc4ef058db9cbda1c057ddb1e6a8167a7c81dd60cfa74b9071690f190b5",
+      "hash_stable": false,
+      "wiki": [
+        "sources/mastracci-saturn-guide"
+      ]
+    }
+  ]
+}

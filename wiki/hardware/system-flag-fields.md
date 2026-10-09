@@ -27,8 +27,11 @@ holds two things about the same fields for a user-facing flags list
   guide does not name (the 48SX's -17 and -18 both set). `-` for a field
   without named settings (a number held in bits).
 
-Both are the model pages' facts restated, no new ones; the source column
-names where each model page has them.
+Both are the model pages' facts restated, no new ones; the Source column
+gives the guide page each model page cites for the field. Every
+multi-flag field the three pages describe has a row. The 49G's word size
+and digit count keep the Clear column (`-` in both columns): the Pocket
+Guide gives their bit values, so that text reads as help already.
 
 ## Fields
 
@@ -46,7 +49,9 @@ names where each model page has them.
 | 48gx | -17..-18 | - | Degrees: -17 clear, -18 clear; Radians: -17 set; Grads: -17 clear, -18 set | [[sources/hp48g-ug]] p. D-2 |
 | 48gx | -45..-48 | Four flags together set how many digits Fix, Sci and Eng show. | - | [[sources/hp48g-ug]] p. D-5 |
 | 48gx | -49..-50 | - | Std: -49 clear, -50 clear; Fix: -49 set, -50 clear; Sci: -49 clear, -50 set; Eng: -49 set, -50 set | [[sources/hp48g-ug]] p. D-5 |
+| 49g | -5..-10 | - | - | [[sources/hp49g-pocket-guide]] p. 76 |
 | 49g | -11..-12 | - | DEC: -11 clear, -12 clear; BIN: -11 clear, -12 set; OCT: -11 set, -12 clear; HEX: -11 set, -12 set | [[sources/hp49g-pocket-guide]] p. 76 |
 | 49g | -15..-16 | - | Rectangular: -16 clear; Cylindrical: -15 clear, -16 set; Spherical: -15 set, -16 set | [[sources/hp49g-pocket-guide]] p. 76 |
 | 49g | -17..-18 | - | Radians: -17 set; Degrees: -17 clear, -18 clear; Grads: -17 clear, -18 set | [[sources/hp49g-pocket-guide]] p. 76 |
+| 49g | -45..-48 | - | - | [[sources/hp49g-pocket-guide]] p. 77 |
 | 49g | -49..-50 | - | Std: -49 clear, -50 clear; Fix: -49 set, -50 clear; Sci: -49 clear, -50 set; Eng: -49 set, -50 set | [[sources/hp49g-pocket-guide]] p. 77 |

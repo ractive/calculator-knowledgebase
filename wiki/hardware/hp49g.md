@@ -4,7 +4,7 @@ type: model
 models: [49g]
 status: draft
 sources: ["[[sources/saturn-tutorial]]", "[[sources/intel-28f160s5]]", "[[sources/hp49-memmap-smith]]", "[[sources/memory49-sousa]]", "[[sources/keyb49-sylvester]]", "[[sources/buf49-flipse]]", "[[sources/serial49-sansonovski]]", "[[sources/hp48-faq]]"]
-tags: [hp49g, model, flash]
+tags: [model, flash]
 ---
 
 # HP 49G

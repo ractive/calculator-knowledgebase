@@ -5,7 +5,8 @@ authors: ["Régis Duchesne", "Marcos Navarro"]
 year: 1994
 raw: "raw/saturn-hardware/Interrupts48-R_DUCHESNE-EN-Rev07c.pdf"
 status: digested
-tags: [hp48, interrupts, rom, timers]
+tags: [interrupts, rom, timers]
+models: [48sx, 48gx]
 ---
 
 # Duchesne, HP48 S, SX, G, GX Interrupts: Tricks to Know (English ed., rev. 07c)

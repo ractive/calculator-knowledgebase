@@ -4,7 +4,7 @@ type: hardware
 models: [48sx, 48gx, 49g, 38g, 39g, 40g]
 status: draft
 sources: ["[[sources/mastracci-saturn-guide]]", "[[sources/saturn-tutorial]]", "[[sources/voyage-48gx]]", "[[sources/hp48-faq]]", "[[sources/hdwreg-taplin]]", "[[sources/screen-brittenson]]", "[[sources/keyboard-ervin]]"]
-tags: [saturn, display, lcd]
+tags: [saturn, display]
 ---
 
 # Display

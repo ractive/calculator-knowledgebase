@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 2000
 raw: "raw/manuals/hp39g40g-ug-en.pdf"
 status: digested
-tags: [39g, 40g, manual, transfer, aplets]
+tags: [manual, transfer, aplets]
+models: [39g, 40g]
 ---
 
 # HP 39G/40G User's Guide

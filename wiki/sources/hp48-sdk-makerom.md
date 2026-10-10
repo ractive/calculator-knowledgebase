@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 1993
 raw: "raw/saturn-hardware/hp48-sdk-1993/MAKEROM.TXT"
 status: skimmed
-tags: [rpl, library, xlib, hp48]
+tags: [rpl, library, xlib]
+models: [48sx, 48gx]
 ---
 
 # MAKEROM: HP's library generator manual

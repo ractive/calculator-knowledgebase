@@ -5,7 +5,8 @@ authors: ["Joe Ervin"]
 year: 1992
 raw: "raw/saturn-hardware/hp48-hw-notes/input/keybrd_input.txt"
 status: digested
-tags: [hp48, keyboard, interrupts, 48sx]
+tags: [keyboard, interrupts]
+models: [48sx]
 ---
 
 # Ervin, HP48SX Keyboard Input: a guide for the ML programmer v1.0

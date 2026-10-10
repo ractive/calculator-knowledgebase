@@ -3,7 +3,8 @@ title: "XSERV: the HP 49G (and XSrvr48) XModem server protocol"
 type: protocol
 status: draft
 sources: ["[[sources/hp49-rom118-notes]]", "[[sources/conn4x-ymodem-pas]]", "[[sources/conn4x-help]]", "[[sources/xsrvr48-readme]]"]
-tags: [xserv, xmodem, hp49g, hp48, server, hptx]
+tags: [xserv, xmodem, server, hptx]
+models: [48sx, 48gx, 49g]
 ---
 
 # XSERV

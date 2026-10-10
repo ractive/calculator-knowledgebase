@@ -2,7 +2,8 @@
 title: "HP49G: which controller maps which RAM block?"
 type: question
 status: answered
-tags: [hp49g, memory]
+tags: [memory]
+models: [49g]
 ---
 
 # HP49G: which controller maps which RAM block?

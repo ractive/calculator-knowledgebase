@@ -2,7 +2,8 @@
 title: "HP 39G/40G: memory map, ROM banking and ROM file layout"
 type: question
 status: open
-tags: [39g, 40g, memory, rom]
+tags: [memory, rom]
+models: [39g, 40g]
 ---
 
 # HP 39G/40G: memory map, ROM banking and ROM file layout

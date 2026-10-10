@@ -4,7 +4,7 @@ type: rom-behaviour
 models: [49g]
 status: draft
 sources: ["[[sources/hp49g-pocket-guide]]", "[[sources/hp49g-aug]]", "[[sources/hp49g-um]]"]
-tags: [hp49g, flags, rom]
+tags: [flags, rom]
 ---
 
 # System flags: HP 49G

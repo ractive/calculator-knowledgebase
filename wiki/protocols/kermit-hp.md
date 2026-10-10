@@ -3,7 +3,8 @@ title: "Kermit as implemented by HP calculators"
 type: protocol
 status: draft
 sources: ["[[sources/hp48g-ug]]", "[[sources/hp48-sikug]]", "[[sources/hp49g-um]]", "[[sources/connectivity-kit]]", "[[sources/hp48-kermit-hints]]", "[[sources/io-guide]]", "[[sources/hp48-faq]]", "[[sources/serial49-sansonovski]]", "[[sources/buf49-flipse]]"]
-tags: [kermit, hp48, transfer, hptx]
+tags: [kermit, transfer, hptx]
+models: [48sx, 48gx]
 ---
 
 # HP calculator Kermit

@@ -2,7 +2,8 @@
 title: "What is Taplin's usual display address #F097C?"
 type: question
 status: open
-tags: [saturn, display, 48sx]
+tags: [saturn, display, memory]
+models: [48sx]
 ---
 
 # What is Taplin's usual display address #F097C?

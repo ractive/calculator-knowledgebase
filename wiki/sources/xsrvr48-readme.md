@@ -5,7 +5,8 @@ authors: ["William G. Graves"]
 year: 2002
 raw: "raw/protocols/xserv-conn4x/xsrvr48/ReadMe.txt"
 status: digested
-tags: [xserv, hp48]
+tags: [xserv]
+models: [48sx, 48gx]
 ---
 
 # Graves, XSrvr48 1.1 ReadMe

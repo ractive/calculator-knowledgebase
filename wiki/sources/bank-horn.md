@@ -5,7 +5,8 @@ authors: ["Joe Horn"]
 year: 1994
 raw: "raw/saturn-hardware/hp48-hw-notes/bank.txt"
 status: digested
-tags: [hp48, card-ports, bank-switching]
+tags: [card-ports, bank-switching]
+models: [48sx, 48gx]
 ---
 
 # Horn, Long answers to short questions about bank switching

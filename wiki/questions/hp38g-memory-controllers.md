@@ -2,7 +2,8 @@
 title: "HP 38G: which controller drives what, and what stops a 48G emulator?"
 type: question
 status: open
-tags: [38g, memory]
+tags: [memory]
+models: [38g]
 ---
 
 # HP 38G: which controller drives what, and what stops a 48G emulator?

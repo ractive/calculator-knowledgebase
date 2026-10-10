@@ -3,7 +3,8 @@ title: "XModem on HP calculators (48G XSEND/XRECV, 49G, XSERV transfers)"
 type: protocol
 status: draft
 sources: ["[[sources/hp48g-ug]]", "[[sources/hp48-faq]]", "[[sources/conn4x-ymodem-pas]]", "[[sources/conn4x-help]]", "[[sources/hp49-rom118-notes]]", "[[sources/serial49-sansonovski]]"]
-tags: [xmodem, hp48, hp49g, transfer, hptx]
+tags: [xmodem, transfer, hptx]
+models: [48gx, 49g]
 ---
 
 # XModem on HP calculators

@@ -5,7 +5,8 @@ authors: ["Carlos Antonio Neves", "Claudimir Lucio do Lago", "Tacio Philip Sanso
 year: 2000
 raw: "raw/saturn-hardware/hp49-38-39/serial49/serial49.pdf"
 status: digested
-tags: [hp49g, serial, uart]
+tags: [serial, uart]
+models: [49g]
 ---
 
 # Neves, do Lago and Sansonovski, Circuit to correct the HP49G serial port signal

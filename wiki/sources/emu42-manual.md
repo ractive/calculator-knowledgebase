@@ -5,7 +5,8 @@ authors: ["Christoph Gießelink"]
 year: 2025
 raw: "raw/emulator-docs/emu42/Emu42.txt"
 status: digested
-tags: [emu42, lewis, 42s, pioneer]
+tags: [emu42, lewis, pioneer]
+models: [42s]
 ---
 
 # Gießelink, Emu42 Manual

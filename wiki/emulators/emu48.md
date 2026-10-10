@@ -9,6 +9,7 @@ sources:
   - "[[sources/emu48-changes]]"
   - "[[sources/kml20]]"
   - "[[sources/io-guide]]"
+models: [48sx, 48gx, 49g, 38g, 39g, 40g]
 ---
 
 # Emu48

@@ -6,6 +6,7 @@ year: 2025
 raw: "raw/emulator-docs/emu42/PROBLEMS.TXT"
 status: digested
 tags: [emu42, lewis, registers]
+models: [42s]
 ---
 
 # Gießelink, Emu42 1.33 PROBLEMS.TXT

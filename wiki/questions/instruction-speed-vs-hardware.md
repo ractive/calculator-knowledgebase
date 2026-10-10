@@ -2,10 +2,8 @@
 title: How fast do real 48SX/48GX/49G run compared with the cycle counts?
 type: question
 status: open
-tags:
-  - saturn
-  - cpu
-  - timing
+tags: [saturn, cpu, timing]
+models: [48sx, 48gx, 49g]
 ---
 
 # How fast do real 48SX/48GX/49G run compared with the cycle counts?

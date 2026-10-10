@@ -4,7 +4,7 @@ type: rom-behaviour
 models: [48gx]
 status: draft
 sources: ["[[sources/hp48g-ug]]", "[[sources/hp48g-aur]]"]
-tags: [hp48, 48gx, flags, rom]
+tags: [flags, rom]
 ---
 
 # System flags: HP 48G / 48GX

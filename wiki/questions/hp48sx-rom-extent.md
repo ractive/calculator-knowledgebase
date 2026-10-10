@@ -2,7 +2,8 @@
 title: "Where does the 48SX ROM end in the address map?"
 type: question
 status: answered
-tags: [48sx, memory]
+tags: [memory]
+models: [48sx]
 ---
 
 # Where does the 48SX ROM end in the address map?

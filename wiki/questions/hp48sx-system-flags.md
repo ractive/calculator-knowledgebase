@@ -2,7 +2,8 @@
 title: "What do the HP 48S/SX system flags mean?"
 type: question
 status: answered
-tags: [48sx, flags, rom]
+tags: [flags, rom]
+models: [48sx]
 ---
 
 # What do the HP 48S/SX system flags mean?

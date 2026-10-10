@@ -2,7 +2,8 @@
 title: Does @ractive's 42S ROM image pass the ROM's own CRC test?
 type: question
 status: open
-tags: [42s, lewis, crc, rom]
+tags: [lewis, crc, rom]
+models: [42s]
 ---
 
 # Does @ractive's 42S ROM image pass the ROM's own CRC test?

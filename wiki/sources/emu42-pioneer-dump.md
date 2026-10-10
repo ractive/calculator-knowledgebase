@@ -5,7 +5,8 @@ authors: ["Christoph Gießelink"]
 year: 2009
 raw: "raw/emulator-docs/emu42/PIONEER.TXT"
 status: digested
-tags: [emu42, lewis, 42s, rom, ir]
+tags: [emu42, lewis, rom, ir]
+models: [42s]
 ---
 
 # Gießelink, Pioneer and Clamshell ROM dump notes, LEWISCRC

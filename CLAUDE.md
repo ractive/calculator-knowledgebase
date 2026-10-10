@@ -40,10 +40,15 @@ implementations from it. Therefore:
   come from their published documentation (manuals, KML and skin docs,
   change logs, forum posts by their authors) and from black-box runs; the
   citation says which.
-- Other source code with restrictive terms is not opened either. The one
-  exception is the Conn4x sources (non-commercial licence), already read
-  for the XSERV and HP XModem facts because no prose specification exists:
-  facts only, no code, no routine names, no layouts copied from it.
+- Other source code with restrictive terms is not opened either. Two
+  documented exceptions, both under the same rules (facts only, no code,
+  no routine names, no layouts copied from it):
+  - The Conn4x sources (non-commercial licence), already read for the
+    XSERV and HP XModem facts because no prose specification exists.
+  - The owner's own HPComm/HPGComm source (GPL-2, 1999-2001, mainly
+    written by the owner, with Mitch Davis and Colin Croft), which may be
+    read for protocol and file-format facts, such as the 38G/39G
+    directory file.
 - No ROM images, and no private material (photographs of someone's own
   calculators or manuals, local file paths, personal data).
 
@@ -87,7 +92,9 @@ against the hosting sites more often than needed.
   `hyalo types show <type>`). Common keys: `title`, `type`, `tags`, `status`
   (`stub|draft|reviewed`; questions `open|answered`; sources
   `unread|skimmed|digested`), `sources` (list of `[[sources/...]]` links),
-  `models` (subset of `48sx, 48gx, 49g, 38g, 39g, 40g, 42s`). The type
+  `models` (subset of `48sx, 48gx, 49g, 38g, 39g, 40g, 42s`; which
+  models a page covers goes here, never in a tag: no `48gx`, `hp48` or
+  `hp49g` tags; `28s` stays a tag because `models` cannot name it). The type
   says what a page is; the directory stays fixed because other projects
   cite page paths. Change schemas with `hyalo types set`.
 - Every hardware or protocol fact carries a citation inline:

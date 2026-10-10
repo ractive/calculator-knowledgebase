@@ -6,6 +6,7 @@ year: 2024
 raw: "raw/emulator-docs/kml20/KML_20.txt"
 status: digested
 tags: [emu48, kml, keyboard, display]
+models: [48sx, 48gx, 49g, 38g, 39g, 40g, 42s]
 ---
 
 # Gießelink, EmuXY and KML 2.0 (rev. 2024-04-23)

@@ -5,7 +5,8 @@ authors: ["Wikipedia contributors"]
 year: 2026
 raw: "https://en.wikipedia.org/wiki/HP_39/40_series"
 status: skimmed
-tags: [39g, 40g, web]
+models: [39g, 40g]
+tags: [hardware]
 ---
 
 # Wikipedia, HP 39/40 series

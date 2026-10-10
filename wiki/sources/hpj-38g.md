@@ -5,7 +5,8 @@ authors: ["Ted W. Beers", "Diana K. Byrne", "James A. Donnelly", "Robert W. Jone
 year: 1996
 raw: "raw/saturn-hardware/hp-journal/hpj-38g/ju96a6.pdf"
 status: digested
-tags: [38g, hp-journal, hardware, aplets, firmware]
+tags: [hp-journal, hardware, aplets, firmware]
+models: [38g]
 ---
 
 # Beers et al., A Graphing Calculator for Mathematics and Science Classes (HP Journal, June 1996)

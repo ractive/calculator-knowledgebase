@@ -5,7 +5,8 @@ authors: ["Paul Courbis", "Sébastien Lalande"]
 year: 2000
 raw: "raw/saturn-hardware/hp48gx-voyage.pdf"
 status: digested
-tags: [hp48, 48gx, io-ram, memory, display, uart, ir, timers, french]
+tags: [io-ram, memory, display, uart, ir, timers, french]
+models: [48gx]
 ---
 
 # Courbis and Lalande, Voyage au centre de la HP 48 G/GX

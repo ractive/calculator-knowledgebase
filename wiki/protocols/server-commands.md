@@ -3,7 +3,8 @@ title: "HP Kermit server mode and its commands"
 type: protocol
 status: draft
 sources: ["[[sources/hp48g-ug]]", "[[sources/hp48-sikug]]", "[[sources/hp48-kermit-hints]]", "[[sources/hp48-faq]]", "[[sources/io-guide]]", "[[sources/kermit-protocol-manual]]"]
-tags: [kermit, server, hp48, hptx]
+tags: [kermit, server, hptx]
+models: [48sx, 48gx]
 ---
 
 # HP Kermit server commands

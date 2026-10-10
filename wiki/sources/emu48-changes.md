@@ -8,6 +8,7 @@ raw: >-
   shipped with the GPL Emu48 package)
 status: digested
 tags: [emu48, emulator, changelog]
+models: [48sx, 48gx, 49g, 38g, 39g, 40g]
 ---
 
 # Emu48 CHANGES.TXT

@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard", "C. Marangon"]
 year: 2001
 raw: "raw/protocols/xserv-conn4x/hpmuseum-archv005.txt"
 status: digested
-tags: [hp49g, xserv, xmodem, rom]
+tags: [xserv, xmodem, rom]
+models: [49g]
 ---
 
 # HP 49G ROM 1.18 release notes (quoted on hpmuseum.org)

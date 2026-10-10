@@ -5,7 +5,8 @@ authors: ["Fernando Steve Domingues Sousa"]
 year: 2000
 raw: "raw/saturn-hardware/hp49-38-39/memory49/memory49.txt"
 status: digested
-tags: [hp49g, memory, flash, bank-switching]
+tags: [memory, flash, bank-switching]
+models: [49g]
 ---
 
 # Sousa, HP49 Memory Explained v1.00

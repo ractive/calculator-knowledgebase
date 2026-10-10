@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 1991
 raw: "raw/saturn-hardware/hp-journal/hpj-48sx/hpj-48sx.pdf"
 status: skimmed
-tags: [48sx, hp-journal, hardware, timing]
+tags: [hp-journal, hardware, timing]
+models: [48sx]
 ---
 
 # HP Journal, June 1991: The HP 48SX Scientific Expandable Calculator

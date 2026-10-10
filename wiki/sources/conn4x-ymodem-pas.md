@@ -5,7 +5,8 @@ authors: ["Cyrille de Brébisson", "William G. Graves"]
 year: 2002
 raw: "raw/protocols/xserv-conn4x/conn4xsource/YModem.pas"
 status: digested
-tags: [xserv, xmodem, hp49g, hptx, code]
+tags: [xserv, xmodem, hptx]
+models: [48sx, 48gx, 49g]
 ---
 
 # de Brébisson and Graves, Conn4x YModem.pas (XModem client and XSERV client code)

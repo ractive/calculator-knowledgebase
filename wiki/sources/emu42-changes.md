@@ -6,6 +6,7 @@ year: 2026
 raw: "raw/emulator-docs/emu42/CHANGES.TXT"
 status: skimmed
 tags: [emu42, lewis, registers]
+models: [42s]
 ---
 
 # Gießelink, Emu42 CHANGES.TXT

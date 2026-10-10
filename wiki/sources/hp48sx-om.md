@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 1990
 raw: "raw/manuals/hp48sx-om-en.pdf"
 status: skimmed
-tags: [hp48, 48sx, manual, flags]
+tags: [manual, flags]
+models: [48sx]
 ---
 
 # HP 48SX Owner's Manual, volumes I and II

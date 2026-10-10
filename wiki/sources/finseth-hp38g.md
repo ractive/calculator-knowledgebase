@@ -5,7 +5,8 @@ authors: ["Craig A. Finseth", "Detlef Mueller"]
 year: 1996
 raw: "https://www.finseth.com/hpdata/hp38g.php"
 status: digested
-tags: [38g, memory, hardware, web]
+tags: [memory, hardware]
+models: [38g]
 ---
 
 # Finseth, HP Calculator Data: hp38g

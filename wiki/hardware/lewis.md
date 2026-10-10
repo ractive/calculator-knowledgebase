@@ -13,7 +13,7 @@ sources:
   - "[[sources/kml20]]"
   - "[[sources/hp28s-procnotes]]"
   - "[[sources/mastracci-saturn-guide]]"
-tags: [lewis, chip, 42s, pioneer]
+tags: [lewis, chip, pioneer]
 ---
 
 # Lewis (1LR2)

@@ -6,6 +6,7 @@ year: 2025
 raw: "raw/emulator-docs/emu48-manual/Emu48.txt"
 status: digested
 tags: [emu48, emulator]
+models: [48sx, 48gx, 49g, 38g, 39g, 40g]
 ---
 
 # Gießelink, Emu48 Manual

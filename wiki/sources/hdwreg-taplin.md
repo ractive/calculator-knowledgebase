@@ -5,7 +5,8 @@ authors: ["Julian Taplin"]
 year: 1991
 raw: "raw/saturn-hardware/hp48-hw-notes/hdwreg.txt"
 status: digested
-tags: [hp48, io-ram, 48sx]
+tags: [io-ram]
+models: [48sx]
 ---
 
 # Taplin, HP48SX Hardware Registers Document v1.0

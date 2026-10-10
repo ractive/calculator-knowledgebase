@@ -6,7 +6,7 @@ year: 2002
 raw: "raw/protocols/xserv-conn4x/conn4xsource/YModem.pas"
 status: digested
 tags: [xserv, xmodem, hptx]
-models: [49g]
+models: [48sx, 48gx, 49g]
 ---
 
 # de Brébisson and Graves, Conn4x YModem.pas (XModem client and XSERV client code)

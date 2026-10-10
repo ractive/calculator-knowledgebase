@@ -11,6 +11,10 @@ authors:
   - pier4r
   - Bob Prosperi
   - forum members
+models:
+  - 48sx
+  - 48gx
+  - 49g
 ---
 
 # HP Museum forum, "Summation based benchmark for calculators"

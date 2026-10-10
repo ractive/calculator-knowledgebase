@@ -6,7 +6,7 @@ year: 1990
 raw: "raw/hp48-internals/io-guide/io2.txt"
 status: digested
 tags: [uart, serial, ir, kermit, hardware]
-models: [48sx, 48gx]
+models: [48sx]
 ---
 
 # HP 48 I/O Technical Interfacing Guide

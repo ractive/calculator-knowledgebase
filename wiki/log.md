@@ -564,23 +564,31 @@ now link to it; saturnus' `scripts/flags-json.py` reads both.
 
 The owner's decisions from the tidy review. Per-model tags (`48sx`,
 `48gx`, `38g`, `39g`, `40g`, `42s`) and the family tags `hp48` and
-`hp49g` are gone; each was first carried into the page's `models` field,
-so 75 pages gained `models` (sources included, whose schema
-now checks `models` by the same pattern as the other types). `hp48` became
-`48sx` and `48gx` unless the page covers only one: the 48G-series manuals,
-Teuwen, Voyage and the XModem pages (the 48S/SX has no XModem) got `48gx`;
-the 48SX manual, Taplin, Ervin and Brittenson `48sx`. `saturn`, `lewis`
-and `pioneer` stay: they name the CPU and the Pioneer series, which
-`models` cannot. `28s` stays: [[sources/hp28s-procnotes]] is about the
-HP 28S itself. Removed as low value: `web`, `pc`, `code`, and `lcd` next
-to `display`. Five Jev suggestions applied by hand: `serial` on
-[[questions/xmodem-hp-crc-mode]] and [[questions/uart-register-bit-layout]],
-`memory` on [[questions/hp49g-flash-write]] and
+`hp49g` are gone; each was first carried into the page's `models` field
+(sources included, whose schema now checks `models` by the same pattern as
+the other types). `hp48` became `48sx` and `48gx` unless the page covers
+only one: the 48G-series manuals, Teuwen, Voyage and the XModem pages (the
+48S/SX has no XModem) got `48gx`; the 48SX manual and the 1990 SX-era
+documents (Taplin, Ervin, Brittenson, the I/O guide, the CRC note) `48sx`.
+Pages with clear model coverage but no model tag got `models` too: the
+Emu48 manual, change log and emulator page, the Emu42 change log and
+problems note, KML 2.0 and the summation benchmark thread. 82 pages gained
+`models` in all. `saturn`, `lewis` and `pioneer` stay: they name the CPU,
+the chip and the Pioneer series, which `models` cannot. `28s` stays:
+[[sources/hp28s-procnotes]] is about the HP 28S itself. Removed as low
+value: `web`, `pc`, `code`, and `lcd` next to `display`.
+
+Seven suggestions from the hyalo-tidy tag helper applied by hand: five
+tags (`serial` on [[questions/xmodem-hp-crc-mode]] and
+[[questions/uart-register-bit-layout]], `memory` on
+[[questions/hp49g-flash-write]] and
 [[questions/display-start-address-taplin]], `cpu` on
-[[questions/lewis-clock-and-rate]]; the two model ones as `models`
-(`48gx` on [[questions/instruction-speed-vs-hardware]], `48sx` on
-[[questions/keyboard-matrix-shift-keys]]). Two pages left without a tag got
-one: `history` on [[questions/hp38g-release-date]], `hardware` on
+[[questions/lewis-clock-and-rate]]) and two as `models`
+([[questions/instruction-speed-vs-hardware]] gets `48sx`, `48gx` and `49g`,
+the models it measures; [[questions/keyboard-matrix-shift-keys]] gets
+`48sx` and `48gx`, as the 49G's shift keys sit elsewhere in its matrix,
+src: [[sources/saturn-tutorial]] p. 136-137). Two pages left without a tag
+got one: `history` on [[questions/hp38g-release-date]], `hardware` on
 [[sources/wikipedia-hp39-40]]. `models` and `sources` stay optional on
 questions; the empty decision and synthesis types stay. CLAUDE.md and the
 README record a second clean-room exception: the owner's own

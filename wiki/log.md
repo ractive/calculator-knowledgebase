@@ -168,7 +168,7 @@ Rewrote [[overview]] with the big picture and the next sources to ingest
 manuals and change logs: documentation only; their source code is not read
 for this wiki).
 
-## [2026-10-04] setup | Linked the hptx and saturnus repos
+## [2026-10-04] setup | Linked the satx and saturnus repos
 
 Overview now names both consumer repos and their `kb/` plans.
 
@@ -182,9 +182,9 @@ working answer to [[questions/dec-mode-constant-bug]]. The saturnus decoder
 round-trips 391 of the 485 records in HP's `SASM.OPC`; the rest are
 assembler directives and pseudo-ops.
 
-## [2026-10-05] ingest | hptx iteration 3 emulator observations
+## [2026-10-05] ingest | satx iteration 3 emulator observations
 
-Observations from driving the three emulated models with the hptx Kermit
+Observations from driving the three emulated models with the satx Kermit
 client: C reply format and errors, ARCHIVE in server mode, the port-0
 backup and restore route, flag -35, binary headers per ROM, the TRANSIO 3
 trigraph table and the directory object layout. Added to
@@ -215,7 +215,7 @@ scenario between saturnus and saturnng; details in [[hardware/card-ports]].
 
 ## [2026-10-05] query | Open-bus probe on saturnng (48SX)
 
-A hand-assembled machine-code probe sent over Kermit (hptx) read #80000,
+A hand-assembled machine-code probe sent over Kermit (satx) read #80000,
 #C0000 and #D0000 on saturnng's 48SX with empty slots: all zero, with a ROM
 control read confirming the reads. Emulator against emulator, not hardware;
 recorded in [[hardware/memory-controller]]. The CE1/CE2 priority stays open
@@ -308,9 +308,9 @@ NAK: the start-bit interrupt hit while ST bit 15 was clear, ROM J returned
 without servicing it, and its later RSI/RTI saw no new edge. Treating the
 UART request as a level at RTI fixes it. Details in [[hardware/uart]].
 
-## [2026-10-05] query | XModem behaviour measured on saturnng by hptx
+## [2026-10-05] query | XModem behaviour measured on saturnng by satx
 
-The hptx project drove XRECV and XSEND on the saturnng emulator (49G ROM
+The satx project drove XRECV and XSEND on the saturnng emulator (49G ROM
 2.15, 48GX ROM R) and recorded byte traces. Not yet confirmed on hardware.
 Answered [[questions/xmodem-hp-crc-mode]]: the 49G receiver opens with `D`,
 which is CRC-16/KERMIT sent high byte first, and the 48GX is checksum only.
@@ -508,7 +508,7 @@ saturnus uses before the next queued key.
 
 ## [2026-10-09] lint | Pre-publication review
 
-Cross-checked every page against what saturnus and hptx now record.
+Cross-checked every page against what saturnus and satx now record.
 Fixed contradictions inside the wiki (display offset axis on
 [[hardware/io-ram]], the DEC-mode constant note on [[hardware/saturn-cpu]],
 cold-start and transfer notes on [[hardware/hp38g]] and
@@ -519,7 +519,7 @@ maps and the 49G latch on SHUTDN ([[hardware/memory-controller]]);
 power-on contrast per model ([[hardware/display]]); the CRC feed rule
 ([[hardware/crc]]); the timing calibration ([[hardware/saturn-cpu]]);
 #11A bit 3 as the 39G/40G strap ([[hardware/uart]]); the server's own
-packets, algebraic mode on the 49G, ON during a transaction and hptx's
+packets, algebraic mode on the 49G, ON during a transaction and satx's
 observations ([[protocols/server-commands]]); the character set and two
 ASCII-transfer notes ([[protocols/hp-object-format]]); IOPAR rewritten by
 the server ([[protocols/iopar]]); XModem name conflicts and ALG mode

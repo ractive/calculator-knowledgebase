@@ -5,7 +5,7 @@ authors: ["The Kermit Project, Columbia University", "Joe Horn"]
 year: 1999
 raw: "raw/protocols/hp48-kermit-columbia.txt"
 status: digested
-tags: [kermit, iopar, server, hptx]
+tags: [kermit, iopar, server, satx]
 models: [48sx, 48gx]
 ---
 

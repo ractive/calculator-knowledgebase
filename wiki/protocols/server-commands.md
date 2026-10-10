@@ -3,7 +3,7 @@ title: "HP Kermit server mode and its commands"
 type: protocol
 status: draft
 sources: ["[[sources/hp48g-ug]]", "[[sources/hp48-sikug]]", "[[sources/hp48-kermit-hints]]", "[[sources/hp48-faq]]", "[[sources/io-guide]]", "[[sources/kermit-protocol-manual]]"]
-tags: [kermit, server, hptx]
+tags: [kermit, server, satx]
 models: [48sx, 48gx]
 ---
 
@@ -60,14 +60,14 @@ which sends one packet of a given type and data and returns the reply as a
 string; an error packet is shown and its text kept for KERRM (src:
 [[sources/hp48g-ug]] 27-13). Horn's list of what MS-DOS
 Kermit answers (I with an init string, R, C, GI, GC, GF/GL, GD, GU, GW, GM,
-GH; GE and GT need length-encoded operands) is in the source; hptx is the
-server side's peer, so this matters only if hptx implements a server (src:
+GH; GE and GT need length-encoded operands) is in the source; satx is the
+server side's peer, so this matters only if satx implements a server (src:
 [[sources/hp48-kermit-hints]]).
 
 ## Observed on the saturnng emulator (2026-10-05)
 
 From driving ROM J (48SX), ROM R (48GX) and ROM 2.15 (49G) in the
-`hptx` emulator container with a Kermit client, not from a document:
+`satx` emulator container with a Kermit client, not from a document:
 
 - The C reply is the stack display, line by line `N: value` from the
   highest level down, right-aligned at the display width, or `Empty Stack`.
@@ -101,27 +101,27 @@ From driving ROM J (48SX), ROM R (48GX) and ROM 2.15 (49G) in the
 - A C packet resent after a lost ACK or a NAK runs again: the server runs
   a command when it arrives and cannot tell a resend from a new one (seen
   once on the emulated 49G under load). A C the server rejects is NAKed
-  about 11 ms after it arrives and does not run (48SX in saturnus) (hptx
+  about 11 ms after it arrives and does not run (48SX in saturnus) (satx
   calculator quirks, 2026-10-05).
 - The idle server's NAKs pile up in the host's input between commands, and
   one is waiting when a host connects; discard input before each command
-  (hptx).
+  (satx).
 - The `G D` reply on the 48GX and 49G begins with a line holding the
   current path and the free bytes (`{ HOME } 127847`); the 48SX has none.
   Lines end in CR LF; the 49G writes sizes and checksums with a trailing
-  point (`IOPAR 29.5 List 10777.`) (hptx traces `48sx-dir`, `48gx-dir`,
+  point (`IOPAR 29.5 List 10777.`) (satx traces `48sx-dir`, `48gx-dir`,
   `49g-dir`).
 - A command whose client died mid-way is still finished; its reply arrives
-  as the answer to the next client's first command (hptx).
-- The 48SX loses keys typed within about 2 s after FINISH (hptx; saturnus
+  as the answer to the next client's first command (satx).
+- The 48SX loses keys typed within about 2 s after FINISH (satx; saturnus
   waits 2.5 s).
 - On the 49G in RPN mode, typing `SERVER` leaves a tagged `SERVER` and
   `NOVAL` on the stack after the server ends; ALG mode and the 48GX leave
-  nothing. Alpha mode can still be on after the server ends (hptx,
+  nothing. Alpha mode can still be on after the server ends (satx,
   saturnng 49G 2.15).
 - In server mode `LCD→` returns the "Awaiting Server Cmd." banner, never
-  the stack (hptx).
-- `PURGE` of a missing `:0:` port object raises no error (hptx).
+  the stack (satx).
+- `PURGE` of a missing `:0:` port object raises no error (satx).
 - `'SIN' CRDIR` is `Invalid Syntax`, as for `STO` (saturnus decision log,
   "iteration 29: create a directory").
 - `STO` strips the tag of a tagged object (`:T:5 'X' STO` stores 5).
@@ -195,8 +195,8 @@ RPN mode) while building its object editor, not from a document:
 
 ## XModem from the server (saturnng, 2026-10-05)
 
-Measured on the saturnng emulator by hptx, 2026-10-05 (HP 49G ROM 2.15, HP
-48GX ROM R); not yet confirmed on hardware. Evidence: hptx
+Measured on the saturnng emulator by satx, 2026-10-05 (HP 49G ROM 2.15, HP
+48GX ROM R); not yet confirmed on hardware. Evidence: satx
 `crates/xmodem-proto/traces/49g-server-xrecv.trace` and
 `48gx-server-xsend.trace`.
 
@@ -216,7 +216,7 @@ Measured on the saturnng emulator by hptx, 2026-10-05 (HP 49G ROM 2.15, HP
   CLOSEIO, clearing flag -33 and a container restart; only a fresh container
   fixed it.
 
-## Packets the server sends (saturnng, hptx traces, 2026-10-04)
+## Packets the server sends (saturnng, satx traces, 2026-10-04)
 
 - Its S packet carries `~* @-#Y3` on the 48SX J, 48GX R and 49G 2.15:
   MAXL 94, TIME 10, no padding, EOL CR, QCTL `#`, QBIN `Y`, CHKT 3, no

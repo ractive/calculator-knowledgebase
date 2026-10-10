@@ -2,7 +2,7 @@
 title: "Which XModem start character and CRC do HP calculators use?"
 type: question
 status: answered
-tags: [xmodem, hptx, serial]
+tags: [xmodem, satx, serial]
 models: [48gx, 49g]
 ---
 
@@ -31,8 +31,8 @@ advertises "1K CRC") and for XSERV's `D` mode.
 
 ## Answer (saturnng, 2026-10-05)
 
-Measured on the saturnng emulator by hptx, 2026-10-05 (HP 49G ROM 2.15, HP
-48GX ROM R); not yet confirmed on hardware. Evidence: hptx
+Measured on the saturnng emulator by satx, 2026-10-05 (HP 49G ROM 2.15, HP
+48GX ROM R); not yet confirmed on hardware. Evidence: satx
 `crates/xmodem-proto/traces/49g-xrecv.trace` and the other traces there.
 
 - 49G as receiver: sends `D` about every 3 s (4 seen), then falls back to

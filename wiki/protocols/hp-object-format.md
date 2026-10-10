@@ -3,7 +3,7 @@ title: "HP object and transfer file formats (binary HPHP48-x, ASCII %%HP)"
 type: file-format
 status: draft
 sources: ["[[sources/hp48-faq]]", "[[sources/rplman]]", "[[sources/hp48-kermit-hints]]", "[[sources/conn4x-ymodem-pas]]", "[[sources/checksum-crc]]", "[[sources/saturn-tutorial]]"]
-tags: [object-format, binary, ascii, transfer, hptx]
+tags: [object-format, binary, ascii, transfer, satx]
 ---
 
 # HP object and transfer file formats
@@ -134,10 +134,10 @@ lengths counted in nibbles, every field low nibble first):
 - An ASCII transfer of a string has two layers. The 49G's string syntax
   escapes `\"` and `\\`, and translation 2 or 3 then doubles each
   backslash, so one 49G backslash becomes four in T(3) text. The 48 has no
-  escapes in strings and writes a string holding `"` as `C$ n` (hptx,
+  escapes in strings and writes a string holding `"` as `C$ n` (satx,
   2026-10-05).
 - In ASCII mode a fresh 48SX did not keep bytes 0-26 of a 256-byte file
-  through a round trip; all 256 survive in binary mode (hptx).
+  through a round trip; all 256 survive in binary mode (satx).
 
 ### ASCII transfer and stack display (saturnus, 2026-10-05)
 
@@ -213,7 +213,7 @@ From binary GETs (flag -35 set) on ROM J (48SX), ROM R (48GX) and ROM 2.15
 
 Bytes 0-127 are ASCII and 160-255 ISO 8859-1. 128-159 are, in order:
 ∡ x̄ ∇ √ ∫ Σ ▶ π ∂ ≤ ≥ ≠ α → ← ↓ ↑ γ δ ε η θ λ ρ σ τ ω Δ Π Ω ■ ∞ (checked by
-hptx against a 48SX string holding every character from 128 to 255;
+satx against a 48SX string holding every character from 128 to 255;
 saturnus `charset.rs`). A host command takes these bytes, not the trigraphs
 ([[protocols/server-commands]]).
 

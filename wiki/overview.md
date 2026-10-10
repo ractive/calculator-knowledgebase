@@ -9,10 +9,10 @@ The wiki covers HP Saturn-based graphing calculators (HP48 S/SX/G/GX, HP49G,
 HP38G, HP39G, HP40G) and the HP 42S (Lewis chip, a Saturn core) for two
 projects:
 
-- **hptx** (<https://github.com/ractive/hptx>): Rust file transfer over
-  serial, Kermit and XModem, with a sans-IO protocol core, a CLI and later a
-  Tauri app. The saturnng Docker container in `hptx/emulator/` is the current
-  test target.
+- **satx** (<https://github.com/ractive/saturnus/tree/main/crates/satx-cli>,
+  part of saturnus): Rust file transfer over serial, Kermit and XModem,
+  with a sans-IO protocol core and a CLI. The saturnng Docker container in
+  saturnus's `tools/saturnng-oracle/` is its test target.
 - **saturnus** (<https://github.com/ractive/saturnus>): a from-scratch
   Saturn emulator in Rust, headless core with pluggable UIs, written from
   documentation and ROM behaviour only (see the clean-room rule in `CLAUDE.md`).
@@ -65,7 +65,7 @@ emulator note, 35 questions (16 answered). See [[index]] and [[log]].
   libraries and menus ([[protocols/rpl-libraries]]) and the 42S and its
   Lewis chip ([[hardware/hp42s]], [[hardware/lewis]]).
 
-## Protocols: what hptx needs
+## Protocols: what satx needs
 
 - [[protocols/kermit]] (generic, from the 6th-edition manual) and
   [[protocols/kermit-hp]]: HP uses 9600 8N1, no flow control, no long

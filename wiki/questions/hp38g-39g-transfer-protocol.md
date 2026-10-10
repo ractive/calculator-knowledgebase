@@ -23,7 +23,7 @@ is the directory file and the aplet format.
 How to settle: boot a ROM in the emulator, choose SEND to a disk drive,
 and decode the bytes on the emulated UART; or read the connectivity kit
 (GPL, so facts only) or the "aplet disk drive" documentation. Matters for
-hptx, which would need a server mode. Context: [[protocols/kermit-hp]],
+satx, which would need a server mode. Context: [[protocols/kermit-hp]],
 [[hardware/hp38g]], [[hardware/hp39g-40g]].
 
 ## Progress from saturnus (2026-10-05)
@@ -50,5 +50,5 @@ UART. The framing and packet types are Kermit's
   The directory file must have content in a format still unknown.
 - **Next step.** Find the format of `HP38DIR.CUR` (the connectivity kit
   or the aplet disk drive would write it; GPL tools are facts-only), serve
-  a valid one, and watch the S/F/D packets of the aplet itself. hptx needs
+  a valid one, and watch the S/F/D packets of the aplet itself. satx needs
   a Kermit server mode that answers I and R for this.

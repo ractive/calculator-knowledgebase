@@ -5,7 +5,7 @@ authors: ["Chuck Forsberg", "Ward Christensen", "John Byrns"]
 year: 1988
 raw: "raw/protocols/ymodem.txt"
 status: digested
-tags: [xmodem, ymodem, protocol, transfer, hptx]
+tags: [xmodem, ymodem, protocol, transfer, satx]
 ---
 
 # Forsberg (ed.), XMODEM/YMODEM Protocol Reference (10-14-88)

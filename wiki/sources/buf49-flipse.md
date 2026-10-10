@@ -21,5 +21,5 @@ Six-page note (2000) with scope photos and a PCB for an external buffer.
   RTS and DTR. "Fortunately HPCOMM sets these signal[s] high"; other terminal
   programs must enable hardware handshaking; RTS and CTS are bridged (p. 1).
 
-Relevance to hptx: a host program should assert DTR and RTS so that
+Relevance to satx: a host program should assert DTR and RTS so that
 port-powered adapters work ([[protocols/kermit-hp]], [[hardware/hp49g]]).

@@ -11,7 +11,7 @@ tags: [saturn, uart, serial, ir]
 
 One UART drives either the wired serial port or the IR LED; single-byte
 receive and transmit holding registers (src: [[sources/mastracci-saturn-guide]]
-4.5). This is the hardware hptx talks to and the emulator must model for
+4.5). This is the hardware satx talks to and the emulator must model for
 Kermit and XModem; see [[protocols/kermit-hp]].
 
 ## Registers
@@ -109,7 +109,7 @@ HP's own description, written for the 48SX (src: [[sources/io-guide]]):
 - Gaps between incoming bytes of between 4 frame times and 4 frame times
   plus 5 ms can cause overruns, and timer interrupts (ticking clock, alarms)
   or key presses stretch the 5 ms; a sender should send back-to-back or
-  pause clearly (5.1). This is the hptx pacing rule.
+  pause clearly (5.1). This is the satx pacing rule.
 - When the HP48 is in self-test (ON-D, ON-E) it copies the test output to
   the serial port at 9600 8N1 regardless of IOPAR (src: [[sources/hp48-faq]]
   4.7).
@@ -207,7 +207,7 @@ serial ports misread it (src: [[sources/buf49-flipse]] p. 1-2;
 [[sources/serial49-sansonovski]] p. 1). Fixes are an internal patch or an
 external buffer powered from the PC's RTS, DTR and TX, which needs the host
 program to assert RTS and DTR (src: [[sources/buf49-flipse]] p. 1). Not an
-emulator concern; a hptx concern.
+emulator concern; a satx concern.
 
 ## Contradictions
 

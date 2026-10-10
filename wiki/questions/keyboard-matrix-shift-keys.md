@@ -3,6 +3,7 @@ title: "Which matrix position is left shift and which right shift?"
 type: question
 status: answered
 tags: [saturn, keyboard]
+models: [48sx]
 ---
 
 # Which matrix position is left shift and which right shift?

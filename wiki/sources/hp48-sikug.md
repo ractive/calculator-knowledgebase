@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard", "Sparcom"]
 year: 1994
 raw: "raw/manuals/hp48-sikug-pc-en.pdf"
 status: digested
-tags: [hp48, manual, kermit, pc, iopar]
+tags: [manual, kermit, iopar]
+models: [48sx, 48gx]
 ---
 
 # HP 48 to DOS/Windows PCs Serial Interface Kit User's Guide, ed. 2

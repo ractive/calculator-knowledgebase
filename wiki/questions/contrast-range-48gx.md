@@ -2,7 +2,8 @@
 title: "48GX contrast: keyboard range 3-19 or 9-24?"
 type: question
 status: open
-tags: [48gx, display]
+tags: [display]
+models: [48gx]
 ---
 
 # 48GX contrast: keyboard range 3-19 or 9-24?

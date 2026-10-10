@@ -5,7 +5,8 @@ authors: ["Eric Smith"]
 year: 1999
 raw: "raw/saturn-hardware/hp49-38-39/memmap/memmap.txt"
 status: digested
-tags: [hp49g, memory, flash]
+tags: [memory, flash]
+models: [49g]
 ---
 
 # Smith, HP 49G memory map

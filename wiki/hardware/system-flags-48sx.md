@@ -4,7 +4,7 @@ type: rom-behaviour
 models: [48sx]
 status: draft
 sources: ["[[sources/hp48sx-om]]", "[[sources/hp48-faq]]"]
-tags: [hp48, 48sx, flags, rom]
+tags: [flags, rom]
 ---
 
 # System flags: HP 48S / 48SX

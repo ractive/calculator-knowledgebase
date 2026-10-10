@@ -2,7 +2,8 @@
 title: "Lewis register roles not settled by the 42S ROM"
 type: question
 status: open
-tags: [lewis, registers, 42s]
+tags: [lewis, registers]
+models: [42s]
 ---
 
 # Lewis register roles not settled by the 42S ROM

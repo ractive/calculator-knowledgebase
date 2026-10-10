@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 1991
 raw: "raw/saturn-hardware/hp-tools-1991/RPLMAN.DOC"
 status: skimmed
-tags: [object-format, rpl, hp48]
+tags: [object-format, rpl]
+models: [48sx, 48gx]
 ---
 
 # RPLMAN: HP's RPL manual

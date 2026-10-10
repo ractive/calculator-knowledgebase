@@ -5,7 +5,8 @@ authors: ["Marcel Flipse"]
 year: 2000
 raw: "raw/saturn-hardware/hp49-38-39/buf49/Buf49.PDF"
 status: digested
-tags: [hp49g, serial, uart]
+tags: [serial, uart]
+models: [49g]
 ---
 
 # Flipse, External serial buffer for the HP49

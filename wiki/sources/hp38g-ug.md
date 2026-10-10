@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 1998
 raw: "raw/manuals/hp38g-ug-en.pdf"
 status: skimmed
-tags: [38g, manual, keyboard, reset, transfer, aplets]
+tags: [manual, keyboard, reset, transfer, aplets]
+models: [38g]
 ---
 
 # HP 38G Graphing Calculator User's Guide

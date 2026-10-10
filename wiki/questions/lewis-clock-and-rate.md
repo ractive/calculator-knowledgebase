@@ -2,7 +2,8 @@
 title: "Lewis CPU clock and the RATE register"
 type: question
 status: open
-tags: [lewis, clock, 42s, timing]
+tags: [lewis, clock, timing, cpu]
+models: [42s]
 ---
 
 # Lewis CPU clock and the RATE register

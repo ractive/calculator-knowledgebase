@@ -2,7 +2,8 @@
 title: "How is the HP49G flash programmed?"
 type: question
 status: open
-tags: [hp49g, flash]
+tags: [flash, memory]
+models: [49g]
 ---
 
 # How is the HP49G flash programmed?

@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 1999
 raw: "raw/manuals/hp49g-aug-en.pdf"
 status: skimmed
-tags: [hp49g, manual, flags]
+tags: [manual, flags]
+models: [49g]
 ---
 
 # HP 49G Advanced User's Guide

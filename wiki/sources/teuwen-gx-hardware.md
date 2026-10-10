@@ -5,7 +5,8 @@ authors: ["Philippe Teuwen"]
 year: 1997
 raw: "raw/saturn-hardware/hp48-hw-notes/hphard/hphard.txt"
 status: digested
-tags: [hp48, 48gx, pcb, pinout]
+tags: [pcb, pinout]
+models: [48gx]
 ---
 
 # Teuwen, Guide to the HP48G/GX Hardware v0.05

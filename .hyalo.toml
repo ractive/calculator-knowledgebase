@@ -20,6 +20,10 @@ type = "list"
 [schema.types.source.properties.tags]
 type = "list"
 
+[schema.types.source.properties.models]
+type = "string-list"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s)$"
+
 [schema.types.hardware]
 required = ["title", "type", "models", "status", "sources", "tags"]
 

@@ -4,7 +4,7 @@ type: rom-behaviour
 models: [48sx, 48gx, 49g]
 status: draft
 sources: ["[[sources/hp48sx-om]]", "[[sources/hp48g-ug]]", "[[sources/hp49g-pocket-guide]]"]
-tags: [flags, rom, hp48, hp49g]
+tags: [flags, rom]
 ---
 
 # System flags: multi-flag fields as shown

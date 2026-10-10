@@ -5,7 +5,8 @@ authors: ["André Schoorl"]
 year: 2000
 raw: "raw/hp48-internals/faq/48faq.txt"
 status: digested
-tags: [hp48, faq, transfer, object-format, kermit]
+tags: [faq, transfer, object-format, kermit]
+models: [48sx, 48gx]
 ---
 
 # HP 48 FAQ 4.62

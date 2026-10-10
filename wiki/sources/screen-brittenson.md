@@ -5,7 +5,8 @@ authors: ["Jan Brittenson"]
 year: 1990
 raw: "raw/saturn-hardware/hp48-hw-notes/screen/SCREEN"
 status: digested
-tags: [hp48, display, 48sx]
+tags: [display]
+models: [48sx]
 ---
 
 # Brittenson, HP48SX screen addresses

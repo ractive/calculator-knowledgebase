@@ -5,7 +5,8 @@ authors: ["Alonzo Gariepy", "Dave Kaffine"]
 year: 1990
 raw: "raw/saturn-hardware/hp48-hw-notes/checksum.txt"
 status: digested
-tags: [hp48, crc]
+tags: [crc]
+models: [48sx, 48gx]
 ---
 
 # Gariepy and Kaffine, Built-in hardware CRC at #00104

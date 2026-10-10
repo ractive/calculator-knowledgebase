@@ -2,7 +2,8 @@
 title: "HP 38G release date: April or September 1995?"
 type: question
 status: open
-tags: [38g]
+models: [38g]
+tags: [history]
 ---
 
 # HP 38G release date: April or September 1995?

@@ -5,7 +5,8 @@ authors: ["Igor Andrade Sylvester"]
 year: 2003
 raw: "raw/saturn-hardware/hp49-38-39/keyb49/keyb49.txt"
 status: digested
-tags: [hp49g, keyboard]
+tags: [keyboard]
+models: [49g]
 ---
 
 # Sylvester, HP 49G Keyboard Hardware Note v0.2

@@ -3,7 +3,8 @@ title: "IOPAR: the HP48 I/O parameter list"
 type: protocol
 status: draft
 sources: ["[[sources/hp48g-aur]]", "[[sources/hp48g-ug]]", "[[sources/hp48-kermit-hints]]", "[[sources/hp48-faq]]", "[[sources/io-guide]]", "[[sources/conn4x-help]]"]
-tags: [iopar, kermit, hp48, settings, hptx]
+tags: [iopar, kermit, settings, hptx]
+models: [48sx, 48gx]
 ---
 
 # IOPAR

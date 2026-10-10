@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 1999
 raw: "raw/manuals/hp49g-pocket-guide/"
 status: digested
-tags: [hp49g, manual, flags]
+tags: [manual, flags]
+models: [49g]
 ---
 
 # The HP 49G Pocket Guide

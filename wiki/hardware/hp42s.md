@@ -9,7 +9,7 @@ sources:
   - "[[sources/emu42-manual]]"
   - "[[sources/emu42-pioneer-dump]]"
   - "[[sources/kml20]]"
-tags: [42s, model, pioneer, lewis]
+tags: [model, pioneer, lewis]
 ---
 
 # HP 42S

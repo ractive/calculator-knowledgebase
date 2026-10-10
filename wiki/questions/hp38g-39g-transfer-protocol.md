@@ -2,7 +2,8 @@
 title: "Which wire protocol do the 38G, 39G and 40G use with a PC?"
 type: question
 status: open
-tags: [38g, 39g, 40g, serial, kermit]
+tags: [serial, kermit]
+models: [38g, 39g, 40g]
 ---
 
 # Which wire protocol do the 38G, 39G and 40G use with a PC?

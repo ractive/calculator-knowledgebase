@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 1994
 raw: "raw/saturn-hardware/hp-journal/hpj-48gx/aug94_6t.pdf"
 status: skimmed
-tags: [48gx, hp-journal, hardware, timing]
+tags: [hp-journal, hardware, timing]
+models: [48gx]
 ---
 
 # HP Journal, August 1994: the HP 48G/GX

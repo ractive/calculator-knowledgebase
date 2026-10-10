@@ -2,7 +2,8 @@
 title: "HP49G bank latch: which address bits select which flash window?"
 type: question
 status: answered
-tags: [hp49g, flash, bank-switching, memory]
+tags: [flash, bank-switching, memory]
+models: [49g]
 ---
 
 # HP49G bank latch: which address bits select which flash window?

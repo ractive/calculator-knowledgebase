@@ -39,10 +39,13 @@ are restated in our own words; quotations are kept to a sentence or two
 and attributed. GPL emulator source code is not reproduced here, and nothing
 here is taken from it: the emulator pages draw on the emulators' manuals
 and change logs, and on black-box runs. Emulator change logs and manuals
-were read for facts, never their source code. The one exception is HP's
+were read for facts, never their source code. One exception is HP's
 Conn4x connectivity kit, whose source was read for the XSERV and HP XModem
 facts because no written specification exists: facts only, no code or
-routine names. If you implement from these notes,
+routine names. The other is the maintainer's own HPComm/HPGComm source
+(GPL-2, 1999-2001, written mainly by the maintainer with Mitch Davis and
+Colin Croft), which may be read the same way for protocol and file-format
+facts, such as the 38G/39G directory file. If you implement from these notes,
 implement from the notes, not with someone else's source open beside you.
 
 No ROM images are included.

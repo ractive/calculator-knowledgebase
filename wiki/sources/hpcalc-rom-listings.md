@@ -5,7 +5,8 @@ authors: ["Eric Rechlin"]
 year: 2026
 raw: "https://www.hpcalc.org/hp38/pc/"
 status: digested
-tags: [rom, 38g, 39g, 40g, web, hp48]
+tags: [rom]
+models: [48sx, 48gx, 38g, 39g, 40g]
 ---
 
 # hpcalc.org ROM image listings for the 38G, 39G/40G and 48

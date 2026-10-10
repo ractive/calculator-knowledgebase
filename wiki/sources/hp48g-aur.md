@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 1994
 raw: "raw/manuals/hp48gaur.pdf"
 status: skimmed
-tags: [hp48, manual, iopar, kermit, commands]
+tags: [manual, iopar, kermit, commands]
+models: [48gx]
 ---
 
 # HP 48G Series Advanced User's Reference Manual, 4th edition

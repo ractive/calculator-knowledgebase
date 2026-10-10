@@ -14,7 +14,7 @@ sources:
   - "[[sources/saturn-tutorial]]"
   - "[[sources/connectivity-kit]]"
   - "[[sources/emu48-manual]]"
-tags: [38g, model]
+tags: [model]
 ---
 
 # HP 38G

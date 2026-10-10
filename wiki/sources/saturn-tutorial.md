@@ -5,7 +5,8 @@ authors: ["Gilbert Fernandes", "Eric Rechlin"]
 year: 2005
 raw: "raw/saturn-hardware/Saturn_tutorial.pdf"
 status: digested
-tags: [saturn, cpu, instruction-set, memory, display, keyboard, hp48, hp49g]
+tags: [saturn, cpu, instruction-set, memory, display, keyboard]
+models: [48sx, 48gx, 49g]
 ---
 
 # Fernandes and Rechlin, Introduction to Saturn Assembly Language, 3rd ed.

@@ -5,7 +5,8 @@ authors: ["Régis Duchesne"]
 year: 1994
 raw: "raw/saturn-hardware/hpregint.txt"
 status: skimmed
-tags: [hp48, interrupts, rom, french]
+tags: [interrupts, rom, french]
+models: [48sx, 48gx]
 ---
 
 # Duchesne, Les interruptions de la HP48 S,SX,G,GX: Ruses à connaître (French original)

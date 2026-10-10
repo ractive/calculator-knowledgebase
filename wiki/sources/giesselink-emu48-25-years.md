@@ -5,7 +5,8 @@ authors: ["Christoph Gießelink"]
 year: 2022
 raw: "https://hp.giesselink.com/25ann48.htm"
 status: digested
-tags: [emu48, 38g, 39g, 40g, history, web]
+tags: [emu48, history]
+models: [38g, 39g, 40g]
 ---
 
 # Gießelink, Emu48 25 Years Anniversary

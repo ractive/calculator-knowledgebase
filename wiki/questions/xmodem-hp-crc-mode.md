@@ -2,7 +2,8 @@
 title: "Which XModem start character and CRC do HP calculators use?"
 type: question
 status: answered
-tags: [xmodem, hp49g, hp48, hptx]
+tags: [xmodem, hptx, serial]
+models: [48gx, 49g]
 ---
 
 # Which XModem start character and CRC do HP calculators use?

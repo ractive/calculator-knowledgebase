@@ -5,7 +5,8 @@ authors: ["Jean-François Garnier"]
 year: 2002
 raw: "raw/hp42s/garnier-hp42s-new-facts.txt"
 status: digested
-tags: [42s, lewis, display, registers]
+tags: [lewis, display, registers]
+models: [42s]
 ---
 
 # Garnier, HP-42S: New Facts (2002)

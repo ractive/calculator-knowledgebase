@@ -2,7 +2,8 @@
 title: "DA19 (#129 bit 3): which value selects upper ROM?"
 type: question
 status: answered
-tags: [48gx, memory, display]
+tags: [memory, display]
+models: [48gx]
 ---
 
 # DA19 (#129 bit 3): which value selects upper ROM?

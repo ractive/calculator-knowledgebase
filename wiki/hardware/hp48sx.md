@@ -4,7 +4,7 @@ type: model
 models: [48sx]
 status: draft
 sources: ["[[sources/mastracci-saturn-guide]]", "[[sources/keyboard-ervin]]", "[[sources/screen-brittenson]]", "[[sources/bank-horn]]", "[[sources/hdwreg-taplin]]", "[[sources/teuwen-gx-hardware]]", "[[sources/saturn-tutorial]]"]
-tags: [hp48, 48sx, model]
+tags: [model]
 ---
 
 # HP 48S / 48SX

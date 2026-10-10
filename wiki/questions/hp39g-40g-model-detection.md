@@ -2,7 +2,8 @@
 title: "How does the shared 39G/40G ROM tell which model it runs on?"
 type: question
 status: answered
-tags: [39g, 40g, rom]
+tags: [rom]
+models: [39g, 40g]
 ---
 
 # How does the shared 39G/40G ROM tell which model it runs on?

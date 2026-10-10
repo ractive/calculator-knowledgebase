@@ -5,7 +5,8 @@ authors: ["Matthew Mastracci"]
 year: 1998
 raw: "raw/saturn-hardware/saturnd/saturn.txt"
 status: digested
-tags: [saturn, cpu, io-ram, hp48]
+tags: [saturn, cpu, io-ram]
+models: [48sx, 48gx]
 ---
 
 # Mastracci, Guide to the Saturn Processor

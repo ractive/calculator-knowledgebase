@@ -2,7 +2,8 @@
 title: "Does the 48G/GX interrupt handler halt on an unconfigured module?"
 type: question
 status: open
-tags: [48gx, interrupts, memory]
+tags: [interrupts, memory]
+models: [48gx]
 ---
 
 # Does the 48G/GX interrupt handler halt on an unconfigured module?

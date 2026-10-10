@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 1993
 raw: "raw/manuals/hp48gug.pdf"
 status: skimmed
-tags: [hp48, manual, transfer, kermit, xmodem, iopar]
+tags: [manual, transfer, kermit, xmodem, iopar]
+models: [48gx]
 ---
 
 # HP 48G Series User's Guide, 8th edition

@@ -5,7 +5,8 @@ authors: ["Hewlett-Packard"]
 year: 1999
 raw: "raw/manuals/hp49g-um-en.pdf"
 status: digested
-tags: [hp49g, manual, transfer]
+tags: [manual, transfer]
+models: [49g]
 ---
 
 # HP 49G User's Manual

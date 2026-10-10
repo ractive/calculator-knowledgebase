@@ -5,7 +5,8 @@ authors: ["William G. Graves"]
 year: 2002
 raw: "raw/protocols/xserv-conn4x/conn4xhelp/HelpConn4x/Connectivity/"
 status: digested
-tags: [xserv, xmodem, hp48, hp49g, iopar]
+tags: [xserv, xmodem, iopar]
+models: [48sx, 48gx, 49g]
 ---
 
 # Graves, Conn4x 2.0 help (XModem server, connection, HP48/HP49 operations)

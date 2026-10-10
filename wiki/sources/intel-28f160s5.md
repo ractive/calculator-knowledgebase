@@ -5,7 +5,8 @@ authors: ["Intel Corporation"]
 year: 1998
 raw: "raw/saturn-hardware/datasheets/intel-28f160s5-290609-004.pdf"
 status: digested
-tags: [hp49g, flash, datasheet]
+tags: [flash, datasheet]
+models: [49g]
 ---
 
 # Intel 28F160S5/28F320S5 5 Volt FlashFile datasheet

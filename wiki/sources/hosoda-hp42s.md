@@ -5,7 +5,8 @@ authors: ["Takayuki Hosoda"]
 year: 2007
 raw: "raw/hp42s/hosoda-hp42s-memory-overclock.txt"
 status: digested
-tags: [42s, lewis, clock, ram]
+tags: [lewis, clock, ram]
+models: [42s]
 ---
 
 # Hosoda, HP-42S memory upgrade and overclock

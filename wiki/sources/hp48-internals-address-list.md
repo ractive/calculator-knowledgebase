@@ -5,7 +5,8 @@ authors: ["HP 48 user community", "Paul Dale", "Rick Grevelle"]
 year: 1991
 raw: "raw/saturn-hardware/hp48-hw-notes/mlstarterkit/hardware/internals/byaddress"
 status: skimmed
-tags: [hp48, rom, ram, entry-points]
+tags: [rom, ram, entry-points]
+models: [48sx, 48gx]
 ---
 
 # Revised HP48 Internals Address List

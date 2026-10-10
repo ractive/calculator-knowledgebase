@@ -2,7 +2,7 @@
 title: "UART registers #110-#112: which bit is which?"
 type: question
 status: answered
-tags: [saturn, uart]
+tags: [saturn, uart, serial]
 ---
 
 # UART registers #110-#112: which bit is which?

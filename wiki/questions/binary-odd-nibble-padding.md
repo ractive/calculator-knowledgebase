@@ -2,7 +2,7 @@
 title: "HPHP48 binary files: how is an odd nibble count padded?"
 type: question
 status: open
-tags: [object-format, hptx]
+tags: [object-format, satx]
 ---
 
 # HPHP48 binary files: how is an odd nibble count padded?
@@ -23,7 +23,7 @@ there is still unknown.
 ## Progress (2026-10-08)
 
 Every binary GET from the 48SX J, 48GX R and 49G 2.15 had 0 in the spare
-half byte and no further padding (saturnng, hptx; see
+half byte and no further padding (saturnng, satx; see
 [[protocols/hp-object-format]]). On receive the object's own length
 decides: exactly ceil(nibbles / 2) bytes after the header store the
 object; the 48SX stores the file as a string if one more byte follows, the

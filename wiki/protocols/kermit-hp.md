@@ -3,7 +3,7 @@ title: "Kermit as implemented by HP calculators"
 type: protocol
 status: draft
 sources: ["[[sources/hp48g-ug]]", "[[sources/hp48-sikug]]", "[[sources/hp49g-um]]", "[[sources/connectivity-kit]]", "[[sources/hp48-kermit-hints]]", "[[sources/io-guide]]", "[[sources/hp48-faq]]", "[[sources/serial49-sansonovski]]", "[[sources/buf49-flipse]]"]
-tags: [kermit, transfer, hptx]
+tags: [kermit, transfer, satx]
 models: [48sx, 48gx]
 ---
 
@@ -54,7 +54,7 @@ is on [[protocols/server-commands]].
 - Block check types 1, 2 and 3; type 3 by default on most models (Protocol
   settings).
 - The HP's Send-Init has no REPT field, so repeat prefixing is never used
-  (hptx kermit-proto traces, 2026-10-04). The server's packets are on
+  (satx kermit-proto traces, 2026-10-04). The server's packets are on
   [[protocols/server-commands]].
 - The HP does not accept unprefixed control characters: the host must prefix
   all of them (Kermit 95 needs `SET CONTROL PREFIX ALL`) (Protocol settings).
@@ -82,7 +82,7 @@ is on [[protocols/server-commands]].
 - Receiving file names: illegal characters abort the transfer with an error
   sent to the computer; a name matching a built-in command or (with flag -36
   clear) an existing variable gets a `.1` style extension (src:
-  [[sources/hp48g-ug]] 27-11). hptx should send valid RPL names.
+  [[sources/hp48g-ug]] 27-11). satx should send valid RPL names.
 - ARCHIVE `:IO:name` backs up HOME to the host over Kermit, always in binary;
   a ticking clock can corrupt the backup (src: [[sources/hp48g-ug]] 27-12).
   RESTORE of that file replaces all user memory.

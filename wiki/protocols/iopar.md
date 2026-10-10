@@ -3,7 +3,7 @@ title: "IOPAR: the HP48 I/O parameter list"
 type: protocol
 status: draft
 sources: ["[[sources/hp48g-aur]]", "[[sources/hp48g-ug]]", "[[sources/hp48-kermit-hints]]", "[[sources/hp48-faq]]", "[[sources/io-guide]]", "[[sources/conn4x-help]]"]
-tags: [iopar, kermit, settings, hptx]
+tags: [iopar, kermit, settings, satx]
 models: [48sx, 48gx]
 ---
 
@@ -18,7 +18,7 @@ Communications settings).
 The Kermit server writes IOPAR in HOME when it ends: purged during a
 session, it is back after `G F` (saturnus iteration 12b, 2026-10-08).
 Storing IOPAR back with the same values grows the 48SX variable from 29.5
-to 37.5 bytes (hptx, 2026-10-05).
+to 37.5 bytes (satx, 2026-10-05).
 
 ## Fields (48G series)
 
@@ -65,7 +65,7 @@ PARITY apply to Kermit only (src: [[sources/hp48g-ug]] 27-8, 27-9).
   "Invalid IOPAR" and answers nothing; `{ 9600. 0. 0. 0. 3. 1. }` works, and
   the 48GX reads that list as well. Changing the checksum field with valid
   reals does not disturb a running server session; it applies at the next
-  SERVER. (Measured on the saturnng emulator by hptx, 2026-10-05, HP 49G ROM
+  SERVER. (Measured on the saturnng emulator by satx, 2026-10-05, HP 49G ROM
   2.15 and HP 48GX ROM R; not yet confirmed on hardware.) The AUR's "all
   entries are integers" above means integer-valued reals: the 48 has no exact
   integers, and the 49G rejects its exact integers in IOPAR.

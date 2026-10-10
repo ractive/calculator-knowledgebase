@@ -5,7 +5,7 @@ authors: ["Frank da Cruz"]
 year: 1986
 raw: "raw/protocols/kproto.pdf"
 status: digested
-tags: [kermit, protocol, transfer, hptx]
+tags: [kermit, protocol, transfer, satx]
 ---
 
 # da Cruz, Kermit Protocol Manual, 6th edition

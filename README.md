@@ -55,7 +55,7 @@ No ROM images are included.
 - [saturnus](https://github.com/ractive/saturnus): a clean-room emulator of
   the Saturn calculators in Rust. Its code cites pages as
   `wiki: hardware/timers`.
-- [hptx](https://github.com/ractive/hptx): file transfer to and from HP
+- [satx](https://github.com/ractive/saturnus/tree/main/crates/satx-cli): file transfer to and from HP
   calculators over Kermit and XModem, in Rust.
 
 ## Getting the source documents

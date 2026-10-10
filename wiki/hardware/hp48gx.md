@@ -100,7 +100,7 @@ clean-room saturnus emulator and comparing screens with saturnng 6.1.1
   bytes free on both emulators. So Mastracci's #10F port names are right
   for the GX ([[hardware/card-ports]]).
 - The Kermit server started by typing ALPHA ALPHA S E R V E R ENTER (the
-  same keys as on the SX) passes hptx's end-to-end suite over TCP.
+  same keys as on the SX) passes satx's end-to-end suite over TCP.
 - Power-on contrast: 14 (range 9-24), observed on ROM R after a cold start
   (observed in saturnus 2026-10-07; saturnus renders it at about 90 % darkness).
 

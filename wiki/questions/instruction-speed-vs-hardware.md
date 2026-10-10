@@ -20,7 +20,7 @@ compensates with TIMER2. But the *speed* of code has no oracle yet:
 - saturnng returns 145 ticks for the same program, which is implausibly
   fast; its TICKS clock is evidently not tied to its instruction timing, so
   it is no oracle for speed.
-- Kermit still works at that speed: hptx's e2e suite passes 6/6 over the
+- Kermit still works at that speed: satx's e2e suite passes 6/6 over the
   emulated wire, with per-packet turnaround of 100-360 ms on the calculator
   side.
 

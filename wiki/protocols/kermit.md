@@ -3,7 +3,7 @@ title: "Kermit protocol (generic)"
 type: protocol
 status: draft
 sources: ["[[sources/kermit-protocol-manual]]"]
-tags: [kermit, protocol, transfer, hptx]
+tags: [kermit, protocol, transfer, satx]
 ---
 
 # Kermit protocol

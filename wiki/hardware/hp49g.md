@@ -155,7 +155,7 @@ which matches baud code 7 on [[hardware/uart]].
     and HP50G Port by JY Avenard", its first 64 KB differ in nearly every
     byte from the two images below, and there is no "Boot Version" string
     at #00214. Yet saturnng boots it with `MODEL=49g` to "Try To Recover
-    Memory?" and runs its Kermit server (hptx README, emulator against
+    Memory?" and runs its Kermit server (satx README, emulator against
     emulator), so it does run on an emulated Saturn 49G. It is the image
     the saturnng oracle uses. Whether it runs on a real 49G is unverified.
   - `hp4950v210.zip` member `rom.49g` (ROM 2.10, 2 MB packed) and

@@ -4,8 +4,9 @@ A wiki about the internals of HP's Saturn-based calculators (HP 48S/SX/G/GX,
 HP 49G, HP 38G, HP 39G, HP 40G) and the HP 42S: hardware, ROM behaviour,
 serial transfer protocols, file formats and existing emulators. Public,
 CC BY 4.0. It feeds saturnus (a clean-room Saturn emulator,
-https://github.com/ractive/saturnus) and hptx (HP file transfer,
-https://github.com/ractive/hptx). saturnus code cites pages as
+https://github.com/ractive/saturnus) and satx (HP file transfer,
+part of saturnus: https://github.com/ractive/saturnus/tree/main/crates/satx-cli).
+saturnus code cites pages as
 `wiki: hardware/timers`; keep page paths stable.
 
 ## Layers

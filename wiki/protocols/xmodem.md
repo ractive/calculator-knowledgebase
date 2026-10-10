@@ -3,7 +3,7 @@ title: "XMODEM, XMODEM-CRC, XMODEM-1K and YMODEM (generic)"
 type: protocol
 status: draft
 sources: ["[[sources/ymodem-reference]]", "[[sources/zmodem]]"]
-tags: [xmodem, ymodem, protocol, transfer, hptx]
+tags: [xmodem, ymodem, protocol, transfer, satx]
 ---
 
 # XMODEM family
@@ -86,4 +86,4 @@ blocks, unprotected single-byte control messages, lack of file names and
 attributes, and need for full 8-bit transparency (src: [[sources/zmodem]]
 section 2). No HP calculator in scope implements it, and the HP48 FAQ notes
 the HP48's small input buffer makes it hard (src: [[sources/hp48-faq]] 6.13).
-Not needed for hptx.
+Not needed for satx.

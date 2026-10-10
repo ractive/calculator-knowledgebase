@@ -2,7 +2,7 @@
 title: "Is the ASCII transfer header %%HP: or %HPHP:?"
 type: question
 status: answered
-tags: [object-format, hptx]
+tags: [object-format, satx]
 ---
 
 # Is the ASCII transfer header %%HP: or %HPHP:?

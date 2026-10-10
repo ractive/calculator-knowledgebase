@@ -3,7 +3,7 @@ title: "XModem on HP calculators (48G XSEND/XRECV, 49G, XSERV transfers)"
 type: protocol
 status: draft
 sources: ["[[sources/hp48g-ug]]", "[[sources/hp48-faq]]", "[[sources/conn4x-ymodem-pas]]", "[[sources/conn4x-help]]", "[[sources/hp49-rom118-notes]]", "[[sources/serial49-sansonovski]]"]
-tags: [xmodem, transfer, hptx]
+tags: [xmodem, transfer, satx]
 models: [48gx, 49g]
 ---
 
@@ -59,11 +59,11 @@ From [[sources/conn4x-ymodem-pas]] (the part of the code in brackets):
 - Timeouts: 2 s for data, 1 s for command acknowledgements; "clear line"
   means reading until 200 ms of silence [receive timeout and line clearing].
 
-## Measured on the saturnng emulator (hptx, 2026-10-05)
+## Measured on the saturnng emulator (satx, 2026-10-05)
 
-Measured on the saturnng emulator by hptx, 2026-10-05, against HP 49G ROM
+Measured on the saturnng emulator by satx, 2026-10-05, against HP 49G ROM
 2.15 and HP 48GX ROM R; not yet confirmed on hardware. Byte-level evidence
-is in the hptx repository under `crates/xmodem-proto/traces/` (trace names
+is in the saturnus repository under `crates/xmodem-proto/traces/` (trace names
 below), not a document.
 
 Starting a transfer:
@@ -94,10 +94,10 @@ Starting a transfer:
 - XSEND pads the last block with memory garbage, not a fixed byte; only a
   walk of the object's length can strip it. XRECV strips the SUB (0x1A)
   padding itself when it stores a string.
-- XRECV does not overwrite an existing variable: with HPTXX present it stored
-  the object as HPTXX.1.
+- XRECV does not overwrite an existing variable: with SATXX present it stored
+  the object as SATXX.1.
 - `-95 CF` over Kermit, FINISH, XRECV or XSEND from the keyboard, `SERVER`,
-  then `-95 SF` brings back ALG mode (hptx).
+  then `-95 SF` brings back ALG mode (satx).
 
 48GX:
 
@@ -109,7 +109,7 @@ Starting a transfer:
 - A cancelled XRECV leaves an empty string in the target variable.
 - XRECV onto an existing name stops with "XRECV Error: Name Conflict": no
   start character is sent, the name stays on the stack, and there is no
-  `.1` fallback; flag -36 was not tried (hptx, saturnng 48GX ROM R,
+  `.1` fallback; flag -36 was not tried (satx, saturnng 48GX ROM R,
   2026-10-05).
 
 ## Settings

@@ -13,7 +13,7 @@ and #112 (status), and on whether #10E-#10F belong to the baud register (src:
 [[hardware/uart]].
 
 This matters for both the emulator (the ROM's serial driver must see the
-right bits) and for understanding receive overruns in hptx tests.
+right bits) and for understanding receive overruns in satx tests.
 
 Resolve with [[sources/voyage-48gx]], [[sources/saturn-tutorial]] and
 [[emulators/emu48]] CHANGES.

@@ -150,9 +150,10 @@ cold start (observed in saturnus 2026-10-07; saturnus renders it at about 90 % d
   remote directory (src: [[sources/hp38g-ug]] 1-26, 1-27;
   [[sources/connectivity-kit]]). The calculator is the client of a server
   on the PC, unlike the 48, where the PC drives the calculator's server.
-- The wire protocol is not named in any source read; Kermit as on the 48G
-  is the likely answer (unverified):
-  [[questions/hp38g-39g-transfer-protocol]].
+- The wire protocol is not named in any source read; observed on the ROM,
+  it is Kermit with the calculator as client and the PC as a "disk drive"
+  holding the directory files `HP38DIR.CUR` and `HP38DIR.000`:
+  [[protocols/aplet-transfer]].
 
 ## First boot
 
@@ -227,4 +228,4 @@ Also observed on saturnus with ROM A1.67, no oracle:
   There is no alpha-mode space as on the 39G.
 - **PC link.** SEND to a disk drive (LIB, SEND, second entry) speaks
   Kermit with the calculator as the client: see
-  [[questions/hp38g-39g-transfer-protocol]].
+  [[protocols/aplet-transfer]].

@@ -48,6 +48,7 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 - [[sources/hp49g-pocket-guide]] — The HP 49G Pocket Guide, system flag pages 76-79 (@ractive's photographs) (digested)
 - [[sources/hp49g-um]] — HP 49G User's Manual (digested)
 - [[sources/hpmuseum-summation-benchmark]] — HP Museum forum, summation benchmark: real 48SX, 48GX and 49G timings (digested)
+- [[sources/hpgcomm]] — HPGComm 2.01 (2001), the 38G/39G/40G PC link: README, help and source, facts only (digested)
 - [[sources/hpcalc-rom-listings]] — hpcalc.org ROM listings for the 38G, 39G/40G and 48, with permission statements (web, digested)
 - [[sources/hpj-38g]] — Beers et al., HP Journal June 1996, the HP 38G articles (digested)
 - [[sources/hpj-48sx]] — HP Journal June 1991, the HP 48SX; read for the 1LT8 IC sidebar: clock from the 32 kHz crystal (skimmed)
@@ -102,6 +103,7 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 
 ## Protocols
 
+- [[protocols/aplet-transfer]] — Aplet transfer: the 38G, 39G and 40G as Kermit clients of a PC "disk drive", the directory files, XModem aplets (draft)
 - [[protocols/hp-object-format]] — HP object and transfer file formats (binary HPHP48-x, ASCII %%HP) (draft)
 - [[protocols/iopar]] — IOPAR: the HP48 I/O parameter list (draft)
 - [[protocols/kermit-hp]] — Kermit as implemented by HP calculators (draft)
@@ -136,7 +138,8 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 - [[questions/hp48sx-rom-extent]] — Where does the 48SX ROM end in the address map? (answered)
 - [[questions/hp48sx-system-flags]] — What do the HP 48S/SX system flags mean? (answered: the Owner's Manual, appendix E)
 - [[questions/hp49g-system-flags]] — HP 49G system flags the Pocket Guide does not cover: 25 unlisted flags, the -90 default (open)
-- [[questions/hp38g-39g-transfer-protocol]] — Which wire protocol do the 38G, 39G and 40G use with a PC? (open; answered in part: Kermit, calculator as client)
+- [[questions/hp38g-39g-transfer-protocol]] — Which wire protocol do the 38G, 39G and 40G use with a PC? (answered: Kermit, calculator as client; XModem aplets on the 39G/40G)
+- [[questions/hp39g-send-destinations]] — Does the 39G's SEND offer two destinations (the guide) or three (the ROM)? (open)
 - [[questions/hp38g-memory-controllers]] — HP 38G: which controller drives what, and what stops a 48G emulator? (open)
 - [[questions/hp38g-release-date]] — HP 38G release date: April or September 1995? (open)
 - [[questions/hp39g-40g-memory-map]] — HP 39G/40G: memory map, ROM banking and ROM file layout (open)

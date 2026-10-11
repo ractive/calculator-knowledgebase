@@ -601,3 +601,26 @@ and 49G, the serial stream recorded for 60-110 s: each sends one NAK of
 packet 0 about 5 s after `SERVER`, or about 10 s after its ACK of an I
 packet, and then nothing. Corrected [[protocols/server-commands]], which
 said the idle server NAKs about every 5 s. Real hardware is unverified.
+
+## [2026-10-11] query | Aplet transfer on the 38G and 39G
+
+Black-box runs of the 38G (ROM A1.67) and 39G ROMs on saturnus with a
+small Kermit server and an XModem sender on the emulated serial port,
+plus HPGComm 2.01's README, help and source under the documented
+exception (facts only). New [[protocols/aplet-transfer]] and
+[[sources/hpgcomm]]; [[questions/hp38g-39g-transfer-protocol]] answered.
+The calculator writes the directory files `HP38DIR.CUR` and `HP38DIR.000`
+itself once the PC answers its first R with an error packet and the user
+confirms "Initialize directory?"; their format (kind letter, file name,
+title, each counted in decimal), the file naming, both flows, the error
+screens and the 39G's XModem aplet path are on the new page.
+
+## [2026-10-11] lint | Aplet transfer: review fixes
+
+The 39G's three SEND destinations against the guide's two recorded as a
+contradiction on [[protocols/aplet-transfer]], with
+[[questions/hp39g-send-destinations]]; the guides' wording quoted
+separately; the check-type sentence says which exchange it is about;
+[[sources/hpgcomm]] points to the public 2.0 download on hpcalc.org and
+says the source is not public; the 38G and 39G/40G guides and the
+connectivity kit list the new page among the pages that use them.

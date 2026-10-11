@@ -32,7 +32,7 @@ XModem).
 - A transmit annunciator shows "data is being transferred via infrared or
   cable" (ch. 1, annunciators).
 
-Facts used on [[hardware/hp39g-40g]].
+Facts used on [[hardware/hp39g-40g]], [[protocols/aplet-transfer]].
 
 Addendum 2026-10-05: the text layer of the PDF renders key glyphs as a
 private font, but the keyboard figure on page 1-3 (rendered as an image)

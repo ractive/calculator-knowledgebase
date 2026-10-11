@@ -26,4 +26,5 @@ the English part (first 3 pages).
 - The warranty states that the software on the CD is not HP software and is
   provided under the GNU General Public License.
 
-Facts used on [[protocols/kermit-hp]], [[hardware/hp38g]].
+Facts used on [[protocols/kermit-hp]], [[hardware/hp38g]],
+[[protocols/aplet-transfer]].

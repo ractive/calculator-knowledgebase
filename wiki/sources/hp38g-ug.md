@@ -60,4 +60,4 @@ The math and aplet chapters were not read.
 Official HP manual. Silent on the memory map, clock, controllers and the
 wire protocol.
 
-Facts used on [[hardware/hp38g]].
+Facts used on [[hardware/hp38g]], [[protocols/aplet-transfer]].

@@ -614,3 +614,13 @@ itself once the PC answers its first R with an error packet and the user
 confirms "Initialize directory?"; their format (kind letter, file name,
 title, each counted in decimal), the file naming, both flows, the error
 screens and the 39G's XModem aplet path are on the new page.
+
+## [2026-10-11] lint | Aplet transfer: review fixes
+
+The 39G's three SEND destinations against the guide's two recorded as a
+contradiction on [[protocols/aplet-transfer]], with
+[[questions/hp39g-send-destinations]]; the guides' wording quoted
+separately; the check-type sentence says which exchange it is about;
+[[sources/hpgcomm]] points to the public 2.0 download on hpcalc.org and
+says the source is not public; the 38G and 39G/40G guides and the
+connectivity kit list the new page among the pages that use them.

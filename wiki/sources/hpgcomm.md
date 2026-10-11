@@ -3,7 +3,7 @@ title: "HPGComm 2.01 (2001): README, help and source"
 type: source
 authors: ["Jean-Pierre Bergamin", "Colin Croft"]
 year: 2001
-raw: "https://github.com/ractive/hpcomm"
+raw: https://www.hpcalc.org/details/3715
 status: digested
 tags: [connectivity, transfer, kermit, xmodem]
 models: [38g, 39g, 40g]
@@ -13,11 +13,14 @@ models: [38g, 39g, 40g]
 
 HPGComm is the PC side of the 38G, 39G and 40G link: the successor of
 HPComm38, shipped with HP's connectivity kit, GPL-2. Version 2.01 is dated
-1 July 2001. Not in `raw/`: the source lives in the owner's private
-repository (the URL above), and the README and help pages were published
-with the program. The source is read under this wiki's documented
-exception (CLAUDE.md, "The clean-room rule"): facts only, no code, no
-routine names, no layouts.
+1 July 2001. Not in `raw/`. Public: version 2.0, the Windows installer
+with its README and help, on hpcalc.org (the URL above, `hpgcomm2.exe`,
+129,643 bytes, listed 2026-10-11). The 2.01 README read here and the
+source are in the owner's private repository; **the source is not
+public**. It is read under this wiki's documented exception (CLAUDE.md,
+"The clean-room rule"): facts only, no code, no routine names, no
+layouts. Pages that use it mark each fact that rests on the source
+alone with "(src: [[sources/hpgcomm]] source)".
 
 What it covers:
 

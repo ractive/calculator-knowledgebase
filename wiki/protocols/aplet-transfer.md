@@ -9,9 +9,11 @@ models: [38g, 39g, 40g]
 
 # Aplet transfer: the 38G, 39G and 40G with a PC "disk drive"
 
-The 38G, 39G and 40G start every PC transfer themselves: SEND and RECEIVE
-offer "a disk drive (or a computer)" beside another calculator (src:
-[[sources/hp38g-ug]] 1-26, 1-27; [[sources/hp39g40g-ug]] 16-5). The PC
+The 38G, 39G and 40G start every PC transfer themselves. On the 38G, SEND
+offers another HP 38G or a disk drive, an "aplet disk drive or computer"
+(src: [[sources/hp38g-ug]] 1-26, 1-27); on the 39G and 40G the cable goes
+to "a remote storage device (aplet disk drive or computer)" (src:
+[[sources/hp39g40g-ug]] 16-5). The PC
 plays that disk drive. The link is Kermit ([[protocols/kermit]],
 [[sources/kermit-protocol-manual]]) with the **calculator as the client**
 and the PC as a server that keeps files in one folder, the reverse of the
@@ -54,8 +56,13 @@ the calculator:
 - When the PC answers an R with S, F, D, Z and B, the calculator's ACK to
   the S is `~& @-# 1` (TIME 6, no 8-bit quoting) and it echoes the file
   name in its ACK to F.
-- A server that answers with CHKT `1` gets type-1 checks; with `3` the
-  rest of the transaction uses the 3-byte CRC. Both work.
+- When the calculator sends (its S), the server's ACK to that S picks
+  the check: CHKT `1` gives type-1 checks for the rest of the
+  transaction, `3` the 3-byte CRC. Both work. Everything else uses type
+  1: the I and S packets, their ACKs and the R. When the server answers
+  an R with its own S, the calculator's ACK names the check for the
+  rest of that transaction: `1` when the server offered `1`, `3` when it
+  offered `3` (both observed).
 - Both ROMs sent their I and their S **twice in a row** before the first
   ACK, and went on normally whether the second copy was ACKed again or
   NAKed. A server must treat a repeated first packet as a duplicate.
@@ -177,6 +184,16 @@ it.
 HPGComm reads an incoming transfer that starts with ESC (0x1B) as a 38G
 screen capture, and one whose second byte is `W` or `G` as a 39G/40G
 capture (src: [[sources/hpgcomm]] source). Not observed on the emulator.
+
+## Contradictions
+
+- **The 39G's destinations.** The 39G/40G guide says SEND and RECV each
+  offer two destinations, another HP 39G or a disk drive on a PC (src:
+  [[sources/hp39g40g-ug]] 16-5). The 39G ROM observed here offers three:
+  "HP39 (IR)", "HP39/40 (Wire)" and "Disk drive…". The guide may describe
+  an earlier ROM, or count the IR and wire calculator transfers as one;
+  the 40G, which has no IR port (same page), was not run. See
+  [[questions/hp39g-send-destinations]].
 
 ## Open
 

@@ -139,6 +139,7 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 - [[questions/hp48sx-system-flags]] — What do the HP 48S/SX system flags mean? (answered: the Owner's Manual, appendix E)
 - [[questions/hp49g-system-flags]] — HP 49G system flags the Pocket Guide does not cover: 25 unlisted flags, the -90 default (open)
 - [[questions/hp38g-39g-transfer-protocol]] — Which wire protocol do the 38G, 39G and 40G use with a PC? (answered: Kermit, calculator as client; XModem aplets on the 39G/40G)
+- [[questions/hp39g-send-destinations]] — Does the 39G's SEND offer two destinations (the guide) or three (the ROM)? (open)
 - [[questions/hp38g-memory-controllers]] — HP 38G: which controller drives what, and what stops a 48G emulator? (open)
 - [[questions/hp38g-release-date]] — HP 38G release date: April or September 1995? (open)
 - [[questions/hp39g-40g-memory-map]] — HP 39G/40G: memory map, ROM banking and ROM file layout (open)

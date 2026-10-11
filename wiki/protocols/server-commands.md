@@ -134,10 +134,10 @@ From driving ROM J (48SX), ROM R (48GX) and ROM 2.15 (49G) in the
   the peak is twice HOME's size and about 175 bytes, on all three models.
   `RCL` of the port object alone takes nothing (hence `Object In Use`
   when the port object is purged with the recalled copy on the stack).
-- After `RESTORE` of a backup made with flag -35 set, the warm-started
-  calculator has -35 set too, where a fresh one has it clear: the user
-  flags come back with the backup (48SX and 48GX in saturnus,
-  2026-10-11).
+- `RESTORE` keeps the calculator's own flags: a backup made with flag
+  -35 clear, restored onto a calculator that had -35 set, left it set;
+  -35 cleared just before `RESTORE` stayed clear after the warm start
+  (48SX and 48GX in saturnus, 2026-10-11).
 - `G D` lists a directory newest first: a variable made by `STO`, a
   SEND or `CRDIR` comes first; `STO` to a name in use keeps its place
   (48SX, 48GX, 49G in saturnus, 2026-10-11).

@@ -593,3 +593,11 @@ got one: `history` on [[questions/hp38g-release-date]], `hardware` on
 questions; the empty decision and synthesis types stay. CLAUDE.md and the
 README record a second clean-room exception: the owner's own
 HPComm/HPGComm source, for protocol and file-format facts only.
+
+## [2026-10-11] query | The idle Kermit server NAKs once
+
+Black-box runs of saturnng (Docker oracle) and saturnus on the 48SX, 48GX
+and 49G, the serial stream recorded for 60-110 s: each sends one NAK of
+packet 0 about 5 s after `SERVER`, or about 10 s after its ACK of an I
+packet, and then nothing. Corrected [[protocols/server-commands]], which
+said the idle server NAKs about every 5 s. Real hardware is unverified.

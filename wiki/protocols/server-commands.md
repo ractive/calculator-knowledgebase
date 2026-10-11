@@ -96,15 +96,20 @@ From driving ROM J (48SX), ROM R (48GX) and ROM 2.15 (49G) in the
 - A command packet that arrives right after the client's final ACK of the
   previous transaction is lost: the server answers only after its own
   timeout (about 6 s) has sent a NAK and the client resent. A pause of
-  100 ms between transactions avoided it on all three models. The idle
-  server NAKs packet 0 about every 5 s (observed in saturnus, 2026-10-08).
+  100 ms between transactions avoided it on all three models.
+- The idle server NAKs packet 0 once and then stays silent: about 5 s
+  after `SERVER`, or about 10 s (the timeout it was given) after its ACK of
+  an I packet, and no further NAK for at least 58 s. saturnng and saturnus
+  behave the same on the 48SX, 48GX and 49G (black-box runs, 2026-10-11);
+  real hardware is unverified. Kermit allows periodic NAKs here (see
+  [[protocols/kermit]]), but neither emulator repeats them.
 - A C packet resent after a lost ACK or a NAK runs again: the server runs
   a command when it arrives and cannot tell a resend from a new one (seen
   once on the emulated 49G under load). A C the server rejects is NAKed
   about 11 ms after it arrives and does not run (48SX in saturnus) (satx
   calculator quirks, 2026-10-05).
-- The idle server's NAKs pile up in the host's input between commands, and
-  one is waiting when a host connects; discard input before each command
+- The idle server's NAK waits in the host's input between commands, and
+  may be waiting when a host connects; discard input before each command
   (satx).
 - The `G D` reply on the 48GX and 49G begins with a line holding the
   current path and the free bytes (`{ HOME } 127847`); the 48SX has none.

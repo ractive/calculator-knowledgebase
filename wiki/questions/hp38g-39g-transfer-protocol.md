@@ -1,7 +1,7 @@
 ---
 title: "Which wire protocol do the 38G, 39G and 40G use with a PC?"
 type: question
-status: open
+status: answered
 tags: [serial, kermit]
 models: [38g, 39g, 40g]
 ---
@@ -16,9 +16,20 @@ source read names the protocol, the baud rate or the framing. The 38G has a
 10-pin connector, and the 48's calculator-end adaptor must not be used
 with it (src: [[sources/finseth-hp38g]]; [[sources/connectivity-kit]]).
 
-Answered by observation (below): Kermit, with the calculator as the
-client of a server on the PC (the reverse of the 48 kit). What stays open
-is the directory file and the aplet format.
+## Answer (2026-10-11)
+
+Kermit, with the calculator as the client of a server on the PC (the
+reverse of the 48 kit), at 9600 baud; the 39G and 40G also take a binary
+aplet by XModem ("HP39/40 (Wire)", 128-byte blocks, checksum). The PC is a
+"disk drive" that only stores and serves files: the calculator itself
+writes the directory files `HP38DIR.CUR` and `HP38DIR.000` (39G/40G:
+`HP39DIR.CUR` and `HP39DIR.000`), plain-ASCII lists of kind letter, file
+name and title, after asking "Initialize directory?" when the PC has none.
+The full description, with both flows and the file formats, is
+[[protocols/aplet-transfer]], from black-box runs of the 38G and 39G ROMs
+on saturnus and from HPGComm (src: [[sources/hpgcomm]]).
+
+The history of the question follows.
 
 How to settle: boot a ROM in the emulator, choose SEND to a disk drive,
 and decode the bytes on the emulated UART; or read the connectivity kit
@@ -48,7 +59,8 @@ UART. The framing and packet types are Kermit's
   8-bit quoting, type-1 check accepted). It then shows an error box saying
   the disk drive is not prepared for the transfer, and sends nothing more.
   The directory file must have content in a format still unknown.
-- **Next step.** Find the format of `HP38DIR.CUR` (the connectivity kit
-  or the aplet disk drive would write it; GPL tools are facts-only), serve
-  a valid one, and watch the S/F/D packets of the aplet itself. satx needs
-  a Kermit server mode that answers I and R for this.
+- **Next step** (done 2026-10-11, [[protocols/aplet-transfer]]). Find
+  the format of `HP38DIR.CUR`, serve a valid one, and watch the S/F/D
+  packets of the aplet itself. The empty file was the wrong answer: a
+  server that answers the R with an E packet instead makes the calculator
+  offer to initialise the directory and write both files itself.

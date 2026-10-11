@@ -127,6 +127,20 @@ From driving ROM J (48SX), ROM R (48GX) and ROM 2.15 (49G) in the
 - In server mode `LCD→` returns the "Awaiting Server Cmd." banner, never
   the stack (satx).
 - `PURGE` of a missing `:0:` port object raises no error (satx).
+- The memory a backup through `:0:` needs (saturnus, 48SX ROM J, 48GX
+  ROM R, 49G ROM 2.15, 2026-10-11, `MEM` after each step, a 5 KB string
+  in HOME): `:0:name ARCHIVE` takes HOME's size (the sum of its `G D`
+  sizes) and about 80 bytes; `:0:name RCL 'name' STO` as much again; so
+  the peak is twice HOME's size and about 175 bytes, on all three models.
+  `RCL` of the port object alone takes nothing (hence `Object In Use`
+  when the port object is purged with the recalled copy on the stack).
+- After `RESTORE` of a backup made with flag -35 set, the warm-started
+  calculator has -35 set too, where a fresh one has it clear: the user
+  flags come back with the backup (48SX and 48GX in saturnus,
+  2026-10-11).
+- `G D` lists a directory newest first: a variable made by `STO`, a
+  SEND or `CRDIR` comes first; `STO` to a name in use keeps its place
+  (48SX, 48GX, 49G in saturnus, 2026-10-11).
 - `'SIN' CRDIR` is `Invalid Syntax`, as for `STO` (saturnus decision log,
   "iteration 29: create a directory").
 - `STO` strips the tag of a tagged object (`:T:5 'X' STO` stores 5).
@@ -195,6 +209,8 @@ RPN mode) while building its object editor, not from a document:
     `}` and `«` inside a word do not end it: `X} 1` and `X« 1` are
     `Invalid Syntax`. `'` splits (`X'Y' 1` gives `{ X Y 1 }`), and so does
     a tag (`X:T:5` gives `{ X :T: 5 }`).
+- `'SUB' CRDIR` is `Invalid Syntax` on the 48SX (saturnus, 2026-10-11),
+  as `'SIN' CRDIR` above: SUB is a command.
 - `'SQ' STO` is `Invalid Syntax` on the 48SX: SQ is a command, so a
   command's name in quotes is not a variable name (as for `'SIN'`).
 

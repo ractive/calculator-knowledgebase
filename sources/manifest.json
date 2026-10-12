@@ -4706,6 +4706,105 @@
       "wiki": [
         "sources/shellos-manual"
       ]
+    },
+    {
+      "path": "manuals/hp17bii-om-en.pdf",
+      "method": "fetch",
+      "title": "HP 17BII Financial Calculator Owner's Manual (edition 2, April 1991)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp17bii-om-en.pdf",
+      "size": 98093781,
+      "sha256": "24f671ed1dce5858c1933896ae58aa5752a9de81410a3fd520c21f0b848d46c0",
+      "notes": "300-page scan with hpcalc.org OCR text layer; 98 MB. HP's own scan (literature.hpcalc.org/official/hp17bii-om-en.pdf) has no text layer and was not kept.",
+      "wiki": [
+        "sources/hp17bii-om"
+      ]
+    },
+    {
+      "path": "manuals/text/hp17bii-om-en.txt",
+      "method": "derived",
+      "title": "HP 17BII Financial Calculator Owner's Manual (edition 2, April 1991) (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "community scan",
+      "derived_from": "manuals/hp17bii-om-en.pdf",
+      "command": "pdftotext -layout manuals/hp17bii-om-en.pdf manuals/text/hp17bii-om-en.txt",
+      "how": "plain pdftotext -layout of the OCR layer; form feeds separate pages, so block N is PDF page N",
+      "size": 471174,
+      "sha256": "511f811810e9fed120ec2f2c27238ee5a37e9db42f09c39bf798217d41bf8332",
+      "hash_stable": false
+    },
+    {
+      "path": "manuals/hp17b-om-en.pdf",
+      "method": "fetch",
+      "title": "HP-17B Owner's Manual (edition 1, August 1987)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1987",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp17b-om-en.pdf",
+      "size": 64289347,
+      "sha256": "ddb5c5a4b18eaec8d4f0ad8812057a90c24bbdd7c380472deb4137a04f63e82a",
+      "notes": "276-page scan with hpcalc.org OCR text layer; 64 MB.",
+      "wiki": [
+        "sources/hp17b-om"
+      ]
+    },
+    {
+      "path": "manuals/text/hp17b-om-en.txt",
+      "method": "derived",
+      "title": "HP-17B Owner's Manual (edition 1, August 1987) (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1987",
+      "terms": "community scan",
+      "derived_from": "manuals/hp17b-om-en.pdf",
+      "command": "pdftotext -layout manuals/hp17b-om-en.pdf manuals/text/hp17b-om-en.txt",
+      "how": "plain pdftotext -layout of the OCR layer; form feeds separate pages, so block N is PDF page N",
+      "size": 432430,
+      "sha256": "3605adf56d569a8f69c3d6c9480ca884fd1ab91e59388b21ebe691101fb62da7",
+      "hash_stable": false
+    },
+    {
+      "path": "manuals/hp27s-om-en.pdf",
+      "method": "fetch",
+      "title": "HP-27S Owner's Manual (edition 2, February 1988)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1988",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp27s-om-en.pdf",
+      "size": 88121499,
+      "sha256": "22119ea4f4316145da47e228f688189c57c7ea822064213b73594679695f9b98",
+      "notes": "264-page scan with hpcalc.org OCR text layer; 88 MB.",
+      "wiki": [
+        "sources/hp27s-om"
+      ]
+    },
+    {
+      "path": "manuals/text/hp27s-om-en.txt",
+      "method": "derived",
+      "title": "HP-27S Owner's Manual (edition 2, February 1988) (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1988",
+      "terms": "community scan",
+      "derived_from": "manuals/hp27s-om-en.pdf",
+      "command": "pdftotext -layout manuals/hp27s-om-en.pdf manuals/text/hp27s-om-en.txt",
+      "how": "plain pdftotext -layout of the OCR layer; form feeds separate pages, so block N is PDF page N",
+      "size": 371396,
+      "sha256": "5c2b38531f3a82d65fb1da8869e1e860c8786c59518458162420cd56b9816cbf",
+      "hash_stable": false
     }
   ]
 }

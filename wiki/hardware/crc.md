@@ -34,8 +34,11 @@ saturnus feeds the CRC from data reads only (DAT loads and the PC=(A)/PC=(C)
 target fetch), not from opcode fetches or I/O RAM reads. With that rule the
 48SX, 48GX and 49G ROMs boot, and the CRC of an object's nibbles equals
 BYTES and G D on all three (saturnus decision log, iterations 2 and 12a).
-The 42S self-test's ROM step under the same rule gives #1BE8, not #FFFF
-([[questions/hp42s-rom-crc]]), so the rule is unconfirmed for the Lewis.
+The Lewis chip (42S, 27S, 17B, 17BII, 19BII, 28S) has a different
+generator: the remainder modulo x^16 + x^14 + x^13 + x^11 + 1, nibbles fed
+most significant bit first (see [[hardware/lewis]] "CRC";
+[[questions/hp42s-rom-crc]]). The Clarke rule above gives the wrong
+value on every Lewis ROM's self-test.
 
 ## Use outside the CPU
 

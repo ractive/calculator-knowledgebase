@@ -80,8 +80,9 @@ Real units print "ROM O.K.", "URAM O.K." (src: [[sources/hosoda-hp42s]]).
 
 Revision C, 65536 bytes packed, SHA-256
 f4c5f9f0e1d89074b7ca49add99b3ea72ed7fae9370b421de20a0cd8384c08f3. It boots, shows "Memory Clear" on a cold start and computes (2 ENTER 3
-+ gives 5), but the self-test's ROM step computes #1BE8 instead of #FFFF and
-the summary reads FAIL: [[questions/hp42s-rom-crc]].
++ gives 5). With the 48's CRC rule the self-test's ROM step computed
+#1BE8 instead of #FFFF; with the Lewis rule ([[hardware/lewis]] "CRC") it
+gives #FFFF, so the image is good: [[questions/hp42s-rom-crc]].
 
 ## Cold start
 

@@ -272,7 +272,7 @@ forms"):
   holds the other languages' messages (Portuguese texts seen in it).
 - `2 + 3 =` shows 5.00.
 - The self-test runs SPD, BEEP, DISP, ROM, ROM2 (the language ROM), DRAM,
-  URAM and ends in a summary; the ROM steps fail with saturnus's CRC rule
-  ([[questions/hp42s-rom-crc]]).
+  URAM and ends in a summary; the ROM steps failed with the 48's CRC rule
+  and give #FFFF with the Lewis rule ([[questions/hp42s-rom-crc]]).
 - In the TIME menu the time line changes once per emulated second, with
   saturnus's 8192 Hz timers ([[questions/pioneer-clock-alarm-hardware]]).

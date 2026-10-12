@@ -186,3 +186,10 @@ image in address order is the 64 KB main ROM (#00000-#1FFFF) followed by
 the 32 KB language ROM (#20000-#2FFFF); the main ROM checks a mark at
 #20000 and, when it is there, asks for a language at the first start
 (see [[hardware/hp17bii]]).
+
+The Lewis CRC ([[hardware/lewis]] "CRC") tells the forms apart without
+the text: each 64 KB Lewis ROM gives #FFFF over #00000-#1FFFF only in
+address order. @ractive's 128 KB 19BII and 28S images are in dump order
+too (256 units of 512 bytes, last first); the 28S image has no
+"COPYRIGHT" text, so for it the CRC is the only test of the two
+([[questions/hp42s-rom-crc]]).

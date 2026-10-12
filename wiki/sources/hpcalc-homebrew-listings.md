@@ -27,6 +27,7 @@ was downloaded. Each fact cites the page it comes from.
 | HP48XGCC 1.0.1 for Unix | <https://www.hpcalc.org/details/3794> |
 | 49/50 ROM updates | <https://www.hpcalc.org/hp49/pc/rom/> |
 | 49 beta ROM 1.19-6 (mirror) | <https://hpcalc.gaak.org/?id=3240> |
+| Search page for "forth" (read 2026-10-12): Doom Preview II for the 49 "includes source code"; Forth 1.0 (Darren Hosking, 2023), a Jonesforth port for HPGCC on the 49g+/50g | <https://www.hpcalc.org/search.php?query=forth> |
 
 ## Replacement systems
 

@@ -637,3 +637,19 @@ and its acceptance test for a system image is undocumented. New
 [[sources/hp49g-faq]], [[sources/hpcalc-homebrew-listings]],
 [[sources/homebrew-projects-web]]. The HP Museum forum and Google Groups
 could not be fetched.
+
+## [2026-10-12] ingest | comp.sys.hp48 and HP Museum forum for custom ROMs
+
+Follow-up to the custom-ROM query. comp.sys.hp48 was read from the
+archive.org Giganews mbox instead of Google Groups; the HP Museum forum
+through a headless browser (no challenge shown). New
+[[sources/comp-sys-hp48-archive]], [[sources/hpmuseum-forum]],
+[[sources/wickes-rpl-name]]. On
+[[questions/custom-rom-for-saturn-calculators]]: the 49G bank header
+(from an HP developer's post), the FS bank's role, what the boot sector
+checks, the `.flash` container, the download menu and handshake (partly),
+how HP's own developers bricked units (boot sector only); 48 ROMs are
+mask ROM in production; SOS, WinSOS and ShellOS details; Brébisson's
+own Doom speed figures; no Forth for the Saturn 48/49; the RPL name from
+Wickes. [[hardware/hp49g]] gains the boot-protection strap. Still open:
+the download framing and the bank CRC.

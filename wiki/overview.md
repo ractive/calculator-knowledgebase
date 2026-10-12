@@ -92,8 +92,8 @@ emulator note, 35 questions (16 answered). See [[index]] and [[log]].
   [[questions/hp38g-39g-transfer-protocol]].
 - Why the real machines are slower than the cycle counts:
   [[questions/instruction-speed-vs-hardware]].
-- Whether the 42S ROM image passes its own CRC test:
-  [[questions/hp42s-rom-crc]].
+- Whether the 42S ROM image passes its own CRC test (it does, with the
+  Lewis CRC rule): [[questions/hp42s-rom-crc]].
 - Constant add/subtract in DEC mode: [[questions/dec-mode-constant-bug]].
 - CE1 vs CE2 priority: [[questions/bus-priority-ce1-ce2]].
 - 49G flash programming command set: [[questions/hp49g-flash-write]].

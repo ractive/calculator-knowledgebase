@@ -36,4 +36,8 @@ Facts (cite by file and section):
   1LU7 Bert a checksum); 64 KB images: 17B, 17BII, 27S, 42S; packed or
   unpacked images are accepted.
 
+What LEWISCRC prints on good images (two passes per Lewis chip, both
+#FFFF) is in [[sources/hpmuseum-forum]] F6; the generator behind it, worked
+out from the ROMs' own self-test, is on [[hardware/lewis]] "CRC".
+
 Facts used on [[hardware/hp42s]] and [[hardware/lewis]].

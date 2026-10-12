@@ -200,5 +200,5 @@ revision B.
 
 - A first start shows "MEMORY LOST"; `2 + 3 =` shows 5.0000.
 - The self-test runs SPD, BEEP, DISP, ROM, DRAM, URAM and a summary; the
-  ROM step prints "ROM 05DFB" and fails with saturnus's CRC rule
-  ([[questions/hp42s-rom-crc]]).
+  ROM step printed "ROM 05DFB" with the 48's CRC rule; with the Lewis
+  rule the image gives #FFFF ([[questions/hp42s-rom-crc]]).

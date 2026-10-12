@@ -685,3 +685,19 @@ and appointments. [[hardware/saturn-models]] links them. New questions
 [[questions/hp17b-international-rom-image]],
 [[questions/pioneer-annunciator-mapping]]. Schema: `models` accepts
 `27s`, `17b`, `17bii`. Not read: the application chapters.
+
+## [2026-10-13] query | Why every Lewis ROM fails its own self-test CRC
+
+[[questions/hp42s-rom-crc]] answered: the images are good and the Lewis
+CRC differs from the Clarke's. It is the remainder modulo
+x^16 + x^14 + x^13 + x^11 + 1 of the nibbles read, each most significant bit
+first, from 0. Found by searching all feedback masks and bit orders for
+one under which the four Pioneer ROMs agree, then the register form that
+gives #FFFF; it gives #FFFF on both self-test passes of the 42S, 27S, 17B
+and 17BII, the language ROMs, and both halves of the 19BII and 28S.
+[[hardware/lewis]] "CRC" has the rule, [[hardware/crc]] points to it,
+[[hardware/saturn-models]] "ROM image forms" gains the CRC as a test of
+the image order (the 28S and 19BII images are in dump order).
+[[sources/hpmuseum-forum]] gains F6 (LEWISCRC output on good images:
+two #FFFF passes per Lewis chip). comp.sys.hp48 had nothing on the
+Lewis CRC. Not covered: the Sacajawea CRC.

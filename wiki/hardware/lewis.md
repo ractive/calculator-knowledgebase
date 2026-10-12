@@ -117,10 +117,32 @@ mirror the 48's #100-#109 too: contrast at offset 1, CRC at 4-7, power at
 
 ## CRC
 
-Data reads outside the register block feed a 16-bit CRC at #40304. Using the
-48's update rule (see [[hardware/crc]]), the 42S ROM's own self-test computes
-the value the real self-test would compare: on @ractive's revision C image
-it gets #1BE8 where the test wants #FFFF ([[questions/hp42s-rom-crc]]).
+Data reads outside the register block feed a 16-bit CRC at #40304
+(#FFF04 on the two-chip 28S and 19BII). It is not the Clarke's generator
+(see [[hardware/crc]]) but a different one, found from the ROMs' own self-test
+(inferred from ROM images; [[questions/hp42s-rom-crc]]):
+
+- The register holds the remainder of the bits read so far, divided by
+  x^16 + x^14 + x^13 + x^11 + 1. The nibbles go in in read order, each
+  nibble most significant bit first.
+- Per bit b: remember bit 15, shift the register left one place with b
+  entering at bit 0 (16 bits kept), and if the remembered bit was 1
+  XOR the register with #6801.
+- Per nibble n, the same four steps at once:
+  `crc = (((crc << 4) | n) & 0xFFFF) ^ R[crc >> 12]`, where `R[t]` is
+  what the four steps make of the top nibble t: t shifted up 16 places,
+  reduced modulo the polynomial. `R[1]` is #6801 and R is linear in t.
+- Writing 0 to #40304-#40307 starts it from 0, and the ROM's check
+  wants the value #FFFF. That check reads the same whatever the bit order
+  at #40304-#40307, so the order is assumed: low nibble first, bit 0 the
+  x^0 coefficient, as on the 48.
+
+The 42S, 27S, 17B and 17BII ROMs, the 17B and 17BII language ROMs and both
+halves of the 19BII and 28S ROMs all give #FFFF with this rule, matching
+Gießelink's LEWISCRC on good images (src: [[sources/hpmuseum-forum]] F6).
+The reads that feed it are as on the 48: data reads, not instruction
+fetches, not reads of the register block (inferred: the data reads
+alone give #FFFF).
 
 ## Keyboard, beeper, IR
 

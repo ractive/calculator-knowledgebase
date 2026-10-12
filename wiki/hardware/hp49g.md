@@ -201,3 +201,6 @@ hardware):
   observed in saturnus 2026-10-07; saturnus renders it at about 90 % darkness).
 
 System flag meanings: [[hardware/system-flags-49g]].
+
+Installing a system of one's own, and what HP's boot sector is known to
+expect: [[questions/custom-rom-for-saturn-calculators]].

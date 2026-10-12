@@ -624,3 +624,16 @@ separately; the check-type sentence says which exchange it is about;
 [[sources/hpgcomm]] points to the public 2.0 download on hpcalc.org and
 says the source is not public; the 38G and 39G/40G guides and the
 connectivity kit list the new page among the pages that use them.
+
+## [2026-10-12] query | Custom ROMs for the Saturn calculators
+
+Web research (hpcalc.org listings, project pages, the 49G FAQ, the
+ShellOS manual) plus the existing SASM, Mastracci and tutorial facts:
+ShellOS is the only documented replacement OS on a Saturn model (48GX,
+RAM card, entered from the RPL OS); newRPL and HPGCC are ARM-only; the
+Doom games run under the HP OS; HP's 49G boot sector always runs first
+and its acceptance test for a system image is undocumented. New
+[[questions/custom-rom-for-saturn-calculators]], [[sources/shellos-manual]],
+[[sources/hp49g-faq]], [[sources/hpcalc-homebrew-listings]],
+[[sources/homebrew-projects-web]]. The HP Museum forum and Google Groups
+could not be fetched.

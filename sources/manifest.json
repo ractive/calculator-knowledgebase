@@ -4668,6 +4668,44 @@
       "wiki": [
         "sources/mastracci-saturn-guide"
       ]
+    },
+    {
+      "path": "homebrew/shellos-manual-en.pdf",
+      "method": "zip-member",
+      "title": "ShellOS 3.0 beta 2.4 user manual (English)",
+      "authors": [
+        "Stephane Cocquereaumont",
+        "Sébastien Munch"
+      ],
+      "year": "1999",
+      "terms": "freely distributed on hpcalc.org; no licence stated",
+      "zip_url": "https://www.hpcalc.org/hp48/apps/shell/shdocsen.zip",
+      "member": "Sh_u_eng.pdf",
+      "size": 145386,
+      "sha256": "d3bb3a41b3a5c2d8aaef8ae143b55c1c1d192a557fc70ef1c92784760794aea6",
+      "wiki": [
+        "sources/shellos-manual"
+      ]
+    },
+    {
+      "path": "homebrew/shellos-manual-en.txt",
+      "method": "derived",
+      "title": "ShellOS 3.0 beta 2.4 user manual (English, text)",
+      "authors": [
+        "Stephane Cocquereaumont",
+        "Sébastien Munch"
+      ],
+      "year": "1999",
+      "terms": "as the PDF",
+      "derived_from": "homebrew/shellos-manual-en.pdf",
+      "command": "pdftotext homebrew/shellos-manual-en.pdf homebrew/shellos-manual-en.txt",
+      "how": "plain pdftotext; section headings come out in a shifted font encoding",
+      "size": 13789,
+      "sha256": "b91df453c0a93e3a54f99296d1f31aa0a5e2efc6269114b68cfaab791f748b17",
+      "hash_stable": false,
+      "wiki": [
+        "sources/shellos-manual"
+      ]
     }
   ]
 }

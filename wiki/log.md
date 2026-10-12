@@ -653,3 +653,18 @@ mask ROM in production; SOS, WinSOS and ShellOS details; Brébisson's
 own Doom speed figures; no Forth for the Saturn 48/49; the RPL name from
 Wickes. [[hardware/hp49g]] gains the boot-protection strap. Still open:
 the download framing and the bank CRC.
+
+## [2026-10-12] query | Which other Saturn models exist, and their ROMs
+
+For saturnus's question which further Saturn models it could emulate.
+New [[hardware/saturn-models]]: the family by chip (1LF2, 1LK7, Bert,
+Sacajawea, Lewis), each model's ROM, RAM, display and I/O, the public
+documentation per model, and ROM availability by class (no download
+locations). New sources [[sources/emu28-manual]],
+[[sources/emu71-manual]], [[sources/emu71-garnier]],
+[[sources/hp71b-compendium]], [[sources/pioneers-rom-dumping]],
+[[sources/wikipedia-saturn-models]], [[sources/hpmuseum-saturn-pages]];
+[[sources/hpmuseum-forum]] gains threads F3-F5 (19BII and low-end
+Pioneer dumps, HP's 2004 42S remark, circulating 42S images).
+[[hardware/saturn-cpu]] links the overview. Not read: the 71B IDS
+volumes themselves.

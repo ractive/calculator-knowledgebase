@@ -40,6 +40,15 @@ pages: [[hardware/memory-controller]] (CONFIG and address space),
 (src: [[sources/mastracci-saturn-guide]] 1.5). On the 48S/SX the CPU is inside
 the Clarke IC; on the 48G/GX inside the Yorke IC (2.1, 2.5).
 
+Mastracci's table leaves out the low-end Pioneers and the companion chips
+of the first generation: the 1LU7 Bert (10B, 20S, 21S) and the 1LR3
+Sacajawea (14B, 22S, 32S, 32SII) carry ROM and RAM on the chip (src:
+[[sources/emu42-manual]] 1; [[sources/wikipedia-saturn-models]]); the
+71B pairs its CPU with the 1LF3 display driver and 1LG7/1LG8 memory
+chips, the 18C and 28C with the 1LP2 and 1LP4 (src:
+[[sources/emu71-manual]] 1; [[sources/emu28-manual]] 1). The whole
+family, with ROM availability, is on [[hardware/saturn-models]].
+
 ## Registers
 
 Nineteen registers (src: [[sources/mastracci-saturn-guide]] 2.2):

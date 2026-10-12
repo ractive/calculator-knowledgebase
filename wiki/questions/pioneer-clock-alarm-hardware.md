@@ -37,3 +37,11 @@ How to settle it: run a 17BII or 27S ROM in an emulator, set the clock and
 an appointment one minute ahead, turn the calculator off, and watch the
 writes to #4030E-#4030F and #403F7-#403FF before SHUTDN and what wakes the
 CPU. A ROM is needed; see [[hardware/saturn-models]] ROM availability.
+
+## Seen in saturnus (2026-10-13)
+
+With saturnus's timers (the 48's TIMER1 and 32-bit TIMER2 at the Lewis
+addresses, TIMER2 counting at 8192 Hz) the 17BII ROM's clock runs: the
+TIME menu's time changes once per emulated second. Which register the
+ROM reads the time from, and how an appointment wakes the calculator
+from off, were not traced; the alarm was not tested.

@@ -164,3 +164,25 @@ No download locations are recorded in this wiki.
 The only permission statement found, "HP graciously began allowing this
 to be downloaded in mid-2000" on hpcalc.org, is on the 48 ROM pages; it
 names none of these models ([[sources/hpcalc-rom-listings]]).
+
+## ROM image forms
+
+Pioneer images (42S, 27S, 17B, 17BII) come in two byte orders (observed
+in saturnus on @ractive's images, iteration 42):
+
+- **Address order**: byte i holds the nibbles at #2i (the low nibble)
+  and at #2i+1. The CPU starts at #00000 with code.
+- **Dump order**: the image cut into 256 equal units (256 bytes of a
+  64 KB image, 384 bytes of a 96 KB one), stored last unit first. The
+  file then starts with zeros and, near its start, the text
+  "COPYRIGHT HP 198x".
+
+Two 42S images of revision C differ exactly by this reordering. Each ROM,
+the 64 KB main ROM and the 32 KB language ROM of an international image,
+ends with "COPYRIGHT HP 198x" and its self-test pass text in its last 32
+bytes, so the text's place tells the forms apart: in the last unit in
+address order, in the first unit in dump order. A 96 KB international
+image in address order is the 64 KB main ROM (#00000-#1FFFF) followed by
+the 32 KB language ROM (#20000-#2FFFF); the main ROM checks a mark at
+#20000 and, when it is there, asks for a language at the first start
+(see [[hardware/hp17bii]]).

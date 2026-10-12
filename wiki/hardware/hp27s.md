@@ -189,3 +189,16 @@ ten appointments with message (22 characters) and repeat interval; the
 ((•)) annunciator and beeping when due, even when off (src:
 [[sources/hp27s-om]] p. 138-143). Clock hardware:
 [[questions/pioneer-clock-alarm-hardware]].
+
+## ROM images seen
+
+@ractive's image, run in saturnus (iteration 42): 65536 bytes, SHA-256
+df64a595e8a86e557eb48609bbbc3b67f9f4fd646f3319861aaa26623510e380, in dump
+order ([[hardware/saturn-models]] "ROM image forms"). Its last 32 bytes
+hold "COPYRIGHT HP 1987" and "OK-27S-EB", the self-test pass text with
+revision B.
+
+- A first start shows "MEMORY LOST"; `2 + 3 =` shows 5.0000.
+- The self-test runs SPD, BEEP, DISP, ROM, DRAM, URAM and a summary; the
+  ROM step prints "ROM 05DFB" and fails with saturnus's CRC rule
+  ([[questions/hp42s-rom-crc]]).

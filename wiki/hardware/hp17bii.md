@@ -250,3 +250,29 @@ The manuals say only that a quartz crystal regulates the clock (p. 218).
 Which Lewis timer keeps time while the calculator is off, and how the
 alarm wakes the CPU, is not documented:
 [[questions/pioneer-clock-alarm-hardware]].
+
+## ROM images seen
+
+@ractive's images, run in saturnus (iteration 42); both are international
+images of 96 KB in dump order ([[hardware/saturn-models]] "ROM image
+forms"):
+
+| Model | Size | SHA-256 | Main ROM | Language ROM |
+| --- | --- | --- | --- | --- |
+| 17BII | 98304 | bf2f77dabf6aa276a27c86d8536d73742d664c8691b49f63cd7074835637176e | "17B II-EB" (revision B) | "OK-17B-LA" (revision A) |
+| 17B | 98304 | 6540a89b9177ed406d097c41d4d5c20b002251c93b5498d2fbbba8550fdacc4e | "OK-17B-EB" (revision B) | "OK-17B-LB" (revision B) |
+
+- The texts are the self-test pass messages each ROM keeps in its last
+  32 bytes, after "COPYRIGHT HP 1987". They tell a 17B ROM from a 17BII
+  one: the 17BII main ROM has "17B II-", the 17B main ROM "OK-17B-E"; the
+  language ROMs of both say "OK-17B-L".
+- After a memory loss the international models first show "SELECT
+  LANGUAGE" with a menu of languages (the second label is ENGL); then
+  "MEMORY LOST" over MAIN (FIN BUS SUM TIME SOLVE). The language ROM
+  holds the other languages' messages (Portuguese texts seen in it).
+- `2 + 3 =` shows 5.00.
+- The self-test runs SPD, BEEP, DISP, ROM, ROM2 (the language ROM), DRAM,
+  URAM and ends in a summary; the ROM steps fail with saturnus's CRC rule
+  ([[questions/hp42s-rom-crc]]).
+- In the TIME menu the time line changes once per emulated second, with
+  saturnus's 8192 Hz timers ([[questions/pioneer-clock-alarm-hardware]]).

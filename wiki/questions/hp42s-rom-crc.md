@@ -33,3 +33,31 @@ the Lewis CRC differs from the Clarke's. Real units print "ROM O.K."
   rule differs; if bad, the image is damaged.
 - Or dump @ractive's calculator again (the IR route to the 48SX) and compare
   the two images byte by byte.
+
+## More images (2026-10-13)
+
+Four more Lewis images from @ractive, run in saturnus (iteration 42):
+
+- A second 42S image (SHA-256 841e79a9...0baf) is the same ROM as the
+  revision C image above, stored in dump order (see
+  [[hardware/saturn-models]] "ROM image forms"). Put in address order it
+  is identical byte for byte, so it adds no evidence.
+- The 27S (revision B), the 17B (main ROM revision B, language ROM B) and
+  the 17BII (main ROM revision B, language ROM A) run the same ROM step:
+  their self-test (CLR + fifth menu key) reads #0001C-#1FFFB in three
+  blocks of two interleaved halves #5550 nibbles apart, 16 nibbles per
+  read, and wants #FFFF. With the 48's CRC rule they give the values
+  of #5DFB (27S), #AB1D (17B) and #1326 (17BII); the step prints the
+  value ("ROM 05DFB") and the pass ends in FAIL. A Python run of the same read order gives the
+  same values.
+- No 16-bit CRC with any polynomial (#0001-#FFFF), shifted either way,
+  starting from 0 or #FFFF, gives #FFFF on all four ROMs in that read
+  order (exhaustive search). Neither does counting instruction fetches
+  into the CRC, reading only one of the two streams, swapping them, or
+  feeding nibbles one at a time instead of in 16-nibble words.
+
+Four independent dumps of four different ROMs failing the same way makes
+damaged dumps unlikely. The Lewis CRC generator, or what the chip feeds
+into it during a 16-nibble read, most likely differs from the Clarke's in
+a way none of the variants above covers. Open; `LEWISCRC` on any one of
+these images would tell whether the images are good.

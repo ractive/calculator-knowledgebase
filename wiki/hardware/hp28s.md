@@ -69,8 +69,8 @@ the self-test.
 ## Two chips
 
 - Both chips have the 42S's registers: contrast at offset #301, DSPCTL
-  at #303 (DON in bit 3, contrast bit 4 in bit 1), LPD at #308, LPE at
-#309, INPORT at #30C, LEDOUT at #30D, the timer controls at #30E/#30F
+  at #303 (DON in bit 3, contrast bit 4 in bit 1), LPD at #308, LPE
+at #309, INPORT at #30C, LEDOUT at #30D, the timer controls at #30E/#30F
   and the timers at #3F7/#3F8 (28S ROM; layout from [[hardware/lewis]]).
   The ROM sets both chips' contrast to 6 with DSPCTL #A: 22, the KML 2.0
   reset value, and DON on both (28S ROM).
@@ -131,8 +131,8 @@ Left to right as drawn above the display, with the manual's meanings
    receives it (RM p. 168).
 
 The segments are 5-nibble words in the slave's first #40 nibbles,
-eight nibbles apart, written #FFFFF (on) or 0 (off), as the 42S's at
-#40210 (28S ROM, each seen lit):
+eight nibbles apart, written #FFFFF (on) or 0 (off), as the 42S's
+at #40210 (28S ROM, each seen lit):
 
 | Word | Annunciator | Seen lit |
 | --- | --- | --- |
@@ -388,8 +388,8 @@ first, as the Pioneer images ([[hardware/saturn-models]] "ROM image
 forms"); the Lewis CRC over #00000-#1FFFF gives #FFFF only after
 reordering. In address order the ROM starts with a GOSBVL to its reset
 code at #004BD, ends with "Copyright HP 1986, 1987" from an odd nibble
-(#3FFB7), and keeps the self-test's "OK-28S" at #01C9F and "FAIL" at
-#01C8D (28S ROM).
+(#3FFB7), and keeps the self-test's "OK-28S" at #01C9F and "FAIL"
+at #01C8D (28S ROM).
 
 ## Not found
 

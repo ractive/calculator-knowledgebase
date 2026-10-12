@@ -34,8 +34,8 @@ The 28S's ROM (revision 2BB, run on a logging bus in saturnus; see
 its reset entry it addresses its blocks at once and never executes
 CONFIG, UNCNFG or C=ID, through cold boot, arithmetic, menus, printing,
 System Halt, Memory Reset and the self-test, and it reads or writes
-nothing outside ROM #00000-#3FFFF, RAM #C0000-#DFFFF, the slave's block
-#FF800-#FFBFF and the master's #FFC00-#FFFFF. Each chip's block has the
+nothing outside ROM #00000-#3FFFF, RAM #C0000-#DFFFF, the slave's
+block #FF800-#FFBFF and the master's #FFC00-#FFFFF. Each chip's block has the
 42S's internal layout (display RAM from offset 0, registers from #300)
 at another base.
 

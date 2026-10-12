@@ -27,8 +27,8 @@ lists the CPU core of the 17B/19B/27S/28S family as 1LT8 inside "Lewis"
 (src: [[sources/mastracci-saturn-guide]] 1.5); Emu42 and Hosoda's schematic
 name the chip 1LR2 (src: [[sources/emu42-manual]] 1, [[sources/hosoda-hp42s]]).
 The 28S carries two Lewis chips, master and slave (src:
-[[sources/emu42-changes]]): the master's block at #FFC00, the slave's at
-#FF800, each with this page's layout and its own timers; the slave holds
+[[sources/emu42-changes]]): the master's block at #FFC00, the slave's
+at #FF800, each with this page's layout and its own timers; the slave holds
 the left half of the display and the annunciators (see
 [[hardware/hp28s]] "Two chips"). This page is about the chip as the 42S uses it;
 the board is on [[hardware/hp42s]].

@@ -90,6 +90,10 @@ lengths counted in nibbles, every field low nibble first):
   beyond the spare half byte; the 49G (ROM of 2009) accepts the same file as
   the object. Send exactly ceil(nibbles / 2) bytes after the header.
 - A 48 header sent to the 49G (and a 49 header to the 48SX) makes a string.
+- A file sent over Kermit under the name `PICT` (the graphics screen's
+  command name) is stored by the 48SX ROM J as the variable `PICT.1`, not
+  as `PICT` and not into the graphics screen (saturnus tx against the
+  emulated 48SX, 2026-10-13).
 
 ## Binary transfer file: "HPHP48-x"
 
@@ -99,6 +103,11 @@ lengths counted in nibbles, every field low nibble first):
   returns its own header string from `#30794h SYSEVAL` (3.4).
 - The header bytes have the top bit clear ("8 byte ascii string with msb
   off", 8.18).
+- The letter tells the model a 48 file came from: the 48S and SX ROM
+  revisions run A to J (F was released in very few units, J is the last),
+  the 48G and GX ones K to R (R is the last); G, H, I, O and Q were never
+  released (src: [[sources/hp48-faq]] 3.5, 3.7, 3.10). saturnus picks the
+  command names to decode a file's programs by this letter (2026-10-13).
 - If a binary file is transferred in text mode, CR/LF translation corrupts
   it; the calculator then shows a string starting "HPHP48-". FIXIT (Horn,
   Heiskanen) and HP's OBJFIX recover it; OBJFIX handles the case where extra

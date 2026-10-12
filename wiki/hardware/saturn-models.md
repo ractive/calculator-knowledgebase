@@ -1,7 +1,17 @@
 ---
 title: "Saturn-based models: the whole family"
 type: hardware
-models: [48sx, 48gx, 49g, 38g, 39g, 40g, 42s]
+models:
+  - 48sx
+  - 48gx
+  - 49g
+  - 38g
+  - 39g
+  - 40g
+  - 42s
+  - 17b
+  - 17bii
+  - 27s
 status: draft
 sources:
   - "[[sources/wikipedia-saturn-models]]"
@@ -19,6 +29,9 @@ sources:
   - "[[sources/pioneers-rom-dumping]]"
   - "[[sources/hp28s-procnotes]]"
   - "[[sources/garnier-hp42s-new-facts]]"
+  - "[[sources/hp17b-om]]"
+  - "[[sources/hp17bii-om]]"
+  - "[[sources/hp27s-om]]"
 tags: [saturn, model, pioneer, clamshell, lewis, 71b, 28s, rom]
 ---
 
@@ -78,8 +91,8 @@ Bert's ROM self-check is a checksum, the Sacajawea's and Lewis's a CRC
 | 28C | 1986 | 1LK7, 1LP2, 1LP4 | 128 KB | 2 KB | 137 x 32 dots, four lines | IR printer | [[sources/emu28-manual]]; [[sources/emu42-pioneer-dump]] CLAMSHEL; [[sources/wikipedia-saturn-models]] |
 | 28S | 1988 | two Lewis | 128 KB | 32 KB | 137 x 32 dots | IR printer | [[sources/emu42-pioneer-dump]] LEWISCRC; [[sources/hp28s-procnotes]]; [[sources/wikipedia-saturn-models]] |
 | 19B, 19BII | 1988, 1990 | two Lewis | 128 KB (19BII) | - | 132 x 32 dots (unverified) | IR printer | [[sources/emu42-pioneer-dump]] LEWISCRC; [[sources/wikipedia-saturn-models]] |
-| 17B, 17BII | 1988, 1990 | Lewis | 64 KB (English), 96 KB (international) | 8 KB | 131 x 16 dots, as 42S | IR printer, clock with alarm | [[sources/emu42-pioneer-dump]]; [[sources/wikipedia-saturn-models]] |
-| 27S | 1988 | Lewis | 64 KB | 8 KB | 131 x 16 dots | IR printer | same |
+| 17B, 17BII | 1988, 1990 | Lewis | 64 KB (English), 96 KB (international) | 8 KB | 131 x 16 dots, as 42S | IR printer, clock with ten appointment alarms | [[hardware/hp17bii]]; [[sources/emu42-pioneer-dump]]; [[sources/wikipedia-saturn-models]] |
+| 27S | 1988 | Lewis | 64 KB | 8 KB | 131 x 16 dots | IR printer, clock with ten appointment alarms | [[hardware/hp27s]]; same |
 | 42S | 1988 | Lewis | 64 KB | 8 KB | 131 x 16 dots | IR printer | [[hardware/hp42s]] |
 | 14B, 22S, 32S, 32SII | 1988-1991 | Sacajawea | 16 KB on chip | 512 bytes on chip | twelve 5 x 7 cells (32S, 32SII) | none | [[sources/emu42-pioneer-dump]] LEWISCRC; [[sources/wikipedia-saturn-models]] |
 | 10B, 20S, 21S | 1988-1989 | Bert | 10 KB on chip | 256 bytes on chip | seven-segment, 12 digits (10B) | none | same |
@@ -95,7 +108,9 @@ Notes:
   at #40000, 8 KB RAM at #50000 (src: [[sources/pioneers-rom-dumping]]).
   The international 17B/17BII's extra 32 KB fits the second-ROM hook
   at #20000 seen on the 42S (src: [[sources/garnier-hp42s-new-facts]] 3.3;
-  the fit is inferred).
+  the fit is inferred); Emu42 v1.24 prepares the larger Pioneers with such
+  a 32 KB extra ROM (src: [[sources/emu42-changes]] v1.24). The image
+  form is open: [[questions/hp17b-international-rom-image]].
 - The 71B's memory is a daisy chain of soft-configured chips that answer
   an ID (type, size, last in chain) and get their base address from the
   OS, with the system ROM hard configured (src: [[sources/emu71-manual]]
@@ -116,6 +131,13 @@ Notes:
   from the 42S's Lewis ([[hardware/lewis]]).
 - 17B, 17BII, 27S: the Lewis as on the 42S; Garnier and Gießelink's
   notes ([[sources/garnier-hp42s-new-facts]], [[sources/emu42-pioneer-dump]]).
+  The owner's manuals ([[sources/hp17b-om]], [[sources/hp17bii-om]],
+  [[sources/hp27s-om]]) give the keyboards, annunciators, the key chords
+  (CLR with menu keys: reset, memory erase, self-test, on the 42S's matrix
+  positions) and the self-test pass messages; collected on
+  [[hardware/hp17bii]] and [[hardware/hp27s]]. KML 2.0 gives their key
+  matrix (the 42S's positions) and contrast (0-31, reset 22, keyboard
+  15-31) ([[sources/kml20]]).
 - 18C, 28C: the Emu28 manual only names the chips; no register-level
   public description found.
 - Bert, Sacajawea: register names in the Emu42 notes, nothing else found.
@@ -142,3 +164,25 @@ No download locations are recorded in this wiki.
 The only permission statement found, "HP graciously began allowing this
 to be downloaded in mid-2000" on hpcalc.org, is on the 48 ROM pages; it
 names none of these models ([[sources/hpcalc-rom-listings]]).
+
+## ROM image forms
+
+Pioneer images (42S, 27S, 17B, 17BII) come in two byte orders (observed
+in saturnus on @ractive's images, iteration 42):
+
+- **Address order**: byte i holds the nibbles at #2i (the low nibble)
+  and at #2i+1. The CPU starts at #00000 with code.
+- **Dump order**: the image cut into 256 equal units (256 bytes of a
+  64 KB image, 384 bytes of a 96 KB one), stored last unit first. The
+  file then starts with zeros and, near its start, the text
+  "COPYRIGHT HP 198x".
+
+Two 42S images of revision C differ exactly by this reordering. Each ROM,
+the 64 KB main ROM and the 32 KB language ROM of an international image,
+ends with "COPYRIGHT HP 198x" and its self-test pass text in its last 32
+bytes, so the text's place tells the forms apart: in the last unit in
+address order, in the first unit in dump order. A 96 KB international
+image in address order is the 64 KB main ROM (#00000-#1FFFF) followed by
+the 32 KB language ROM (#20000-#2FFFF); the main ROM checks a mark at
+#20000 and, when it is there, asks for a language at the first start
+(see [[hardware/hp17bii]]).

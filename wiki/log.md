@@ -668,3 +668,20 @@ locations). New sources [[sources/emu28-manual]],
 Pioneer dumps, HP's 2004 42S remark, circulating 42S images).
 [[hardware/saturn-cpu]] links the overview. Not read: the 71B IDS
 volumes themselves.
+
+## [2026-10-12] ingest | HP 17B, 17BII and 27S owner's manuals
+
+For saturnus iteration 42 (the 17B, 17BII and 27S on the 42S's Lewis
+board). New sources [[sources/hp17b-om]], [[sources/hp17bii-om]],
+[[sources/hp27s-om]] (hpcalc.org community scans with OCR) and
+[[sources/commons-pioneer-photos]] (three Commons photographs, not
+stored, sampled for colours and read for labels and self-test screens).
+New model pages [[hardware/hp17bii]] (covers the 17B) and
+[[hardware/hp27s]]: KML 2.0 key matrix and contrast, every key's labels
+per model, approximate colours, annunciators, ALPHA menus, the CLR chords
+(reset, memory erase, self-test) and their pass messages, ALG/RPN, clock
+and appointments. [[hardware/saturn-models]] links them. New questions
+[[questions/pioneer-clock-alarm-hardware]],
+[[questions/hp17b-international-rom-image]],
+[[questions/pioneer-annunciator-mapping]]. Schema: `models` accepts
+`27s`, `17b`, `17bii`. Not read: the application chapters.

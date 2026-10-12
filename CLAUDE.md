@@ -93,8 +93,8 @@ against the hosting sites more often than needed.
   `hyalo types show <type>`). Common keys: `title`, `type`, `tags`, `status`
   (`stub|draft|reviewed`; questions `open|answered`; sources
   `unread|skimmed|digested`), `sources` (list of `[[sources/...]]` links),
-  `models` (subset of `48sx, 48gx, 49g, 38g, 39g, 40g, 42s`; which
-  models a page covers goes here, never in a tag: no `48gx`, `hp48` or
+  `models` (subset of `48sx, 48gx, 49g, 38g, 39g, 40g, 42s, 27s, 17b,
+  17bii`; which models a page covers goes here, never in a tag: no `48gx`, `hp48` or
   `hp49g` tags; `28s` stays a tag because `models` cannot name it). The type
   says what a page is; the directory stays fixed because other projects
   cite page paths. Change schemas with `hyalo types set`.

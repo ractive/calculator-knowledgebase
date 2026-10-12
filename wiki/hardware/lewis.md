@@ -1,7 +1,7 @@
 ---
 title: "Lewis (1LR2)"
 type: hardware
-models: [42s]
+models: [42s, 28s]
 status: draft
 sources:
   - "[[sources/garnier-hp42s-new-facts]]"
@@ -27,7 +27,10 @@ lists the CPU core of the 17B/19B/27S/28S family as 1LT8 inside "Lewis"
 (src: [[sources/mastracci-saturn-guide]] 1.5); Emu42 and Hosoda's schematic
 name the chip 1LR2 (src: [[sources/emu42-manual]] 1, [[sources/hosoda-hp42s]]).
 The 28S carries two Lewis chips, master and slave (src:
-[[sources/emu42-changes]]). This page is about the chip as the 42S uses it;
+[[sources/emu42-changes]]): the master's block at #FFC00, the slave's at
+#FF800, each with this page's layout and its own timers; the slave holds
+the left half of the display and the annunciators (see
+[[hardware/hp28s]] "Two chips"). This page is about the chip as the 42S uses it;
 the board is on [[hardware/hp42s]].
 
 Facts marked "(42S ROM)" were found by running and tracing the 42S revision C
@@ -48,10 +51,11 @@ ROM in saturnus (iteration 15, 2026-10-05).
   reset and never executes CONFIG, UNCNFG or C=ID during boot, normal use or
   the self-test (42S ROM; the CONFIG opcodes a linear disassembly shows sit in
   data). Whatever window logic the chip has, the 42S runs on its reset map.
-  The 28S's ROM puts RAM at #C0000 and the display at #FF840/#FFC00 (src:
-  [[sources/hp28s-procnotes]]), and Emu42 says "Register and Display/Timer MMU
-  configuration isn't separated" (src: [[sources/emu42-problems]]), so the
-  windows are configurable; how is open: [[questions/lewis-memory-map]].
+  The 28S puts RAM at #C0000 and its two chips' blocks at #FF800 (slave)
+  and #FFC00 (master) (src: [[sources/hp28s-procnotes]]; 28S ROM), and its
+  ROM, too, uses them from its first instructions without CONFIG: each
+  ROM runs on a fixed map of its own; where the chips' bases come from is
+  open ([[questions/lewis-memory-map]], [[hardware/hp28s]]).
 - RAM mirrors: with 8 KB the ROM's cold start only works when the RAM repeats
   through #50000-#5FFFF: with nothing above #53FFF its stack arithmetic later
   fails ("Invalid Type" on `2 ENTER 3 +`); with a mirror it sizes memory

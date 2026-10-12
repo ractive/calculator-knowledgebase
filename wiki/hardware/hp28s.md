@@ -41,7 +41,53 @@ RM = [[sources/hp28s-rm]].
 
 ## Memory map
 
-See [[questions/lewis-memory-map]].
+Facts marked "(28S ROM)" were found by running the owner's revision 2BB
+image in saturnus on a logging bus (iteration 43a, 2026-10-13): cold
+boot, arithmetic, menus, typing, printing, System Halt, Memory Reset and
+the self-test.
+
+| Range | What | Source |
+| --- | --- | --- |
+| #00000-#3FFFF | 128 KB ROM | [[sources/hp28s-procnotes]] Overview |
+| #C0000-#CFFFF | 32 KB RAM, repeated at #D0000-#DFFFF | [[sources/hp28s-procnotes]] Overview |
+| #FF800-#FFBFF | the slave Lewis's block: display RAM, annunciators, registers at #FFB00 | (28S ROM) |
+| #FFC00-#FFFFF | the master Lewis's block: display RAM, registers at #FFF00 | [[sources/hp28s-procnotes]] SCR; (28S ROM) |
+
+- The ROM's reset entry runs RESET and then writes the master's INPORT
+  (#FFF0C, 4 then 0), both chips' contrast (#FFF01, #FFB01) and both
+  chips' LPD (#FFB08, #FFF08) at once; it never executes CONFIG, UNCNFG
+  or C=ID and touches nothing outside the four ranges above (28S ROM).
+  Each chip's block has the 42S's layout ([[hardware/lewis]]) at another
+  base: display RAM from offset 0, registers from offset #300. So each
+  ROM uses a fixed map; where the chips take their bases from is open:
+  [[questions/lewis-memory-map]].
+- The memory-clear code at #005A2 builds its structures from #D0000
+  downwards and the ROM keeps system variables from #C0000 (28S ROM);
+  the first HOME variable ends at #D0000 ([[sources/hp28s-procnotes]],
+  the SYSEVAL example).
+
+## Two chips
+
+- Both chips have the 42S's registers: contrast at offset #301, DSPCTL
+  at #303 (DON in bit 3, contrast bit 4 in bit 1), LPD at #308, LPE at
+#309, INPORT at #30C, LEDOUT at #30D, the timer controls at #30E/#30F
+  and the timers at #3F7/#3F8 (28S ROM; layout from [[hardware/lewis]]).
+  The ROM sets both chips' contrast to 6 with DSPCTL #A: 22, the KML 2.0
+  reset value, and DON on both (28S ROM).
+- The master's TIMER2 (#FFFF8) is the clock and auto-off timer, its CRC
+  (#FFF04) serves the self-test, its LEDOUT (#FFF0D) drives the IR LED
+  (ON + L writes it thousands of times) (28S ROM).
+- The slave has timers of its own: the reset code loads its TIMER2
+  (#FFBF8) with #E67, the interrupt code at #00A8F polls both chips'
+  TIMER2 control nibbles, and while the command line is open the ROM
+  rearms the slave's TIMER2 #E67 ticks (about 0.45 s at 8192 Hz) ahead
+  each time it expires and sets RUN, INT and WAKE (#FFB0F = 7) before
+  sleeping: the cursor blinks on it (28S ROM). The ROM reads the
+  slave's LPD once and its battery routine (#00D30) reads the master's.
+  Emu42's change log has the slave's power bits always 0 and a DON
+  change on the slave affecting the annunciators (src:
+  [[sources/emu42-changes]]), which fits the annunciators living in
+  the slave's RAM (below).
 
 ## Display
 
@@ -59,6 +105,15 @@ See [[questions/lewis-memory-map]].
   last cell one column short (inferred: 23 x 6 = 138).
 - The seven annunciators sit in a row above the dot matrix, not inside
   it (OM p. 27 drawing).
+- Display RAM: each column is eight nibbles, 32 bits, least significant
+  bit the top row. The slave shows the left 68 columns from #FF840
+  (offset #40), the master the right 69 from #FFC00, each half's
+  address growing to the right ([[sources/hp28s-procnotes]] SCR, "each
+  1/2 of LCD is 34*2 columns (+1 on right)"; the orientation is
+  confirmed by the ROM's text reading right in both halves: "Memory
+  Lost" in the left half, the 5 of 2 ENTER 3 + at the right edge; 28S
+  ROM). The master's #FFE28-#FFE5F and the slave's #FFA60-#FFA7F are
+  scratch the ROM writes, not shown (28S ROM).
 
 ### Annunciators
 
@@ -75,8 +130,22 @@ Left to right as drawn above the display, with the manual's meanings
 7. Printer symbol: sending data to the printer, whether or not a printer
    receives it (RM p. 168).
 
-The I/O addresses of these segments are not in either manual (see
-[[questions/lewis-memory-map]] for the 28S's I/O).
+The segments are 5-nibble words in the slave's first #40 nibbles,
+eight nibbles apart, written #FFFFF (on) or 0 (off), as the 42S's at
+#40210 (28S ROM, each seen lit):
+
+| Word | Annunciator | Seen lit |
+| --- | --- | --- |
+| #FF800 | busy | for about 0.2 s while it computes |
+| #FF808 | α | with the α key |
+| #FF810 | battery | with LPD's low-battery bit set |
+| #FF818 | shift | after the shift key |
+| #FF820 | (2π) | after RAD |
+| #FF828 | suspended | after « HALT » EVAL |
+| #FF830 | printer | while ON + L sends the display |
+
+No word lights them all, unlike the 42S's #40210 (none was seen
+written).
 
 ### Stack screen
 
@@ -270,7 +339,18 @@ release ON (OM p. 20-21, 217).
 
 ## Self-test
 
-Repeating test: hold ON, press the ◀ menu key, release ON. It shows
+Repeating test: hold ON, press the ◀ menu key, release ON.
+
+In saturnus (28S ROM) the pass ends in "8 FAIL": the failure number is
+the ST bits 8-11 nibble, and its ROM step sets ST bit 11. The step
+(#0169B, CRC routine #01770) clears the master's CRC, reads
+#0001C-#1FFFB as three blocks of two interleaved halves #5550 nibbles
+apart in 16-nibble reads, and wants #FFFF; with the 48's CRC rule the
+owner's image gives #185A. Then it checks #00000-#00FFF, #2001C-#3FFFB
+and #20000-#20FFF the same way. The same step fails on every Lewis ROM
+so far: [[questions/hp42s-rom-crc]].
+
+ It shows
 horizontal and vertical lines, a blank display, a random pattern, then
 the result briefly, and starts again. "OK-28S" means pass; a message
 such as "1 FAIL" is a failure, the number naming the fault. A key press
@@ -302,12 +382,18 @@ flashes in the top line at every key; worse, the stack lines show only
 object types ("No Room to Show Stack"), and at the end an "Out of
 Memory" purge dialogue takes over (OM p. 188-189).
 
+## ROM image
+
+The owner's image (128 KB, SHA-256 51589fa3...1e921c, "Version 2BB" in
+the copyright message) is in dump order: 256 units of 512 bytes, last
+first, as the Pioneer images ([[hardware/saturn-models]] "ROM image
+forms"). In address order the ROM starts with a GOSBVL to its reset
+code at #004BD, ends with "Copyright HP 1986, 1987" from an odd nibble
+(#3FFB7), and keeps the self-test's "OK-28S" at #01C9F and "FAIL" at
+#01C8D (28S ROM).
+
 ## Not found
 
-- The annunciator segment addresses and the display memory layout in
-  the manuals (I/O facts: [[questions/lewis-memory-map]]).
-- The meaning of the self-test failure numbers, and what the factory
-  test on ON + ▼ checks.
+- Other self-test failure numbers than 8 (the ROM's), and what the
+  factory test on ON + ▼ checks.
 - A character-cell width stated outright (six columns is inferred).
-- How the two Lewis chips split the display (see
-  [[sources/hp28s-procnotes]] SCR for the two halves).

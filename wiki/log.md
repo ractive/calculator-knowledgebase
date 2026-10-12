@@ -718,3 +718,12 @@ behaviour. Its memory map section is left to the memory-map work in
 Schema: `models` accepts `28s` and `19bii`; the `28s` tags became
 `models` entries. Not read: the maths, plotting and programming
 chapters.
+
+## [2026-10-13] query | The 28S's memory map from its ROM
+
+Ran the owner's 28S ROM (2BB) in saturnus on a logging bus (iteration
+43a): no CONFIG, UNCNFG or C=ID, a fixed map (ROM, RAM at #C0000, slave
+block #FF800, master block #FFC00). Filled [[hardware/hp28s]] (memory
+map, two chips, display RAM, annunciator words, ROM image form, the
+self-test's "8 FAIL"), answered [[questions/lewis-memory-map]] for
+emulation, updated [[hardware/lewis]].

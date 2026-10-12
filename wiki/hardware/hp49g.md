@@ -142,7 +142,11 @@ which matches baud code 7 on [[hardware/uart]].
   code #B0, device code #D0 (src: [[sources/intel-28f160s5]] Tables 3, 12,
   15). The hardware boot-sector protection would fit a set lock-bit with
   WP# held low, since lock-bits only bind while WP# is low (Table 13), but
-  no source says how the 49G does it (unverified).
+  no source says how the 49G does it (unverified). An HP developer lifted
+  the protection by shorting two points on the board, which fits a WP#
+  line held by a strap (src: [[sources/comp-sys-hp48-archive]] C22). Bank
+  headers, the FS bank and the download menu are on
+  [[questions/custom-rom-for-saturn-calculators]] section 3.
 - The saturnus emulator assumes a nibble write at an even address is held
   and the next nibble write at the odd address of the same byte completes
   one byte cycle, low nibble first (emulator choice, unverified on

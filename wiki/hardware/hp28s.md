@@ -339,24 +339,22 @@ release ON (OM p. 20-21, 217).
 
 ## Self-test
 
-Repeating test: hold ON, press the ◀ menu key, release ON.
-
-In saturnus (28S ROM) the pass ends in "8 FAIL": the failure number is
-the ST bits 8-11 nibble, and its ROM step sets ST bit 11. The step
-(#0169B, CRC routine #01770) clears the master's CRC, reads
-#0001C-#1FFFB as three blocks of two interleaved halves #5550 nibbles
-apart in 16-nibble reads, and wants #FFFF; with the 48's CRC rule the
-owner's image gives #185A. Then it checks #00000-#00FFF, #2001C-#3FFFB
-and #20000-#20FFF the same way. The same step fails on every Lewis ROM
-so far: [[questions/hp42s-rom-crc]].
-
- It shows
+Repeating test: hold ON, press the ◀ menu key, release ON. It shows
 horizontal and vertical lines, a blank display, a random pattern, then
 the result briefly, and starts again. "OK-28S" means pass; a message
 such as "1 FAIL" is a failure, the number naming the fault. A key press
 during the test gives a meaningless failure. With a printer on, it
 prints numbers for service. Leave it with System Halt (ON + ▲) (OM
 p. 218, 290-291).
+
+In saturnus (28S ROM) the pass ends in "OK-28S". Its ROM step (#0169B,
+CRC routine #01770) clears the master's CRC, reads #0001C-#1FFFB as
+three blocks of two interleaved halves #5550 nibbles apart in 16-nibble
+reads, and wants #FFFF; then it checks #00000-#00FFF, #2001C-#3FFFB
+and #20000-#20FFF the same way. With the Lewis CRC rule
+([[hardware/lewis]] "CRC") every pass gives #FFFF; with the 48's rule
+the owner's image got #185A and the result read "8 FAIL", so a failure's number is the ST bits
+8-11 nibble, the ROM step's being bit 11 ([[questions/hp42s-rom-crc]]).
 
 Keyboard test: hold ON, press NEXT, release ON. The display reads
 "KEYBOARD TEST". Press every key in order: the left keyboard row by row
@@ -387,13 +385,14 @@ Memory" purge dialogue takes over (OM p. 188-189).
 The owner's image (128 KB, SHA-256 51589fa3...1e921c, "Version 2BB" in
 the copyright message) is in dump order: 256 units of 512 bytes, last
 first, as the Pioneer images ([[hardware/saturn-models]] "ROM image
-forms"). In address order the ROM starts with a GOSBVL to its reset
+forms"); the Lewis CRC over #00000-#1FFFF gives #FFFF only after
+reordering. In address order the ROM starts with a GOSBVL to its reset
 code at #004BD, ends with "Copyright HP 1986, 1987" from an odd nibble
 (#3FFB7), and keeps the self-test's "OK-28S" at #01C9F and "FAIL" at
 #01C8D (28S ROM).
 
 ## Not found
 
-- Other self-test failure numbers than 8 (the ROM's), and what the
+- Other self-test failure numbers than 8 (the ROM step's), and what the
   factory test on ON + ▼ checks.
 - A character-cell width stated outright (six columns is inferred).

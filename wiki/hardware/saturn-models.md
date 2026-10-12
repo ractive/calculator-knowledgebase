@@ -12,6 +12,8 @@ models:
   - 17b
   - 17bii
   - 27s
+  - 28s
+  - 19bii
 status: draft
 sources:
   - "[[sources/wikipedia-saturn-models]]"
@@ -32,7 +34,7 @@ sources:
   - "[[sources/hp17b-om]]"
   - "[[sources/hp17bii-om]]"
   - "[[sources/hp27s-om]]"
-tags: [saturn, model, pioneer, clamshell, lewis, 71b, 28s, rom]
+tags: [saturn, model, pioneer, clamshell, lewis, 71b, rom]
 ---
 
 # Saturn-based models: the whole family
@@ -89,7 +91,7 @@ Bert's ROM self-check is a checksum, the Sacajawea's and Lewis's a CRC
 | 71B | 1984 | 1LF2, later 1LK7, plus 1LF3, 1LG7, 1LG8 | 64 KB | 17.5 KB, ports | one line of 22 characters, 132 x 8 dots | four module ports, card reader, HP-IL module | [[sources/hpmuseum-saturn-pages]]; [[sources/emu71-manual]]; [[sources/hp71b-compendium]] |
 | 18C | 1986 | 1LK7, 1LP2, 1LP4 | (128 KB, as 28C, unverified) | - | (as 28C, unverified) | IR printer | [[sources/emu28-manual]] |
 | 28C | 1986 | 1LK7, 1LP2, 1LP4 | 128 KB | 2 KB | 137 x 32 dots, four lines | IR printer | [[sources/emu28-manual]]; [[sources/emu42-pioneer-dump]] CLAMSHEL; [[sources/wikipedia-saturn-models]] |
-| 28S | 1988 | two Lewis | 128 KB | 32 KB | 137 x 32 dots | IR printer | [[sources/emu42-pioneer-dump]] LEWISCRC; [[sources/hp28s-procnotes]]; [[sources/wikipedia-saturn-models]] |
+| 28S | 1988 | two Lewis | 128 KB | 32 KB | 137 x 32 dots | IR printer | [[hardware/hp28s]]; [[sources/emu42-pioneer-dump]] LEWISCRC; [[sources/hp28s-procnotes]]; [[sources/wikipedia-saturn-models]] |
 | 19B, 19BII | 1988, 1990 | two Lewis | 128 KB (19BII) | - | 132 x 32 dots (unverified) | IR printer | [[sources/emu42-pioneer-dump]] LEWISCRC; [[sources/wikipedia-saturn-models]] |
 | 17B, 17BII | 1988, 1990 | Lewis | 64 KB (English), 96 KB (international) | 8 KB | 131 x 16 dots, as 42S | IR printer, clock with ten appointment alarms | [[hardware/hp17bii]]; [[sources/emu42-pioneer-dump]]; [[sources/wikipedia-saturn-models]] |
 | 27S | 1988 | Lewis | 64 KB | 8 KB | 131 x 16 dots | IR printer, clock with ten appointment alarms | [[hardware/hp27s]]; same |

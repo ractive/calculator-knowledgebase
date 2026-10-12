@@ -5,7 +5,11 @@ authors: ["Wikipedia contributors"]
 year: 2026
 raw: "https://en.wikipedia.org/wiki/HP_Saturn"
 status: skimmed
-tags: [saturn, pioneer, clamshell, 71b, 28s]
+tags: [saturn, pioneer, clamshell, 71b]
+models:
+  - 17b
+  - 27s
+  - 28s
 ---
 
 # Wikipedia, HP Saturn and the Saturn calculator articles

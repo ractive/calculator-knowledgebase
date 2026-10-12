@@ -94,10 +94,11 @@ against the hosting sites more often than needed.
   (`stub|draft|reviewed`; questions `open|answered`; sources
   `unread|skimmed|digested`), `sources` (list of `[[sources/...]]` links),
   `models` (subset of `48sx, 48gx, 49g, 38g, 39g, 40g, 42s, 27s, 17b,
-  17bii`; which models a page covers goes here, never in a tag: no `48gx`, `hp48` or
-  `hp49g` tags; `28s` stays a tag because `models` cannot name it). The type
+  17bii, 28s, 19bii`; which models a page covers goes here, never in a
+  tag: no `48gx`, `hp48`, `hp49g` or `28s` tags). The type
   says what a page is; the directory stays fixed because other projects
-  cite page paths. Change schemas with `hyalo types set`.
+  cite page paths. Change schemas with `hyalo types set`; the `models`
+  item pattern is a string-list constraint, edited in `.hyalo.toml`.
 - Every hardware or protocol fact carries a citation inline:
   `(src: [[sources/voyage-48gx]] p. 212)` or
   `(src: [[emulators/emu48]] CHANGES SP43)` (Emu48's change log has

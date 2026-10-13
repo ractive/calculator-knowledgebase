@@ -9,6 +9,7 @@ sources:
   - "[[sources/emu42-manual]]"
   - "[[sources/emu42-pioneer-dump]]"
   - "[[sources/kml20]]"
+  - "[[sources/hp42s-om]]"
 tags: [model, pioneer, lewis]
 ---
 
@@ -75,6 +76,34 @@ the CRC), DRAM (display RAM), URAM (user RAM), an IR or further test that
 is skipped when status flag 8 is set, then "OK-42S" or "FAIL" with a code
 (strings at #1FFE6 and #1FEE6), then "COPYRIGHT HP 1988", and it starts over.
 Real units print "ROM O.K.", "URAM O.K." (src: [[sources/hosoda-hp42s]]).
+
+## Held keys: preview and NULL
+
+Holding a key that runs a function shows the function's name; after
+"about a second" NULL replaces it, stays until the key is let go, and the
+function does not run; let go before NULL, it runs (src:
+[[sources/hp42s-om]] p. 75). So the ROM must see a key as held while it
+is down, not only when it is released.
+
+How the ROM gets there (42S ROM revision C, traced in saturnus):
+
+- The keyboard interrupt's handler debounces the keys itself: it scans the
+  matrix row by row (OUT #01, #02 ... #20, then OUT #3F again) and wants
+  six identical scans, each taken when the TIMER2 nibble at #403F9
+  changes, about every 2 ms, with interrupts enabled. A new key goes into
+  a key buffer; the current key bitmap is kept in RAM (#500A6, 13
+  nibbles).
+- The main loop (around #009A3) takes keys from the buffer, shows the
+  preview and times the hold; a timer interrupt about every 1/16 s keeps
+  rescanning until the key is released.
+- An emulator whose keyboard interrupt looks at IN through the OUT lines
+  the ROM drives sees each row scan as a new key-down: the edge arrives
+  while the handler runs, the handler runs again at RTI, and the main loop
+  never runs while the key is held (saturnus before 2026-10-13: every
+  key acted on release, no preview, no NULL). With the interrupt taken
+  from a scan of the whole keyboard ([[hardware/keyboard]] "Scanning
+  model") the preview shows at once and NULL after 0.95 s of emulated
+  time at 1 MHz.
 
 ## @ractive's ROM image
 

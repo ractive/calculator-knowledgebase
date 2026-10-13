@@ -4840,6 +4840,39 @@
       "hash_stable": false
     },
     {
+      "path": "manuals/hp42s-om-en.pdf",
+      "method": "fetch",
+      "title": "HP-42S Owner's Manual (edition 7, March 1994)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1994",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp42s-om-en.pdf",
+      "size": 129956848,
+      "sha256": "623776a8e74952ca5c5f4e3ccfdc614717ca2d941b7180d1e100c9a582899afb",
+      "notes": "362-page scan with hpcalc.org OCR text layer; 130 MB.",
+      "wiki": [
+        "sources/hp42s-om"
+      ]
+    },
+    {
+      "path": "manuals/text/hp42s-om-en.txt",
+      "method": "derived",
+      "title": "HP-42S Owner's Manual (edition 7, March 1994) (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1994",
+      "terms": "community scan",
+      "derived_from": "manuals/hp42s-om-en.pdf",
+      "command": "pdftotext -layout manuals/hp42s-om-en.pdf manuals/text/hp42s-om-en.txt",
+      "how": "plain pdftotext -layout of the OCR layer; form feeds separate pages, so block N is PDF page N",
+      "size": 502697,
+      "sha256": "66fa75343f8c73d7ff471cb3305cd3753097b5e73240064904c0beb24ec083db",
+      "hash_stable": false
+    },
+    {
       "path": "manuals/hp28s-om-en.pdf",
       "method": "fetch",
       "title": "HP-28S Owner's Manual (edition 5, August 1989)",

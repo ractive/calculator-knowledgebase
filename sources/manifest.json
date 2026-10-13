@@ -965,22 +965,6 @@
       ]
     },
     {
-      "path": "manuals/hp49g-pocket-guide/README.md",
-      "method": "manual",
-      "title": "The HP 49G Pocket Guide, System Flags pages 76-79 (photographs of a printed copy)",
-      "authors": [
-        "Hewlett-Packard"
-      ],
-      "year": "",
-      "terms": "HP copyright; photographs not distributed",
-      "instructions": "Not online and not distributed. Photographs of pages 76-79 of a printed HP 49G Pocket Guide, used only to cite the 49G system flags. Use your own copy of the booklet.",
-      "size": 802,
-      "sha256": "f3e9e93a502fe8d80c74e2b725ec8ac6357adf593302c315287fcba536bb60de",
-      "wiki": [
-        "sources/hp49g-pocket-guide"
-      ]
-    },
-    {
       "path": "manuals/hp49g-pocket-guide/p76-flags--1-to--26.jpeg",
       "method": "manual",
       "title": "The HP 49G Pocket Guide, System Flags pages 76-79 (photographs of a printed copy)",

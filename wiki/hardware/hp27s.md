@@ -202,3 +202,8 @@ revision B.
 - The self-test runs SPD, BEEP, DISP, ROM, DRAM, URAM and a summary; the
   ROM step printed "ROM 05DFB" with the 48's CRC rule; with the Lewis
   rule the image gives #FFFF ([[questions/hp42s-rom-crc]]).
+
+## Setting the clock by keys
+
+The SET menu as an emulator presses it, the RAM nibble of its date and
+12/24 settings and the 17B's language prompt: [[hardware/clocks]].

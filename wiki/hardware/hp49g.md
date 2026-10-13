@@ -208,3 +208,8 @@ System flag meanings: [[hardware/system-flags-49g]].
 
 Installing a system of one's own, and what HP's boot sector is known to
 expect: [[questions/custom-rom-for-saturn-calculators]].
+
+## Clock
+
+Keeps the date and time; how it is set, and what saturnus found about
+setting it by keys: [[hardware/clocks]].

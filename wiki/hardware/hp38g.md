@@ -229,3 +229,8 @@ Also observed on saturnus with ROM A1.67, no oracle:
 - **PC link.** SEND to a disk drive (LIB, SEND, second entry) speaks
   Kermit with the calculator as the client: see
   [[protocols/aplet-transfer]].
+
+## Clock
+
+Keeps the date and time; how it is set, and what saturnus found about
+setting it by keys: [[hardware/clocks]].

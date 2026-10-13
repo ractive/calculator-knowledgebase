@@ -83,3 +83,8 @@ document:
   (observed in saturnus 2026-10-07; saturnus renders it at about 90 % darkness).
 
 System flag meanings: [[hardware/system-flags-48sx]].
+
+## Clock
+
+Keeps the date and time; how it is set, and what saturnus found about
+setting it by keys: [[hardware/clocks]].

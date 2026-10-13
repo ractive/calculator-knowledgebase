@@ -4741,6 +4741,39 @@
       "hash_stable": false
     },
     {
+      "path": "manuals/hp19bii-om-en.pdf",
+      "method": "fetch",
+      "title": "HP 19BII Business Consultant II Owner's Manual (edition 2, February 1991)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp19bii-om-en.pdf",
+      "size": 121401908,
+      "sha256": "7f3d499c4698b0c18f35fde5e12fc0a34230f15074dc970690d67b88c6275828",
+      "notes": "374-page scan with hpcalc.org OCR text layer; part number 00019-90054; 121 MB. HP's own scan (literature.hpcalc.org/official/hp19bii-om-en.pdf, 18 MB) has no text layer and was not kept.",
+      "wiki": [
+        "sources/hp19bii-om"
+      ]
+    },
+    {
+      "path": "manuals/text/hp19bii-om-en.txt",
+      "method": "derived",
+      "title": "HP 19BII Business Consultant II Owner's Manual (edition 2, February 1991) (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1991",
+      "terms": "community scan",
+      "derived_from": "manuals/hp19bii-om-en.pdf",
+      "command": "pdftotext -layout manuals/hp19bii-om-en.pdf manuals/text/hp19bii-om-en.txt",
+      "how": "plain pdftotext -layout of the OCR layer; form feeds separate pages, so block N is PDF page N",
+      "size": 559390,
+      "sha256": "6177158c0b425997cc0dd2d822072e3f9fb3f7a9ff9acc2feda42d72df1ccfbc",
+      "hash_stable": false
+    },
+    {
       "path": "manuals/hp17b-om-en.pdf",
       "method": "fetch",
       "title": "HP-17B Owner's Manual (edition 1, August 1987)",

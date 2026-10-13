@@ -1,7 +1,7 @@
 ---
 title: "Lewis (1LR2)"
 type: hardware
-models: [42s, 28s]
+models: [42s, 28s, 19bii]
 status: draft
 sources:
   - "[[sources/garnier-hp42s-new-facts]]"
@@ -55,7 +55,9 @@ ROM in saturnus (iteration 15, 2026-10-05).
   and #FFC00 (master) (src: [[sources/hp28s-procnotes]]; 28S ROM), and its
   ROM, too, uses them from its first instructions without CONFIG: each
   ROM runs on a fixed map of its own; where the chips' bases come from is
-  open ([[questions/lewis-memory-map]], [[hardware/hp28s]]).
+  open ([[questions/lewis-memory-map]], [[hardware/hp28s]]). The 19BII
+  uses the 28S's windows, with RAM only at #C4000-#C7FFF
+  ([[hardware/hp19bii]] "Memory map").
 - RAM mirrors: with 8 KB the ROM's cold start only works when the RAM repeats
   through #50000-#5FFFF: with nothing above #53FFF its stack arithmetic later
   fails ("Invalid Type" on `2 ENTER 3 +`); with a mirror it sizes memory

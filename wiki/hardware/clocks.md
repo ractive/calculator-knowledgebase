@@ -1,7 +1,7 @@
 ---
 title: "Which models have a clock, and how each is set"
 type: hardware
-models: [48sx, 48gx, 49g, 38g, 39g, 40g, 42s, 27s, 17bii, 17b]
+models: [48sx, 48gx, 49g, 38g, 39g, 40g, 42s, 27s, 17bii, 17b, 28s]
 status: draft
 sources:
   - "[[sources/hp48sx-om]]"
@@ -11,12 +11,13 @@ sources:
   - "[[sources/hp27s-om]]"
   - "[[sources/hp17bii-om]]"
   - "[[sources/hp17b-om]]"
+  - "[[sources/hp28s-rm]]"
 tags: [clock, timers]
 ---
 
 # Which models have a clock, and how each is set
 
-Every model here keeps the date and time except the 42S. How the owner
+Every model here keeps the date and time except the 42S and the 28S. How the owner
 sets it, per model, from the manuals; what an emulator that sets the
 clock for the user by keys has to know is under each. The hardware that
 keeps the time: [[hardware/timers]] (48, 49, aplet models) and
@@ -30,6 +31,7 @@ keeps the time: [[hardware/timers]] (48, 49, aplet models) and
 | 38G | yes | store into the `TIME` and `DATE` variables in HOME; `DISPTIME` shows them | [[sources/hp38g-ug]] 8-22 (`DISPTIME`) |
 | 39G, 40G | yes | the same: `Time` and `Date` are HOME's Modes variables | [[sources/hp39g40g-ug]] 15-26 (`DISPTIME`) and the variables table |
 | 42S | no | - | see below |
+| 28S | no | - | its reference manual has no time or date command; RDZ with 0 seeds from "the system clock" ([[sources/hp28s-rm]], RDZ) |
 | 27S | yes | TIME application (shift ÷), SET menu | [[sources/hp27s-om]] p. 137-139 |
 | 17BII, 17B | yes | MAIN, TIME, SET menu | [[sources/hp17bii-om]], [[sources/hp17b-om]] p. 132 |
 

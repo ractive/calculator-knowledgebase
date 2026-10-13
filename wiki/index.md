@@ -39,6 +39,7 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 - [[sources/hp17b-om]] — HP-17B Owner's Manual (1987): keyboard, annunciators, clock and alarms, reset chords, self-test (skimmed)
 - [[sources/hp17bii-om]] — HP 17BII Owner's Manual (1991): keyboard, ALG/RPN, ALPHA menu, clock and alarms, reset chords, self-test (skimmed)
 - [[sources/hp27s-om]] — HP-27S Owner's Manual (1988): keyboard, five annunciators, ALPHA menu, clock, reset chords, self-test (skimmed)
+- [[sources/commons-hp19bii-photos]] — two Commons photographs of the open 19BII (CC BY 2.0): case layout and colours (digested)
 - [[sources/hp19bii-om]] — HP 19BII Owner's Manual (1991): keyboard figure with shifted labels, six annunciators, contrast, clock and appointments, reset, self-test (skimmed)
 - [[sources/hp28s-om]] — HP-28S Owner's Manual (1989): keyboards, seven annunciators, stack display, ON chords, System Halt, Memory Reset, self-tests (digested: ch. 1, 18, 25, parts of 15, 20, 24, app. A)
 - [[sources/hp28s-rm]] — HP-28S Reference Manual (1989): SYSEVAL version, 137x32 pixel grid, LCD image format, KEY strings, IR printer (digested: those entries only)

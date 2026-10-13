@@ -8,6 +8,7 @@ sources:
   - "[[sources/kml20]]"
   - "[[sources/emu42-pioneer-dump]]"
   - "[[sources/hpmuseum-forum]]"
+  - "[[sources/commons-hp19bii-photos]]"
 tags: [model, clamshell, lewis, keyboard, display, self-test, clock]
 ---
 
@@ -153,12 +154,32 @@ contrast keys, and MATH, the number of decimal places and the language
 | × | ^ (power) | 3 / 8 |
 | % | MATH | 2 / 2 |
 | 1, 2, 3 | - | 2 / 128, 512, 4 |
-| − | π | 2 / 8 |
+| − | √x | 2 / 8 |
 | ON | - | IN bit 15 |
 | 0 | MEM | 1 / 128 |
 | . | SHOW | 1 / 512 |
 | = (ENTER in RPN, printed below) | LAST | 1 / 4 |
 | + | x² | 1 / 8 |
+
+## Case and colours
+
+Measured on square-on photographs ([[sources/commons-hp19bii-photos]]
+P1, checked on P2); approximate.
+
+- Two halves of nearly equal size (on P1 the letter half 845 x 1451 px,
+  the display half 905 x 1508, the display half nearer the lens). The
+  hinge's barrel belongs to the letter half, on its right edge.
+- Key pitch on the display half: menu keys 108.8 px apart, number keys
+  135.6 px, rows 109.3 px; on the letter half 102.4 px across and 121.5
+  px down, caps about 73 x 58 px.
+- The reference card sits in a recess above the letter keys, in four
+  grey-olive groups (MAIN MENU, CLEAR, DISPLAY CONTRAST, OTHER).
+- Colours: case near-black (about #2b2a2b); grey keys (about #5d5b57)
+  with white labels for the letters, STO, RCL, DISP, PRNT, INPUT, +/−,
+  ( ), ←, ▲, ▼, % and ON; cream keys (about #e4e1d2) with dark labels
+  for the menu keys, digits, operators and EXIT; the shift key blank,
+  orange-yellow (about #eda646); shifted labels orange (about #eaa54b);
+  ENTER printed light under =.
 
 ## Clock
 
@@ -177,8 +198,9 @@ contrast keys, and MATH, the number of decimal places and the language
 ## Cold start and language
 
 After a memory loss the ROM asks for a language before anything else:
-the menu keys pick Deutsch, Español, Français, Italiano, Português and
-English, in that order; English shows "MEMORY LOST" over 0.00 and the
+the menu keys, labelled D E F I P ENG, pick Deutsch, Español, Français,
+Italiano, Português and English, in that order ([[sources/commons-hp19bii-photos]]
+P2 shows the same prompt); English shows "MEMORY LOST" over 0.00 and the
 MAIN menu (19BII ROM). The nibble #C402B reads 0 on that prompt and 2 in
 every menu tried after it (19BII ROM), as #50092 does on the
 international 17BII ([[hardware/clocks]]).

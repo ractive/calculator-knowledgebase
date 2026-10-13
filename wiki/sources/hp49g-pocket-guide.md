@@ -19,7 +19,7 @@ photographed pages carry no date).
 
 What the library has: four of @ractive's photographs of a printed copy, taken
 2026-10-06, of the "System Flags" section only, in
-`raw/manuals/hp49g-pocket-guide/` (with a README). They are not online and
+`raw/manuals/hp49g-pocket-guide/`. They are not online and
 not distributed with this repository; check against your own copy:
 
 - `p76-flags--1-to--26.jpeg`: p. 76, the introduction (flag numbering,

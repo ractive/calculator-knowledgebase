@@ -90,3 +90,8 @@ A cold start with blank RAM shows "Memory Clear" on the upper line and
 `x: 0.0000` on the lower, the stack ready; no key has to be answered (42S
 ROM). Power-on contrast 22 (range 15-31), observed on ROM C after a cold
 start (observed in saturnus 2026-10-07; saturnus renders it at about 90 % darkness).
+
+## Clock
+
+None: no time or date functions, and none of the clock strings of the
+27S and 17BII ROMs in its ROM ([[hardware/clocks]]).

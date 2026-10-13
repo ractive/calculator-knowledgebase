@@ -284,3 +284,8 @@ forms"):
   and give #FFFF with the Lewis rule ([[questions/hp42s-rom-crc]]).
 - In the TIME menu the time line changes once per emulated second, with
   saturnus's 8192 Hz timers ([[questions/pioneer-clock-alarm-hardware]]).
+
+## Setting the clock by keys
+
+The SET menu as an emulator presses it, the RAM nibble of its date and
+12/24 settings and the 17B's language prompt: [[hardware/clocks]].

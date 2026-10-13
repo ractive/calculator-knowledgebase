@@ -123,6 +123,7 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 - [[hardware/system-flags-48sx]] — System flags -1 to -64 of the 48S/SX: name, clear and set meaning per flag, from the Owner's Manual (draft)
 - [[hardware/system-flags-49g]] — System flags of the 49G from the Pocket Guide: 103 described with defaults, 25 not listed (draft)
 - [[hardware/timers]] — Timers (draft)
+- [[hardware/clocks]] — Which models have a clock, and how each is set (draft)
 - [[hardware/uart]] — UART, serial port and IR (draft)
 
 ## Protocols

@@ -118,3 +118,8 @@ The G-series cycle counts in [[hardware/saturn-cpu]] "Timing" explain
 most of the gap.
 
 System flag meanings: [[hardware/system-flags-48gx]].
+
+## Clock
+
+Keeps the date and time; how it is set, and what saturnus found about
+setting it by keys: [[hardware/clocks]].

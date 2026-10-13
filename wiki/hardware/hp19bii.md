@@ -222,5 +222,9 @@ opening the chips; the known images came from people at HP
 F3). @ractive's image is 131072 bytes in dump order (256 units of 512
 bytes, last first) and carries "COPYRIGHT HP 198" in its first unit, as
 the Pioneers' images do; the Lewis CRC over #00000-#1FFFF gives #FFFF in
-address order ([[hardware/saturn-models]] "ROM image forms";
+address order. The self-test's pass message "OK-19B II" is kept whole
+in the ROM (address order, byte #16F50), next to " FAIL"; the halves'
+own tags "OK-19B-1DK" and "OK-19B-2A" start like a 19B's might, so the
+whole message is what names a 19BII image (19BII ROM)
+([[hardware/saturn-models]] "ROM image forms";
 [[sources/emu42-pioneer-dump]]).

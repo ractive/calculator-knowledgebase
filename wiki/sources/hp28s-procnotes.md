@@ -5,7 +5,9 @@ authors: ["Alonzo Gariepy"]
 year: 1989
 raw: "raw/saturn-hardware/hp28s-procnotes.txt"
 status: skimmed
-tags: [28s, lewis, saturn]
+tags: [lewis, saturn]
+models:
+  - 28s
 ---
 
 # Gariepy, HP28S Processor Notes (1989)

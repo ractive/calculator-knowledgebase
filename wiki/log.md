@@ -701,3 +701,29 @@ the image order (the 28S and 19BII images are in dump order).
 [[sources/hpmuseum-forum]] gains F6 (LEWISCRC output on good images:
 two #FFFF passes per Lewis chip). comp.sys.hp48 had nothing on the
 Lewis CRC. Not covered: the Sacajawea CRC.
+
+## [2026-10-13] ingest | HP 28S owner's and reference manuals
+
+For saturnus iteration 43 (the 28S). New sources [[sources/hp28s-om]]
+and [[sources/hp28s-rm]] (hpcalc.org community scans, edition 5, with
+OCR; key glyphs read off the page images). New model page
+[[hardware/hp28s]]: ROM and RAM size and placement, ROM revision 2BB
+and the version check, 137 x 32 display and its four 23-character
+lines, the seven annunciators, the stack screen, every key's labels on
+both keyboards with KML 2.0's OUT/IN codes, the cursor-menu key (KML's
+"<^v>"), contrast, the ON chords (System Halt, Memory Reset, repeating
+and keyboard tests, print display), the IR printer and low-memory
+behaviour. Its memory map section is left to the memory-map work in
+[[questions/lewis-memory-map]]. [[hardware/saturn-models]] links it.
+Schema: `models` accepts `28s` and `19bii`; the `28s` tags became
+`models` entries. Not read: the maths, plotting and programming
+chapters.
+
+## [2026-10-13] query | The 28S's memory map from its ROM
+
+Ran the owner's 28S ROM (2BB) in saturnus on a logging bus (iteration
+43a): no CONFIG, UNCNFG or C=ID, a fixed map (ROM, RAM at #C0000, slave
+block #FF800, master block #FFC00). Filled [[hardware/hp28s]] (memory
+map, two chips, display RAM, annunciator words, ROM image form, the
+self-test's "8 FAIL"), answered [[questions/lewis-memory-map]] for
+emulation, updated [[hardware/lewis]].

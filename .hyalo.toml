@@ -22,7 +22,7 @@ type = "list"
 
 [schema.types.source.properties.models]
 type = "string-list"
-item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii)$"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii|28s|19bii)$"
 
 [schema.types.hardware]
 required = ["title", "type", "models", "status", "sources", "tags"]
@@ -33,7 +33,7 @@ values = ["stub", "draft", "reviewed"]
 
 [schema.types.hardware.properties.models]
 type = "string-list"
-item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii)$"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii|28s|19bii)$"
 
 [schema.types.hardware.properties.sources]
 type = "string-list"
@@ -51,7 +51,7 @@ values = ["stub", "draft", "reviewed"]
 
 [schema.types.model.properties.models]
 type = "string-list"
-item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii)$"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii|28s|19bii)$"
 
 [schema.types.model.properties.sources]
 type = "string-list"
@@ -69,7 +69,7 @@ values = ["stub", "draft", "reviewed"]
 
 [schema.types.rom-behaviour.properties.models]
 type = "string-list"
-item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii)$"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii|28s|19bii)$"
 
 [schema.types.rom-behaviour.properties.sources]
 type = "string-list"
@@ -87,7 +87,7 @@ values = ["stub", "draft", "reviewed"]
 
 [schema.types.protocol.properties.models]
 type = "string-list"
-item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii)$"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii|28s|19bii)$"
 
 [schema.types.protocol.properties.sources]
 type = "string-list"
@@ -105,7 +105,7 @@ values = ["stub", "draft", "reviewed"]
 
 [schema.types.file-format.properties.models]
 type = "string-list"
-item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii)$"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii|28s|19bii)$"
 
 [schema.types.file-format.properties.sources]
 type = "string-list"
@@ -126,7 +126,7 @@ type = "string"
 
 [schema.types.emulator.properties.models]
 type = "string-list"
-item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii)$"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii|28s|19bii)$"
 
 [schema.types.emulator.properties.sources]
 type = "string-list"
@@ -144,7 +144,7 @@ values = ["open", "answered"]
 
 [schema.types.question.properties.models]
 type = "string-list"
-item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii)$"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii|28s|19bii)$"
 
 [schema.types.question.properties.sources]
 type = "string-list"
@@ -174,7 +174,7 @@ type = "date"
 
 [schema.types.synthesis.properties.models]
 type = "string-list"
-item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii)$"
+item_pattern = "^(48sx|48gx|49g|38g|39g|40g|42s|27s|17b|17bii|28s|19bii)$"
 
 [schema.types.synthesis.properties.sources]
 type = "string-list"

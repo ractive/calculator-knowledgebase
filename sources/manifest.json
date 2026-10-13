@@ -4805,6 +4805,72 @@
       "size": 371396,
       "sha256": "5c2b38531f3a82d65fb1da8869e1e860c8786c59518458162420cd56b9816cbf",
       "hash_stable": false
+    },
+    {
+      "path": "manuals/hp28s-om-en.pdf",
+      "method": "fetch",
+      "title": "HP-28S Owner's Manual (edition 5, August 1989)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1989",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp28s-om-en.pdf",
+      "size": 93451104,
+      "sha256": "cdf6ff412b8628bd1c0fcb0b395ef5866e0dc37dc9123cb24dbfd46ca78c3647",
+      "notes": "342-page scan with hpcalc.org OCR text layer; reorder number 00028-90066; 93 MB.",
+      "wiki": [
+        "sources/hp28s-om"
+      ]
+    },
+    {
+      "path": "manuals/text/hp28s-om-en.txt",
+      "method": "derived",
+      "title": "HP-28S Owner's Manual (edition 5, August 1989) (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1989",
+      "terms": "community scan",
+      "derived_from": "manuals/hp28s-om-en.pdf",
+      "command": "pdftotext -layout manuals/hp28s-om-en.pdf manuals/text/hp28s-om-en.txt",
+      "how": "plain pdftotext -layout of the OCR layer; form feeds separate pages, so block N is PDF page N",
+      "size": 460399,
+      "sha256": "fa6f4c7048d45b40c81627630b1ee540bb61aa70073dd3b44be9ad7863a65c97",
+      "hash_stable": false
+    },
+    {
+      "path": "manuals/hp28s-rm-en.pdf",
+      "method": "fetch",
+      "title": "HP-28S Reference Manual (edition 5, August 1989)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1989",
+      "terms": "community scan",
+      "url": "https://literature.hpcalc.org/community/hp28s-rm-en.pdf",
+      "size": 104681220,
+      "sha256": "32cdb1fd0fd9a144e1b5ad700fc153ee5201f352eb90c49c9ed1a67be3e448a7",
+      "notes": "356-page scan with hpcalc.org OCR text layer; reorder number 00028-90068; 104 MB.",
+      "wiki": [
+        "sources/hp28s-rm"
+      ]
+    },
+    {
+      "path": "manuals/text/hp28s-rm-en.txt",
+      "method": "derived",
+      "title": "HP-28S Reference Manual (edition 5, August 1989) (text)",
+      "authors": [
+        "Hewlett-Packard"
+      ],
+      "year": "1989",
+      "terms": "community scan",
+      "derived_from": "manuals/hp28s-rm-en.pdf",
+      "command": "pdftotext -layout manuals/hp28s-rm-en.pdf manuals/text/hp28s-rm-en.txt",
+      "how": "plain pdftotext -layout of the OCR layer; form feeds separate pages, so block N is PDF page N",
+      "size": 542512,
+      "sha256": "437d52e1966a3a33a1b36fa2e3b8f42b14a5e5a5aef5a82e56762af4f2902f75",
+      "hash_stable": false
     }
   ]
 }

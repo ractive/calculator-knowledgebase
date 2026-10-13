@@ -3,7 +3,7 @@ title: Does @ractive's 42S ROM image pass the ROM's own CRC test?
 type: question
 status: answered
 tags: [lewis, crc, rom]
-models: [42s, 27s, 17b, 17bii]
+models: [42s, 27s, 17b, 17bii, 28s]
 sources: ["[[sources/hpmuseum-forum]]", "[[sources/emu42-pioneer-dump]]", "[[sources/hosoda-hp42s]]"]
 ---
 
@@ -105,3 +105,13 @@ the 32SII. With this rule their whole images do not give #FFFF, linearly
 or after reordering from dump order. Their read order and comparison differ
 (the 32SII reads five nibbles back and compares differently), so they were
 not checked further.
+
+## The 28S in saturnus (2026-10-13)
+
+The 28S's self-test (ON + the ◀ menu key) runs the same ROM step on its
+master chip's CRC (#FFF04): #0001C-#1FFFB in three blocks of two
+interleaved halves #5550 nibbles apart, 16-nibble reads, wanting #FFFF
+(code at #0169B and #01770 of revision 2BB). With the 48's rule the
+owner's image got #185A and the pass ended in "8 FAIL" (ST bit 11); with
+the rule above it ends in "OK-28S" (see [[hardware/hp28s]] "Self-test";
+saturnus iteration 43a).

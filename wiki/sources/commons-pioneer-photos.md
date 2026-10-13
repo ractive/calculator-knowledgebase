@@ -11,9 +11,10 @@ models: [17b, 17bii, 27s]
 
 # Wikimedia Commons photographs of the HP 17B, 17BII and 27S
 
-Three photographs on Wikimedia Commons, looked at to read key labels and
-the displayed self-test result, and sampled for approximate colours (the
-median of a small patch). They are not stored in `raw/` and nothing of
+Four photographs on Wikimedia Commons, looked at to read key labels and
+the displayed self-test result, sampled for approximate colours (the
+median of a small patch), and, for the two taken square on (P3, P4),
+measured for the case layout. They are not stored in `raw/` and nothing of
 them is reproduced here. Colours from photographs depend on the lighting
 and white balance, so the hex values on the model pages are approximate.
 
@@ -29,5 +30,10 @@ and white balance, so the hex values on the model pages are approximate.
   striegel (Flickr), CC BY 2.0, taken 2016-10-13. The title says "end of
   keyboard test"; the display shows the self-test pass message.
   <https://commons.wikimedia.org/wiki/File:HP_27S_Scientific_calculator,_front,_power_on,_end_of_keyboard_test,_on_blue_background_(30268535976).png>
+
+- **P4**, 17BII, front, scanned on blue (even, neutral light; the label
+  ink clips to near white); striegel (Flickr), CC BY 2.0, taken
+  2015-07-29.
+  <https://commons.wikimedia.org/wiki/File:HP_17B_II_Business_calculator_(19934267028).jpg>
 
 Used on [[hardware/hp17bii]] and [[hardware/hp27s]].

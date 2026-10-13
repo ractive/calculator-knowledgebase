@@ -112,21 +112,57 @@ Approximate, sampled from photograph P3
 
 | Part | 27S |
 | --- | --- |
-| Case body | #1c1a18 black |
-| Keyboard faceplate | #292623 dark grey |
-| Display surround | dark grey band #4f4944; "27S" and "SCIENTIFIC" in white |
-| LCD window frame | brushed silver, #cbc1b0 |
-| LCD background | #66654d (lit, in shadow) |
-| Ordinary keys, INPUT, digits | all the same, near-black, about #151413 |
-| Key label text | off-white #cfd1c1 |
-| Shifted labels | light blue #82acc4 |
-| Grey bars behind the digit-block shifted labels | #48443f |
-| Shift key | blank, blue #5e94bc |
-| Lower label (ON) | off-white |
+| Case body | #1e1d1b black |
+| Keyboard faceplate | #242220 dark grey |
+| Band behind the menu-key row | #46403c, lighter than the faceplate |
+| Display surround | dark grey band #4e4742; "27S" in heavy italics and "SCIENTIFIC" in italics, both white |
+| LCD window frame | brushed silver, #d4c9b9 |
+| LCD background | #64664e (lit, in shadow) |
+| Ordinary keys, INPUT, digits | all the same, near-black, about #040403 |
+| Key label text | white #fefbf5 |
+| Shifted labels | light blue #79abc2 (the most saturated pixels) |
+| Grey bars behind the digit-block shifted labels | #4b4642 |
+| Shift key | blank, blue #6098c0 |
+| Lower label (ON) | white |
+
+Earlier samples of the same photograph (smaller patches) gave #1c1a18,
+#292623, #4f4944, #cbc1b0, #82acc4, #48443f and #5e94bc; the differences
+show the precision of these values.
 
 The manual: "Most keys have a second function printed in blue above the
 key. The blue shift key accesses these operations." (src:
 [[sources/hp27s-om]] p. 21).
+
+## Case layout
+
+The 27S, 17BII and 17B share one case and key grid, the same on all
+three keyboard figures (src: [[sources/hp27s-om]] p. 2,
+[[sources/hp17bii-om]] p. 2, [[sources/hp17b-om]] p. 2). Measured on the
+two square-on photographs, P3 (27S) and P4 (17BII)
+([[sources/commons-pioneer-photos]]), in units of the menu-key pitch
+(100 = the distance from one menu key's left edge to the next; P3 and P4
+agree within about 3 units, P4 reads 0.7% taller):
+
+- Case: 670 (P3) and 674 (P4) wide, 1248 (P3) tall; 1.86 times as tall as
+  wide.
+- Display surround plate: x 33-641, y 128-466 from the case's top left;
+  the HP badge sits on the case above it, its logo square centred at
+  about (100, 78).
+- LCD bezel: x 50-624, y 200-418; the glass inside it x 64-610,
+  y 226-384. The dot matrix is narrower than the glass: one column is
+  about 3.9 units, one row about 4.6 (the dots are taller than wide).
+- Keyboard plate from y 478; a band of its own colour behind the menu
+  row, y 478-583.
+- Key footprints (cap with the dark skirt it stands on): rows 1-3 at
+  x 53 + 100 n, 70 wide; INPUT from the first column's left edge to the
+  second's right edge. Rows 4-7: a narrow key at x 51, 73 wide, and four
+  wide keys at x 165, 286, 408 and 530, 94 wide. Row tops at y 517, 615,
+  713, 813, 912, 1012 and 1111; rows 1-2 are 55 tall, rows 3-7 58.
+- The 27S's grey bars: 19 units tall, from 22 to 3 units above the key
+  footprint, from 3 units left of it to its right edge.
+- The model number is printed in heavy italics at the left of the
+  surround (cap height about 19 units, baseline about 188), the line name
+  ("SCIENTIFIC", "BUSINESS") at the right.
 
 ## Display and annunciators
 

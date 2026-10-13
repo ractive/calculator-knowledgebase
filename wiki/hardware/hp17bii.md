@@ -129,20 +129,28 @@ Approximate, sampled from photographs (P1 17BII, P2 17B in
 
 | Part | 17BII | 17B |
 | --- | --- | --- |
-| Case body | #383228 dark brown | #1c1614 near-black brown |
-| Keyboard faceplate | #433b32 | #1a1616 |
-| Display surround | brushed champagne-gold band, #efdcb0 (P1 #f7dfa3, manual #efd7b9); "17B II" in black, "BUSINESS" in dark grey | dark brown band, about #2a1c16; "17B" and "BUSINESS" in gold |
-| LCD window frame | grey-brown, #8a7a5c | gold, #735b37 |
+| Case body | #201f1d black (P4; P1 in warm light #302920) | near-black brown (P2 #0d090a, darkened by the flash) |
+| Keyboard faceplate | #1a1917 (P4; P1 #433b32) | #141213 (P2) |
+| Band behind the menu-key row | brown #4b3d34 (P4; P1 #6f614c) | lighter brown (P2) |
+| Display surround | brushed champagne-gold band, #d1b797 (P4; P1 #fdeaaa, manual #efd7b9); "17B II" in heavy black italics, "BUSINESS" in black italics | chocolate brown band, about #412e32 (P2); "17B" in heavy gold italics, "BUSINESS" upright in grey-tan |
+| LCD window frame | taupe, #93836c (P4; P1 #8b7759) | gold, #785d3a (P2) |
 | LCD background | #989e80 (lit) | not readable (off) |
-| Ordinary keys, INPUT, digits | all the same, dark brown #2f2820 | all the same, #181616 |
-| Key label text | off-white #d7cfbc | #c2bea5 |
-| Shifted labels | gold-orange #deae64 | orange #c78852 |
-| Shift key | blank, gold-orange #dcad56 | gold-orange (flash-lit #fbc05a) |
-| Lower labels (ON, ENTER) | off-white, as key text | off-white |
+| Ordinary keys, INPUT, digits | all the same, near-black #030302 (P4) | all the same, #140e0f (P2) |
+| Key label text | white #f3f3f1 | #c9ca9e (P2, flash-yellowed) |
+| Shifted labels | gold; P1 #f2c892, P4 clipped to #f3e9d5 | orange #c38552 (P2) |
+| Shift key | blank, gold #d5a356 (P4; P1 #ddae57) | gold-yellow (flash-lit #f6bc54) |
+| Lower labels (ON, ENTER) | cream, lighter than the gold labels (P1 #f9e9cb) | tan, like the shifted labels |
+
+P1's light is warmer and brighter than P4's scan, which is the more
+neutral of the two; the earlier values on this page came from P1.
 
 The manuals call the shift key "the colored shift key" and the shifted
-labels "printed in color" (src: [[sources/hp17bii-om]] p. 17). A thin gold
-line frames the 17BII keyboard (P1). The menu keys print a white ^.
+labels "printed in color" (src: [[sources/hp17bii-om]] p. 17). A thin
+light gold line frames the 17BII keyboard 9 units (hundredths of the menu-key pitch)
+inside the plate: down both sides from the band behind the menu row and
+along the bottom, not across the top (P1, P4); the 17B has none (P2). The
+menu keys print a white ^. The case and key grid are the 27S's
+([[hardware/hp27s]] "Case layout").
 
 ## Display and annunciators
 

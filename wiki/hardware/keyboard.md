@@ -41,6 +41,12 @@ tags: [saturn, keyboard]
   "key-down" whenever a ROM scanning row by row with interrupts on comes
   back to the held key's row; the Lewis ROMs do exactly that, and the
   key then acts only on release ([[hardware/hp42s]] "Held keys").
+  Emu48's change log reads the other way (the key interrupt as the
+  rising edge of the OR of IN[8:0], and raised after an OUT that finds an
+  IN bit set: [[emulators/emu48]] SP4, SP16); saturnus follows Ervin's
+  hardware description for the 1 ms scan, and keeps the OUT-dependent
+  reading for RSI and the SHUTDN wake, where the SASM manual and Voyage
+  describe IN as read (see [[hardware/interrupts]]).
 - The hardware scan only interrupts on key-down; there is no release
   interrupt. The ROM polls for release by re-arming a 1/16 s timer interrupt
   while any key is held (src: [[sources/keyboard-ervin]] 2).

@@ -154,6 +154,11 @@ alone give #FFFF).
 
 - Keyboard through OUT and IN like the 48 (src: [[sources/hp28s-procnotes]]
   "I/O Registers"); the 42S matrix is on [[hardware/hp42s]].
+- The ROMs debounce inside the keyboard interrupt, scanning row by row
+  every 2 ms (paced by TIMER2) with interrupts enabled; the keyboard
+  interrupt must therefore come from a scan of the whole keyboard, one per
+  key-down, or a held key re-enters the handler for as long as it is held
+  (42S and 27S ROMs in saturnus; [[hardware/hp42s]] "Held keys").
 - Beeper: the self-test's BEEP step toggles OUT bits 10 and 11 in opposite
   phase (OUT #43F / #83F), a push-pull drive of the piezo (42S ROM). The 48
   uses OUT bit 11 alone ([[hardware/keyboard]]).

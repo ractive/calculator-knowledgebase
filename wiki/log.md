@@ -737,3 +737,12 @@ with matrix codes, clock, language prompt and self-test, from the manual
 and from running @ractive's image in saturnus (iteration 44). Corrected the
 19BII row of [[hardware/saturn-models]] (137 x 32, not 132 x 32; 8 KB RAM);
 the 19BII added to [[hardware/clocks]] and [[hardware/lewis]].
+
+## [2026-10-13] ingest | HP-42S Owner's Manual; held keys on the Lewis
+
+Added [[sources/hp42s-om]] (function preview and NULL, p. 75). Traced the
+42S and 27S ROMs' key handling in saturnus: the handler's row-by-row
+debounce paced by TIMER2, and why an OUT-dependent keyboard interrupt
+starves the main loop while a key is held. Updated [[hardware/hp42s]]
+"Held keys", [[hardware/lewis]] "Keyboard, beeper, IR" and
+[[hardware/keyboard]] "Scanning model".

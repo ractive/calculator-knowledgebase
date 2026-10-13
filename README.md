@@ -80,6 +80,17 @@ need tools such as `pdftotext` or OCR. A full fetch is about 430 MB. The
 sites hosting these files are run by volunteers; please do not run the
 script more often than you need to.
 
+The mega.nz documents decrypt in the browser, so download them there, put
+them anywhere in `raw/`, and move each to its manifest path (the SHA-256
+tells which is which). They are linked from Marcos Navarro's page
+<https://sites.google.com/view/mnavarrodocs/home>:
+
+| Path under `raw/` | File on mega.nz | Link |
+| --- | --- | --- |
+| `saturn-hardware/Interrupts48-R_DUCHESNE-EN-Rev07c.pdf` | `Interrupts48-R_DUCHESNE-EN-Rev07c.pdf` | <https://mega.nz/file/y5ojHRKa#sPO9n2n66WacNPqsQdzN-Ws9qpJ6aq9GJnq-d4RIjMY> |
+| `saturn-hardware/cannon-tips-v1.pdf` | `SDTv1B (Douglas Cannon).pdf` | <https://mega.nz/file/2kZGjaZK#hDLRX_k_biyD2sYc5F7fR_jzjGlkkrTbWUslvl8P0ao> |
+| `saturn-hardware/cannon-tips-v2.pdf` | `SDTv2B (Douglas Cannon).pdf` | <https://mega.nz/file/rpgSnYrL#Pxo6AOYo_Lq_g2z8Zy1CPX2lTxgcNn9Bae0WH9rYTPU> |
+
 ## Licence
 
 The text in this repository (the wiki, the manifest and these notes) is

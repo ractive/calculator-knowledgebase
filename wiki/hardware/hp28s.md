@@ -9,6 +9,7 @@ sources:
   - "[[sources/kml20]]"
   - "[[sources/emu42-pioneer-dump]]"
   - "[[sources/hp28s-procnotes]]"
+  - "[[sources/commons-hp28s-photos]]"
 tags: [model, clamshell, lewis, keyboard, display, self-test]
 ---
 
@@ -105,6 +106,10 @@ at #309, INPORT at #30C, LEDOUT at #30D, the timer controls at #30E/#30F
   last cell one column short (inferred: 23 x 6 = 138).
 - The seven annunciators sit in a row above the dot matrix, not inside
   it (OM p. 27 drawing).
+- A menu's six labels fill the bottom line: inverse boxes 22 pixels wide
+  with a 1-pixel gap, the first from column 0, so 23 pixels apart and the
+  last ending at column 136 (the TRIG menu, 28S ROM). The 48's are 21
+  wide, 22 apart ([[hardware/display]] "Menu labels").
 - Display RAM: each column is eight nibbles, 32 bits, least significant
   bit the top row. The slave shows the left 68 columns from #FF840
   (offset #40), the master the right 69 from #FFC00, each half's
@@ -298,6 +303,52 @@ Key, shifted label, then OUT bit / IN value (OM p. 26; [[sources/kml20]]):
   line, stop a program); shift ON is OFF (OM p. 20, 30).
 - KEY returns the key-top text except INS, DEL, UP, DOWN, LEFT, RIGHT,
   CURSOR, BACK (backspace) and a space for SPACE (RM p. 197).
+
+## Case layout
+
+Measured on P1 of [[sources/commons-hp28s-photos]], checked against P2,
+in units of the display half's menu-key pitch (100 = from one menu
+key's left edge to the next), each half from its own top-left corner.
+The OM's keyboard figures (p. 26-27) give the grid and the labels, not
+the sizes.
+
+- Each half is about 836 x 1414 units (1.69 times as tall as wide). On
+  P1 the letter half is 2% larger than the display half (it lies nearer
+  the lens), so its pixels are scaled by 0.932 and the display half's by
+  0.951; P2 shows the letter keys' pitch equal to the menu keys' within
+  3%.
+- The hinge's barrel runs along the letter half's right edge, about 52
+  units thick, from y 177 to 1323; between it and the keys is a channel
+  of bare case.
+- Letter half: a dark recessed reference card x 42-746, y 28-610 (the
+  object types, their delimiters and an example each, in grey boxes
+  under the headings "Object Type", "Symbol", "Example"; groups Data,
+  Names, Procedures), then the light keyboard plate x 37-736, y
+  620-1364. Key footprints (cap and the dark skirt it stands on) at
+  x 83 + 102.8 col, 83 wide, rows at y 683 + 115.8 row, 73 tall; SPACE
+  over the first two columns.
+- Display half: a dark spine x 0-100 beside the keys; the display
+  housing x 100-828, y 6-604, raised, with a recessed name plate
+  x 143-804, y 43-247 carrying the HP logo (its square centred near
+  (224, 102)), "28S" in heavy italics at the left (baseline about 223)
+  and "ADVANCED / SCIENTIFIC CALCULATOR" in italics at the right; the
+  LCD glass x 155-782, y 337-540. The light keyboard plate x 112-818,
+  y 621-1370. Key footprints: rows 1-3 at x 164 + 100 col, 80 wide;
+  ENTER over the first two columns; rows 4-7 a key at x 164, 80 wide,
+  then four wide keys at x 276 + 123.3 n, 103 wide. Row tops at y 646 +
+  101.7 row, 71 tall.
+- Light bands behind the menu names: over the letter half's first two
+  rows (ARRAY to PRINT) and CONTRL, BRANCH, TEST (bracketed PROGRAM),
+  and over MODE, LOGS, PLOT, CUSTOM; about 18 units tall, ending 5
+  above the key's footprint.
+- The cursor menu (INS DEL ▲ ▼ ◀ ▶) over the menu keys and ATTN under
+  ON are printed white on the light plate; the shifted labels in a dark
+  red.
+- Colours (approximate, P1; P2 agrees): case about #363437, display
+  housing #424043, keyboard plates #a29d91, light bands #c9c2b3, dark
+  keys #6d685f with white labels, light keys (menu keys, digits,
+  operators, NEXT) #cdcabb to #bdbaa7 with black labels, the shift key a
+  dark red #7e2a35, shifted labels about #6b3839, the LCD #b7c6bf.
 
 ## ON chords
 

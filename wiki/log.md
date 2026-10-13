@@ -727,3 +727,13 @@ block #FF800, master block #FFC00). Filled [[hardware/hp28s]] (memory
 map, two chips, display RAM, annunciator words, ROM image form, the
 self-test's "8 FAIL"), answered [[questions/lewis-memory-map]] for
 emulation, updated [[hardware/lewis]].
+
+## [2026-10-13] ingest | HP 19BII Owner's Manual; the 19BII's ROM in saturnus
+
+Fetched the 19BII Owner's Manual (hpcalc.org community scan) into `raw/`,
+with its manifest entries. Created [[sources/hp19bii-om]] and
+[[hardware/hp19bii]]: memory map, display, annunciators, both keyboards
+with matrix codes, clock, language prompt and self-test, from the manual
+and from running @ractive's image in saturnus (iteration 44). Corrected the
+19BII row of [[hardware/saturn-models]] (137 x 32, not 132 x 32; 8 KB RAM);
+the 19BII added to [[hardware/clocks]] and [[hardware/lewis]].

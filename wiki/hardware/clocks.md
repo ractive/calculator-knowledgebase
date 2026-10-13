@@ -1,7 +1,7 @@
 ---
 title: "Which models have a clock, and how each is set"
 type: hardware
-models: [48sx, 48gx, 49g, 38g, 39g, 40g, 42s, 27s, 17bii, 17b, 28s]
+models: [48sx, 48gx, 49g, 38g, 39g, 40g, 42s, 27s, 17bii, 17b, 28s, 19bii]
 status: draft
 sources:
   - "[[sources/hp48sx-om]]"
@@ -12,6 +12,7 @@ sources:
   - "[[sources/hp17bii-om]]"
   - "[[sources/hp17b-om]]"
   - "[[sources/hp28s-rm]]"
+  - "[[sources/hp19bii-om]]"
 tags: [clock, timers]
 ---
 
@@ -21,7 +22,8 @@ Every model here keeps the date and time except the 42S and the 28S. How the own
 sets it, per model, from the manuals; what an emulator that sets the
 clock for the user by keys has to know is under each. The hardware that
 keeps the time: [[hardware/timers]] (48, 49, aplet models) and
-[[questions/pioneer-clock-alarm-hardware]] (27S, 17B, 17BII).
+[[questions/pioneer-clock-alarm-hardware]] (27S, 17B, 17BII; the 19BII
+has not been traced).
 
 | Model | Clock | Set by | Source |
 | --- | --- | --- | --- |
@@ -34,6 +36,7 @@ keeps the time: [[hardware/timers]] (48, 49, aplet models) and
 | 28S | no | - | its reference manual has no time or date command; RDZ with 0 seeds from "the system clock" ([[sources/hp28s-rm]], RDZ) |
 | 27S | yes | TIME application (shift ÷), SET menu | [[sources/hp27s-om]] p. 137-139 |
 | 17BII, 17B | yes | MAIN, TIME, SET menu | [[sources/hp17bii-om]], [[sources/hp17b-om]] p. 132 |
+| 19BII | yes | MAIN, TIME, SET menu, as the 17BII | [[sources/hp19bii-om]] p. 176-177; [[hardware/hp19bii]] "Clock" |
 
 ## 48SX, 48GX, 49G
 
@@ -79,7 +82,10 @@ occur, while `SOLVER` does; the 27S and 17BII images hold `DATE` and
 manual is not in `raw/`; its table of contents would settle it beyond
 doubt.
 
-## 27S, 17BII, 17B
+## 27S, 17BII, 17B, 19BII
+
+The 19BII's TIME and SET menus are the 17BII's (src:
+[[sources/hp19bii-om]] p. 175-177); its own addresses are below.
 
 - TIME is shift ÷ on the 27S and the fourth label of MAIN (shift EXIT)
   on the 17B and 17BII; SET is TIME's fourth label. SET's labels are
@@ -94,13 +100,15 @@ doubt.
   keeps a PM already set was not tried; pressing 12/24 to 24-hour form,
   keying the time and pressing 12/24 again avoids the question.
 - Seen in saturnus: one RAM nibble holds both SET settings, bit 0 set
-  for day.month.year and bit 2 set for 24-hour time: #50025 on the
-  27S, #5002B on the 17BII, #5002A on the 17B (international images), found
-  by pressing M/D and 12/24 and comparing RAM. Read only; nothing else
-  about it is known.
+  for day.month.year and bit 2 set for 24-hour time: #50025 on the 27S, the
+  17BII's #5002B, the 17B's #5002A (international images) and the
+  19BII's #C41E1, found by pressing M/D and 12/24 and comparing RAM. Read
+  only; nothing else about it is known.
 - An international 17B or 17BII after a memory loss asks for its
   language first and takes no other key (shift EXIT does not leave it).
   Seen in saturnus: the nibble at #50092 (17BII) or #50091 (17B) reads 0
-  there and 2 in every menu tried after it.
+  there and 2 in every menu tried after it. Every 19BII image known asks
+  too; its nibble is #C402B, with the same values (seen in saturnus; its
+  menu keys pick the languages, English the sixth).
 - The number keyed stays in the calculator line afterwards, so what it
   showed before is replaced, as when the owner sets the clock by hand.

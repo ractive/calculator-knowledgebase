@@ -1,0 +1,193 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 James Bergamin
+"""Tests of scripts/fetch-sources, offline: a copy of the script in a
+temporary tree with its own manifest, fetching from a local http.server.
+
+    scripts/test-fetch-sources        # python3 -m unittest, verbose
+"""
+
+import gzip
+import hashlib
+import http.server
+import importlib.machinery
+import importlib.util
+import io
+import json
+import shutil
+import subprocess
+import sys
+import tempfile
+import threading
+import unittest
+import zipfile
+from pathlib import Path
+
+SCRIPT = Path(__file__).resolve().parent / "fetch-sources"
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+class Handler(http.server.SimpleHTTPRequestHandler):
+    def log_message(self, *args):
+        pass
+
+    def do_GET(self):
+        if self.path == "/gz":
+            body = gzip.compress(b"inflated text")
+            self.send_response(200)
+            self.send_header("Content-Encoding", "gzip")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        super().do_GET()
+
+
+class FetchSources(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.www = Path(tempfile.mkdtemp(prefix="fetch-www-"))
+        (cls.www / "good.txt").write_bytes(b"good")
+        (cls.www / "bad.txt").write_bytes(b"tampered")
+        (cls.www / "big.bin").write_bytes(b"x" * 4096)
+        buf = io.BytesIO()
+        with zipfile.ZipFile(buf, "w") as zf:
+            zf.writestr("A.TXT", b"member a")
+            zf.writestr("B.TXT", b"member b, too long")
+        (cls.www / "pack.zip").write_bytes(buf.getvalue())
+        handler = lambda *a, **k: Handler(*a, directory=str(cls.www), **k)  # noqa: E731
+        cls.server = http.server.ThreadingHTTPServer(("127.0.0.1", 0), handler)
+        threading.Thread(target=cls.server.serve_forever, daemon=True).start()
+        cls.base = f"http://127.0.0.1:{cls.server.server_address[1]}"
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.server.shutdown()
+        shutil.rmtree(cls.www, ignore_errors=True)
+
+    def setUp(self):
+        self.root = Path(tempfile.mkdtemp(prefix="fetch-tree-"))
+        (self.root / "scripts").mkdir()
+        (self.root / "sources").mkdir()
+        shutil.copy(SCRIPT, self.root / "scripts" / "fetch-sources")
+        self.raw = self.root / "raw"
+
+    def tearDown(self):
+        shutil.rmtree(self.root, ignore_errors=True)
+
+    def run_with(self, entries, *args):
+        (self.root / "sources" / "manifest.json").write_text(json.dumps({"entries": entries}))
+        return subprocess.run(
+            [sys.executable, str(self.root / "scripts" / "fetch-sources"), *args],
+            capture_output=True, text=True, timeout=120,
+        )
+
+    def module(self):
+        loader = importlib.machinery.SourceFileLoader("fetch_sources", str(self.root / "scripts" / "fetch-sources"))
+        spec = importlib.util.spec_from_loader("fetch_sources", loader)
+        mod = importlib.util.module_from_spec(spec)
+        loader.exec_module(mod)
+        return mod
+
+    def fetch(self, path, url, data, **more):
+        return {"path": path, "method": "fetch", "url": f"{self.base}/{url}", "sha256": sha(data), "size": len(data), **more}
+
+    def test_paths_outside_raw_are_refused(self):
+        for bad in ("/etc/passwd", "../escape.txt", "a/../../escape.txt", ""):
+            r = self.run_with([self.fetch(bad, "good.txt", b"good")])
+            self.assertEqual(r.returncode, 1, bad)
+            self.assertIn("REFUSED", r.stderr, bad)
+        r = self.run_with([{"path": "a.txt", "method": "zip-member", "zip": "../x.zip", "member": "A.TXT", "sha256": sha(b"member a")}])
+        self.assertIn("REFUSED", r.stderr)
+        self.assertFalse((self.root / "escape.txt").exists())
+        self.assertFalse(self.raw.exists(), "nothing was fetched")
+
+    def test_a_link_out_of_raw_is_refused(self):
+        self.raw.mkdir()
+        outside = Path(tempfile.mkdtemp(prefix="fetch-out-"))
+        try:
+            (self.raw / "link").symlink_to(outside)
+            r = self.run_with([self.fetch("link/x.txt", "good.txt", b"good")])
+            self.assertIn("resolves outside raw/", r.stderr)
+            self.assertEqual(list(outside.iterdir()), [])
+        finally:
+            shutil.rmtree(outside, ignore_errors=True)
+
+    def test_good_files_land_and_bad_ones_do_not(self):
+        r = self.run_with([
+            self.fetch("ok/good.txt", "good.txt", b"good"),
+            self.fetch("ok/bad.txt", "bad.txt", b"expected"),  # same size, other bytes
+            self.fetch("ok/gz.txt", "gz", b"inflated text"),
+            self.fetch("ok/missing.txt", "missing.txt", b"x"),
+        ])
+        self.assertEqual(r.returncode, 1, r.stdout)
+        self.assertEqual((self.raw / "ok/good.txt").read_bytes(), b"good")
+        self.assertEqual((self.raw / "ok/gz.txt").read_bytes(), b"inflated text")
+        self.assertFalse((self.raw / "ok/bad.txt").exists(), "a mismatch is not kept")
+        self.assertIn("SHA-256 MISMATCH", r.stdout)
+        self.assertIn("ok/missing.txt: FAILED", r.stdout)
+        self.assertEqual(list(self.raw.rglob("*.part")), [], "no .part is left")
+
+    def test_unverified_entries_are_kept_and_named(self):
+        r = self.run_with([self.fetch("u/bad.txt", "bad.txt", b"bad", hash_stable=False)])
+        self.assertEqual(r.returncode, 0, r.stdout)
+        self.assertEqual((self.raw / "u/bad.txt").read_bytes(), b"tampered")
+        self.assertIn("fetch   u/bad.txt (unverified)", r.stdout)
+        self.assertIn("Unverified (1", r.stdout)
+        r = self.run_with([self.fetch("u/bad.txt", "bad.txt", b"bad", hash_stable=False)], "--dry-run")
+        self.assertIn("(unverified)", r.stdout)
+
+    def test_sizes_are_capped(self):
+        # The manifest says 10 bytes; the server sends 4096.
+        entry = self.fetch("big.bin", "big.bin", b"x" * 4096)
+        entry["size"] = 10
+        r = self.run_with([entry])
+        self.assertIn("larger than 10 bytes", r.stdout)
+        self.assertFalse((self.raw / "big.bin").exists())
+        self.assertEqual(list(self.raw.rglob("*.part")), [])
+        # A zip member over its size is not extracted.
+        r = self.run_with([
+            {"path": "z/a.txt", "method": "zip-member", "zip_url": f"{self.base}/pack.zip", "member": "A.TXT", "sha256": sha(b"member a"), "size": 8},
+            {"path": "z/b.txt", "method": "zip-member", "zip_url": f"{self.base}/pack.zip", "member": "B.TXT", "sha256": sha(b"member b"), "size": 8},
+        ])
+        self.assertEqual((self.raw / "z/a.txt").read_bytes(), b"member a")
+        self.assertFalse((self.raw / "z/b.txt").exists())
+        self.assertIn("z/b.txt: FAILED: member B.TXT is larger than 8 bytes", r.stdout)
+
+    def test_derived_commands_run_without_a_shell_and_only_allowed_tools(self):
+        good = {"path": "d/out.txt", "method": "derived", "derived_from": "d/in.txt",
+                "command": "cp d/in.txt d/out.txt", "sha256": sha(b"source")}
+        self.raw.joinpath("d").mkdir(parents=True)
+        (self.raw / "d/in.txt").write_bytes(b"source")
+        r = self.run_with([good], "--derive")
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertEqual((self.raw / "d/out.txt").read_bytes(), b"source")
+        for command in ("rm -rf d", "cp d/in.txt ../out.txt", "cp d/in.txt d/x.txt; touch pwned"):
+            r = self.run_with([dict(good, command=command)], "--derive")
+            self.assertEqual(r.returncode, 1, command)
+            self.assertIn("REFUSED", r.stderr, command)
+        self.assertTrue((self.raw / "d/in.txt").exists())
+        self.assertFalse((self.raw / "pwned").exists())
+        # A failing command is reported, not ignored.
+        (self.raw / "d/out.txt").unlink()
+        r = self.run_with([dict(good, command="cp d/nothing.txt d/out.txt")], "--derive")
+        self.assertIn("d/out.txt: FAILED", r.stdout)
+
+    def test_https_never_redirects_to_http(self):
+        (self.root / "sources" / "manifest.json").write_text('{"entries": []}')
+        mod = self.module()
+        handler = mod.NoDowngrade()
+        import urllib.request
+        req = urllib.request.Request("https://example.org/a")
+        with self.assertRaises(mod.Refused):
+            handler.redirect_request(req, None, 302, "Found", {}, "http://example.org/a")
+        self.assertIsNotNone(handler.redirect_request(req, None, 302, "Found", {}, "https://example.org/b"))
+        plain = urllib.request.Request("http://example.org/a")
+        self.assertIsNotNone(handler.redirect_request(plain, None, 302, "Found", {}, "http://example.org/b"))
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

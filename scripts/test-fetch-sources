@@ -96,7 +96,7 @@ class FetchSources(unittest.TestCase):
         return {"path": path, "method": "fetch", "url": f"{self.base}/{url}", "sha256": sha(data), "size": len(data), **more}
 
     def test_paths_outside_raw_are_refused(self):
-        for bad in ("/etc/passwd", "../escape.txt", "a/../../escape.txt", ""):
+        for bad in ("/etc/passwd", "../escape.txt", "a/../../escape.txt", "", ".", "a/.."):
             r = self.run_with([self.fetch(bad, "good.txt", b"good")])
             self.assertEqual(r.returncode, 1, bad)
             self.assertIn("REFUSED", r.stderr, bad)
@@ -130,6 +130,20 @@ class FetchSources(unittest.TestCase):
         self.assertIn("SHA-256 MISMATCH", r.stdout)
         self.assertIn("ok/missing.txt: FAILED", r.stdout)
         self.assertEqual(list(self.raw.rglob("*.part")), [], "no .part is left")
+
+    def test_entries_without_a_hash_are_refused(self):
+        entry = self.fetch("h/good.txt", "good.txt", b"good")
+        del entry["sha256"]
+        r = self.run_with([entry])
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("no sha256", r.stderr)
+        r = self.run_with([dict(entry, sha256=None)])
+        self.assertIn("no sha256", r.stderr)
+        # Unverified without a hash: fetched, reported as unverified.
+        r = self.run_with([dict(entry, hash_stable=False)])
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        self.assertEqual((self.raw / "h/good.txt").read_bytes(), b"good")
+        self.assertIn("unverified", r.stdout)
 
     def test_unverified_entries_are_kept_and_named(self):
         r = self.run_with([self.fetch("u/bad.txt", "bad.txt", b"bad", hash_stable=False)])
@@ -165,12 +179,28 @@ class FetchSources(unittest.TestCase):
         r = self.run_with([good], "--derive")
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
         self.assertEqual((self.raw / "d/out.txt").read_bytes(), b"source")
-        for command in ("rm -rf d", "cp d/in.txt ../out.txt", "cp d/in.txt d/x.txt; touch pwned"):
+        for command in (
+            "rm -rf d", "cp d/in.txt ../out.txt", "cp d/in.txt d/x.txt; touch pwned",
+            "cp --target-directory=/tmp d/in.txt", "cp -t/tmp d/in.txt", "cp -t /tmp d/in.txt",
+            "cp d/in.txt d/a.txt d/b.txt", "cp d/in.txt",
+            "textutil -convert html -output d/o.txt d/in.txt", "textutil -convert txt -output /tmp/o.txt d/in.txt",
+            "textutil -convert txt -output=../o.txt d/in.txt", "textutil -convert txt -output d/o.txt -extension x d/in.txt",
+            "pdftotext -layout d/in.pdf /tmp/out.txt", "pdftotext -enc=EBCDIC d/in.pdf d/o.txt", "pdftotext -layout=1 d/in.pdf d/o.txt",
+            "cp d/in.txt .",
+        ):
             r = self.run_with([dict(good, command=command)], "--derive")
             self.assertEqual(r.returncode, 1, command)
             self.assertIn("REFUSED", r.stderr, command)
         self.assertTrue((self.raw / "d/in.txt").exists())
         self.assertFalse((self.raw / "pwned").exists())
+        # The manifest's own forms pass the check.
+        mod_entries = [
+            dict(good, command="textutil -convert txt -output d/o.txt d/in.htm"),
+            dict(good, command="pdftotext -layout d/in.pdf d/o.txt"),
+            dict(good, command="pdftotext -enc=UTF-8 d/in.pdf d/o.txt"),
+        ]
+        r = self.run_with(mod_entries, "--dry-run")
+        self.assertNotIn("REFUSED", r.stderr)
         # A failing command is reported, not ignored.
         (self.raw / "d/out.txt").unlink()
         r = self.run_with([dict(good, command="cp d/nothing.txt d/out.txt")], "--derive")

@@ -48,8 +48,15 @@ TIMEOUT = 120
 # Largest download or extracted file without a size in the manifest (the
 # largest source is about 130 MB).
 MAX_BYTES = 512 << 20
-# The only programs a 'derived' entry's command may run.
-DERIVE_TOOLS = {"textutil", "pdftotext", "cp"}
+# The only programs a 'derived' entry's command may run, each with the
+# options it may take: None for a flag, a set for the values allowed, "path"
+# for a file inside raw/. Then how many file arguments (inside raw/) it
+# takes, as (least, most).
+DERIVE_TOOLS = {
+    "textutil": ({"-convert": {"txt"}, "-output": "path"}, (1, 1)),
+    "pdftotext": ({"-layout": None, "-nopgbrk": None, "-enc": {"UTF-8", "Latin1", "ASCII7"}}, (2, 2)),
+    "cp": ({}, (2, 2)),
+}
 
 
 class Refused(Exception):
@@ -63,7 +70,9 @@ def inside_raw(rel, what="path"):
         raise Refused(f"{what} {rel!r} is not a relative path inside raw/")
     full = (RAW / p).resolve()
     root = RAW.resolve()
-    if full != root and root not in full.parents:
+    if full == root:
+        raise Refused(f"{what} {rel!r} is raw/ itself, not a file in it")
+    if root not in full.parents:
         raise Refused(f"{what} {rel!r} resolves outside raw/")
     return RAW / p
 
@@ -94,7 +103,8 @@ def verified_replace(entry, tmp, dest, problems):
     """Move tmp over dest when its SHA-256 matches entry (or the entry is
     unverified); otherwise delete tmp and record the mismatch. Returns
     whether dest was replaced."""
-    if entry is None or entry.get("sha256") is None or check_hash(entry, tmp, problems, entry["path"]):
+    # A missing hash is a mismatch: only an unverified entry is kept then.
+    if check_hash(entry, tmp, problems, entry["path"]):
         tmp.replace(dest)
         return True
     if unverified(entry):
@@ -174,7 +184,7 @@ class Fetcher:
 
 def check_hash(entry, path, problems, name=None):
     got = sha256_of(path)
-    if got == entry["sha256"]:
+    if isinstance(entry.get("sha256"), str) and got == entry["sha256"]:
         return True
     if entry["method"] == "derived":
         kind = "differs from the library's conversion (tool version; expected)"
@@ -188,7 +198,7 @@ def check_hash(entry, path, problems, name=None):
 
 def present(entry):
     p = RAW / entry["path"]
-    return p.is_file() and sha256_of(p) == entry["sha256"]
+    return p.is_file() and isinstance(entry.get("sha256"), str) and sha256_of(p) == entry["sha256"]
 
 
 def part_of(dest):
@@ -196,17 +206,45 @@ def part_of(dest):
 
 
 def derive_argv(entry):
-    """The derived entry's command as an argv list: an allowed tool, and
-    every argument that is not an option inside raw/."""
-    argv = shlex.split(entry["command"])
+    """The derived entry's command as an argv list: an allowed tool with
+    only its allowed options (DERIVE_TOOLS), every path inside raw/."""
+    command = entry["command"]
+    argv = shlex.split(command)
     if not argv or argv[0] not in DERIVE_TOOLS:
-        raise Refused(f"command {entry['command']!r}: only {', '.join(sorted(DERIVE_TOOLS))} may run")
-    for arg in argv[1:]:
+        raise Refused(f"command {command!r}: only {', '.join(sorted(DERIVE_TOOLS))} may run")
+    options, (least, most) = DERIVE_TOOLS[argv[0]]
+
+    def value_ok(flag, value):
+        kind = options[flag]
+        if kind == "path":
+            inside_raw(value, f"{flag} value")
+        elif value not in kind:
+            raise Refused(f"command {command!r}: {flag} {value!r} is not allowed")
+
+    files = []
+    rest = iter(argv[1:])
+    for arg in rest:
         # No shell runs it; a shell's syntax in it is a mistake or worse.
         if any(c in arg for c in ";&|<>$`*?\n"):
-            raise Refused(f"command {entry['command']!r}: {arg!r} looks like shell syntax")
+            raise Refused(f"command {command!r}: {arg!r} looks like shell syntax")
         if not arg.startswith("-"):
             inside_raw(arg, "command argument")
+            files.append(arg)
+            continue
+        flag, eq, value = arg.partition("=")
+        if flag not in options:
+            raise Refused(f"command {command!r}: option {arg!r} is not allowed for {argv[0]}")
+        if options[flag] is None:
+            if eq:
+                raise Refused(f"command {command!r}: {flag} takes no value")
+            continue
+        if not eq:
+            value = next(rest, None)
+            if value is None:
+                raise Refused(f"command {command!r}: {flag} needs a value")
+        value_ok(flag, value)
+    if not least <= len(files) <= most:
+        raise Refused(f"command {command!r}: {argv[0]} takes {least}-{most} file arguments, not {len(files)}")
     return argv
 
 
@@ -231,6 +269,8 @@ def main():
                     inside_raw(e[key], key)
             if e.get("command"):
                 derive_argv(e)
+            if not isinstance(e.get("sha256"), str) and not unverified(e):
+                raise Refused("no sha256 (and not hash_stable: false)")
         except Refused as err:
             refused.append(f"{e.get('path')!r}: REFUSED: {err}")
     if refused:

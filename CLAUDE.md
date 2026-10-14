@@ -58,8 +58,14 @@ implementations from it. Therefore:
 ```sh
 scripts/fetch-sources --dry-run
 scripts/fetch-sources          # fetch + zip-member entries into raw/, SHA-256 checked
-scripts/fetch-sources --derive # also the .txt conversions (textutil, cp)
+scripts/fetch-sources --derive # also the .txt conversions (textutil, pdftotext, cp)
+scripts/test-fetch-sources     # its tests, offline (a local server, a fake manifest)
 ```
+
+A file replaces the one in `raw/` only once its SHA-256 matches; manifest
+paths must stay inside `raw/`, the manifest size caps a download, and a
+`derived` command runs without a shell, limited to the tools in the
+script's `DERIVE_TOOLS` (add a new tool there).
 
 `manual` entries (mega.nz files, photographs that are not distributed) and
 derived OCR texts are listed with instructions at the end. To add a source:

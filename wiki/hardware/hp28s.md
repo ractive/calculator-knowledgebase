@@ -436,6 +436,30 @@ flashes in the top line at every key; worse, the stack lines show only
 object types ("No Room to Show Stack"), and at the end an "Out of
 Memory" purge dialogue takes over (OM p. 188-189).
 
+## Number entry
+
+The ROM's number parser (rev. 2BB, from #108E7) stores a real typed
+with a zero before the point and zeros after it unnormalised: `0.00042`
+becomes mantissa 0.0042 with exponent -1, where `.00042` becomes 4.2
+with exponent -4. Both show as `.00042` in STD, and arithmetic
+normalises its result (0.00042 1 * is right), but MANT returns .0042,
+XPON -1, and ENG shows such a number with leading zeros (0.0012345 in
+3 ENG as `001.2E-3`). Traced in saturnus, every branch checked against
+the Saturn instruction semantics (2026-10-19):
+
+- A loop at #10938 skips leading zeros; it counts the exponent down
+  only once the point has been seen, so for `.000` the zeros after the
+  point are dropped.
+- With `0.` the loop stops at the point. The code at #109A5-#109C1
+  handles the point, and its GOTO lands at #1099A, the entry of the digit
+  loop, not back in the zero loop. The zeros after the point are then
+  stored as mantissa digits and nothing normalises the mantissa before
+  the object is built.
+- The 28C ROM holds the same code (the same nibble sequence).
+
+The 48SX (rev. J) and 48GX (rev. R) parsers normalise: 0.0001 gives
+MANT 1 and XPON -4 on both.
+
 ## ROM image
 
 The owner's image (128 KB, SHA-256 51589fa3...1e921c, "Version 2BB" in
@@ -452,3 +476,5 @@ at #01C8D (28S ROM).
 - Other self-test failure numbers than 8 (the ROM step's), and what the
   factory test on ON + ▼ checks.
 - A character-cell width stated outright (six columns is inferred).
+- A real 28S confirming the unnormalised number entry ("Number entry"):
+  0.00042 ENTER MANT should give .0042 there too.

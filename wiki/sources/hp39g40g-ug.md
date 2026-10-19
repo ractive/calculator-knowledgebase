@@ -11,7 +11,8 @@ models: [39g, 40g]
 
 # HP 39G/40G User's Guide
 
-288-page text PDF. Read: the annunciator table (ch. 1), "Downloading
+288-page text PDF; its text layer, one block per PDF page, is in
+`raw/manuals/text/hp39g40g-ug-en.txt` (pdftotext -layout, 2026-10-19). Read: the annunciator table (ch. 1), "Downloading
 e-lessons" and "Sending and receiving aplets" (p. 16-4, 16-5), and the
 matrix/list send-receive notes in the Matrices and Lists chapters. No
 protocol details appear anywhere in the guide (no mention of Kermit or

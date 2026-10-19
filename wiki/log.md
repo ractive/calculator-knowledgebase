@@ -746,3 +746,10 @@ debounce paced by TIMER2, and why an OUT-dependent keyboard interrupt
 starves the main loop while a key is held. Updated [[hardware/hp42s]]
 "Held keys", [[hardware/lewis]] "Keyboard, beeper, IR" and
 [[hardware/keyboard]] "Scanning model".
+
+## [2026-10-19] ingest | 38G and 39G/40G guides as text
+
+Kept the text of [[sources/hp38g-ug]] (OCR of the scan, 300 dpi) and
+[[sources/hp39g40g-ug]] (the PDF's text layer) under `raw/manuals/text/`,
+one block per PDF page, for saturnus's command reference of the 38G, 39G
+and 40G.

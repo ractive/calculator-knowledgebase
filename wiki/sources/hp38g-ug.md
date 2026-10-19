@@ -12,9 +12,10 @@ models: [38g]
 # HP 38G Graphing Calculator User's Guide
 
 HP part F1200-90013, printing of January 1998 (back cover), 228-page scan
-with **no text layer**. Read through a local OCR pass (tesseract at 150 dpi;
-the OCR text is not kept in `raw/`) plus a visual check of the keyboard
-figure. OCR mangles key glyphs, so key names below come from the figure,
+with **no text layer**. Read through a local OCR pass plus a visual check
+of the keyboard figure. Since 2026-10-19 the OCR text is kept, one block per
+PDF page: `raw/manuals/text/hp38g-ug-en.txt` (tesseract at 300 dpi, `--psm
+4`). OCR mangles key glyphs, so key names below come from the figure,
 not the OCR. Cite by the guide's printed page (`1-2`, `9-8`), or "inside
 cover" for the keyboard figure (PDF page 2).
 

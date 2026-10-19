@@ -213,3 +213,12 @@ expect: [[questions/custom-rom-for-saturn-calculators]].
 
 Keeps the date and time; how it is set, and what saturnus found about
 setting it by keys: [[hardware/clocks]].
+
+## ROM quirks
+
+- `DEGREE` gives the degree in the CAS's current variable (VX in CASDIR,
+  X by default), not the total degree: `'X^2*Y^2+X'` gives 2, `'Y^5+X'`
+  gives 1, and with VX set to Y the latter gives 5. Without that variable
+  it takes the first variable in alphabetical order: `'Z^4+Y'` gives 1,
+  `'B^4+A'` 1, `'A^4+B'` 4. Seen in saturnus with ROM 2.15 (2026-10-19);
+  no manual in `raw/` describes the command.

@@ -55,6 +55,32 @@ has not been traced).
   saturnus: `TIME` gives H.MMSSss, `DATE` 10.132026 for 13 October
   2026 with flag -42 clear).
 
+### 49G: setting the clock from the Kermit server
+
+Seen in saturnus with ROM 2.15 and 2.10 (2026-10-19), by tracing the ROM
+while it ran `→DATE`; not checked on a real 49G or in saturnng.
+
+- Both the 48GX (ROM R) and the 49G keep the clock as a 13-nibble tick
+  count in RAM (#80058) that is the time of the next TIMER2 event:
+  `TICKS` is that count minus TIMER2 read as a signed 32-bit number. To
+  set a new time, the ROM stores a new next-event time there and loads
+  TIMER2 with the next-event time less the new time (see
+  [[hardware/timers]]).
+- ROM R always takes the new time plus #7E900000 ticks (72 hours) as the
+  next event. The 49G ROM takes the 13-nibble value at #80069 instead
+  when it is not zero: a deadline five minutes (#258000 ticks) ahead,
+  which is armed while the Kermit server runs commands (seen from its
+  first command after `SERVER` on). The difference then has to fit TIMER2's 32 bits, and it does
+  not for a move of more than 2^31 ticks (about 3 days): it wraps.
+  `1.012030 →DATE DATE` sent as server commands to a 49G showing 1 January
+  1991 gives 61.877009, and `10.052026 →DATE` sets 1 March 1991.
+- Once that deadline has passed it reads 0, and later moves are exact:
+  `707788800. CLKADJ` (a day forward, which passes it) and then
+  `-707788800. CLKADJ` leave the clock where it was, after which
+  `1.012030 →DATE` sets 1 January 2030. From the keyboard (the same
+  `→DATE` in a program run from the VAR menu) a move of 39 years is
+  exact.
+
 ## 38G, 39G, 40G
 
 - The guides document setting the clock by storing into the variables:

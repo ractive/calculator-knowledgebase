@@ -775,3 +775,10 @@ where the GX and the SX's own HMS→ + →HMS give 1; confirmed on a real 48SX.
 
 [[hardware/hp38g]] "ROM quirks": ACOT(1) in DEG gives π/4; confirmed on a
 real 38G; ATAN, ACSC and ASEC follow the mode.
+
+## [2026-10-19] decision | 49G clock set from the Kermit server wraps
+
+[[hardware/clocks]] "49G: setting the clock from the Kermit server": while
+the server's five-minute deadline is armed, the 49G ROM reloads TIMER2
+with the deadline less the new time, so `→DATE` moves of more than about
+3 days wrap. [[hardware/hp49g]] "ROM quirks": `DEGREE` is the degree in VX.

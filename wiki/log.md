@@ -770,3 +770,8 @@ the 28C ROM has the same code, the 48SX and 48GX parsers normalise.
 
 [[hardware/hp48sx]] "Differences from the G/GX": the SX ROM's HMS+ returns .6
 where the GX and the SX's own HMS→ + →HMS give 1; confirmed on a real 48SX.
+
+## [2026-10-19] decision | 38G ACOT answers in radians in DEG mode
+
+[[hardware/hp38g]] "ROM quirks": ACOT(1) in DEG gives π/4; confirmed on a
+real 38G; ATAN, ACSC and ASEC follow the mode.

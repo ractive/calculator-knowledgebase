@@ -234,3 +234,11 @@ Also observed on saturnus with ROM A1.67, no oracle:
 
 Keeps the date and time; how it is set, and what saturnus found about
 setting it by keys: [[hardware/clocks]].
+
+## ROM quirks
+
+- ACOT ignores the angle mode: in DEG, ACOT(1) gives .785398163397 (π/4,
+  the radian answer) where 45 is right. ATAN(1) gives 45, ACSC(1) 90 and
+  ASEC(2) 60 in the same mode. Seen in saturnus with ROM A167 and confirmed
+  on the owner's real 38G in DEG mode (2026-10-19). Not checked on the
+  39G/40G in DEG (their emulated default mode is RAD).

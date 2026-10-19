@@ -58,7 +58,9 @@ has not been traced).
 ### 49G: setting the clock from the Kermit server
 
 Seen in saturnus with ROM 2.15 and 2.10 (2026-10-19), by tracing the ROM
-while it ran `→DATE`; not checked on a real 49G or in saturnng.
+while it ran `→DATE`. saturnng, an independent emulator, gives the same:
+`1.012030 →DATE DATE` sent to its Kermit server returns 61.877009, as in
+saturnus (2026-10-19). Not checked on a real 49G.
 
 - Both the 48GX (ROM R) and the 49G keep the clock as a 13-nibble tick
   count in RAM (#80058) that is the time of the next TIMER2 event:

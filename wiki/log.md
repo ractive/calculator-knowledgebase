@@ -782,3 +782,8 @@ real 38G; ATAN, ACSC and ASEC follow the mode.
 the server's five-minute deadline is armed, the 49G ROM reloads TIMER2
 with the deadline less the new time, so `→DATE` moves of more than about
 3 days wrap. [[hardware/hp49g]] "ROM quirks": `DEGREE` is the degree in VX.
+
+## [2026-10-19] query | 49G Kermit-server clock jump confirmed in saturnng
+
+[[hardware/clocks]] "49G: setting the clock from the Kermit server": saturnng
+returns the same 61.877009 for `1.012030 →DATE DATE` over its Kermit server.

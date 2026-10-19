@@ -50,6 +50,11 @@ Default configuration (src: [[sources/saturn-tutorial]] p. 156):
   third-party cards are switched by user code (src: [[sources/bank-horn]]).
 - IR transmitter driven through a transistor stage (src:
   [[sources/teuwen-gx-hardware]] 14.2).
+- HMS+ near a full degree: `0.5959 ENTER 0.0001 HMS+` gives .6 (0°59'59" +
+  0°00'01" should be 1°00'00", i.e. 1). The 48GX (rev R) gives 1, and so does
+  the 48SX itself when the sum is done by hand (HMS→, +, →HMS). Seen in
+  saturnus with ROM J and confirmed on the owner's real 48SX (2026-10-19), so
+  it is the SX ROM's HMS+, not the emulation.
 
 ## Contradictions
 

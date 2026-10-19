@@ -765,3 +765,8 @@ for the 28S.
 [[hardware/hp28s]] "Number entry": the ROM's parser stores a real typed
 as `0.000x` unnormalised (MANT and ENG show it), traced in saturnus;
 the 28C ROM has the same code, the 48SX and 48GX parsers normalise.
+
+## [2026-10-19] decision | 48SX HMS+ gives .6 for 0.5959 + 0.0001
+
+[[hardware/hp48sx]] "Differences from the G/GX": the SX ROM's HMS+ returns .6
+where the GX and the SX's own HMS→ + →HMS give 1; confirmed on a real 48SX.

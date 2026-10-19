@@ -245,6 +245,11 @@ Key, shifted label, then OUT bit / IN value (OM p. 26; [[sources/kml20]]):
 - LC toggles lower case; α picks the entry mode by hand; shifted α
   (MENUS) is Menu Lock, which swaps shifted and unshifted on the top
   three rows so menus need no shift and letters do (OM p. 28-29, 168-169).
+- Neither mode has an annunciator. Their flags live in RAM: bit 2 of the
+  nibble at #C00F0 is set while lower case is on, bit 1 of the nibble at
+  #C00F2 while Menu Lock is on (observed in saturnus with the 28S ROM,
+  2026-10-19, by reading RAM while pressing LC and MENUS; not checked on
+  a real 28S).
 - The left keyboard is not a menu-key row: A-F are letters.
 
 ### Right keyboard

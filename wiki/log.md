@@ -753,3 +753,9 @@ Kept the text of [[sources/hp38g-ug]] (OCR of the scan, 300 dpi) and
 [[sources/hp39g40g-ug]] (the PDF's text layer) under `raw/manuals/text/`,
 one block per PDF page, for saturnus's command reference of the 38G, 39G
 and 40G.
+
+## [2026-10-19] ingest | 28S lower case and Menu Lock flags
+
+[[hardware/hp28s]] "Keyboard": where the ROM keeps the lower-case and Menu
+Lock modes in RAM, observed in saturnus while building Search's typing
+for the 28S.

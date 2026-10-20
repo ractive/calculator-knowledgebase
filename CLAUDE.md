@@ -50,8 +50,12 @@ implementations from it. Therefore:
     written by the owner, with Mitch Davis and Colin Croft), which may be
     read for protocol and file-format facts, such as the 38G/39G
     directory file.
-- No ROM images, and no private material (photographs of someone's own
-  calculators or manuals, local file paths, personal data).
+- No ROM images, and no private material (other people's photographs of
+  their calculators or manuals, local file paths, personal data).
+- The owner's (@ractive's) own photographs of the owner's calculators and printed
+  manuals may be cited as sources (owner, 2026-10-20). The photographs stay
+  in `raw/`, out of git; pages take facts from them in their own words, like
+  from any other source.
 
 ## Getting the sources
 

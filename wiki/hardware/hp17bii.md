@@ -261,7 +261,7 @@ alarm wakes the CPU, is not documented:
 
 ## ROM images seen
 
-@ractive's images, run in saturnus (iteration 42); both are international
+Two images, run in saturnus (iteration 42); both are international
 images of 96 KB in dump order ([[hardware/saturn-models]] "ROM image
 forms"):
 

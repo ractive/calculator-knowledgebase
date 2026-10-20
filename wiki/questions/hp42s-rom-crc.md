@@ -1,5 +1,5 @@
 ---
-title: Does @ractive's 42S ROM image pass the ROM's own CRC test?
+title: Does a 42S ROM image pass the ROM's own CRC test?
 type: question
 status: answered
 tags: [lewis, crc, rom]
@@ -7,7 +7,7 @@ models: [42s, 27s, 17b, 17bii, 28s]
 sources: ["[[sources/hpmuseum-forum]]", "[[sources/emu42-pioneer-dump]]", "[[sources/hosoda-hp42s]]"]
 ---
 
-# Does @ractive's 42S ROM image pass the ROM's own CRC test?
+# Does a 42S ROM image pass the ROM's own CRC test?
 
 **Answer (2026-10-13): yes.** The images are good; the Lewis CRC is not
 the Clarke's. It is the remainder of the bit stream read, each nibble
@@ -38,7 +38,7 @@ routine on #104; it uses it to checksum a plugged-in card, not the ROM
 ## What failed
 
 With the 48's CRC rule ([[hardware/crc]]) saturnus gets #1BE8 on
-@ractive's revision C 42S image (SHA-256 f4c5f9f0...08f3), #5DFB on the 27S,
+A revision C 42S image (SHA-256 f4c5f9f0...08f3), #5DFB on the 27S,
 #AB1D on the 17B and #1326 on the 17BII; the step prints the value ("ROM
 01BE8") and the summary reads FAIL. A second 42S image (SHA-256
 841e79a9...0baf) is the same ROM in dump order ([[hardware/saturn-models]]
@@ -93,7 +93,7 @@ both #FFFF on good 27S, 42S, 17B, 17BII, 19BII and 28S images, plus an
 "External ROM CRC" of #FFFF on the 17B and 17BII (src:
 [[sources/hpmuseum-forum]] F6). That is the same two-pass structure and the
 same target as the ROM step, and our rule reproduces it on the images
-here. Running LEWISCRC on @ractive's images (as given, in dump order, and in
+here. Running LEWISCRC on the images (as given, in dump order, and in
 address order) would confirm the images directly, but it is no longer
 needed to decide between a bad dump and a different generator.
 
@@ -112,6 +112,6 @@ The 28S's self-test (ON + the ◀ menu key) runs the same ROM step on its
 master chip's CRC (#FFF04): #0001C-#1FFFB in three blocks of two
 interleaved halves #5550 nibbles apart, 16-nibble reads, wanting #FFFF
 (code at #0169B and #01770 of revision 2BB). With the 48's rule the
-owner's image got #185A and the pass ended in "8 FAIL" (ST bit 11); with
+image got #185A and the pass ended in "8 FAIL" (ST bit 11); with
 the rule above it ends in "OK-28S" (see [[hardware/hp28s]] "Self-test";
 saturnus iteration 43a).

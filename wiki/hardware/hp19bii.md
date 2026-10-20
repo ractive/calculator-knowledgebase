@@ -24,7 +24,7 @@ p. 22-23). Emu42 runs it as `Model "Y"` on `Hardware "Lewis"` (src:
 [[sources/kml20]] Global).
 
 Page numbers are the manual's book pages ([[sources/hp19bii-om]]).
-Facts marked "(19BII ROM)" were found by running @ractive's image in
+Facts marked "(19BII ROM)" were found by running a 19BII ROM image in
 saturnus (iteration 44, 2026-10-13), on a logging bus where a memory
 range is named.
 
@@ -219,7 +219,7 @@ fourth menu key starts the factory test. In saturnus the pass shows
 The 19BII has no memory scanner, so its ROM cannot be read out without
 opening the chips; the known images came from people at HP
 ([[hardware/saturn-models]] "ROM availability", [[sources/hpmuseum-forum]]
-F3). @ractive's image is 131072 bytes in dump order (256 units of 512
+F3). The image is 131072 bytes in dump order (256 units of 512
 bytes, last first) and carries "COPYRIGHT HP 198" in its first unit, as
 the Pioneers' images do; the Lewis CRC over #00000-#1FFFF gives #FFFF in
 address order. The self-test's pass message "OK-19B II" is kept whole

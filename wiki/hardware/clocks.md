@@ -104,7 +104,7 @@ saturnus (2026-10-19). Not checked on a real 49G.
 
 No clock. The 42S keyboard and menus have no time or date function, and
 its ROM holds none of the strings the clock models' ROMs use for it:
-searched in @ractive's 42S image (revision C), `DATE` and `APPT` do not
+searched in a 42S image (revision C), `DATE` and `APPT` do not
 occur, while `SOLVER` does; the 27S and 17BII images hold `DATE` and
 `APPT` (black-box search of the ROM bytes, 2026-10-13). The 42S
 manual is not in `raw/`; its table of contents would settle it beyond
@@ -123,7 +123,7 @@ The 19BII's TIME and SET menus are the 17BII's (src:
 - The date is keyed in the calculator's own format, MM.DDYYYY or
   DD.MMYYYY, as M/D last chose; the time as HH.MMSS, and in 12-hour
   format A/PM corrects the half of the day (same pages).
-- Seen in saturnus (owner's ROMs, 2026-10-13): in 12-hour format the
+- Seen in saturnus (27S ROM image, 2026-10-13): in 12-hour format the
   27S takes `21.0830` TIME as 9:08:30 PM, but whether a morning hour
   keeps a PM already set was not tried; pressing 12/24 to 24-hour form,
   keying the time and pressing 12/24 again avoids the question.

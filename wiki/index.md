@@ -174,7 +174,7 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 - [[questions/hp38g-release-date]] — HP 38G release date: April or September 1995? (open)
 - [[questions/hp39g-40g-memory-map]] — HP 39G/40G: memory map, ROM banking and ROM file layout (open)
 - [[questions/hp39g-40g-model-detection]] — How does the shared 39G/40G ROM tell which model it runs on? (answered: #11A bit 3)
-- [[questions/hp42s-rom-crc]] — Does @ractive's 42S ROM image pass the ROM's own CRC test? (answered)
+- [[questions/hp42s-rom-crc]] — Does a 42S ROM image pass the ROM's own CRC test? (answered)
 - [[questions/hp49g-bank-latch-bits]] — HP49G bank latch: which address bits select which flash window? (answered: Sousa's assignment)
 - [[questions/hp49g-flash-write]] — How is the HP49G flash programmed? (open)
 - [[questions/custom-rom-for-saturn-calculators]] — Custom ROMs and replacement systems: what exists, toolchains, 49G boot sector, bank header and flashing, what a ROM must do at reset, RPL and Forth (open)

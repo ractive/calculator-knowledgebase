@@ -42,7 +42,7 @@ RM = [[sources/hp28s-rm]].
 
 ## Memory map
 
-Facts marked "(28S ROM)" were found by running the owner's revision 2BB
+Facts marked "(28S ROM)" were found by running a revision 2BB ROM
 image in saturnus on a logging bus (iteration 43a, 2026-10-13): cold
 boot, arithmetic, menus, typing, printing, System Halt, Memory Reset and
 the self-test.
@@ -409,7 +409,7 @@ three blocks of two interleaved halves #5550 nibbles apart in 16-nibble
 reads, and wants #FFFF; then it checks #00000-#00FFF, #2001C-#3FFFB
 and #20000-#20FFF the same way. With the Lewis CRC rule
 ([[hardware/lewis]] "CRC") every pass gives #FFFF; with the 48's rule
-the owner's image got #185A and the result read "8 FAIL", so a failure's number is the ST bits
+the image got #185A and the result read "8 FAIL", so a failure's number is the ST bits
 8-11 nibble, the ROM step's being bit 11 ([[questions/hp42s-rom-crc]]).
 
 Keyboard test: hold ON, press NEXT, release ON. The display reads
@@ -462,7 +462,7 @@ MANT 1 and XPON -4 on both.
 
 ## ROM image
 
-The owner's image (128 KB, SHA-256 51589fa3...1e921c, "Version 2BB" in
+The image (128 KB, SHA-256 51589fa3...1e921c, "Version 2BB" in
 the copyright message) is in dump order: 256 units of 512 bytes, last
 first, as the Pioneer images ([[hardware/saturn-models]] "ROM image
 forms"); the Lewis CRC over #00000-#1FFFF gives #FFFF only after

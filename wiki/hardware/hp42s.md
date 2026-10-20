@@ -105,7 +105,7 @@ How the ROM gets there (42S ROM revision C, traced in saturnus):
   model") the preview shows at once and NULL after 0.95 s of emulated
   time at 1 MHz.
 
-## @ractive's ROM image
+## ROM image
 
 Revision C, 65536 bytes packed, SHA-256
 f4c5f9f0e1d89074b7ca49add99b3ea72ed7fae9370b421de20a0cd8384c08f3. It boots, shows "Memory Clear" on a cold start and computes (2 ENTER 3

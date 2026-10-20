@@ -170,7 +170,7 @@ names none of these models ([[sources/hpcalc-rom-listings]]).
 ## ROM image forms
 
 Pioneer images (42S, 27S, 17B, 17BII) come in two byte orders (observed
-in saturnus on @ractive's images, iteration 42):
+in saturnus on 42S, 27S, 17B and 17BII images, iteration 42):
 
 - **Address order**: byte i holds the nibbles at #2i (the low nibble)
   and at #2i+1. The CPU starts at #00000 with code.
@@ -191,7 +191,7 @@ the 32 KB language ROM (#20000-#2FFFF); the main ROM checks a mark at
 
 The Lewis CRC ([[hardware/lewis]] "CRC") tells the forms apart without
 the text: each 64 KB Lewis ROM gives #FFFF over #00000-#1FFFF only in
-address order. @ractive's 128 KB 19BII and 28S images are in dump order
+address order. The 128 KB 19BII and 28S images are in dump order
 too (256 units of 512 bytes, last first); the 28S image has no
 "COPYRIGHT" text, so for it the CRC is the only test of the two
 ([[questions/hp42s-rom-crc]]).

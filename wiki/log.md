@@ -371,7 +371,7 @@ Machine (the live HP Museum page answers 403 to plain fetches;
 [[sources/garnier-hp42s-new-facts]]), Hosoda's 42S hardware notes
 ([[sources/hosoda-hp42s]]), Gariepy's 28S notes
 ([[sources/hp28s-procnotes]]) and the 42S rows of KML 2.0
-([[sources/kml20]]). Traced @ractive's revision C ROM in saturnus.
+([[sources/kml20]]). Traced a revision C ROM image in saturnus.
 Created [[hardware/lewis]] (fixed 42S map, display RAM interleave, the seven
 annunciator words, registers at #40300-#4030F, timers at #403F7-#403FF in the
 48's bit layout, CRC, beeper on OUT bits 10/11) and [[hardware/hp42s]] (board
@@ -721,7 +721,7 @@ chapters.
 
 ## [2026-10-13] query | The 28S's memory map from its ROM
 
-Ran the owner's 28S ROM (2BB) in saturnus on a logging bus (iteration
+Ran a 28S ROM image (2BB) in saturnus on a logging bus (iteration
 43a): no CONFIG, UNCNFG or C=ID, a fixed map (ROM, RAM at #C0000, slave
 block #FF800, master block #FFC00). Filled [[hardware/hp28s]] (memory
 map, two chips, display RAM, annunciator words, ROM image form, the
@@ -734,7 +734,7 @@ Fetched the 19BII Owner's Manual (hpcalc.org community scan) into `raw/`,
 with its manifest entries. Created [[sources/hp19bii-om]] and
 [[hardware/hp19bii]]: memory map, display, annunciators, both keyboards
 with matrix codes, clock, language prompt and self-test, from the manual
-and from running @ractive's image in saturnus (iteration 44). Corrected the
+and from running a 19BII ROM image in saturnus (iteration 44). Corrected the
 19BII row of [[hardware/saturn-models]] (137 x 32, not 132 x 32; 8 KB RAM);
 the 19BII added to [[hardware/clocks]] and [[hardware/lewis]].
 

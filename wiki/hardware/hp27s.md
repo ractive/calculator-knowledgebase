@@ -228,7 +228,7 @@ ten appointments with message (22 characters) and repeat interval; the
 
 ## ROM images seen
 
-@ractive's image, run in saturnus (iteration 42): 65536 bytes, SHA-256
+The image, run in saturnus (iteration 42): 65536 bytes, SHA-256
 df64a595e8a86e557eb48609bbbc3b67f9f4fd646f3319861aaa26623510e380, in dump
 order ([[hardware/saturn-models]] "ROM image forms"). Its last 32 bytes
 hold "COPYRIGHT HP 1987" and "OK-27S-EB", the self-test pass text with

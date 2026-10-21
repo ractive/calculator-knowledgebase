@@ -34,8 +34,13 @@ This repository is public and exists so that others can build independent
 implementations from it. Therefore:
 
 - Facts in our own words, with a citation. Quotations at most a sentence or
-  two, in quotes, attributed. No copied tables, code or page layouts from
-  any document.
+  two, in quotes, attributed. No code or page layouts copied from any
+  document. Tables of plain facts (flag numbers, register addresses, bit
+  meanings) may follow a source's table, with the source cited (owner,
+  2026-10-21); their descriptions are still our own words. Not allowed:
+  tables whose source forbids changes or redistribution (Mastracci's
+  notes), tables from GPL packages (Emu42's PROBLEMS.TXT), and whole
+  lists transcribed verbatim (the 49G Pocket Guide's flag list).
 - GPL emulator source code (Emu48, Emu42, x48ng, saturnng, ...) is never
   opened for this wiki, not even to look up a fact. Facts about emulators
   come from their published documentation (manuals, KML and skin docs,

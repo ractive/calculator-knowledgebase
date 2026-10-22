@@ -15,7 +15,7 @@ tags: [model, clamshell, lewis, keyboard, display, self-test]
 
 # HP 28S
 
-Clamshell RPN scientific calculator (1987-1988), the successor of the
+Clamshell RPL scientific calculator, the successor of the
 28C: two halves that fold like a book, an alphabetic keyboard on the
 left and the calculator keyboard and display on the right (src:
 [[sources/hp28s-om]] p. 18-19). Two [[hardware/lewis]] chips, master and

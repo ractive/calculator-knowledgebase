@@ -805,3 +805,14 @@ the 2BB ROM: the text reversed below the pointer at #C006E (floor at
 #C0069), zeroed when the line closes; #C015D bit 0 set while a line is
 open; the cursor at #C0126; insert and algebraic bits at #C00EE, alpha
 entry at #C00ED. [[hardware/command-line]] links to it.
+
+## [2026-10-24] ingest | The 49G's editor after a cold boot and in algebraic mode
+
+[[hardware/command-line]] "After a cold boot" and "Programs in the 49G's
+algebraic mode": observed in saturnus (iteration 64) on ROMs 2.10 and
+1.19-6 (48GX R, 48SX J for the boot): the boot question keeps the
+keyboard with the CPU asleep, ALPHA does nothing there, the 49G reaches
+the stack about 3.4 s after power-on once answered; in algebraic mode a
+program is read as algebraic (`« 1 2 + »` is Invalid Syntax,
+`« → a « a » »` is read); line breaks make no difference; a 146-point
+plot loop takes the 49G about 38 s against the 48GX's 8 s.

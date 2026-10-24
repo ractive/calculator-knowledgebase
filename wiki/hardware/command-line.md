@@ -151,6 +151,40 @@ three, RPN mode on the 49G).
   overwrites), otherwise in temporary memory. Menu redraws build strings
   of their labels as well (observed).
 
+## After a cold boot
+
+Observed in saturnus on 2026-10-24 (iteration 64), ROMs 49G 2.10 and
+1.19-6, 48GX R and 48SX J, in emulated time from power-on:
+
+- "Try To Recover Memory?" and, on the 49G after NO, the "Memory Clear"
+  box keep the keyboard. While the question waits for a key the CPU
+  sleeps, so a sleeping CPU does not mean the stack is ready. ALPHA does
+  nothing there: after four presses the editor's alpha and alpha-lock
+  bits are still clear, which is how typing into the question shows up.
+- In the first moments of a 1.19-6 boot the editor's pointers in RAM do
+  not yet hold the ROM's values; there is no command line to read.
+- With the question answered as soon as it is up (the sixth menu key,
+  twice on the 49G), both 49G ROMs are at the stack after about 3.4 s;
+  the 48GX's and 48SX's question is up and answered within about 0.4 s.
+  From then on typing works at once.
+
+## Programs in the 49G's algebraic mode
+
+Observed in saturnus on 2026-10-24, ROMs 2.10 and 1.19-6. In algebraic
+mode (flag -95 set, as the 49G boots) ENTER reads the line, programs
+included, as algebraic syntax: `« 1 2 + »`, `« 1 'X' STO »`,
+`« 0 2 FOR i i NEXT »` and `« 1 2 + » EVAL` give "Invalid Syntax" and
+the line stays open, while `« → a « a » »` and `« 1 → a « a » »` are
+read (each ENTER also leaves its echo on the stack, see
+[[hardware/hp49g]]). In RPN mode (flag -95 clear) the same texts are read
+as on the 48GX. Line breaks and indentation make no difference: a
+multi-line program and the same text on one line behave the same in
+either mode.
+
+Evaluation time differs too: a FOR loop storing X and evaluating
+`'SIN(X)' →NUM` at 146 points took about 38 s on the 49G (both ROMs)
+and about 8 s on the 48GX R, in saturnus's emulated time.
+
 ## Key timing
 
 Measured on the three ROMs by typing digit sequences with a given hold

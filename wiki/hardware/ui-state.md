@@ -124,9 +124,17 @@ field while it is edited, while `INPUT` waits, and in the 49G's equation
 writer, which edits on the command line; only with the stack in control
 is it the user's command line at the stack (observed).
 
-- On the 49G the nibble at #80EC8 reads #F in the interactive stack too,
-  not only while an error box shows ([[hardware/command-line]], "Errors
-  after ENTER"); the return stack tells them apart (observed).
+- On the 49G a run-time error raised at the stack (a key such as `+`
+  with one argument, or ▲ at an empty stack) draws its box while the
+  stack's own loop keeps the keyboard: the return stack is the bare
+  stack's, and #80EC8 reads #F ([[hardware/command-line]], "Errors after
+  ENTER") until the next key, which clears the box and also takes
+  effect (▲ then opens the interactive stack). A parse error's box is a
+  loop of its own and sets #80EC9 instead. In the interactive stack both
+  nibbles read no #F (#80EC8 0, #80EC9 #E): opened with ▲ over one or
+  three objects, ▲ pressed twice, in RPN and in algebraic mode, after a
+  run-time error, after a dismissed parse error, and straight from a
+  run-time error's box (observed on ROM 2.10 and 1.19-6).
 
 ## Not found
 

@@ -787,3 +787,13 @@ with the deadline less the new time, so `→DATE` moves of more than about
 
 [[hardware/clocks]] "49G: setting the clock from the Kermit server": saturnng
 returns the same 61.877009 for `1.012030 →DATE DATE` over its Kermit server.
+
+## [2026-10-24] ingest | What has the keyboard (48SX, 48GX, 49G)
+
+New [[hardware/ui-state]]: observed in saturnus (iteration 61) on 48SX J,
+48GX R and 49G 2.10 (and 1.19-6): the return stack tells the stack's own
+loop from forms, boxes, the graphics screen and other loops, and counts
+halted programs; the temporary environments name input forms (both) and
+the 49G's choose box; the shown-GROB and PICT pointers tell the graphics
+screen. [[hardware/command-line]]: the 49G's #80EC8 also reads #F in the
+interactive stack.

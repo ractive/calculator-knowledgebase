@@ -115,6 +115,7 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 - [[hardware/hp49g]] — HP 49G (draft)
 - [[hardware/command-line]] — The command line in RAM (reversed, NUL-terminated text, cursor, editor flags), what each key types into it, CHARS, clearing inside EDIT, errors after ENTER, key timing (48SX, 48GX, 49G) (draft)
 - [[hardware/hp48-system-ram]] — System RAM: HOME, current directory, data stack and flags pointers (48SX, 48GX, 49G), directory and HOME layout, BYTES size and checksum (draft)
+- [[hardware/ui-state]] — What has the keyboard, from RAM: the stack's loop against forms, boxes, the graphics screen and other loops (return stack), halted programs, the temporaries each screen binds (48SX, 48GX, 49G) (draft)
 - [[hardware/interrupts]] — Interrupt system (draft)
 - [[hardware/io-ram]] — I/O RAM (hardware registers) map (draft)
 - [[hardware/keyboard]] — Keyboard matrix, 49G alpha letters, shift colours and printed labels, time awake after a key (draft)

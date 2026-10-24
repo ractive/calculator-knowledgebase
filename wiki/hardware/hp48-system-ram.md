@@ -111,7 +111,8 @@ name, type, size and checksum with the Kermit server's `G D` listing:
   48SX gives ROM pointers #2A2C9, #2A2DE, #2A2F3); entries continue to a 0
   entry, and the end pointer points just after it. Depth = (end - D1) / 5
   - 1 (observed on all three).
-- Valid while the ROM is idle in its outer loop. While the Kermit server
+- Valid while the ROM is idle in its outer loop (how to tell that it is,
+  from the return stack: [[hardware/ui-state]]). While the Kermit server
   waits for a packet the saved D1 is the server's own stack (on the 49G a
   system binary on top of the user's levels; DEPTH there reads 0 for the
   keyboard's levels, see below).

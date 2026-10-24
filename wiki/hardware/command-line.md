@@ -134,7 +134,8 @@ three, RPN mode on the 49G).
   address #7068B (48SX) or #80809 (48GX) is set; the next key clears it. On the 49G an error box
   makes #80EC8 (run-time error) or #80EC9 (parse error) read #F while
   the line's active bit is clear; ATTN closes the box and returns to the
-  line.
+  line. #80EC8 also reads #F in the interactive stack, which shows no
+  box; the return stack tells them apart ([[hardware/ui-state]]).
 - The message text is in RAM as string objects the ROM built to show
   it, one per line ("DROP Error:", "Too Few Arguments"; on the 49G the
   box's word-wrapped copy too): for "Invalid Syntax" at #700F2 on the

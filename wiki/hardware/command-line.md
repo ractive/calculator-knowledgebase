@@ -20,6 +20,10 @@ and cursor) (src: [[sources/rplman]] p. 7474-7560 of RPLMAN.TXT); no
 document found gives its location. The 1991 address list has no entry for
 it (src: [[sources/hp48-internals-address-list]]).
 
+The 28S keeps its line the same way, reversed below a text pointer, at
+other addresses, and clears it when the line closes: [[hardware/hp28s]]
+"Command line".
+
 ## Text
 
 - The text is stored **reversed and NUL-terminated, just below the

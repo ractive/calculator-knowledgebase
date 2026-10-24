@@ -797,3 +797,11 @@ halted programs; the temporary environments name input forms (both) and
 the 49G's choose box; the shown-GROB and PICT pointers tell the graphics
 screen. [[hardware/command-line]]: the 49G's #80EC8 also reads #F in the
 interactive stack.
+
+## [2026-10-24] ingest | The 28S's command line in RAM
+
+[[hardware/hp28s]] "Command line": observed in saturnus (iteration 62) on
+the 2BB ROM: the text reversed below the pointer at #C006E (floor at
+#C0069), zeroed when the line closes; #C015D bit 0 set while a line is
+open; the cursor at #C0126; insert and algebraic bits at #C00EE, alpha
+entry at #C00ED. [[hardware/command-line]] links to it.

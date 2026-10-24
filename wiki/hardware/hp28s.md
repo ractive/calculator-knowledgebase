@@ -436,6 +436,53 @@ flashes in the top line at every key; worse, the stack lines show only
 object types ("No Room to Show Stack"), and at the end an "Out of
 Memory" purge dialogue takes over (OM p. 188-189).
 
+## Command line
+
+Found in saturnus with the revision 2BB ROM image (iteration 62,
+2026-10-24) the way [[hardware/command-line]] found the 48's editor:
+type known text after a memory reset, search RAM for it, diff RAM
+(#C0000-#CFFFF) across key presses (letters, the cursor menu's ◀ ▶ INS
+DEL, backspace, ', «, α, LC, ENTER, ATTN, EDIT, COMMAND, a halted
+program, a menu, CATALOG, a line that does not parse, 300 characters).
+Not checked on a real 28S.
+
+- **Text**: reversed and NUL-terminated, as on the 48. The 5-nibble
+  pointer at #C006E points just past the first character, the next
+  character sits two nibbles lower, and so on down to a 00 byte. Typing
+  "ABC" after a memory reset left `342414` at #CFF6A-#CFF6F with
+  [#C006E] = #CFF70. The pointer moves down when the ROM keeps more
+  above it: #CFF66 after an error, #CFF5C after EDIT, #CFF34 with a
+  halted program.
+- **Floor**: the 5-nibble pointer at #C0069 is never above the byte
+  under the text. With 300 characters (text from #CFD0E) it held #CFD0C,
+  the address of the 00 byte; with short lines it stays lower. The 48's
+  pointer past the data stack sits five nibbles below its text pointer
+  too ([[hardware/command-line]] "Text").
+- **Cleared when closed**: ENTER and ATTN write zeros over the text
+  (the 48 leaves it in RAM). The line also closes, and the stack comes
+  back, when its last character goes: backspace, DEL or shifted INS on
+  a one-character line. No open empty line was seen.
+- **Open**: bit 0 of the nibble at #C015D is set while a command line
+  is open: after the first character, after ' and «, in EDIT (shifted
+  ENTER), after COMMAND (shifted 7), while a program is halted, under
+  a menu, while "Syntax Error" shows over a line that does not parse
+  (the line stays), and while CATALOG has the screen over an open line.
+  It is clear after ENTER, ATTN, a key that takes the line as its
+  argument (+, a menu command such as SIN), and when the line empties.
+  Only 0 and 1 were seen.
+- **Cursor**: 5 nibbles at #C0126, in characters from the start (0
+  before the first); it reached 300 (#0012C). #C013F holds the cursor's
+  column on the display line, at most 22.
+- **Entry modes**: the nibble at #C00EE has bit 1 set in insert mode
+  and bit 2 in algebraic entry (after '), the 48's bits
+  ([[hardware/command-line]] "Cursor and editor state"). The ROM starts
+  in replace mode: on "ABC" with the cursor on B, X gave "AXC"; after
+  INS, Y gave "AXYC". Bit 0 was also set in EDIT (meaning not known).
+  Bit 0 of the nibble at #C00ED is set in alpha entry mode: by α, by «,
+  in EDIT and after COMMAND; ENTER and ATTN clear it. Lower case is
+  bit 2 of #C00F0 ("Keyboard").
+- **Characters**: the text uses the 28S's codes: « typed byte 146.
+
 ## Number entry
 
 The ROM's number parser (rev. 2BB, from #108E7) stores a real typed
@@ -478,3 +525,8 @@ at #01C8D (28S ROM).
 - A character-cell width stated outright (six columns is inferred).
 - A real 28S confirming the unnormalised number entry ("Number entry"):
   0.00042 ENTER MANT should give .0042 there too.
+- A message flag for the command line: bit 1 of #C00ED was set while
+  "Memory Lost" or "Syntax Error" showed, but also after CONT with no
+  message on the display, so it is not one.
+- An open command line with no text ("Command line"), and the meaning
+  of bit 0 of #C00EE.

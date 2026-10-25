@@ -117,6 +117,12 @@ TE28F160-S5 (p. 161). The boot half of bank 0 is write-protected in hardware
 8x8 matrix plus ON at IN bit 15, different layout from the 48 (src:
 [[sources/keyb49-sylvester]]); table on [[hardware/keyboard]].
 
+Held-shift functions (a second function per key when the shift is held
+down, such as the plot keys in RPN mode and the MODES, CHARS, SOLVE and
+TIME command menus), the unlabelled cursor-key shifts and the ON-key
+combinations, from the 49G FAQ, the User's Manual and a key sweep on ROM
+2.10 in saturnus: [[hardware/hp49g-keyboard]].
+
 ## Serial port
 
 Early units (serial ID below 94xxxxxx) have a weak TX driver that some PCs

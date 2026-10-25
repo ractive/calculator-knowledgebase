@@ -68,6 +68,10 @@ the top of the address space. Code name "Elsie" (src:
 
 ## Keyboard
 
+Functions not printed on the keys (the SETUP views, shifted cursor keys)
+and the ON-key combinations, from the guide and a key sweep on ROM A1.67
+in saturnus: [[hardware/hp38g-39g-keyboard]].
+
 The 38G keeps the 48's matrix (src: [[sources/kml20]] OutIn codes
 HP48SX/HP48GX/HP38G). The HP 38G case is the 48 case with two keys
 removed (src: [[sources/hpj-38g]] art. 6 p. 1); the keyboard figure shows

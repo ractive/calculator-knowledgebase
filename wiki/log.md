@@ -841,3 +841,19 @@ alpha shifts, and the ON-key combinations. Sources: the User's Guide
 black box, not hardware). Appendix G gives SERVER as ← I/O SRVR SERVE
 (left shift). Linked from
 [[hardware/hp48gx]] and [[hardware/keyboard]].
+
+## [2026-10-25] ingest | Keys not printed on the keyboard and ON combinations, the other models
+
+New pages, one per model or family, modelled on [[hardware/hp48gx-keyboard]]:
+[[hardware/hp48sx-keyboard]] (right shift on the application keys, the
+LAST keys, → PURGE, → PREV), [[hardware/hp49g-keyboard]] (held-shift
+functions: plot keys in RPN mode, command menus, HOME, last menu,
+complex and exact mode, Kermit or XModem server),
+[[hardware/hp28s-keyboard]], [[hardware/hp38g-39g-keyboard]] (38G, 39G,
+40G), [[hardware/hp42s-keyboard]], [[hardware/hp27s-17b-17bii-keyboard]]
+and [[hardware/hp19bii-keyboard]]. Sources: the models' manuals as
+already cited, the 48 FAQ 4.6, the 49G FAQ 4.10, 4.14, 5.8 and 6.1
+(newly read, noted on [[sources/hp49g-faq]]), and black-box key sweeps
+on the saturnus emulator with each model's ROM (2026-10-25, not
+hardware). Linked from each model's page, [[hardware/keyboard]] and the
+index.

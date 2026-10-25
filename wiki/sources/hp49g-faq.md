@@ -14,7 +14,8 @@ models: [49g]
 The comp.sys.hp48 community FAQ for the 49G, version 1.10 of 23 December
 2000, maintained by Eric Rechlin on hpcalc.org. Web page, not in `raw/`;
 read on 2026-10-12 at <https://www.hpcalc.org/hp49/docs/faq/>. Only the
-sections on flash, the boot ROM, ROM versions and diagnostics were read.
+sections on flash, the boot ROM, ROM versions, diagnostics and hidden
+keys (2.6, 4.10, 4.14, 6.1; read 2026-10-25) were read.
 Cite by FAQ section.
 
 - 1.6: flash can be read like ROM and also written; of the 2 MB, 1 MB holds
@@ -30,8 +31,18 @@ Cite by FAQ section.
 - 4.11: `VERSION` shows the system ROM version, `VER` the CAS version; there
   is no command for the boot sector's version, and "all known production
   49's have version 1.9".
+- 4.10: in RPN mode the plot windows (Y=, WIN, GRAPH, ...) need the left
+  shift held down while the function key is pressed, because a tapped
+  shift before a function key stores into variables or converts units;
+  in algebraic mode a tapped shift works.
+- 4.14: a list of undocumented held-shift combinations (← NXT last menu,
+  ← TOOL real/complex, ← VAR HOME, → ENTER exact/approximate, → EQW back
+  quotes, → ▶ Kermit and XModem server, → 9 time tools, → ▼ menu labels)
+  and of unshifted shortcuts (ENTER DUP, ⬅ DROP, ▶ SWAP, ▲ HIST). Used on
+  [[hardware/hp49g-keyboard]].
 - 5.8: ON-D starts the diagnostics; the number keys run tests including
   keyboard, ROM, RAM and flash formatting, and Y^x reboots.
+- 6.1: holding ⬅ during a warm start skips the libraries' configuration.
 
 ## Contradictions
 

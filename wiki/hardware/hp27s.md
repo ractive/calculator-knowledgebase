@@ -188,6 +188,9 @@ letter, groups ABCDE, FGHI, JKLM, NOPQ, RSTUV, WXYZ, each with OTHER
 
 ## Key chords
 
+What the keys do beyond their labels (the menu keys with no menu) and
+what the sweep saw for each chord: [[hardware/hp27s-17b-17bii-keyboard]].
+
 (src: [[sources/hp27s-om]] p. 15, 195-199)
 
 | Chord | Matrix | Effect |

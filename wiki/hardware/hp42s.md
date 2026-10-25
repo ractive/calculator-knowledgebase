@@ -42,6 +42,10 @@ details and evidence on [[hardware/lewis]]. With 8 KB the RAM mirrors through
 
 ## Keyboard
 
+Functions not printed on the keys (held keys, ⬅ as CLX) and the EXIT
+combinations, from the manual and a key sweep in saturnus:
+[[hardware/hp42s-keyboard]].
+
 KML OutIn codes (OUT bit, IN value) (src: [[sources/kml20]] OutIn Codes
 HP42S):
 
@@ -60,6 +64,10 @@ XEQ, STO to TAN, ENTER (two keys wide) x≷y +/- E ←, then ▲ 7 8 9 ÷, ▼ 4
 ×, shift 1 2 3 −, EXIT 0 . R/S +. The top row doubles as the six menu keys.
 
 ## Key chords (42S ROM in saturnus, revision C)
+
+A key sweep of 2026-10-25 saw nothing for EXIT + 1/x, and the manual's
+memory clear is EXIT + Σ+ + XEQ: [[hardware/hp42s-keyboard]]
+"Contradictions".
 
 | Chord | Effect | Source |
 | --- | --- | --- |

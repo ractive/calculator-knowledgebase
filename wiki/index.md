@@ -89,6 +89,7 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 - [[sources/hp48-sdk-makerom]] — MAKEROM, HP's library generator manual: the parts of a library (skimmed)
 - [[sources/saturn-tutorial]] — Fernandes and Rechlin, Introduction to Saturn Assembly Language, 3rd ed. (digested)
 - [[sources/screen-brittenson]] — Brittenson, HP48SX screen addresses (digested)
+- [[sources/sebastian-selftests]] — Sebastian, HP calculator self-tests: how to start and stop them (28S, Pioneers, 38G, 39G) (skimmed)
 - [[sources/serial49-sansonovski]] — Neves, do Lago and Sansonovski, Circuit to correct the HP49G serial port signal (digested)
 - [[sources/teuwen-gx-hardware]] — Teuwen, Guide to the HP48G/GX Hardware v0.05 (digested)
 - [[sources/voyage-48gx]] — Courbis and Lalande, Voyage au centre de la HP 48 G/GX (digested)

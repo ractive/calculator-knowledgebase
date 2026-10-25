@@ -3,7 +3,7 @@ title: "HP 27S, 17B and 17BII keyboards: functions not printed on the keys, and 
 type: rom-behaviour
 models: [27s, 17b, 17bii]
 status: draft
-sources: ["[[sources/hp27s-om]]", "[[sources/hp17bii-om]]", "[[sources/hp17b-om]]"]
+sources: ["[[sources/hp27s-om]]", "[[sources/hp17bii-om]]", "[[sources/hp17b-om]]", "[[sources/sebastian-selftests]]"]
 tags: [keyboard, rom, self-test]
 ---
 
@@ -93,9 +93,30 @@ EXIT chords ([[hardware/hp42s-keyboard]]).
 | CLR + second menu key | not listed | Taken by the chord handler: an open entry stays, CLR does not act |
 | CLR + any other key | not listed | Acts as CLR alone (clears the calculator line) |
 
+## Leaving the tests
+
+The manuals: CLR + third menu key halts the self-test with "MACHINE
+RESET"; any other key halts it with a FAIL message that only means a
+wrong key was pressed (27S p. 198-199; 17BII and 17B p. 220). The 27S
+footnote stops the factory test (CLR + fourth menu key) the same way
+(p. 198). Sebastian's page agrees, and says the factory test steps on
+any key until after the copyright notice, then tests the keyboard (src:
+[[sources/sebastian-selftests]]).
+
+Observed (saturnus, 2026-10-25, all three models alike), each from MAIN
+with 77 stored in register 1:
+
+| Test | Leaves it | Other keys |
+| --- | --- | --- |
+| Self-test, CLR + fifth menu key | CLR + third menu key: "MACHINE RESET", then MAIN; RCL 1 gives 77 | BEEP, ROM, DRAM OK, the OK message, "COPYRIGHT HP 1987", DISP, speed, patterns, repeating. A key, CLR included, is noticed only at some steps (on the 17B and 17BII mostly at once, on the 27S often a step or two later): "FAIL 00020"; the next key gives "MACHINE RESET" and is not acted on. A 1.5 s press went straight to "MACHINE RESET". Register 1 was kept every time |
+| Factory test, CLR + fourth menu key | CLR + third menu key, at any step, as above | Three vertical lines; every key, CLR included, advances one step: speed, BEEP, DISP, patterns, ROM OK, DRAM OK, then "KBD", a keyboard test; a wrong key shows "KBD 01D01", then "FAIL 00020" |
+
+No test lost memory.
+
 ## Open
 
 - Nothing here was checked on real calculators.
+- The factory keyboard test's key order was not tried.
 - Whether the memory-clear chord works with CLR pressed first on a real
   unit (the manuals say "press and hold" the three keys).
 - The factory test behind CLR + fourth menu key was not explored past

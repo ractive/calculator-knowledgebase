@@ -3,7 +3,7 @@ title: "HP 28S keyboard: functions not printed on the keys, and the ON-key combi
 type: rom-behaviour
 models: [28s]
 status: draft
-sources: ["[[sources/hp28s-om]]"]
+sources: ["[[sources/hp28s-om]]", "[[sources/sebastian-selftests]]"]
 tags: [keyboard, rom, self-test]
 ---
 
@@ -92,8 +92,36 @@ their white cursor labels):
 | ON+DEL alone | cancel a pending operation (p. 215) | nothing visible |
 | ON+any other key | not listed | nothing visible |
 
+## Leaving the tests
+
+The manual: both tests perform a System Halt (p. 218), so the stack is
+cleared and variables are kept (p. 217). The repeating test (ON+◀) is
+left with System Halt, ON+▲; a key pressed during it gives a failure
+message that means nothing (p. 218, 290-291). The keyboard test
+(ON+NEXT) ends with OK-28S or a FAIL message, then ON (p. 219, step 4).
+The factory test (ON+▼) waits for keys and is quit with System Halt
+(p. 291). Sebastian's page gives ON+▲ for all three and says the
+factory test steps on any key until KEYBOARD TEST (src:
+[[sources/sebastian-selftests]]).
+
+Observed (saturnus, ROM 2BB, 2026-10-25), each from the stack holding
+77 with a variable X = 5:
+
+| Test | Leaves it | Other keys |
+| --- | --- | --- |
+| Repeating, ON+◀ | ON+▲: the stack, empty; X still 5 | ON alone did nothing within 6 s. Another key (1, ENTER) stopped it with "1 FAIL"; the next key, ON included, returned to the empty stack and was not acted on. Left alone, a pass took about 30 s and ended in OK-28S, then the test started again |
+| Keyboard, ON+NEXT | ON+▲, as above | ON or a key out of order gives "1 FAIL"; the next key returns to the empty stack and is swallowed |
+| Factory, ON+▼ | ON+▲, as above | Every key, ON included, advances one step: eight display patterns, then KEYBOARD TEST, from where it acts as the keyboard test |
+
+No test cleared variables; every exit left the stack empty, as System
+Halt does. In the keyboard test saturnus accepted A to J in order and
+answered K with "1 FAIL" at every speed tried, although K types K
+outside the test, so the full order was not completed.
+
 ## Open
 
 - Nothing here was checked on a real 28S.
+- Why the keyboard test rejects K in saturnus (an emulator fault, or an
+  order other than A to F, G to L).
 - Shift ▲ and shift ▼ in a multi-line command line were not tried.
 - What the sweep's states do not reach (see above) was not swept.

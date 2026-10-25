@@ -857,3 +857,16 @@ already cited, the 48 FAQ 4.6, the 49G FAQ 4.10, 4.14, 5.8 and 6.1
 on the saturnus emulator with each model's ROM (2026-10-25, not
 hardware). Linked from each model's page, [[hardware/keyboard]] and the
 index.
+
+## [2026-10-25] ingest | How to leave the self-tests
+
+New source [[sources/sebastian-selftests]] (Mike Sebastian's self-test
+page). A "Leaving the tests" section on [[hardware/hp28s-keyboard]],
+[[hardware/hp38g-39g-keyboard]], [[hardware/hp27s-17b-17bii-keyboard]]
+and [[hardware/hp19bii-keyboard]]: the manuals' exits (28S OM p. 217-219,
+290-291; 27S OM p. 198-199; 17BII and 17B OM p. 220; 19BII OM p. 279),
+Sebastian's, and black-box runs on the saturnus emulator with each
+model's ROM (2026-10-25, not hardware): each test started with a value
+stored, then ON, the exit chord, single keys and waiting tried from a
+fresh state. No test lost stored values; the 28S exits clear the stack,
+the aplet calculators' exits clear the HOME history.

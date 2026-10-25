@@ -91,6 +91,12 @@ stored in register 1:
 
 No test lost memory; every exit leaves 0.00 on the calculator line.
 
+How long the chord is held matters in the self-test (saturnus, 19BII
+ROM, 2026-10-25, the keys going down together after the test had run
+about 4 s): ON + third menu key held 0.5 s or 1 s left the self-test
+showing "OK-19B II", in two tries each; held 2 s it left it with
+"MACHINE RESET", in two tries.
+
 ## Open
 
 - Nothing here was checked on a real 19BII.

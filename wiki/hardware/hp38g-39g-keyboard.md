@@ -3,7 +3,7 @@ title: "HP 38G, 39G and 40G keyboards: functions not printed on the keys, and th
 type: rom-behaviour
 models: [38g, 39g, 40g]
 status: draft
-sources: ["[[sources/hp38g-ug]]", "[[sources/hp39g40g-ug]]"]
+sources: ["[[sources/hp38g-ug]]", "[[sources/hp39g40g-ug]]", "[[sources/sebastian-selftests]]"]
 tags: [keyboard, rom, self-test]
 ---
 
@@ -115,9 +115,50 @@ same results):
 | ON + +, ON + − | contrast up, down (p. 1-2) | contrast 12 to 13, and 12 to 11 |
 | ON + any other key | not listed | nothing visible; ON + (−), at the 49G's SPC position, does not turn the display off |
 
+## Leaving the tests
+
+Neither guide documents the tests. Sebastian's page says the 38G's
+tests work as on the 48, left with ON + menu key 3 (the 48's ON+C);
+the 39G's Tests menu is left with ON, which reboots, or ON + menu key 3,
+and its continuous and quick tests with ON + menu key 3. It warns that
+the tests may clear memory (src: [[sources/sebastian-selftests]]). The
+48 FAQ gives ON+C, a warm start, as the way out of the 48's interactive
+test (src: [[sources/hp48-faq]] 4.7).
+
+Observed (saturnus, 2026-10-25), each from HOME with 77 stored in A:
+
+**38G** (ROM A1.67):
+
+| Test | Leaves it | Other keys |
+| --- | --- | --- |
+| ON + menu key 4: test mode, three vertical lines | ON + menu key 3: HOME, history cleared, A still 77 | ON alone does nothing. Menu keys 1 to 6 run single tests as on the 48: 1 speed ("SPD"), 2 display patterns (ENTER steps them), 3 "IROM OK", 4 "IRAM OK", 5 "KBD1", 6 "KBD2"; a wrong key in KBD1 or KBD2 shows a code. Each returns to test mode |
+| ON + menu key 5: continuous test | ON + menu key 3, as above | Patterns, IRAM, "OK-38", speed, IROM, repeating. ON did nothing; other keys let it run on, then it showed "KBD 00013" and stayed in test mode |
+
+**39G and 40G** (`rom.39g`; the 40G differs only in its CAS label and
+in naming itself HP40G):
+
+| Test | Leaves it | Other keys |
+| --- | --- | --- |
+| ON + menu key 4: the Tests menu | ON ("Reboot") or ON + menu key 3: HOME, history cleared, A still 77 | 1 Hard and 2 Cpu showed nothing in saturnus. 3 Kbd1 and 4 Kbd2 wait for the keys in order and show a hex code for a wrong key, ON included, so ON does not leave them; Kbd2 done in Sebastian's order returns to the menu; ON + menu key 3 leaves either. 5 FullRAM runs about 5 s and returns to the menu; A was still 77. 6 RS232 and 7 IR ask to open, then close the loop, "And Press any key"; without a loop plug they report an error, and keys step them back to the menu. Menu key 1, not listed, opens a hex memory dump |
+| ON + menu key 5: continuous test | ON + menu key 3, held: HOME, history cleared, A still 77 | RAM tests ("No open pins", "RAM0 OK"), display patterns, speed, repeating; ON and other keys did not stop it |
+| ON + menu key 6: quick test | ON + menu key 3, held, as above | Patterns, then Kbd2; done in order it goes on to the RS232 and IR steps, keys stepping them; ON counts as a wrong key in Kbd2 |
+
+How long menu key 3 is held matters in the continuous and quick tests:
+held 2 s it left at every one of eight starting times tried (1 to 20 s
+into the test); held 0.4 s it was sometimes taken as a key press (the
+test showed "HP39/40 Error" and went on), and where it did leave, the
+history held two lines of garbage characters; held 1 s it failed once in
+eight. A was kept in every case.
+
+In saturnus each continuous pass ends with "HP39/40 Error", where
+Sebastian reports "HP 39/40 OK", and the ERAM step shows "Write on ERAM
+ERROR, Calculator is HP39G": probably an emulator gap, not checked.
+
 ## Open
 
 - Nothing here was checked on a real 38G, 39G or 40G.
+- Whether "Write on ERAM ERROR" and "HP39/40 Error" in the 39G tests
+  are saturnus faults, and why Hard and Cpu show nothing.
 - Whether ON + 1 sends the screen anywhere (serial or IR) was not
   checked; the test screens were not explored item by item.
 - The states listed under "Not covered" were not swept.

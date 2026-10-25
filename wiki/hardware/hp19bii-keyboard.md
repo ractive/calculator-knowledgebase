@@ -3,7 +3,7 @@ title: "HP 19BII keyboard: functions not printed on the keys, and the ON-key com
 type: rom-behaviour
 models: [19bii]
 status: draft
-sources: ["[[sources/hp19bii-om]]"]
+sources: ["[[sources/hp19bii-om]]", "[[sources/sebastian-selftests]]"]
 tags: [keyboard, rom, self-test]
 ---
 
@@ -72,6 +72,24 @@ ON is held down and the second key pressed before ON is released.
 | ON + EXIT | not listed | "KEYBOARD TEST": a factory keyboard test; it took some keys and answered another with "1 FAIL", then showed "COPYRIGHT HP 1986, 1987" and returned to MAIN. The expected key order was not found |
 | ON + second menu key | not listed | Nothing; the calculator stays on |
 | ON + any other key | not listed | The calculator turns off (ON acts alone) |
+
+## Leaving the tests
+
+The manual: ON + third menu key halts the self-test with "MACHINE
+RESET"; any other key halts it with a FAIL message caused by the wrong
+key (p. 279). The footnote on the same page stops the factory test (ON
++ fourth menu key) the same way.
+
+Observed (saturnus, 19BII ROM, 2026-10-25), each from MAIN with 77
+stored in register 1:
+
+| Test | Leaves it | Other keys |
+| --- | --- | --- |
+| Self-test, ON + fifth menu key | ON + third menu key: "MACHINE RESET" over 0.00; RCL 1 gives 77 | Patterns and "OK-19B II", repeating. A key, ON included, is noticed at some steps only: "1 FAIL"; the next key shows "COPYRIGHT HP 1986, 1987", the one after returns to MAIN with 0.00 and is not acted on. Register 1 was kept |
+| Factory test, ON + fourth menu key | ON + third menu key, at any step, as above | Vertical lines; each key but ON advances one step (ON did nothing): display patterns, then "KEYBOARD TEST", the test ON + EXIT starts |
+| Keyboard test, ON + EXIT | ON + third menu key, as above | Some keys are taken; ON or a wrong key gives "1 FAIL", then as for the self-test |
+
+No test lost memory; every exit leaves 0.00 on the calculator line.
 
 ## Open
 

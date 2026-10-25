@@ -119,6 +119,15 @@ most of the gap.
 
 System flag meanings: [[hardware/system-flags-48gx]].
 
+## Keyboard
+
+Functions not printed on the keys (the left-shifted application menus,
+right-shift right-arrow for the Kermit server, right-shift down-arrow
+for the menu labels) and the ON-key combinations, from the User's Guide,
+the 48 FAQ and a key sweep on ROM R in saturnus:
+[[hardware/hp48gx-keyboard]]. Matrix and shift colours:
+[[hardware/keyboard]].
+
 ## Clock
 
 Keeps the date and time; how it is set, and what saturnus found about

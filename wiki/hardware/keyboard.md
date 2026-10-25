@@ -198,7 +198,8 @@ saturnus skins, iteration 30):
   green are the twelve applications (CHARS, EQ LIB, I/O, LIBRARY, MEMORY,
   MODES, PLOT, SOLVE, STACK, STAT, SYMBOLIC, TIME), all right-shifted;
   each one's left-shifted key gives the unlabelled command menu of the
-  same name (p. 1-6). The UNITS catalog is right-shifted, the UNITS
+  same name (p. 1-7; the full list, observed on ROM R, is on
+  [[hardware/hp48gx-keyboard]]). The UNITS catalog is right-shifted, the UNITS
   command menu left-shifted (p. 10-1 ff.). Measured on the saturnus
   emulator with ROM R: left shift + 7 shows the SOLVE command menu
   (ROOT DIFFE POLY SYS TVM), right shift + 7 the "Solve equation…"

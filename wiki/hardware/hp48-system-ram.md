@@ -156,3 +156,29 @@ pointer to a real at #705BA (48SX) and #80739 (48GX); key presses do not
 update those. An input form shows its own menu (on the 48GX an entry of
 library #B3), not one of the numbered menus. See
 [[protocols/rpl-libraries]], "Built-in menus".
+
+The page shown (observed 2026-10-25 in saturnus, 48SX ROM J, 48GX ROM R,
+49G ROM 2.10 and 1.19-6, by diffing RAM after NXT and PREV in the VAR
+menu of 40 variables and in MTH's submenus): a 5-nibble field, low
+nibble first, holding the number of the first key the page shows,
+counted from 1: 1 on the first page, 7 after NXT, 13, 19 (#13) and so
+on; NXT on the last page wraps it to 1, PREV steps it back. It is at
+#707C9 on the 48SX, #80947 on the 48GX and #81026 on the 49G. Creating a
+directory did not reset it; pressing a menu key sets it to 1.
+
+Further observations, same runs:
+
+- The VAR menu is menu 2 and CST menu 1 on all three. The VAR menu's
+  keys are the current directory's variables, newest first, six to a
+  page as the field counts them.
+- While a choose box shows (the 48GX's → 7, the 49G's APPS with flag
+  -117 clear), the pointer points into RAM, not at a numbered menu.
+- On the 49G some menus are not entries of the menu library: TOOL, and
+  the menus of the applications reached from the shifted keys, leave the
+  pointer on a program object in RAM (prolog #02D9D) that builds the
+  keys.
+- Reading a menu's labels from the ROM's definitions (the keys in the
+  order the definition lists them, six per page) matched the display on
+  the menus tried: MTH and its first submenu with both pages, PRG, the
+  48SX's ALGEBRA and SOLVE, the 48GX's and 49G's `93 MENU` (COLCT EXPAN
+  ISOL QUAD SHOW TAYLR).

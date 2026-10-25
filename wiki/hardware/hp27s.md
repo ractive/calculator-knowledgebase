@@ -242,6 +242,34 @@ revision B.
   ROM step printed "ROM 05DFB" with the 48's CRC rule; with the Lewis
   rule the image gives #FFFF ([[questions/hp42s-rom-crc]]).
 
+## Menu labels in RAM
+
+Observed in saturnus on 2026-10-25 with the image under "ROM images
+seen" (revision B, "OK-27S-EB"). Found by pressing keys and comparing
+RAM, then checked against the LCD; no ROM code was read. Not checked on
+a real 27S.
+
+- **Label buffer**: six entries of 11 nibbles from #503DF, one per menu
+  key from the left: a length nibble (0 to 5), then up to five
+  characters of two nibbles each, low nibble first, as on the 42S and
+  17BII ([[hardware/hp42s]] "Menu labels in RAM"). Labels seen were
+  ASCII (`I%YR`, `. /,`). Blank keys have length 0 and no box.
+- **Not cleared**: unlike the 17BII the 27S often shows no menu (after
+  a first start, after EXIT from a menu). The buffer then still holds
+  old text: after a first start and after shift TVM EXIT the entries for
+  keys 1 and 2 read length 0 and keys 3 to 6 `ABCDE`, `FGHI`, `JKLM`,
+  `NOPQ`. Whether a menu shows has to be taken from elsewhere, such as
+  the LCD's label row.
+
+Menus checked: TVM (two key paths), TVM OTHER, TIME, MODES, SOLVE, the
+ALPHA menu (after SOLVE NEW), the Solver's variable menu (`A`, `B` for
+`A=B`), the STAT list menu (`CALC INSR DELET NAME GET TOTAL`) and its GET
+menu (`*NEW`, then a list named AB).
+
+Not checked: BASE, PROB, HYP, CONVERT, %CHG, PARTS, PRINTER, MEM, CLEAR
+DATA, the STAT CALC menus, the TIME submenus, MODES' second page, and
+Solver equations with more than six variables.
+
 ## Setting the clock by keys
 
 The SET menu as an emulator presses it, the RAM nibble of its date and

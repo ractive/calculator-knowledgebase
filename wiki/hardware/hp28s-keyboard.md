@@ -31,7 +31,8 @@ equivalent of this page is [[hardware/hp48gx-keyboard]].
   This is the ROM on an emulator, not checked on a real calculator.
 
 Not covered: menus other than TRIG, the PLOT and SOLV environments,
-catalogs, FORM, VISIT and EDIT, halted programs, USER mode.
+catalogs, FORM, VISIT and EDIT, halted programs, USER mode. Which menu
+and page shows can be read from RAM: [[hardware/hp28s]] "Menu in RAM".
 
 ## Unprinted functions
 

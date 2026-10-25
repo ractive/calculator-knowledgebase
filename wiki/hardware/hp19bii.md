@@ -98,6 +98,10 @@ with #FF828) and one at a time (19BII ROM).
 
 ## Keyboard
 
+Functions not printed on the keys (ON as OFF, letters at MAIN) and the
+ON combinations, including an unlisted keyboard test:
+[[hardware/hp19bii-keyboard]].
+
 Matrix codes are Emu42's, as OUT bit and IN value (src:
 [[sources/kml20]] OutIn Codes HP19BII); key labels and shifted labels
 from the manual's figure (p. 22-23). The pattern is the 28S's

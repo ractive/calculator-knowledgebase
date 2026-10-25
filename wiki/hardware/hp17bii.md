@@ -188,6 +188,9 @@ does the same with its menu keys ([[hardware/hp42s]]).
 
 ## Key chords
 
+What the keys do beyond their labels and what a key sweep saw for each
+chord: [[hardware/hp27s-17b-17bii-keyboard]].
+
 From the manuals (src: [[sources/hp17bii-om]] p. 16, 217-220;
 [[sources/hp17b-om]] p. 16, 217-220); identical on both models:
 
@@ -199,8 +202,9 @@ From the manuals (src: [[sources/hp17bii-om]] p. 16, 217-220;
 | CLR + fifth menu key | ON + OUT 1/IN 64 | continuous self-test |
 
 The chords sit on the same matrix positions as the 42S's EXIT + √x
-(reset) and EXIT + LN (self-test) ([[hardware/hp42s]]); the 42S's memory
-clear is a two-key chord on the second key instead.
+(reset) and EXIT + LN (self-test) ([[hardware/hp42s]]); the 42S manual's
+memory clear, EXIT + Σ+ + XEQ, is the first and sixth menu key too
+([[hardware/hp42s-keyboard]]).
 
 Erasing memory clears the calculator line and history, equations,
 variables, lists and appointments and restores start-up settings

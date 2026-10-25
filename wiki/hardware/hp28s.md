@@ -174,6 +174,10 @@ pressed (OM p. 21, 217).
 
 ## Keyboard
 
+Functions not printed on the keys (the shifted cursor menu, Menu Lock on
+shift α) and every ON chord tried on ROM 2BB in saturnus:
+[[hardware/hp28s-keyboard]].
+
 The left (alpha) keyboard has six rows of six keys, SPACE taking two
 places; the right keyboard has seven rows: six blank menu keys under the
 display, then rows of six, five and five keys (ENTER takes two places).

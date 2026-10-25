@@ -192,7 +192,10 @@ saturnus skins, iteration 30):
 - **48SX**: the orange key is the left shift and its labels are orange;
   the blue key is the right shift, its labels blue (OFF is blue, above
   ON) (src: [[sources/hp48sx-om]] p. 1-3). This settles the "unverified
-  here" above: left shift is the orange key.
+  here" above: left shift is the orange key. The application names are
+  orange (left shift); the blue slots above them are empty, though most
+  of those right-shift positions do something
+  ([[hardware/hp48sx-keyboard]]).
 - **48G/GX**: purple left shift, green right shift, labels in the same
   colours (src: [[sources/hp48g-ug]] p. 1-5). The labels printed alone in
   green are the twelve applications (CHARS, EQ LIB, I/O, LIBRARY, MEMORY,
@@ -206,7 +209,9 @@ saturnus skins, iteration 30):
   choose box of the SOLVE application.
 - **49G**: blue left shift (FILES above APPS), red right shift (PASTE
   above NXT) (src: [[sources/hp49g-um]] p. 1-3). On @ractive's unit the
-  left-shift labels are navy and the right-shift labels dark red.
+  left-shift labels are navy and the right-shift labels dark red. A shift
+  held down while the key is pressed gives some keys an unprinted second
+  function ([[hardware/hp49g-keyboard]]).
 - **38G**: one shift key, light turquoise, its labels turquoise
   (@ractive's photographs of a 38G, saturnus skin).
 - **39G/40G**: one orange SHIFT key, orange-red shifted labels

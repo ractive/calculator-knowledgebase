@@ -89,6 +89,15 @@ document:
 
 System flag meanings: [[hardware/system-flags-48sx]].
 
+## Keyboard
+
+Functions not printed on the keys (the right shift on the application
+keys: → I/O server, → MODES, → MEMORY, → SOLVE, → PLOT, → ALGEBRA,
+→ TIME, → STAT, → UNITS; → PURGE, → PREV, the LAST keys) and the ON-key
+combinations, from the Owner's Manual and a key sweep on ROM J in
+saturnus: [[hardware/hp48sx-keyboard]]. Matrix and shift colours:
+[[hardware/keyboard]].
+
 ## Clock
 
 Keeps the date and time; how it is set, and what saturnus found about

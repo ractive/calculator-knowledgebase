@@ -28,7 +28,9 @@ for I/O and object format only, per the brief.
 | 3.5 | ROM bugs incl. XRECV needing twice the file size free before rev. R | [[protocols/xmodem-hp]] |
 | 4.1 | BYTES checksum: 16-bit CRC | [[hardware/crc]] |
 | 4.6, 4.7 | ON-key combinations, self-tests; test results go out the serial port at 9600 8N1 regardless of IOPAR | [[hardware/uart]] |
-| 4.19 | right-shift right-arrow starts Kermit SERVER on the G/GX | [[protocols/server-commands]] |
+| 4.6, 4.7 | ON-key combinations compared with a key sweep on ROM R | [[hardware/hp48gx-keyboard]] |
+| 4.19 | right-shift right-arrow starts Kermit SERVER on the G/GX; right-shift down-arrow reviews the menu keys | [[protocols/server-commands]], [[hardware/hp48gx-keyboard]] |
+| 10.1 | G/GX keys: left shift on the digit keys gives softkey menus, right shift full-screen ones; CHARS shows NUM and the key sequence; right-shift VAR is the Variable Browser | [[hardware/hp48gx-keyboard]] |
 | 6.4-6.18 | cables, IR range, IrDA, binary vs ASCII transfer, "HPHP48-" strings, the `%%HP:` ASCII header, Kermit slowness, XRECV bug, transfer tips, pinout | [[protocols/kermit-hp]], [[protocols/hp-object-format]] |
 | 6.23, 6.26, 6.27 | Invalid card data, covered ports, 64 Hz flicker | model pages |
 | 7.6 | ASC format (\->ASC / ASC\->) | [[protocols/hp-object-format]] |

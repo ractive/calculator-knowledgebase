@@ -53,4 +53,13 @@ binary. -36 receive overwrite. -39 I/O messages suppressed (p. D-3, D-4).
 The whole appendix (p. D-1 to D-6 = PDF 467-472) was later read for
 [[hardware/system-flags-48gx]].
 
+Later read (2026-10-25, the OCR text in `raw/manuals/text/` checked
+against the page images) for [[hardware/hp48gx-keyboard]]: chapter 1
+p. 1-4 to 1-10 (keyboard layers, the twelve applications and their
+left-shifted command menus p. 1-6, 1-7, the cursor-key table p. 1-7, the
+keys with no cursor p. 1-8, the last menu p. 1-10), the alpha keyboard
+p. 2-2, 2-3, LASTARG p. 3-5, and the Appendix G entries for LASTARG
+(G-23), MENU (G-26), SERVER (G-42, keys ← I/O SRVR SERVE) and VIEW and
+→VIEW (G-51). Book page G-n is PDF page 480 + n.
+
 Facts used on [[protocols/iopar]], [[protocols/kermit-hp]], [[protocols/server-commands]], [[protocols/xmodem-hp]].

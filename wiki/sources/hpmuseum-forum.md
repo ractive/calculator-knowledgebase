@@ -25,6 +25,7 @@ browser did not, and no challenge was shown). Web pages, not in `raw/`.
 | F4 | "Looking for HP-42S ROM image", 2004-06-29, old forum archive 14, message 59526 | Thomas Okken, J-F Garnier |
 | F5 | "HP42s ROM", 2012-06-25, old forum archive 21, message 225619 | replies saying 42S images circulate on a hobbyist site |
 | F6 | "Converting Rom Art", 2020-09-25 to 2024-10-24, <https://www.hpmuseum.org/forum/thread-15593.html> | RPLman (LEWISCRC runs), Christoph Gießelink (2020-09-25) |
+| F7 | "HP48 Shortcut Keys", 2018-11-04 to 2025-06-24, <https://www.hpmuseum.org/forum/thread-11745.html> | TomC, rprosperi, Steve Simpkin, tarapitha |
 
 F3-F5 were read on 2026-10-12 for [[hardware/saturn-models]] (ROM
 availability):
@@ -72,6 +73,20 @@ page, through the headless browser, no challenge shown):
 So on a good image the Lewis self-test's two passes both give #FFFF, as
 the ROM's own check expects. The thread does not say how LEWISCRC computes
 the CRC.
+
+F7 was read on 2026-10-25 for [[hardware/hp48gx-keyboard]] (lite archive
+page through a headless Firefox; the print view hit a Cloudflare check):
+
+- TomC asks for a list of all HP48 shortcut keys (examples: right-arrow
+  for SWAP, ON+1 to print the screen) and says he cannot find one in the
+  User's Guide or the AUR.
+- rprosperi answers that the 48GX User's Guide Appendix G has most of
+  them, but as a list of keys for every operation, so the shortcuts are
+  hard to pick out; he did not find a table in the 48 FAQ either.
+- Steve Simpkin points to the FAQ's ON-key list
+  ([[sources/hp48-faq]] 4.6) and reposts it.
+- tarapitha (2025-06-24) adds right shift with the R key (the right-arrow
+  key) to start the Kermit server, unsure whether the manual has it.
 
 The quoted 1987 article (F2) says: the team that had written the HP-71
 Math and FORTH/Assembler ROMs went on to design a new calculator

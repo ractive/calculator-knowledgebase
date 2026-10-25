@@ -827,3 +827,17 @@ inside it), calls of commands that are no functions as user-function
 calls through library 2 command 392, and the history echo (an empty tag
 on such a program), shown as typed in algebraic mode and with
 backquotes in RPN mode. [[hardware/command-line]] links to it.
+
+## [2026-10-25] ingest | HP 48G/GX keys not printed on the keyboard, ON combinations
+
+New page [[hardware/hp48gx-keyboard]]: the left-shifted application
+menus, → ▶ (Kermit server), → ▼ (menu labels in full), the cursor keys
+with and without a command line, → EEX (LASTARG), → NXT (last menu), the
+alpha shifts, and the ON-key combinations. Sources: the User's Guide
+(chapter 1-3 pages and Appendix G entries, newly read, noted on
+[[sources/hp48g-ug]]), the 48 FAQ 4.6, 4.19 and 10.1, the forum thread
+"HP48 Shortcut Keys" ([[sources/hpmuseum-forum]] F7), and a sweep of
+1274 key combinations on the saturnus emulator with ROM R (2026-10-25,
+black box, not hardware). Appendix G gives SERVER as ← I/O SRVR SERVE
+(left shift). Linked from
+[[hardware/hp48gx]] and [[hardware/keyboard]].

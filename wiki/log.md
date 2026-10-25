@@ -816,3 +816,14 @@ the stack about 3.4 s after power-on once answered; in algebraic mode a
 program is read as algebraic (`« 1 2 + »` is Invalid Syntax,
 `« → a « a » »` is read); line breaks make no difference; a 146-point
 plot loop takes the 49G about 38 s against the 48GX's 8 s.
+
+## [2026-10-25] ingest | The 49G's algebraic-mode echo and backquoted expressions
+
+[[protocols/rpl-libraries]] "Algebraic-mode expressions": observed in
+saturnus on ROMs 2.10 and 1.19-6 from RAM, the ROM's `→STR` and its
+stack display: structure library commands 30 (an expression in
+algebraic-mode syntax, written between backquotes) and 31 (a quote
+inside it), calls of commands that are no functions as user-function
+calls through library 2 command 392, and the history echo (an empty tag
+on such a program), shown as typed in algebraic mode and with
+backquotes in RPN mode. [[hardware/command-line]] links to it.

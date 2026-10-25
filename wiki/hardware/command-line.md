@@ -176,7 +176,8 @@ included, as algebraic syntax: `« 1 2 + »`, `« 1 'X' STO »`,
 `« 0 2 FOR i i NEXT »` and `« 1 2 + » EVAL` give "Invalid Syntax" and
 the line stays open, while `« → a « a » »` and `« 1 → a « a » »` are
 read (each ENTER also leaves its echo on the stack, see
-[[hardware/hp49g]]). In RPN mode (flag -95 clear) the same texts are read
+[[hardware/hp49g]]; its object format is in [[protocols/rpl-libraries]]
+"Algebraic-mode expressions"). In RPN mode (flag -95 clear) the same texts are read
 as on the 48GX. Line breaks and indentation make no difference: a
 multi-line program and the same text on one line behave the same in
 either mode.

@@ -138,7 +138,7 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 - [[protocols/iopar]] — IOPAR: the HP48 I/O parameter list (draft)
 - [[protocols/kermit-hp]] — Kermit as implemented by HP calculators (draft)
 - [[protocols/kermit]] — Kermit protocol (generic) (draft)
-- [[protocols/rpl-libraries]] — RPL libraries in ROM: headers, hash and link tables, command names, unit operators, how the decompiler shows programs and algebraics, built-in menus and their definitions (48SX, 48GX, 49G) (draft)
+- [[protocols/rpl-libraries]] — RPL libraries in ROM: headers, hash and link tables, command names, unit operators, how the decompiler shows programs, algebraics and the 49G's backquoted algebraic-mode expressions, built-in menus and their definitions (48SX, 48GX, 49G) (draft)
 - [[protocols/server-commands]] — HP Kermit server mode and its commands; replies, errors, archive and STR→ tokenising as observed (draft)
 - [[protocols/xmodem-hp]] — XModem on HP calculators (48G XSEND/XRECV, 49G, XSERV transfers) (draft)
 - [[protocols/xmodem]] — XMODEM, XMODEM-CRC, XMODEM-1K and YMODEM (generic) (draft)

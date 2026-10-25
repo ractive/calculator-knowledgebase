@@ -151,6 +151,46 @@ With flag -53 set, every compound operand is
 parenthesised. Checked against the ROMs' own text for some 2000 objects
 (saturnus iteration 12c).
 
+## Algebraic-mode expressions (49G, observed)
+
+Observed in saturnus on 2026-10-25 by reading RAM after typing on the
+49G ROMs 2.10 and 1.19-6, and comparing with the ROM's own `→STR` and
+its stack display. The 49G's structure library (#700) has commands 30
+and 31 more than the 48's (which end at 28), both unnamed (at #78C2C
+and #78D2F in both images, seen as #38C2C and #38D2F):
+
+- Command 30 marks the next object as an expression in algebraic-mode
+  syntax. The ROM writes the pair between backquotes: `` `CF(-95)` ``.
+  Typed in RPN mode, `` « `CF(-95)` » `` compiles to the same objects.
+- Command 31, inside such an expression, quotes the next object
+  (`'A'`, `'X+1'`).
+- A command that is no function (CF, STO, R→B, ΣLIST, DUP) is called as
+  a user function is (see "How a program shows a command" above): its
+  arguments, an algebraic holding just the command (an XLIB name, e.g.
+  library 2 command 132 for CF), a system binary with the argument
+  count, then a pointer to an unnamed command of library 2 (number 392,
+  next to NOVAL's 391) that applies it. With no arguments the ROM shows
+  the command's name alone (`` `DUP` ``).
+- An expression made only of functions and operators is an ordinary
+  algebraic after command 30 (`` `SIN(1)` ``, `` `1+2` ``); a name is
+  the name (`` `X` ``); a list is the list, shown with commas
+  (`` `{1,2}` ``), where a name inside it is a program of command 30 and
+  the name (`` `{1,X}` ``). A mixed expression nests these in a program:
+  `R→B(5)+1` is a program holding command 30, a program with 5, the
+  algebraic `R→B`, the count 1 and the applying command, then 1 and `+`.
+
+The history echo: in algebraic mode (flag -95 set) ENTER leaves, under
+the results, a tagged object with an empty tag whose object is a program
+without `«` and `»` holding the line compiled so: `CF(-95)` is
+`:: « (command 30) « -95 'CF' <1h> (apply) » »` in these terms, a
+number alone (`12`) or a string is just the object, `1+2,3` is the
+expression `1+2`, the separator `;` and 3. `→STR` writes the echo
+`` :: `CF(-95)` ``. The stack shows it as typed, `:CF(-95)` and
+`:'X+1'`, in algebraic mode, but with the backquotes
+(`` :`CF(-95)` ``) in RPN mode; a program holding such an expression
+keeps its backquotes in either mode. `→STR` writes a unit echo quoted
+(`'1_m'`), which the stack shows as `:1_m`.
+
 ## Unit operators (observed)
 
 A unit object (prolog #02ADA) is the number, then the unit expression in

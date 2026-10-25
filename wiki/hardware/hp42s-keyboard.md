@@ -40,6 +40,8 @@ printed are the held-key behaviours and the EXIT chords.
 
 Not covered: program-entry mode, ALPHA mode beyond its menu, the
 CATALOG and the other menus' own keys, the matrix editor, printing.
+Which labels a menu shows can be read from RAM: [[hardware/hp42s]]
+"Menu labels in RAM".
 
 ## Held keys
 

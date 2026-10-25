@@ -209,6 +209,39 @@ MAIN menu (19BII ROM). The nibble #C402B reads 0 on that prompt and 2 in
 every menu tried after it (19BII ROM), as #50092 does on the
 international 17BII ([[hardware/clocks]]).
 
+## Menu labels in RAM
+
+Observed in saturnus on 2026-10-25 with the image under "ROM image"
+(halves "OK-19B-1DK" and "OK-19B-2A", SHA-256
+25151cab88df3d419cc677c8b59744286298433fe042073c80885b00121fa83d),
+English chosen at the language prompt. Found by pressing keys and
+comparing RAM, then checked against the LCD; no ROM code was read. Not
+checked on a real 19BII.
+
+- **Label buffer**: six entries of 11 nibbles from #C4376, one per menu
+  key from the left: a length nibble (0 to 5), then up to five
+  characters of two nibbles each, low nibble first, the layout of the
+  Pioneers ([[hardware/hp42s]] "Menu labels in RAM"). Labels seen were
+  ASCII. Blank keys have length 0 and no box (SOLVE's fourth to sixth
+  keys, SUM MORE's third).
+- Some labels differ from the 17BII's: `ICONV`, `INSRT`; BUS adds
+  `CURRX` and `UNITS`; TVM OTHER has `AMRT` on the fourth key.
+- A menu always shows, MAIN at the top, as on the 17BII.
+
+Menus checked: MAIN, FIN, FIN TVM (two key paths), TVM OTHER (two
+paths), BUS, TIME, SOLVE, the Solver's variable menu (`A`, `B` for the
+equation `A=B`, also after leaving and re-entering SOLVE), the CFLO list
+menu (`CALC INSRT DELET NAME GET PLOT`) and its GET menu (`*NEW`, `AB`),
+the SUM list menu, its GET menu and its second page (`COPY LABEL` blank
+`START SUBT MORE`), TEXT (`MARK EDIT DELET NAME GET MORE`), its second
+page (`FIND EDIT PREV NEXT SORT MORE`) and its GET menu with a named
+text list.
+
+Not checked: MODES, MATH, PRINTER, CLEAR DATA, ICONV, BOND, DEPRC, AMRT,
+CURRX, UNITS, the CFLO and SUM CALC menus, the TIME submenus, TEXT's
+third page, Solver equations with more than six variables, and the five
+other languages.
+
 ## Self-test
 
 ON held while pressing the fifth menu key starts a repeating test: lit

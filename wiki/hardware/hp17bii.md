@@ -289,6 +289,40 @@ forms"):
 - In the TIME menu the time line changes once per emulated second, with
   saturnus's 8192 Hz timers ([[questions/pioneer-clock-alarm-hardware]]).
 
+## Menu labels in RAM
+
+Observed in saturnus on 2026-10-25 with the two images under "ROM images
+seen" (17BII main ROM revision B, language ROM A; 17B main ROM B,
+language ROM B), English chosen at the language prompt. Found by
+pressing keys and comparing RAM, then checked against the LCD; no ROM
+code was read. Not checked on a real calculator.
+
+- **Label buffer**: six entries of 11 nibbles, one per menu key from the
+  left, from #503D2 on the 17BII and #503D1 on the 17B: a length nibble
+  (0 to 5), then up to five characters of two nibbles each, low nibble
+  first. The layout is the 42S's ([[hardware/hp42s]] "Menu labels in
+  RAM"). All labels seen were ASCII (`I%YR`, `MU%C`, `#T?`, `*NEW`).
+- **Blank keys**: an entry of length 0, and unlike the 42S no box is
+  drawn (MAIN's sixth key, BUS's fifth and sixth).
+- **Names typed by the user** appear as typed: an equation `A=B` gives
+  the Solver's variable menu `A`, `B`; a CFLO or SUM list named AB shows
+  in the GET menu as `*NEW`, `AB`.
+- **Always a menu**: these models show a menu in every state tried
+  (MAIN at the top), and in each the buffer matched it. States without
+  a menu label row (the language prompt, messages) were not checked.
+
+Menus checked, the same on both models: MAIN, FIN, FIN TVM (reached two
+ways), TVM OTHER (two ways), BUS, TIME, SOLVE, the ALPHA menu (after
+SOLVE NEW and CFLO NAME), the Solver's variable menu (after CALC, and
+again after leaving and re-entering SOLVE), the CFLO list menu (`CALC`
+`INSR` `DELET` `NAME` `GET` `#T?`), its GET menu, the SUM list menu
+(`... GET TOTAL`) and its GET menu.
+
+Not checked: the 17BII's RPN mode, MODES, MATH, PRINTER, MEM, CLEAR
+DATA, ICNV, BOND, DEPRC, AMRT, the CFLO and SUM CALC menus, the TIME
+submenus, the list editors' entries, a Solver equation with more than six
+variables (MORE), and the other languages of the international ROMs.
+
 ## Setting the clock by keys
 
 The SET menu as an emulator presses it, the RAM nibble of its date and

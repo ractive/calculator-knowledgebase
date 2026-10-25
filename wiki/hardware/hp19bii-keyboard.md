@@ -33,7 +33,9 @@ their matrix codes and shifted labels, and the self-test are on
   checked on a real 19BII.
 
 Not covered: the applications' menus, the equation and list editors
-beyond their first screen, ALG versus RPN, printing to a printer.
+beyond their first screen, ALG versus RPN, printing to a printer. The
+labels a menu shows are kept in RAM: [[hardware/hp19bii]] "Menu labels
+in RAM".
 
 ## Unprinted functions
 

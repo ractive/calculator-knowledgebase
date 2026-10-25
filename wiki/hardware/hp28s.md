@@ -487,6 +487,35 @@ Not checked on a real 28S.
   bit 2 of #C00F0 ("Keyboard").
 - **Characters**: the text uses the 28S's codes: « typed byte 146.
 
+## Menu in RAM
+
+Observed in saturnus on 2026-10-25 with the revision 2BB image under
+"ROM image": menus opened by their keys, RAM compared, the LCD saved
+alongside. No ROM code was read for this. Not checked on a real 28S.
+
+- **Menu number**: two nibbles at #C0151, low nibble first. Seen: ARRAY
+  1, REAL 6, STACK 7, LOGS 17, TRIG 21, USER 23; 0 after a memory reset
+  and in the cursor menu. The same number came by two key paths (TRIG
+  directly or after REAL; REAL directly or after TRIG). ATTN leaves the
+  menu on the screen and the number unchanged.
+- **First label shown**: two nibbles at #C0153, low nibble first: the
+  index of the leftmost label, 0, 6, 12. NEXT adds 6 and wraps at the
+  menu's end (STACK: 0, 6, 0, 6 with each NEXT; REAL, ARRAY and TRIG
+  reached 12); PREV from the first page went to STACK's last page (6).
+  In the empty USER menu NEXT left it at 0.
+- **Label texts**: the ROM builds the label strings in temporary memory
+  as it draws them, at addresses that move from one redraw to the next,
+  and the old copies stay: after STACK, NEXT, NEXT and then REAL, RAM
+  still held `ROLLD`, `PICK` and three copies of `DROP` from the STACK
+  pages next to REAL's `NEG`. Searching RAM for the labels is therefore
+  not reliable; the labels of a menu number and page have to come from
+  elsewhere (the reference manual's menu maps, or the screen).
+
+Menus checked: ARRAY, REAL, STACK, LOGS, TRIG, USER (with no
+variables), the cursor menu. The numbers of the other menus (the
+remaining shifted letter keys, SOLV and its submenus, a USER menu with
+variables) were not read.
+
 ## Number entry
 
 The ROM's number parser (rev. 2BB, from #108E7) stores a real typed

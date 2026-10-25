@@ -113,6 +113,60 @@ How the ROM gets there (42S ROM revision C, traced in saturnus):
   model") the preview shows at once and NULL after 0.95 s of emulated
   time at 1 MHz.
 
+## Menu labels in RAM
+
+Observed in saturnus on 2026-10-25 with a revision C image (its last
+bytes read "OK-42S-EC"; this image's SHA-256 is
+841e79a9f0878882f6dd9343d428f1065e3ea12c1da4c11980061db4615b0baf, a
+different byte order from the image under "ROM image"). Found by
+pressing keys and comparing RAM, then checked against the LCD; no ROM
+code was read. Not checked on a real 42S.
+
+- **Label buffer**: the texts of the six menu labels, left to right,
+  sit in six entries of 11 nibbles from #5033C (to #5037D). Each entry
+  is a length nibble (0 to 5), then up to five characters of two
+  nibbles each, low nibble first. CONVERT's first row reads `→DEG`,
+  `→RAD`, `→HR`, `→HMS`, `→REC`, `→POL`.
+- **Characters** are the 42S's codes, not ASCII throughout: 0x0F is →
+  and 0x05 is Σ (`Σ+`, `ALLΣ`).
+- **Full label, no mark**: a toggle's label is kept without its ■.
+  STAT's second row shows `ALL■` on the screen and holds `ALLΣ`; DISP
+  shows `FIX■` and `RDX.■` and holds `FIX` and `RDX.`.
+- **Five characters at most**: a program named ABCDEFG shows as
+  `ABCDE` in the XEQ menu and its entry holds those five. The nibbles
+  after the length can hold stale characters from an earlier label.
+- **Blank keys**: an entry of length 0 (STAT's second row keys 3 and 4,
+  MODES key 4); the 42S still draws an empty box there. In the ALPHA
+  menu's ABCDE level the sixth key holds one space and shows an empty
+  box.
+- **Not cleared**: after EXIT the entries keep the last menu's labels
+  (CONVERT's after shift CONVERT EXIT), and after a label typed with the
+  ALPHA menu in program entry they keep the ALPHA labels. Only after a
+  cold start were all six empty. So a reader must first know that a
+  menu shows.
+- **Menu shown**: the nibble at #50201 reads 0 with no menu, 1 in a
+  menu and 2 in a submenu: BASE LOGIC, CATALOG FCN and CATALOG PGM, the
+  ALPHA menu's letter level, the Solver's and ∫f(x)'s variable menus.
+  The variable menu VARMENU shows from the keyboard reads 1. It read 0
+  again after EXIT, and 0 in program entry once a step from PGM.FCN was
+  keyed and the menu had gone.
+
+Menus checked, each against its screen: CONVERT (both rows), STAT (both
+rows), DISP, PROB, BASE, BASE LOGIC, MODES, CATALOG, CATALOG FCN (two
+rows), CATALOG PGM, the ALPHA menu (both levels, also inside a LBL
+prompt), the XEQ menu (empty: `.END.`; with programs: their labels),
+PGM.FCN (all four rows, in program entry), the Solver's program menu and
+its variable menu (`X`, `Y` from MVAR), the same for ∫f(x), the menu
+VARMENU shows, and the RCL prompt's variable menu (`A`, `REGS`). Some
+were reached by two key paths with the same result.
+
+Not checked: CUSTOM and ASSIGN, FLAGS, PRINT, TOP.FCN, CLEAR, MATRIX and
+the matrix editor, CATALOG REAL, CPX, MAT and MEM, the Solver's and
+∫f(x)'s further menus, complex mode. A programmable menu (a program
+running KEY 1 GTO "S", MENU, STOP) showed six empty boxes on the screen
+and six empty entries, with #50201 at 1; why "S" did not show was not
+found (open).
+
 ## ROM image
 
 Revision C, 65536 bytes packed, SHA-256

@@ -870,3 +870,16 @@ model's ROM (2026-10-25, not hardware): each test started with a value
 stored, then ON, the exit chord, single keys and waiting tried from a
 fresh state. No test lost stored values; the 28S exits clear the stack,
 the aplet calculators' exits clear the HOME history.
+
+## [2026-10-25] ingest | Menu labels and menu state in RAM: 42S, 27S, 17B, 17BII, 19BII, 28S
+
+A "Menu labels in RAM" section on [[hardware/hp42s]], [[hardware/hp27s]],
+[[hardware/hp17bii]] (17B and 17BII) and [[hardware/hp19bii]]: each ROM
+keeps the six label texts in a buffer of six 11-nibble entries
+(42S #5033C, 27S #503DF, 17B #503D1, 17BII #503D2, 19BII #C4376),
+not cleared when the menu goes away; on the 42S the nibble at #50201
+tells whether a menu shows. A "Menu in RAM" section on [[hardware/hp28s]]: the menu number at #C0151 and the first label shown
+at #C0153; the label strings themselves move and leave stale copies.
+Black-box observation on the saturnus emulator with each model's ROM
+(2026-10-25, ROM versions on each page, not hardware), with the menus
+checked and not checked listed. Linked from the keyboard pages.

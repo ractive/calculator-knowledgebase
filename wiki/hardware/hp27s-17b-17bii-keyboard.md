@@ -36,7 +36,9 @@ counterpart is [[hardware/hp48gx-keyboard]].
 
 Not covered: the applications' own menus (TVM, CFLO, SUM, SOLVE, TIME,
 STAT and the rest), ALG versus RPN mode on the 17BII, the equation and
-list editors, typing letters, printing.
+list editors, typing letters, printing. The labels a menu shows are
+kept in RAM: [[hardware/hp27s]] and [[hardware/hp17bii]], "Menu labels
+in RAM".
 
 ## The menu keys with no menu (27S)
 

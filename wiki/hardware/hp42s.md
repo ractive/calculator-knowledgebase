@@ -151,6 +151,15 @@ code was read. Not checked on a real 42S.
   again after EXIT, and 0 in program entry once a step from PGM.FCN was
   keyed and the menu had gone.
 
+- **More character codes** (observed 2026-10-26, same image): ≤ is
+  0x09, ≥ 0x0B and ≠ 0x0C (PGM.FCN's `X≠0?`, `X≤Y?`, `X≥0?` rows).
+  Plain letters, digits and punctuation are ASCII.
+- **Label and box can differ**: the entry holds the label whole where
+  the box cuts it short (MATRIX's `TRANS`, shown as `TRAN`); BASE's
+  first key holds `A...F` (three full stops) for the box's `A…F`; a
+  toggle shown with ■ in place of its last letter holds that letter
+  (`DECM` for `DEC■`).
+
 Menus checked, each against its screen: CONVERT (both rows), STAT (both
 rows), DISP, PROB, BASE, BASE LOGIC, MODES, CATALOG, CATALOG FCN (two
 rows), CATALOG PGM, the ALPHA menu (both levels, also inside a LBL
@@ -159,6 +168,11 @@ PGM.FCN (all four rows, in program entry), the Solver's program menu and
 its variable menu (`X`, `Y` from MVAR), the same for ∫f(x), the menu
 VARMENU shows, and the RCL prompt's variable menu (`A`, `REGS`). Some
 were reached by two key paths with the same result.
+
+On 2026-10-26 every menu key the saturnus key reference presses under a
+menu (157 keys in the menus its functions reach, MATRIX, FLAGS, PRINT,
+CLEAR, the STAT and PGM.FCN rows among them) read as the label the
+screen shows, apart from the differences above.
 
 Not checked: CUSTOM and ASSIGN, FLAGS, PRINT, TOP.FCN, CLEAR, MATRIX and
 the matrix editor, CATALOG REAL, CPX, MAT and MEM, the Solver's and

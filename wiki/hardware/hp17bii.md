@@ -311,12 +311,21 @@ code was read. Not checked on a real calculator.
   (MAIN at the top), and in each the buffer matched it. States without
   a menu label row (the language prompt, messages) were not checked.
 
+- **Character codes** (observed 2026-10-26, both models): Σ is 0x76
+  (SUM CALC's forecast menu: `ΣX`, `ΣY`, `ΣX2`, `ΣY2`, `ΣXY`); every
+  other label seen was ASCII.
+
 Menus checked, the same on both models: MAIN, FIN, FIN TVM (reached two
 ways), TVM OTHER (two ways), BUS, TIME, SOLVE, the ALPHA menu (after
 SOLVE NEW and CFLO NAME), the Solver's variable menu (after CALC, and
 again after leaving and re-entering SOLVE), the CFLO list menu (`CALC`
 `INSR` `DELET` `NAME` `GET` `#T?`), its GET menu, the SUM list menu
 (`... GET TOTAL`) and its GET menu.
+
+On 2026-10-26 every menu key the saturnus key reference presses under a
+menu (184 keys on the 17BII, 181 on the 17B: ICNV, BOND, DEPRC, AMRT,
+the CFLO and SUM CALC menus, the TIME submenus, MATH and MODES among
+them) read as the label the screen shows.
 
 Not checked: the 17BII's RPN mode, MODES, MATH, PRINTER, MEM, CLEAR
 DATA, ICNV, BOND, DEPRC, AMRT, the CFLO and SUM CALC menus, the TIME

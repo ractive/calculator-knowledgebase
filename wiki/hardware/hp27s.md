@@ -261,10 +261,20 @@ a real 27S.
   `NOPQ`. Whether a menu shows has to be taken from elsewhere, such as
   the LCD's label row.
 
+- **Character codes** (observed 2026-10-26): Σ is 0x76 (STAT's `ΣX`,
+  `ΣXY`) and ∡ 0x77 (CONVERT's angle); the other characters seen were
+  ASCII. Lower-case ASCII codes stand for these characters here.
+- **Spaces**: some entries hold a space the label shows as a narrow gap
+  (`C X,Y`, `P X,Y` in PROB, `. /,` in MODES).
+
 Menus checked: TVM (two key paths), TVM OTHER, TIME, MODES, SOLVE, the
 ALPHA menu (after SOLVE NEW), the Solver's variable menu (`A`, `B` for
 `A=B`), the STAT list menu (`CALC INSR DELET NAME GET TOTAL`) and its GET
 menu (`*NEW`, then a list named AB).
+
+On 2026-10-26 every menu key the saturnus key reference presses under a
+menu (142 keys, PROB, HYP, CONVERT, BASE, the STAT CALC menus and the
+TIME submenus among them) read as the label the screen shows.
 
 Not checked: BASE, PROB, HYP, CONVERT, %CHG, PARTS, PRINTER, MEM, CLEAR
 DATA, the STAT CALC menus, the TIME submenus, MODES' second page, and

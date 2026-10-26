@@ -883,3 +883,17 @@ at #C0153; the label strings themselves move and leave stale copies.
 Black-box observation on the saturnus emulator with each model's ROM
 (2026-10-25, ROM versions on each page, not hardware), with the menus
 checked and not checked listed. Linked from the keyboard pages.
+
+## [2026-10-26] ingest | Menu labels: character codes, labels cut short, the 28S's menu numbers
+
+Added to the "Menu labels in RAM" sections of [[hardware/hp42s]],
+[[hardware/hp27s]], [[hardware/hp17bii]] and [[hardware/hp19bii]]: the
+non-ASCII character codes seen in the label buffers (42S ≤ ≥ ≠; Σ on
+the 27S, 17B and 17BII; ∡ on the 27S and 19BII; ° on the 19BII), labels
+held whole where the box cuts them short, and that every menu key the
+saturnus key reference presses under a menu read as its label. Added to
+[[hardware/hp28s]] "Menu in RAM": the number of every menu with a key
+of its own, the Solver's variable menu and a custom menu, and what the
+labels show page by page against the Reference Manual's menus.
+Black-box observation on the saturnus emulator with each model's ROM
+(2026-10-26, not hardware).

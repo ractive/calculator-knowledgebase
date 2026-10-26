@@ -228,6 +228,13 @@ checked on a real 19BII.
   `CURRX` and `UNITS`; TVM OTHER has `AMRT` on the fourth key.
 - A menu always shows, MAIN at the top, as on the 17BII.
 
+- **Character codes** (observed 2026-10-26): ° is 0x65 (BUS UNITS
+  TEMP: `°F`, `°C`, `°R`, `°K`) and ∡ 0x78 (MATH CONV's angle); the other
+  labels seen were ASCII.
+- **Label and box can differ**: the entry holds the label whole where
+  the box cuts it short (SUM CALC's `RANGE`, shown as `RANG`; UNITS
+  AREA's `SQ.KM` as `SQ.K`), and a space shown as a narrow gap (`C X,Y`).
+
 Menus checked: MAIN, FIN, FIN TVM (two key paths), TVM OTHER (two
 paths), BUS, TIME, SOLVE, the Solver's variable menu (`A`, `B` for the
 equation `A=B`, also after leaving and re-entering SOLVE), the CFLO list
@@ -236,6 +243,11 @@ the SUM list menu, its GET menu and its second page (`COPY LABEL` blank
 `START SUBT MORE`), TEXT (`MARK EDIT DELET NAME GET MORE`), its second
 page (`FIND EDIT PREV NEXT SORT MORE`) and its GET menu with a named
 text list.
+
+On 2026-10-26 every menu key the saturnus key reference presses under a
+menu (298 keys: ICONV, BOND, DEPRC, AMRT, CURRX, UNITS, MATH, MODES, the
+CFLO and SUM CALC menus, the TIME submenus and TEXT among them) read as
+the label the screen shows, apart from the differences above.
 
 Not checked: MODES, MATH, PRINTER, CLEAR DATA, ICONV, BOND, DEPRC, AMRT,
 CURRX, UNITS, the CFLO and SUM CALC menus, the TIME submenus, TEXT's

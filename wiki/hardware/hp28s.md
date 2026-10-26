@@ -511,10 +511,32 @@ alongside. No ROM code was read for this. Not checked on a real 28S.
   not reliable; the labels of a menu number and page have to come from
   elsewhere (the reference manual's menu maps, or the screen).
 
+- **Menu numbers** (observed 2026-10-26, same image): each menu opened
+  by its key from a fresh state: ARRAY 1, BINARY 2, COMPLX 3, STRING 4,
+  LIST 5, REAL 6, STACK 7, STORE 8, MEMORY 9, ALGBRA 10, STAT 11, PRINT
+  12, CONTRL 13, BRANCH 14, TEST 15, MODE 16, LOGS 17, PLOT 18, TRIG 21,
+  SOLV 22, USER 23 (also with a variable); the Solver's variable menu
+  (SOLVR with an equation stored) 24, and a custom menu (`{ A B } MENU`)
+  254. Each menu opened on label 0, NEXT stepped by 6 and came back to 0
+  after the last page.
+- **What the labels show**: read off the display page by page, every
+  menu's labels match the menus the Reference Manual lists for its
+  commands (src: [[sources/hp28s-rm]], each command's menu), in key
+  order, with a few labels that are not commands: TRAC in PRINT, SST in
+  CONTRL, CMD, UNDO, LAST, ML and `RDX,` in MODE, PPAR in PLOT, SOLVR in
+  SOLV. Labels too wide for a box are cut short: `UNTI`, `WHIL`, `REPEA`
+  in BRANCH. A mode that is on gets a small square after its label,
+  apart from the letters (MODE's DEG; pressing RAD moves it to RAD).
+  BINARY, REAL, STAT, BRANCH, PLOT and TRIG have blank keys inside their
+  pages.
+
 Menus checked: ARRAY, REAL, STACK, LOGS, TRIG, USER (with no
 variables), the cursor menu. The numbers of the other menus (the
 remaining shifted letter keys, SOLV and its submenus, a USER menu with
 variables) were not read.
+
+The numbers of all menus with a key of their own were read on
+2026-10-26 (above).
 
 ## Number entry
 

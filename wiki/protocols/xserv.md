@@ -96,6 +96,33 @@ hardware by the owner and Claude, 2026-11-08):
   a Kermit FINISH then returns to XSERV, which answers again. Done twice
   in a row; the stack was unchanged afterwards.
 
+## Observed on the emulated 49G, ROM 2.15 (2026-11-08)
+
+On the saturnus emulator with ROM 2.15 (typed `XSERV`), a PC on its serial
+port (observations on the emulator, 2026-11-08):
+
+- `M` replies with the free memory as text (`245811.`); `V` replies
+  `XModem Version 1.0`.
+- `Q` ends XSERV; the calculator is back at its stack, with whatever an
+  `E` left there.
+- `E` is acknowledged before its RPL runs. Command bytes sent while the RPL
+  still runs are dropped, not queued, which fits the unanswered `L` above.
+  An RPL error inside `E` shows nothing on the link and XSERV goes on.
+- `G` of a variable that does not exist leaves XSERV on an error box until
+  a key is pressed.
+- `G` sends the object in binary whatever flag -35 says. `P` of a file
+  that is not an HP binary object stores a string that keeps the XModem
+  padding.
+- The `L` size plus 4.5 plus the name's length equals the Kermit server's
+  size, on 7 variables; this confirms the inference above. The CRC in an
+  `L` record is low byte first and equals the Kermit listing's.
+- A Kermit server started through `E` (`SERVER`) does not pack the stack
+  at FINISH, also in algebraic mode; XSERV answers again about 1 s after
+  FINISH.
+- XSERV ignores a Kermit Send-Init (`I` packet) sent in any of the three
+  parities, and the Kermit servers of ROM 2.15, the 48GX's ROM R and the
+  48SX's ROM J ignore a lone `M` byte.
+
 ## Interplay with XModem
 
 See [[protocols/xmodem-hp]] for block sizes, the start characters (NAK, `C`,
@@ -103,8 +130,7 @@ See [[protocols/xmodem-hp]] for block sizes, the start characters (NAK, `C`,
 
 ## Open
 
-- The exact reply format of `V`, and whether `M`'s number is free memory
-  in bytes.
+- Whether `M`'s number is free memory in bytes.
 - What the calculator does on an unknown command byte.
-- Why an `L` straight after an `E` once went unanswered (one occurrence).
+- Whether ROM 1.18 knows `Q`.
 - Whether XSrvr48 implements exactly the same set.

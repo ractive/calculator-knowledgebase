@@ -905,3 +905,7 @@ Added: 49G 1.18 Kermit replies cut at 20 characters, XSERV commands, sizes and s
 ## [2026-11-08] ingest | HP 100LX/200LX serial link and the Filer protocol
 
 Added: the 100LX/200LX page (cable, warnings, speeds, Filer server mode, DataComm Kermit), the Filer protocol page (framing, CRC, commands, recorded flows), eight web sources and two questions; models `100lx`, `200lx` added to the schema.
+
+## [2026-11-08] ingest | HP Connectivity Pack for the 100LX: Filer protocol facts
+
+Added from a static analysis of HP's PC programs (facts only): revision byte, status and result words, handles, error codes, CRC-16/ARC with undoubled CRC bytes, timeouts and retries, connect and disconnect, HP's command sequences, UART set-up; contradictions settled, two questions updated, one source page.

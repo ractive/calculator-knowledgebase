@@ -13,8 +13,8 @@ A command server layered on XModem. Built into the 49G (ROM after 1.10);
 provided on the 48 by the XSrvr48 library (src: [[sources/hp49-rom118-notes]];
 [[sources/xsrvr48-readme]]). There is no prose specification: everything
 below on framing comes from the HP-written client code in
-[[sources/conn4x-ymodem-pas]]. satx, which implements that framing,
-worked against a real 49G with ROM 1.18 on 2026-11-08 (section below).
+[[sources/conn4x-ymodem-pas]]. A host using that framing worked against
+a real 49G with ROM 1.18 on 2026-11-08 (section below).
 
 ## Starting
 
@@ -66,9 +66,9 @@ with a name packet [file execution], meaning unknown.
 
 ## Observed on a real 49G (2026-11-08)
 
-The owner's HP 49G, ROM 1.18 ("Version HP49-C Revision #1.18"), driven by
-satx 0.10.3 over an FTDI USB serial adapter at 9600 baud (observations on
-real hardware by the owner and Claude, 2026-11-08):
+The owner's HP 49G, ROM 1.18 ("Version HP49-C Revision #1.18"), from a PC
+over an FTDI USB serial adapter at 9600 baud (observations on real
+hardware by the owner and Claude, 2026-11-08):
 
 - XSERV answered every command tried. `M`: a reply packet holding
   `245478.`, a real with the 49G's trailing point (the release notes call

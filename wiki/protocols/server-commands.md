@@ -176,7 +176,7 @@ From driving ROM J (48SX), ROM R (48GX) and ROM 2.15 (49G) in the
 ## Observed on real calculators (2026-11-08)
 
 The owner's HP 49G (ROM 1.18, "Version HP49-C Revision #1.18") and HP
-48SX, driven by satx 0.10.3 over an FTDI USB serial adapter at 9600 baud
+48SX, from a PC over an FTDI USB serial adapter at 9600 baud
 (observations on real hardware by the owner and Claude, 2026-11-08):
 
 - The 49G's C reply cuts each stack level's display text at 20
@@ -185,8 +185,8 @@ The owner's HP 49G (ROM 1.18, "Version HP49-C Revision #1.18") and HP
   is `{ 9600. 0. 0. 0. 3. 1. }`), the first string of `VERSION` as
   `"Version HP49-C` newline `Revi`, a 36-character string as
   `"ABCDEFGHIJKLMNOPQRS`. A host that needs the whole value must fetch
-  it another way (store it and GET it). The emulated 49G with ROMs 2.15
-  and 2.10 (saturnus) cuts at 22 characters and writes IOPAR without
+  it another way (store it and GET it). ROMs 2.15 and 2.10, seen on an
+  emulated 49G, cut at 22 characters and write IOPAR without
   spaces (`{9600.,0.,0.,0.,3.,1.}`). The real 48SX sent a 60-character
   list whole.
 - A lone `M` byte (XSERV's memory command) sent to the 49G's Kermit

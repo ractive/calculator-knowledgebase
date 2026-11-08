@@ -188,7 +188,7 @@ capture (src: [[sources/hpgcomm]] source). Not observed on the emulator.
 ## On a real 38G (2026-11-08)
 
 The owner's 38G, through a 4-pin serial cable with a 10-pin adapter, with
-the saturnus web app's Files disk drive as the PC side (observations on
+a Kermit server on a PC as the disk drive (observations on
 real hardware by the owner and Claude, 2026-11-08):
 
 - SEND of the Function aplet (LIB, SEND, "Disk drive…", "Send now")

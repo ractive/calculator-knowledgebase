@@ -51,7 +51,7 @@ Details and block-size findings on [[protocols/xmodem-hp]].
 ## On hardware (2026-11-08)
 
 On the owner's real 49G with ROM 1.18, XSERV's `G` and `P` ran in the `D`
-mode (HP's CRC, CRC-16/KERMIT, as satx 0.10.3 reported the check), with
+mode (HP's CRC, CRC-16/KERMIT), with
 byte-identical round trips of a 47-byte and a 4013-byte object
 (observations on real hardware by the owner and Claude, 2026-11-08;
 [[protocols/xserv]]). So XSERV uses the same `D` CRC, and the 49G's

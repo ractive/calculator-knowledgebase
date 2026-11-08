@@ -90,7 +90,9 @@ menus as on the S/SX, right shift the new full-screen versions (src:
   entry (src: [[sources/hp48-faq]] 4.19). Appendix G gives only
   ← I/O SRVR SERVE (src: [[sources/hp48g-ug]] p. G-42). A forum post of
   2025 also mentions it (src: [[sources/hpmuseum-forum]] F7). Server
-  behaviour: [[protocols/server-commands]].
+  behaviour: [[protocols/server-commands]]. Unlike the 49G's shortcut
+  ([[hardware/hp49g-keyboard]]), a pause of 2.5 s between → and ▶ still
+  starts the Kermit server (saturnus, ROM R, 2026-11-08).
 - **→ ▼ (right shift on the key labelled VIEW) shows the current menu's
   labels in full.** Appendix G lists it as "→VIEW": it displays the menu
   keywords of the current menu, with their values if they are variables

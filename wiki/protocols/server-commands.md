@@ -200,6 +200,9 @@ The owner's HP 49G (ROM 1.18, "Version HP49-C Revision #1.18") and HP
   FINISH, EVAL from the keyboard (right-shift SYMB on the 49G) ran it and
   XSEND sent EQ by XModem. This is a way round XSEND being refused inside
   the server: push the program from the host, finish, evaluate by hand.
+  The 48GX (ROM R) does the same with XSEND and XRECV: the program stays
+  on the stack through FINISH and EVAL starts the transfer (saturnus,
+  2026-11-08).
 - Once, with the batteries low, "Low Battery" came back as the server's
   reply to a command ([[hardware/hp49g]]).
 - A Kermit server started through XSERV's `E` runs nested inside XSERV;

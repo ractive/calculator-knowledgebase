@@ -13,7 +13,8 @@ A command server layered on XModem. Built into the 49G (ROM after 1.10);
 provided on the 48 by the XSrvr48 library (src: [[sources/hp49-rom118-notes]];
 [[sources/xsrvr48-readme]]). There is no prose specification: everything
 below on framing comes from the HP-written client code in
-[[sources/conn4x-ymodem-pas]] and is unverified against a calculator.
+[[sources/conn4x-ymodem-pas]]. satx, which implements that framing,
+worked against a real 49G with ROM 1.18 on 2026-11-08 (section below).
 
 ## Starting
 
@@ -21,6 +22,12 @@ below on framing comes from the HP-written client code in
   start the Kermit server. Also XSERV from the catalog (src:
   [[sources/conn4x-help]] ConnectivityHP49Ops).
 - 48: XSERV from the XSRVR library menu (ConnectivityHP48Ops).
+- On the owner's real 49G (ROM 1.18, 2026-11-08) the right-shift ▶
+  shortcut started XSERV twice and then the Kermit server twice, so which
+  server it starts was unpredictable there; see
+  [[hardware/hp49g-keyboard]].
+- Not from the Kermit server: `XSERV` sent as a host command fails with
+  "Port Not Available" ([[protocols/server-commands]]).
 - The 49G ROM notes also give XGET and XPUT (client side, name argument) and
   ROMUPLOAD (src: [[sources/hp49-rom118-notes]]).
 
@@ -57,6 +64,34 @@ with a name packet [file execution], meaning unknown.
   `G`s `$$$t`; a 48 file starts `HPHP48-x` (x = ROM letter), a 49 reply
   contains "Revision #...@" [connection setup].
 
+## Observed on a real 49G (2026-11-08)
+
+The owner's HP 49G, ROM 1.18 ("Version HP49-C Revision #1.18"), driven by
+satx 0.10.3 over an FTDI USB serial adapter at 9600 baud (observations on
+real hardware by the owner and Claude, 2026-11-08):
+
+- XSERV answered every command tried. `M`: a reply packet holding
+  `245478.`, a real with the 49G's trailing point (the release notes call
+  `M` "get the calculator memory", src: [[sources/hp49-rom118-notes]]).
+  `L`: 13 variables with sizes, types and CRCs, in the record layout
+  above. `G` and `P`: XModem in HP's CRC mode (the `D` start,
+  [[protocols/xmodem-hp]]), with byte-identical round trips of a 47-byte
+  and a 4013-byte object. `E`: RPL executed, e.g.
+  `{ SATXXM SATXXN } PURGE`.
+- Once, an `L` sent right after an `E` got no complete reply; with a 2 s
+  pause between the two it worked.
+- The sizes in an `L` reply are smaller than those of the Kermit server's
+  directory listing ([[protocols/server-commands]]): IOPAR 20 bytes in
+  XSERV against 29.5 in Kermit, X 10.5 against 16. The XSERV record
+  gives the object's nibbles; the differences (9.5 and 5.5 bytes) fit
+  Kermit counting the name's directory entry as well, 4.5 bytes plus one
+  per name character (inferred, not checked on more names).
+- Speed, the same 4013-byte string fetched by each server, connection
+  setup included, 9600 baud: Kermit server 16.7 s, XSERV 8.4 s.
+- `SERVER` sent through `E` starts the Kermit server inside XSERV's `E`:
+  a Kermit FINISH then returns to XSERV, which answers again. Done twice
+  in a row; the stack was unchanged afterwards.
+
 ## Interplay with XModem
 
 See [[protocols/xmodem-hp]] for block sizes, the start characters (NAK, `C`,
@@ -64,6 +99,8 @@ See [[protocols/xmodem-hp]] for block sizes, the start characters (NAK, `C`,
 
 ## Open
 
-- Exact reply formats of `M` and `V`.
+- The exact reply format of `V`, and whether `M`'s number is free memory
+  in bytes.
 - What the calculator does on an unknown command byte.
+- Why an `L` straight after an `E` once went unanswered (one occurrence).
 - Whether XSrvr48 implements exactly the same set.

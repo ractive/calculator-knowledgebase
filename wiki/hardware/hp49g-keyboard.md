@@ -33,7 +33,10 @@ and [[hardware/hp48sx-keyboard]]; shift colours and the matrix are on
   down, and as a long press; then about 25 follow-up sequences. Default
   flags: CHOOSE boxes rather than soft menus (flag −117 clear). Results
   read from the emulator's memory and screen (black-box observation, no
-  ROM code read). Not checked on a real 49G.
+  ROM code read). Not checked on a real 49G, apart from the two keys in
+  "On a real 49G" below.
+- **Real hardware**: the owner's 49G with ROM 1.18, observed by the owner
+  and Claude on 2026-11-08.
 
 Not covered: other ROM versions (1.19-6, 2.15), soft-menu mode (flag
 −117 set), the applications' own screens, the Equation Writer and
@@ -128,9 +131,23 @@ Observed (saturnus, ROM 2.10, 2026-10-25), from the RPN stack holding
 The 49G's matrix differs from the 48's, so the softkeys F1-F6 take the
 roles of the 48's A-F in these chords.
 
+## On a real 49G (2026-11-08)
+
+The owner's 49G, ROM 1.18 (observations on real hardware by the owner
+and Claude, 2026-11-08):
+
+- **→ ▶** started XSERV ("XModem server") twice and then the Kermit
+  server twice, the last time right after XSERV had been used and quit.
+  On this unit it could not be predicted which server the shortcut
+  starts. Whether the difference was a shift tapped or held, as in the
+  table above, was not checked. Typing `SERVER` always started the Kermit
+  server.
+- **→ SYMB is EVAL**: the printed right-shift label on the owner's 49G.
+  The 49G has no unshifted EVAL key (the 48 has one).
+
 ## Open
 
-- Nothing here was checked on a real 49G.
+- Apart from the two keys above, nothing here was checked on a real 49G.
 - ON+▲ opened the serial port; whether it sends a screen dump was not
   checked.
 - ON+F5 and ON+F6 run test sequences that were not followed through.

@@ -157,7 +157,8 @@ cold start (observed in saturnus 2026-10-07; saturnus renders it at about 90 % d
 - The wire protocol is not named in any source read; observed on the ROM,
   it is Kermit with the calculator as client and the PC as a "disk drive"
   holding the directory files `HP38DIR.CUR` and `HP38DIR.000`:
-  [[protocols/aplet-transfer]].
+  [[protocols/aplet-transfer]]. The owner's real 38G sent and received an
+  aplet that way (2026-11-08, same page).
 
 ## First boot
 

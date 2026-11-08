@@ -236,6 +236,22 @@ known (see the end).
   [[sources/saturn-tutorial]] p. 162). `ROM.E49` (Emu48) is instead a
   whole-chip image including boot sector and port 2 (src:
   [[sources/comp-sys-hp48-archive]] C30).
+- **HP's 1.18 update file, as observed** (2026-11-08, the file's structure
+  only, no ROM content read): `hp49g118.zip` from hpcalc.org
+  (<https://www.hpcalc.org/details/3236>; SHA-256 of the zip
+  ca83bac405362e03eda15c8fa8620915bb2d1c2cee72604e9db36db98361d0c8) holds
+  `hp49g-1.18.flash` (833736 bytes), `hp49g-1.18.txt` and `extable.HP`.
+  The `.flash` starts with the ASCII `HPROM` and the part count, 7. Each
+  part is a length-prefixed name, a 32-bit little-endian length of the
+  rest of the part, then for Part1 to Part7 a 32-bit little-endian field
+  with the bank number in its top nibble and the nibble count in the rest
+  (Part1: 0x1003F15F, bank 1, 0x3F15F nibbles), then the nibbles packed
+  two per byte. The parts are System, Part1, Part2, Part3, Part4, Part6
+  and Part7: no Part5, as in 1.17, and also **no FS part**,
+  unlike the list above. The System part's field (0x03400007) does not
+  follow the bank-and-count pattern. At byte #100 of each part's data
+  there is no bank header, so the parts do not start at the bank's
+  offset 0.
 - **The download**: boot menu reached with reset, + and ENTER held, ON; key
   4 "terminal mode" shows a blank screen and, by Meyers' reading, waits for
   four special bytes from HP's Flash Download Program (FDP) or from another

@@ -185,6 +185,25 @@ HPGComm reads an incoming transfer that starts with ESC (0x1B) as a 38G
 screen capture, and one whose second byte is `W` or `G` as a 39G/40G
 capture (src: [[sources/hpgcomm]] source). Not observed on the emulator.
 
+## On a real 38G (2026-11-08)
+
+The owner's 38G, through a 4-pin serial cable with a 10-pin adapter, with
+the saturnus web app's Files disk drive as the PC side (observations on
+real hardware by the owner and Claude, 2026-11-08):
+
+- SEND of the Function aplet (LIB, SEND, "Disk drive…", "Send now")
+  wrote `FUNCTION.000`, 589 bytes, header `HP38BinB`, then the title
+  length byte 8 and `Function`, as on the emulator. The title appears
+  nowhere else in the file. The directory file became
+  `HP38AscA B 12 FUNCTION.0008 Function`.
+- RECV of it (LIB, RECV, "Disk drive…"), with Function still on the
+  calculator, did not ask "Replace existing aplet?" and reported success,
+  as on the emulator.
+- A copy with the title in the file changed to `Funktion` (same length,
+  one byte different) was received as a second aplet, "Funktion", next to
+  "Function". The calculator tells aplets apart by the title in the file
+  header alone.
+
 ## Contradictions
 
 - **The 39G's destinations.** The 39G/40G guide says SEND and RECV each
@@ -199,8 +218,8 @@ capture (src: [[sources/hpgcomm]] source). Not observed on the emulator.
 
 - Matrix, program and note entries in the directory file, and how two
   titles with the same first 8 characters are named.
-- The 40G and real hardware: everything above is from the emulator and
-  HPGComm.
+- The 40G, and real hardware beyond the 38G's Kermit SEND and RECV
+  above: the rest is from the emulator and HPGComm.
 
 Context: [[hardware/hp38g]], [[hardware/hp39g-40g]],
 [[protocols/kermit-hp]], [[questions/hp38g-39g-transfer-protocol]].

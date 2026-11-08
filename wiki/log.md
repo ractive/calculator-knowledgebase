@@ -897,3 +897,26 @@ of its own, the Solver's variable menu and a custom menu, and what the
 labels show page by page against the Reference Manual's menus.
 Black-box observation on the saturnus emulator with each model's ROM
 (2026-10-26, not hardware).
+
+## [2026-11-08] ingest | Real-hardware observations: 49G ROM 1.18, 38G, 48SX
+
+First-hand observations by the owner and Claude on the owner's own
+calculators over an FTDI USB serial adapter, with satx 0.10.3 and
+saturnus. [[protocols/server-commands]]: the 49G's Kermit server cuts
+each stack level of a C reply at 20 characters (saturnus with ROMs 2.15
+and 2.10 at 22), a lone `M` byte is ignored, `XSERV` as a host command is
+"Port Not Available", a program pushed from the host and run by hand
+afterwards can XSEND, "Low Battery" as a reply. [[protocols/xserv]]:
+first real-hardware evidence, every command answered, sizes against
+Kermit's listing, the speed against the Kermit server, a Kermit server
+nested in `E`. [[questions/xmodem-hp-crc-mode]] and
+[[protocols/xmodem-hp]]: `D` mode confirmed on 1.18.
+[[questions/binary-odd-nibble-padding]]: XSEND's spare half byte comes
+from memory. [[hardware/hp49g-keyboard]]: → ▶ started either server
+unpredictably; EVAL is → SYMB. [[hardware/hp49g]]: the ROM revision, memory
+after a battery change. [[questions/custom-rom-for-saturn-calculators]]:
+the structure of HP's 1.18 `.flash` file (no FS part).
+[[protocols/aplet-transfer]]: a real 38G's SEND and RECV with a disk
+drive; aplets are told apart by the title in the file header.
+[[questions/instruction-speed-vs-hardware]]: an empty 2000-pass loop on
+a real 48SX, about 9 s.

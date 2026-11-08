@@ -30,3 +30,13 @@ object; the 48SX stores the file as a string if one more byte follows, the
 49G (2009 ROM) accepts it (saturnus 2026-10-05). A file fetched and sent
 back unchanged gives the same bytes (saturnus, iteration 12b). Still
 unknown: whether a non-zero spare nibble is accepted.
+
+## On a real 49G (2026-11-08)
+
+The owner's 49G with ROM 1.18 sent the same object (EQ, an odd nibble
+count) both ways: a Kermit download had 0 in the spare half byte, XSEND
+had 5 (observations on real hardware by the owner and Claude,
+2026-11-08). So XSEND writes whatever nibble follows the object in
+memory, and the value is not fixed. Whether the Kermit sender writes 0
+on purpose was not established. A reader must take the length from
+the object and ignore the spare nibble's value.

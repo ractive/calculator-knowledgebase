@@ -92,7 +92,9 @@ Starting a transfer:
   sends one 1k block and then seven 128-byte blocks, the same short-tail
   split Conn4x uses.
 - XSEND pads the last block with memory garbage, not a fixed byte; only a
-  walk of the object's length can strip it. XRECV strips the SUB (0x1A)
+  walk of the object's length can strip it. On a real 49G (ROM 1.18,
+  2026-11-08) even the spare half byte of an odd nibble count came from
+  memory ([[questions/binary-odd-nibble-padding]]). XRECV strips the SUB (0x1A)
   padding itself when it stores a string.
 - XRECV does not overwrite an existing variable: with SATXX present it stored
   the object as SATXX.1.
@@ -123,7 +125,12 @@ stores IOPAR on a 49G must use reals (`{ 9600. 0. 0. 0. 3. 1. }`); see
 
 ## Open
 
-- Confirm the saturnng measurements above on hardware.
+- Confirm the saturnng measurements above on hardware. Confirmed so far,
+  on a real 49G with ROM 1.18 (owner and Claude, 2026-11-08): the `D`
+  mode, through XSERV's `G` and `P` with byte-identical round trips
+  ([[protocols/xserv]]), and XSEND run from the keyboard after the
+  program was pushed through the Kermit server
+  ([[protocols/server-commands]]).
 - Answered on saturnng: [[questions/xmodem-hp-crc-mode]] (49G `D` mode is
   CRC-16/KERMIT, high byte first; 48GX checksum only), and the 48G's XRECV
   rejects 1K blocks.

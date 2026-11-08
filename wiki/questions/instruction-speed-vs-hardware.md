@@ -32,6 +32,17 @@ ticks (1/8192 s). Compare with 48880. A real figure settles whether the
 SASM counts, the 2 MHz figure or the stall model is off, and by how much.
 The same program on a 48GX gives the Yorke figure for later.
 
+## Progress (2026-11-08): the empty loop on a real 48SX
+
+On the owner's real 48SX, `1 2000 START NEXT` sent as a Kermit host
+command took about 11 s from command to reply, of which about 2 s is the
+link's own overhead, so about 9 s for the loop (observations on real
+hardware by the owner and Claude, 2026-11-08; timed by the host, not
+with TICKS). That is about 1.5 times the 5.97 s saturnus gave before its
+calibration (above) and above the 7.6 s that the 48SX factor of 1.267
+(below) predicts. A coarse figure only: the TICKS experiment above
+would make it exact.
+
 ## Progress (2026-10-05): a published benchmark as oracle
 
 The HP Museum thread "Summation based benchmark for calculators" (src:

@@ -72,7 +72,8 @@ From driving ROM J (48SX), ROM R (48GX) and ROM 2.15 (49G) in the
 - The C reply is the stack display, line by line `N: value` from the
   highest level down, right-aligned at the display width, or `Empty Stack`.
   Results stay on the calculator's stack. The 49G truncates long values at
-  the display width (a 20-element list shows as `{1,2,3,4,5,6,7,8,9,10,`)
+  the display width (a 20-element list shows as `{1,2,3,4,5,6,7,8,9,10,`;
+  a real 49G with ROM 1.18 cuts at 20 characters, see the next section)
   and in algebraic mode shows lists with commas (`{9600.,0.,0.,0.,3.,1.}`)
   and names without quotes.
 - A failed command is not an E packet: the reply starts with
@@ -171,6 +172,38 @@ From driving ROM J (48SX), ROM R (48GX) and ROM 2.15 (49G) in the
   the server the host commands are RPN either way and the replies are the
   same (ROM 2.10; saturnus decision log, "49G writes in algebraic mode",
   2026-10-09).
+
+## Observed on real calculators (2026-11-08)
+
+The owner's HP 49G (ROM 1.18, "Version HP49-C Revision #1.18") and HP
+48SX, driven by satx 0.10.3 over an FTDI USB serial adapter at 9600 baud
+(observations on real hardware by the owner and Claude, 2026-11-08):
+
+- The 49G's C reply cuts each stack level's display text at 20
+  characters, quotes and braces included, with no marker that anything
+  is missing: `IOPAR` came back as `{ 9600. 0. 0. 0. 3. ` (the whole list
+  is `{ 9600. 0. 0. 0. 3. 1. }`), the first string of `VERSION` as
+  `"Version HP49-C` newline `Revi`, a 36-character string as
+  `"ABCDEFGHIJKLMNOPQRS`. A host that needs the whole value must fetch
+  it another way (store it and GET it). The emulated 49G with ROMs 2.15
+  and 2.10 (saturnus) cuts at 22 characters and writes IOPAR without
+  spaces (`{9600.,0.,0.,0.,3.,1.}`). The real 48SX sent a 60-character
+  list whole.
+- A lone `M` byte (XSERV's memory command) sent to the 49G's Kermit
+  server got no reply within 2.5 s, and the server answered a directory
+  listing normally afterwards. So the byte does not disturb the Kermit
+  server.
+- `XSERV` sent as a host command fails with the calculator's error "Port
+  Not Available", as XRECV and XSEND do on saturnng (below).
+- A host command holding a program, `« 'EQ' XSEND »`, leaves the program
+  on the stack unevaluated, as any program typed on a command line. After
+  FINISH, EVAL from the keyboard (right-shift SYMB on the 49G) ran it and
+  XSEND sent EQ by XModem. This is a way round XSEND being refused inside
+  the server: push the program from the host, finish, evaluate by hand.
+- Once, with the batteries low, "Low Battery" came back as the server's
+  reply to a command ([[hardware/hp49g]]).
+- A Kermit server started through XSERV's `E` runs nested inside XSERV;
+  see [[protocols/xserv]].
 
 ## Compiling text through the server (saturnus, 2026-10-08)
 

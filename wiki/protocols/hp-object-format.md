@@ -195,7 +195,8 @@ From binary GETs (flag -35 set) on ROM J (48SX), ROM R (48GX) and ROM 2.15
 
 - Headers sent: `HPHP48-J` (48SX), `HPHP48-R` (48GX), `HPHP49-C` (49G).
   The files carry no padding beyond the spare half byte of an odd nibble
-  count, which was 0 in every file.
+  count, which was 0 in every file. A real 49G's XSEND sent a non-zero
+  value there ([[questions/binary-odd-nibble-padding]]).
 - The ASCII header is spelled `%%HP: T(1)A(D)F(.);` followed by CR LF
   (49G: `A(R)`), answering [[questions/ascii-header-spelling]].
 - With translation mode 3 the 48SX writes characters 128-159 as two-letter

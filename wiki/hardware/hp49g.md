@@ -111,6 +111,8 @@ p. 162). Its controllers are wired differently:
 TE28F160-S5 (p. 161). The boot half of bank 0 is write-protected in hardware
 (p. 161). In `.flash` update files the banks are named Part0 (boot), FS
 (second half of bank 0), System, Part1, Part2 ... (no Part5) (p. 162).
+HP's 1.18 update file has no FS part; its layout as observed is on
+[[questions/custom-rom-for-saturn-calculators]] section 3.
 
 ## Keyboard
 
@@ -209,6 +211,18 @@ hardware):
 - **Power-on contrast**: 14 (range 9-24), observed on ROM 1.19-6 and 2.10
   after a cold start (2.10 sets 16 first, then 14 within a second;
   observed in saturnus 2026-10-07; saturnus renders it at about 90 % darkness).
+
+## A real 49G with ROM 1.18 (2026-11-08)
+
+The owner's 49G reports "Version HP49-C Revision #1.18" (copyright 2000)
+in VERSION. Observations on real hardware by the owner and Claude,
+2026-11-08, over an FTDI USB serial adapter:
+
+- Kermit and XModem transfers worked at 9600 baud with that adapter.
+- After a low-battery warning and fresh batteries, memory was intact.
+- Kermit server replies cut at 20 characters, and the other server
+  findings: [[protocols/server-commands]]; XSERV:
+  [[protocols/xserv]]; the → ▶ shortcut and EVAL: [[hardware/hp49g-keyboard]].
 
 System flag meanings: [[hardware/system-flags-49g]].
 

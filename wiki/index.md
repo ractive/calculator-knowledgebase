@@ -151,7 +151,7 @@ Catalog of every wiki page, one line each. Updated on every ingest.
 - [[protocols/server-commands]] — HP Kermit server mode and its commands; replies, errors, archive and STR→ tokenising as observed (draft)
 - [[protocols/xmodem-hp]] — XModem on HP calculators (48G XSEND/XRECV, 49G, XSERV transfers) (draft)
 - [[protocols/xmodem]] — XMODEM, XMODEM-CRC, XMODEM-1K and YMODEM (generic) (draft)
-- [[protocols/xserv]] — XSERV: the HP 49G (and XSrvr48) XModem server protocol (draft)
+- [[protocols/xserv]] — XSERV: the HP 49G (and XSrvr48) XModem server protocol; every command seen working on a real 49G, ROM 1.18 (draft)
 
 ## Emulators
 

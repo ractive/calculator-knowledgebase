@@ -2,7 +2,9 @@
 
 A wiki about the internals of HP's Saturn-based calculators (HP 48S/SX/G/GX,
 HP 49G, HP 38G, HP 39G, HP 40G) and the HP 42S: hardware, ROM behaviour,
-serial transfer protocols, file formats and existing emulators. Public,
+serial transfer protocols, file formats and existing emulators. Since
+2026-11-08 (owner) it also covers HP's MS-DOS palmtops (HP 100LX, 200LX):
+their serial and IR links, cables and the Filer protocol. Public,
 CC BY 4.0. It feeds saturnus (a clean-room Saturn emulator,
 https://github.com/ractive/saturnus) and satx (HP file transfer,
 part of saturnus: https://github.com/ractive/saturnus/tree/main/crates/satx-cli).
@@ -109,7 +111,7 @@ against the hosting sites more often than needed.
   (`stub|draft|reviewed`; questions `open|answered`; sources
   `unread|skimmed|digested`), `sources` (list of `[[sources/...]]` links),
   `models` (subset of `48sx, 48gx, 49g, 38g, 39g, 40g, 42s, 27s, 17b,
-  17bii, 28s, 19bii`; which models a page covers goes here, never in a
+  17bii, 28s, 19bii, 100lx, 200lx`; which models a page covers goes here, never in a
   tag: no `48gx`, `hp48`, `hp49g` or `28s` tags). The type
   says what a page is; the directory stays fixed because other projects
   cite page paths. Change schemas with `hyalo types set`; the `models`

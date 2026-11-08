@@ -3,7 +3,7 @@ title: "HP 49G"
 type: model
 models: [49g]
 status: draft
-sources: ["[[sources/saturn-tutorial]]", "[[sources/intel-28f160s5]]", "[[sources/hp49-memmap-smith]]", "[[sources/memory49-sousa]]", "[[sources/keyb49-sylvester]]", "[[sources/buf49-flipse]]", "[[sources/serial49-sansonovski]]", "[[sources/hp48-faq]]"]
+sources: ["[[sources/saturn-tutorial]]", "[[sources/intel-28f160s5]]", "[[sources/hp49-memmap-smith]]", "[[sources/memory49-sousa]]", "[[sources/keyb49-sylvester]]", "[[sources/buf49-flipse]]", "[[sources/serial49-sansonovski]]", "[[sources/hp48-faq]]", "[[sources/holyjoe-cable-table]]"]
 tags: [model, flash]
 ---
 
@@ -136,6 +136,11 @@ The 49G has no IR port; it ships with a 49-to-49 cable and an adapter for the
 checksum, 1K, 1K with CRC) at up to 9600 bps; the FAQ adds "15360 bps
 internally, but no PCs support that speed" (src: [[sources/hp48-faq]] 2.14),
 which matches baud code 7 on [[hardware/uart]].
+
+HP's palmtop cables (F1015-80002 to a PC, F1016-80002 to a Mac) fit the
+49G's 10-pin port and destroy the 49G; the 49G's own cables and adaptors
+have "small" or no keying, the palmtop plug "WIDE" keying (src:
+[[sources/holyjoe-cable-table]]; [[hardware/hp100lx-200lx]]).
 
 ## Flash chip and ROM images (2026-10-05)
 

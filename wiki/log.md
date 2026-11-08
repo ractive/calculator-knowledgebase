@@ -901,3 +901,7 @@ Black-box observation on the saturnus emulator with each model's ROM
 ## [2026-11-08] ingest | Real-hardware observations: 49G ROM 1.18, 38G, 48SX
 
 Added: 49G 1.18 Kermit replies cut at 20 characters, XSERV commands, sizes and speed, the `D` CRC, XSEND's spare nibble, → ▶ and EVAL keys, the 1.18 `.flash` layout, 38G aplet SEND/RECV and titles, a 48SX loop time.
+
+## [2026-11-08] ingest | HP 100LX/200LX serial link and the Filer protocol
+
+Added: the 100LX/200LX page (cable, warnings, speeds, Filer server mode, DataComm Kermit), the Filer protocol page (framing, CRC, commands, recorded flows), eight web sources and two questions; models `100lx`, `200lx` added to the schema.

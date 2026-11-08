@@ -6,8 +6,10 @@ type: meta
 # Overview
 
 The wiki covers HP Saturn-based graphing calculators (HP48 S/SX/G/GX, HP49G,
-HP38G, HP39G, HP40G) and the HP 42S (Lewis chip, a Saturn core) for two
-projects:
+HP38G, HP39G, HP40G) and the HP 42S (Lewis chip, a Saturn core), and,
+since 2026-11-08, HP's MS-DOS palmtops 100LX and 200LX as far as their
+serial links go ([[hardware/hp100lx-200lx]], [[protocols/filer-hplx]]), for
+two projects:
 
 - **satx** (<https://github.com/ractive/saturnus/tree/main/crates/satx-cli>,
   part of saturnus): Rust file transfer over serial, Kermit and XModem,

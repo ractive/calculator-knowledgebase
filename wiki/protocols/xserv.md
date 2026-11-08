@@ -25,7 +25,11 @@ a real 49G with ROM 1.18 on 2026-11-08 (section below).
 - On the owner's real 49G (ROM 1.18, 2026-11-08) the right-shift ▶
   shortcut started XSERV twice and then the Kermit server twice, so which
   server it starts was unpredictable there; see
-  [[hardware/hp49g-keyboard]].
+  [[hardware/hp49g-keyboard]]. The press timing was not measured, so this
+  fits the timing rule above (a pause gives XSERV, quick presses Kermit).
+- ROM 2.15 has XSERV: typed on the saturnus emulator with that ROM, it
+  showed "Xmodem server" and answered `M` (observation on the emulator,
+  2026-11-08).
 - Not from the Kermit server: `XSERV` sent as a host command fails with
   "Port Not Available" ([[protocols/server-commands]]).
 - The 49G ROM notes also give XGET and XPUT (client side, name argument) and

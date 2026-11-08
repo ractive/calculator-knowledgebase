@@ -108,6 +108,10 @@ port (observations on the emulator, 2026-11-08):
 - `E` is acknowledged before its RPL runs. Command bytes sent while the RPL
   still runs are dropped, not queued, which fits the unanswered `L` above.
   An RPL error inside `E` shows nothing on the link and XSERV goes on.
+  Text that does not parse as a command line (e.g. a rename to `PICT`)
+  stays on the stack as a string, where the user finds it after `Q`.
+  While XSERV runs, the stack holds only XSERV's own objects (its last
+  reply); the user's stack is back after `Q`.
 - `G` of a variable that does not exist leaves XSERV on an error box until
   a key is pressed.
 - `G` sends the object in binary whatever flag -35 says. `P` of a file

@@ -909,3 +909,7 @@ Added: the 100LX/200LX page (cable, warnings, speeds, Filer server mode, DataCom
 ## [2026-11-08] ingest | HP Connectivity Pack for the 100LX: Filer protocol facts
 
 Added from a static analysis of HP's PC programs (facts only): revision byte, status and result words, handles, error codes, CRC-16/ARC with undoubled CRC bytes, timeouts and retries, connect and disconnect, HP's command sequences, UART set-up; contradictions settled, two questions updated, one source page.
+
+## [2026-11-09] ingest | Real-hardware observations: HP 100LX Filer server mode and memory
+
+Added to the 100LX page: Filer's server mode answered a client built from the protocol page (listings, copies); with 1-2-3 open, DataComm would not start for lack of memory until 1-2-3 was closed.

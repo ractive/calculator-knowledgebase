@@ -3,7 +3,7 @@ title: "What has the keyboard: the stack, a form, a box, the graphics screen, a 
 type: rom-behaviour
 models: [48sx, 48gx, 49g]
 status: draft
-sources: ["[[sources/rplman]]", "[[sources/hp48-internals-address-list]]"]
+sources: ["[[sources/rplman]]", "[[sources/hp48-internals-address-list]]", "[[sources/hp48g-ug]]", "[[sources/hp48sx-om]]"]
 tags: [ram, rpl, keyboard, display, memory]
 ---
 
@@ -83,6 +83,8 @@ gives the names the open screens bound (observed):
 | Message box (`MSGBOX`, the 49G's error box) | only unnamed ones (7 pairs) | only unnamed ones (7 pairs) |
 | Graphics screen (PICTURE) | `PlotEnv`, `SAVEDDEPTH`, `EXITFCN`, `EnvOK` | the same |
 | Equation writer | `ploc`, `FontGauge`, `cx`, `cy` and others | only unnamed ones |
+| MatrixWriter | only unnamed ones (22) | `_IDX`, `_STR`, `_IDX2`, `_TAB2` |
+| Kermit `SERVER` | `PKNO`, `KP`, `EXCHP` | the same |
 
 - On the 48SX and 48GX every parameterized outer loop binds `SavedUI`
   (RPLMAN: the outer loop saves the interface it replaces and restores
@@ -95,6 +97,61 @@ gives the names the open screens bound (observed):
   as a graphic, so a title is not generally readable from here.
 - The 49G 1.19-6 ROM binds the same names; a halted program there binds
   `halt`.
+
+## The 48's EquationWriter modes
+
+The 48G User's Guide names three modes of the EquationWriter: entry,
+scrolling (for viewing a large equation: PICTURE toggles it, and ▼ on an
+algebraic at the stack starts the EquationWriter in it) and selection
+(src: [[sources/hp48g-ug]] chapter 7; the 48SX Owner's Manual describes
+the same with GRAPH in place of PICTURE, src: [[sources/hp48sx-om]]). On the 48SX J and 48GX R ROMs the
+temporary environments, newest first, tell them apart (observed
+2026-11-15):
+
+- Entry mode: the writer's own environment (`ploc`, `FontGauge` and the
+  others of the table above) is the newest; one binding only `SavedUI` is
+  under it.
+- Selection mode (◀ in entry mode): one environment binding only
+  `SavedUI` above the writer's.
+- Scrolling mode: one binding `SavedUI`, then one binding `SAVEDDEPTH`,
+  `EXITFCN` and `EnvOK` (the 48SX: `EXITFCN` and `EnvOK`) above the
+  writer's.
+- A message box over the writer adds environments with unnamed
+  bindings above it.
+
+What the keys do there (observed):
+
+- Scrolling mode: ENTER does nothing; the arrow keys move the view.
+  CANCEL goes back to entry mode when it was opened with PICTURE (GRAPH), or to
+  selection mode when it was opened with ▼, keeping the formula.
+- Entry and selection mode: ENTER closes the writer and puts the formula
+  on the stack; opened with ▼, it replaces that stack level; opened from
+  an input form's field, it goes into the field. CANCEL closes the writer
+  and drops the formula; opened with ▼, the stack stays as it was.
+- While the writer is open its working objects lie on the data stack
+  above the user's levels (49 with an empty formula, 52 for `1+2`, 99
+  for a Σ of a quotient; two more in scrolling mode). Input forms,
+  choose and message boxes, the graphics screen, `INPUT`, the
+  interactive stack and the MatrixWriter put nothing there.
+- The 49G's equation writer edits on the command line (see "Command
+  line in another loop" below) and puts nothing on the data stack; ▼ on
+  an algebraic opens it too, ENTER replaces the level, CANCEL leaves it.
+
+## Editing an object inside another loop
+
+▼ on a stack level that holds neither an algebraic nor a matrix, EDIT,
+VISIT and the interactive stack's EDIT copy the object into the command
+line (src: [[sources/hp48sx-om]] chapter 3, [[sources/hp48g-ug]]
+chapter 3: ENTER saves the changes, CANCEL drops them). While it is
+edited the object is off the data stack; ENTER puts the edited object
+back at its level, CANCEL restores the original (observed on 48GX R with
+a real number). The editor's active bit is set, as for `INPUT`; the
+innermost environment binds four unnamed objects in both, so the two
+read alike.
+
+CANCEL drops a matrix that the MatrixWriter is building, and stops a
+program waiting in `0 WAIT` (WAIT's argument comes back to the stack),
+observed on 48GX R.
 
 ## The graphics screen
 
@@ -140,7 +197,9 @@ is it the user's command line at the stack (observed).
 
 - No reliable sign in RAM was found for the 48GX's choose and message
   boxes (see above), for the interactive stack (a parameterized outer
-  loop with no named temporaries) or for `WAIT`.
+  loop with no named temporaries) or for `WAIT`. Their unnamed
+  bindings have shapes of their own (the types of the bound objects),
+  checked on one ROM revision each so far.
 - Titles and message texts in general.
 
 ## Open

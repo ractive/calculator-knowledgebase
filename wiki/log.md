@@ -913,3 +913,7 @@ Added from a static analysis of HP's PC programs (facts only): revision byte, st
 ## [2026-11-09] ingest | Real-hardware observations: HP 100LX Filer server mode and memory
 
 Added to the 100LX page: Filer's server mode answered a client built from the protocol page (listings, copies); with 1-2-3 open, DataComm would not start for lack of memory until 1-2-3 was closed.
+
+## [2026-11-15] ingest | The 48's EquationWriter modes in RAM
+
+Added to hardware/ui-state: how the temporary environments tell the 48SX's and 48GX's EquationWriter entry, selection and scrolling modes apart, what ENTER and CANCEL do in each, its working objects on the data stack, editing an object inside another loop, the MatrixWriter's and SERVER's names; observed in saturnus on ROMs J, R and 2.10.

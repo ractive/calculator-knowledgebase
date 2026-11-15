@@ -917,3 +917,7 @@ Added to the 100LX page: Filer's server mode answered a client built from the pr
 ## [2026-11-15] ingest | The 48's EquationWriter modes in RAM
 
 Added to hardware/ui-state: how the temporary environments tell the 48SX's and 48GX's EquationWriter entry, selection and scrolling modes apart, what ENTER and CANCEL do in each, its working objects on the data stack, editing an object inside another loop, the MatrixWriter's and SERVER's names; observed in saturnus on ROMs J, R and 2.10.
+
+## [2026-11-15] ingest | The interactive stack, object edits and the MatrixWriter in RAM
+
+Added to hardware/ui-state: the patterns of unnamed temporaries' types that tell the interactive stack, an object edited on the command line and the MatrixWriter apart, VISIT's name, the 49G MatrixWriter's names; observed in saturnus on ROMs J, R, 2.10 and 1.19-6.

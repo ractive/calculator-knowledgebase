@@ -145,13 +145,49 @@ line (src: [[sources/hp48sx-om]] chapter 3, [[sources/hp48g-ug]]
 chapter 3: ENTER saves the changes, CANCEL drops them). While it is
 edited the object is off the data stack; ENTER puts the edited object
 back at its level, CANCEL restores the original (observed on 48GX R with
-a real number). The editor's active bit is set, as for `INPUT`; the
-innermost environment binds four unnamed objects in both, so the two
-read alike.
+a real number). VISIT takes the name from level 1 and does not give it
+back on ENTER or CANCEL; ENTER stores the edit in the variable
+(observed).
 
 CANCEL drops a matrix that the MatrixWriter is building, and stops a
 program waiting in `0 WAIT` (WAIT's argument comes back to the stack),
 observed on 48GX R.
+
+## Signs in the types of unnamed temporaries
+
+Some loops bind only unnamed temporaries, but the types of the objects
+bound to them have a fixed pattern, newest environment first. "Command"
+below is a bound object with no prolog of its own (a ROM entry), "bint" a
+system binary. Observed on 48SX J, 48GX R, 49G 2.10 and 49G 1.19-6
+(2026-11-15):
+
+- **Interactive stack** (▲ at the stack; the 49G's HIST): on the 48, a
+  command and three bints, with an environment binding only `SavedUI`
+  under it; on the 49G, eight bindings: bint, any, command, bint,
+  command, bint, string, program (the last is a command while VIEW,
+  EDIT, GOTO or INFO is open over it). The command line is closed. One
+  CANCEL or ENTER leaves; what the menu keys did (ROLL) stays (src:
+  [[sources/hp48sx-om]] chapter 3, [[sources/hp48g-ug]] chapter 3; the
+  rest observed).
+- **An object edited on the command line** (above): a command, a bint,
+  a command and a string, with the editor's line open; the next
+  environment (under one binding only `SavedUI` on the 48) binds one
+  unnamed object, the edited object itself (not a bint). The bint is #2
+  on the 48 for most edits, but #0 for ▼ on a string on the 49G, the
+  same value as `INPUT`'s; the environment under it tells them apart:
+  under `INPUT` it is a named environment, a bint (options) or the
+  stack's own. VISIT and ▼ on a name bind the same.
+- **MatrixWriter** (◀MATRIX, the 49G's MTRW, ▼ on a matrix, the
+  interactive stack's VIEW on a matrix, STAT EDIT): the 49G binds the
+  names `_IDX`, `_STR`, `_IDX2`, `_TAB2`; the 48 binds 22 unnamed
+  objects, the first a bint, the third a command, the fourth a bint (the
+  second a bint too until a cell is filled), with an environment binding
+  only `SavedUI` under it; also while a cell is typed (the line open).
+  ENTER with nothing typed puts the matrix on the stack (src:
+  [[sources/hp48g-ug]] chapter 8); CANCEL drops a new matrix and puts
+  one opened from the stack back unchanged (observed). ▼ ends the first
+  row on the 48 (src: [[sources/hp48g-ug]] chapter 8); on the 49G the same
+  keys gave a 3×3 matrix (observed).
 
 ## The graphics screen
 
@@ -196,10 +232,11 @@ is it the user's command line at the stack (observed).
 ## Not found
 
 - No reliable sign in RAM was found for the 48GX's choose and message
-  boxes (see above), for the interactive stack (a parameterized outer
-  loop with no named temporaries) or for `WAIT`. Their unnamed
-  bindings have shapes of their own (the types of the bound objects),
-  checked on one ROM revision each so far.
+  boxes (see above) or for `WAIT` (one unnamed binding, a command, seen
+  on one revision of each ROM).
+- After CANCEL from the 49G's STAT EDIT the statistics form binds `IF`
+  under an environment of 40 unnamed bindings, so its newest environment
+  does not carry the form's names (observed on 2.10).
 - Titles and message texts in general.
 
 ## Open
